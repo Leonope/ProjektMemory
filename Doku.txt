@@ -1,0 +1,21 @@
+Ein Merge-Konflikt tritt auf, wenn Git zwei unterschiedliche Versionen desselben Codes nicht automatisch zusammenführen kann. 
+Dies passiert typischerweise, wenn zwei verschiedene Branches Änderungen an derselben Stelle im Code vornehmen und Git nicht feststellen kann, 
+welche Änderungen beibehalten werden sollen.
+Um einen Merge-Konflikt zu beheben, musst du die folgenden Schritte ausführen:
+Erkennen des Konflikts: Wenn du versuchst, Branches zusammenzuführen und ein Konflikt auftritt, 
+wird Git dir eine Meldung anzeigen, die den Konflikt anzeigt. Du kannst auch den Befehl git status verwenden, 
+um Informationen über den Konflikt zu erhalten.
+Öffnen der Datei(en) mit Konflikt(en): Öffne die Datei(en), die Konflikte enthalten, in einem Texteditor. 
+In diesen Dateien werden die Konflikte durch spezielle Markierungen angezeigt, die anzeigen, welche Teile des Codes konfliktieren.
+Lösen des Konflikts: Bearbeite die Dateien manuell, um die Konflikte zu beheben. 
+Entferne die Markierungen von Git und wähle aus den verschiedenen Versionen des Codes aus, welche Änderungen du behalten möchtest. 
+Stelle sicher, dass du eine konsistente und funktionierende Version des Codes erhältst.
+Markieren des Konflikts als behoben: Nachdem du die Konflikte behoben hast, markiere die Dateien als behoben, 
+indem du sie zu deinem Index (Staging-Bereich) hinzufügst. Verwende den Befehl git add für jede behobene Datei.
+Commit des behobenen Konflikts: Führe den Commit-Vorgang aus, um die behobenen Konflikte zu bestätigen. 
+Verwende den Befehl git commit, um einen Commit mit einer aussagekräftigen Nachricht zu erstellen, die beschreibt, 
+wie du den Konflikt behoben hast.
+Fortschreiten mit dem Merge-Vorgang: Nachdem der Konflikt behoben und committet wurde, kannst du den Merge-Vorgang fortsetzen, 
+indem du den Befehl ausführst, der den Merge initiiert hat (z. B. git merge oder git pull).
+Es ist wichtig, dass du die Konflikte sorgfältig und gründlich löst, um sicherzustellen, 
+dass dein Code weiterhin korrekt funktioniert und keine unerwünschten Änderungen enthält.

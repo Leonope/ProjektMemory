@@ -1,0 +1,639 @@
+# Coverage data, format version: 3.0
+# Statement data:
+# - id
+# - source path
+# - package name
+# - class name
+# - class type (Class, Object or Trait)
+# - full class name
+# - method name
+# - start offset
+# - end offset
+# - line number
+# - symbol name
+# - tree name
+# - is branch
+# - invocations count
+# - is ignored
+# - description (can be multi-line)
+# '' sign
+# ------------------------------------------
+1
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+main
+160
+184
+7
+Memory.runApp
+Apply
+false
+0
+true
+Memory.this.runApp(RealInputHandler)
+
+2
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+runApp
+278
+304
+11
+Memory.GameStarting
+Apply
+false
+0
+true
+Memory.this.GameStarting(inputHandler)
+
+3
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+runApp
+360
+397
+13
+scala.Predef.println
+Apply
+false
+0
+true
+scala.Predef.println("Game started successfully.")
+
+4
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+runApp
+360
+397
+13
+scala.Predef.println
+Apply
+true
+0
+true
+scala.Predef.println("Game started successfully.")
+
+5
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+runApp
+426
+474
+14
+scala.Predef.println
+Apply
+false
+0
+true
+scala.Predef.println("Error starting game: ".+(e.getMessage()))
+
+6
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+runApp
+426
+474
+14
+scala.Predef.println
+Apply
+true
+0
+true
+scala.Predef.println("Error starting game: ".+(e.getMessage()))
+
+7
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+runApp
+251
+490
+10
+<nosymbol>
+Block
+true
+0
+true
+{
+  val gameOutcome: scala.util.Try[Unit] = Memory.this.GameStarting(inputHandler);
+  gameOutcome match {
+    case (value: Unit): scala.util.Success[Unit](_) => scala.Predef.println("Game started successfully.")
+    case (exception: Throwable): scala.util.Failure[Unit]((e @ _)) => scala.Predef.println("Error starting game: ".+(e.getMessage()))
+  }
+}
+
+8
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+runApp
+527
+571
+17
+scala.Predef.println
+Apply
+false
+0
+true
+scala.Predef.println("Unhandled error: ".+(e.getMessage()))
+
+9
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+runApp
+527
+571
+17
+scala.Predef.println
+Apply
+true
+0
+true
+scala.Predef.println("Unhandled error: ".+(e.getMessage()))
+
+10
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerCount
+738
+797
+24
+scala.Predef.println
+Apply
+false
+0
+false
+scala.Predef.println("How many players will play? (Choose between 1-3)")
+
+11
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerCount
+815
+838
+25
+InputHandler.readLine
+Apply
+false
+0
+false
+inputHandler.readLine()
+
+12
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerCount
+815
+844
+25
+scala.collection.StringOps.toInt
+Select
+false
+0
+false
+scala.Predef.augmentString(inputHandler.readLine()).toInt
+
+13
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerCount
+862
+863
+26
+<nosymbol>
+Literal
+false
+0
+false
+1
+
+14
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerCount
+867
+876
+26
+scala.Int.>
+Apply
+false
+0
+false
+count.>(3)
+
+15
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerCount
+854
+876
+26
+scala.Boolean.||
+Apply
+false
+0
+false
+count.<(1).||(count.>(3))
+
+16
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerCount
+878
+953
+26
+<nosymbol>
+Throw
+false
+0
+false
+throw new scala.`package`.IllegalArgumentException("Player count must be between 1 and 3.")
+
+17
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerCount
+878
+953
+26
+<nosymbol>
+Block
+true
+0
+false
+throw new scala.`package`.IllegalArgumentException("Player count must be between 1 and 3.")
+
+18
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerCount
+850
+850
+26
+<nosymbol>
+Literal
+false
+0
+false
+()
+
+19
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerCount
+850
+850
+26
+<nosymbol>
+Block
+true
+0
+false
+()
+
+20
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerCount
+727
+969
+23
+scala.util.Try.apply
+Apply
+false
+0
+false
+scala.util.Try.apply[Int]({
+  scala.Predef.println("How many players will play? (Choose between 1-3)");
+  val count: Int = scala.Predef.augmentString(inputHandler.readLine()).toInt;
+  if (count.<(1).||(count.>(3)))
+    throw new scala.`package`.IllegalArgumentException("Player count must be between 1 and 3.")
+  else
+    ();
+  count
+})
+
+21
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+checkPlayerCount
+1087
+1127
+32
+scala.util.Success.apply
+Apply
+false
+0
+false
+scala.util.Success.apply[String]("One player has been selected.")
+
+22
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+checkPlayerCount
+1087
+1127
+32
+scala.util.Success.apply
+Block
+true
+0
+false
+scala.util.Success.apply[String]("One player has been selected.")
+
+23
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+checkPlayerCount
+1151
+1250
+33
+java.lang.Exception.<init>
+Apply
+false
+0
+false
+new scala.`package`.Exception("Only 1 player is allowed, as the function for more players is not yet implemented.")
+
+24
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+checkPlayerCount
+1143
+1251
+33
+scala.util.Failure.apply
+Apply
+false
+0
+false
+scala.util.Failure.apply[Nothing](new scala.`package`.Exception("Only 1 player is allowed, as the function for more players is not yet implemented."))
+
+25
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+checkPlayerCount
+1143
+1251
+33
+scala.util.Failure.apply
+Block
+true
+0
+false
+scala.util.Failure.apply[Nothing](new scala.`package`.Exception("Only 1 player is allowed, as the function for more players is not yet implemented."))
+
+26
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerName
+1358
+1392
+38
+scala.Predef.println
+Apply
+false
+0
+false
+scala.Predef.println("Please enter your name:")
+
+27
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+askPlayerName
+1398
+1421
+39
+InputHandler.readLine
+Apply
+false
+0
+false
+inputHandler.readLine()
+
+28
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+greetPlayer
+1501
+1557
+44
+scala.Predef.println
+Apply
+false
+0
+false
+scala.Predef.println("Welcome to the Memory Game, ".+(name).+("! Have fun!"))
+
+29
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+GameStarting
+1826
+1853
+51
+Memory.askPlayerName
+Apply
+false
+0
+false
+Memory.this.askPlayerName(inputHandler)
+
+30
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+GameStarting
+1781
+1781
+50
+scala.Tuple2.apply
+Apply
+false
+0
+false
+scala.Tuple2.apply[String, String](check, name)
+
+31
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+GameStarting
+1872
+1889
+53
+Memory.greetPlayer
+Apply
+false
+0
+false
+Memory.this.greetPlayer(name)
+
+32
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+GameStarting
+1872
+1889
+53
+Memory.greetPlayer
+Block
+true
+0
+false
+Memory.this.greetPlayer(name)
+
+33
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+GameStarting
+1781
+1889
+50
+scala.util.Try.map
+Apply
+false
+0
+false
+Memory.this.checkPlayerCount(count).map[(String, String)](((check: String) => {
+  val name: String = Memory.this.askPlayerName(inputHandler);
+  scala.Tuple2.apply[String, String](check, name)
+})).map[Unit](((x$1: (String, String)) => (x$1: (String, String) @unchecked) match {
+  case (_1: String, _2: String): (String, String)((check @ _), (name @ _)) => Memory.this.greetPlayer(name)
+}))
+
+34
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+GameStarting
+1727
+1889
+49
+scala.util.Try.flatMap
+Apply
+false
+0
+false
+Memory.this.askPlayerCount(inputHandler).flatMap[Unit](((count: Int) => Memory.this.checkPlayerCount(count).map[(String, String)](((check: String) => {
+  val name: String = Memory.this.askPlayerName(inputHandler);
+  scala.Tuple2.apply[String, String](check, name)
+})).map[Unit](((x$1: (String, String)) => (x$1: (String, String) @unchecked) match {
+  case (_1: String, _2: String): (String, String)((check @ _), (name @ _)) => Memory.this.greetPlayer(name)
+}))))
+
+35
+src\main\scala\Memory.scala
+<empty>
+RealInputHandler
+Object
+RealInputHandler
+readLine
+2031
+2056
+63
+scala.io.StdIn.readLine
+Apply
+false
+0
+false
+scala.io.StdIn.readLine()
+

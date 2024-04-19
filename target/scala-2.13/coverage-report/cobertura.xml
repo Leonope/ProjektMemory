@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "https://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage 
+line-rate="1.00" lines-valid="26" lines-covered="26" branches-valid="5" branches-covered="5" branch-rate="1.00" complexity="0" version="1.0" timestamp="1713507595861">
+    <sources>
+        <source>--source</source>
+        <source>C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester 3/Software-Engineering/ProjektMemory/src/main/scala</source>
+    </sources>
+    <packages>
+        <package name="&lt;empty&gt;" line-rate="1.00" branch-rate="1.00" complexity="0">
+            <classes>
+                <class name="Memory" filename="Memory.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="&lt;empty&gt;/Memory/GameStarting" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="53" hits="1" branch="true"/>
+                                <line number="51" hits="1" branch="false"/>
+                                <line number="53" hits="1" branch="false"/>
+                                <line number="49" hits="1" branch="false"/>
+                                <line number="50" hits="1" branch="false"/>
+                                <line number="50" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="&lt;empty&gt;/Memory/askPlayerCount" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="26" hits="1" branch="true"/>
+                                <line number="25" hits="1" branch="false"/>
+                                <line number="23" hits="1" branch="false"/>
+                                <line number="26" hits="1" branch="false"/>
+                                <line number="26" hits="1" branch="false"/>
+                                <line number="26" hits="1" branch="false"/>
+                                <line number="24" hits="1" branch="false"/>
+                                <line number="26" hits="1" branch="true"/>
+                                <line number="26" hits="1" branch="false"/>
+                                <line number="25" hits="1" branch="false"/>
+                                <line number="26" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method 
+                        name="&lt;empty&gt;/Memory/checkPlayerCount" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="33" hits="1" branch="false"/>
+                                <line number="32" hits="1" branch="true"/>
+                                <line number="33" hits="1" branch="true"/>
+                                <line number="32" hits="1" branch="false"/>
+                                <line number="33" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method name="&lt;empty&gt;/Memory/askPlayerName" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="38" hits="1" branch="false"/>
+                                <line number="39" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="&lt;empty&gt;/Memory/greetPlayer" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="44" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="33" hits="1" branch="false"/>
+                        <line number="53" hits="1" branch="true"/>
+                        <line number="26" hits="1" branch="true"/>
+                        <line number="38" hits="1" branch="false"/>
+                        <line number="25" hits="1" branch="false"/>
+                        <line number="51" hits="1" branch="false"/>
+                        <line number="23" hits="1" branch="false"/>
+                        <line number="26" hits="1" branch="false"/>
+                        <line number="26" hits="1" branch="false"/>
+                        <line number="32" hits="1" branch="true"/>
+                        <line number="53" hits="1" branch="false"/>
+                        <line number="26" hits="1" branch="false"/>
+                        <line number="33" hits="1" branch="true"/>
+                        <line number="49" hits="1" branch="false"/>
+                        <line number="24" hits="1" branch="false"/>
+                        <line number="26" hits="1" branch="true"/>
+                        <line number="44" hits="1" branch="false"/>
+                        <line number="26" hits="1" branch="false"/>
+                        <line number="39" hits="1" branch="false"/>
+                        <line number="32" hits="1" branch="false"/>
+                        <line number="25" hits="1" branch="false"/>
+                        <line number="50" hits="1" branch="false"/>
+                        <line number="26" hits="1" branch="false"/>
+                        <line number="33" hits="1" branch="false"/>
+                        <line number="50" hits="1" branch="false"/>
+                    </lines>
+                </class>
+                <class name="RealInputHandler" filename="Memory.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/RealInputHandler/readLine" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="63" hits="1" branch="false"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="63" hits="1" branch="false"/>
+                    </lines>
+                </class>
+            </classes>
+        </package>
+    </packages>
+</coverage>

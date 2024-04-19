@@ -1,0 +1,127 @@
+<scoverage 
+statement-count="26" statements-invoked="26" statement-rate="100.00" branch-rate="100.00" version="1.0" timestamp="1713507596050">
+    <packages>
+        <package name="&lt;empty&gt;" statement-count="26" statements-invoked="26" statement-rate="100.00">
+            <classes>
+                <class 
+                name="Memory" filename="Memory.scala" statement-count="25" statements-invoked="25" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/Memory/GameStarting" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="1872" end="1889" line="53" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="1826" end="1853" line="51" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="1872" end="1889" line="53" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="1727" end="1889" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="1781" end="1781" line="50" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="1781" end="1889" line="50" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Memory/askPlayerCount" statement-count="11" statements-invoked="11" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="878" end="953" line="26" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="815" end="838" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="727" end="969" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="867" end="876" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="862" end="863" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="878" end="953" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="738" end="797" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="850" end="850" line="26" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="850" end="850" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="815" end="844" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="854" end="876" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Memory/checkPlayerCount" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="checkPlayerCount" start="1151" end="1250" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="checkPlayerCount" start="1087" end="1127" line="32" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="checkPlayerCount" start="1143" end="1251" line="33" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="checkPlayerCount" start="1087" end="1127" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="checkPlayerCount" start="1143" end="1251" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Memory/askPlayerName" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerName" start="1358" end="1392" line="38" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerName" start="1398" end="1421" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Memory/greetPlayer" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Memory" class-type="Object" full-class-name="Memory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="greetPlayer" start="1501" end="1557" line="44" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="RealInputHandler" filename="Memory.scala" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/RealInputHandler/readLine" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="RealInputHandler" class-type="Object" full-class-name="RealInputHandler" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="readLine" start="2031" end="2056" line="63" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

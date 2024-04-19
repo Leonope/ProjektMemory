@@ -1,0 +1,36 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MemoryGameSpec, org.scalatest.tools.Framework$$anon$1@1425447, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(test, org.scalatest.tools.Framework$$anon$1@1425447, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ExampleSpec, org.scalatest.tools.Framework$$anon$1@1425447, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mtest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAn example[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mExampleSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA Set[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when empty[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should have size 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should produce NoSuchElementException when head is invoked[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMemoryGameSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRealInputHandler[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the correct string when readLine is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMemory[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when askPlayerCount is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return a valid count within range[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return failure on invalid number[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return success for edge cases[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when checkPlayerCount is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should handle only one player[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should fail for more than one player[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when GameStarting is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should handle valid player count and name[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should fail with invalid player count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when greetPlayer is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should print the correct greeting[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 416 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 12[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 3, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 12, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MemoryGameSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	test[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ExampleSpec[0m
