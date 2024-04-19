@@ -1,15 +1,8 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MemorySpec, org.scalatest.tools.Framework$$anon$1@1e903d2, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MemoryGameSpec, org.scalatest.tools.Framework$$anon$1@1e903d2, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ExampleSpec, org.scalatest.tools.Framework$$anon$1@1e903d2, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(test, org.scalatest.tools.Framework$$anon$1@1e903d2, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mMemorySpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mMemory[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  when runApp is called[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should print success message when game starts successfully[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ExampleSpec, org.scalatest.tools.Framework$$anon$1@104e2af, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MemorySpec, org.scalatest.tools.Framework$$anon$1@104e2af, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MemoryGameSpec, org.scalatest.tools.Framework$$anon$1@104e2af, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(test, org.scalatest.tools.Framework$$anon$1@104e2af, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mExampleSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should print error message when game fails to start[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m    should RealInputHandler[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m    - should return the correct string when readLine is called[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mA Set[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  when empty[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should have size 0[0m[0m
@@ -17,6 +10,13 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mtest:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAn example[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should be true[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMemorySpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMemory[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when runApp is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should print success message when game starts successfully[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should print error message when game fails to start[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    should RealInputHandler[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    - should return the correct string when readLine is called[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mMemoryGameSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mMemory[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  when askPlayerCount is called[0m[0m
@@ -31,7 +31,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should fail with invalid player count[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  when greetPlayer is called[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should print the correct greeting[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 516 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 168 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 14[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 4, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 14, failed 0, canceled 0, ignored 0, pending 0[0m[0m

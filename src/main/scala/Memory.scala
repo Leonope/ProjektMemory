@@ -64,4 +64,5 @@ trait InputHandler {
 
 object RealInputHandler extends InputHandler {
   def readLine(): String = scala.io.StdIn.readLine()
+  // tui Feld aufbauen dass mit der tui verändert wird, testen
 }

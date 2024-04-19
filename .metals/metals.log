@@ -4927,3 +4927,267 @@ Apr. 19, 2024 9:13:29 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint noti
 INFORMATION: Unsupported notification method: $/setTrace
 Apr. 19, 2024 9:15:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNUNG: Unmatched cancel notification for request id 67
+2024.04.19 09:30:53 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:30:57 INFO  time: compiled projektmemory in 4.01s
+2024.04.19 09:31:26 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:31:26 INFO  time: compiled projektmemory in 0.27s
+2024.04.19 09:31:34 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:31:39 INFO  time: compiled projektmemory in 5.57s
+2024.04.19 09:33:03 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:33:06 INFO  time: compiled projektmemory-test in 2.94s
+2024.04.19 09:33:34 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:33:34 INFO  time: compiled projektmemory-test in 0.24s
+2024.04.19 09:33:47 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:33:47 INFO  time: compiled projektmemory-test in 0.53s
+2024.04.19 09:33:53 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:33:53 INFO  time: compiled projektmemory-test in 0.29s
+2024.04.19 09:34:01 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:34:03 INFO  time: compiled projektmemory-test in 1.63s
+2024.04.19 09:34:37 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:34:39 INFO  time: compiled projektmemory-test in 1.88s
+2024.04.19 09:35:16 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:35:18 INFO  time: compiled projektmemory in 2.72s
+2024.04.19 09:35:21 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:35:23 INFO  time: compiled projektmemory-test in 1.66s
+2024.04.19 09:35:23 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:35:24 INFO  time: compiled projektmemory-test in 0.91s
+Apr. 19, 2024 9:35:35 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 450
+2024.04.19 09:35:37 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:35:38 INFO  time: compiled projektmemory-test in 1.05s
+Apr. 19, 2024 9:36:14 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 500
+2024.04.19 09:36:14 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:36:15 INFO  time: compiled projektmemory-test in 1.07s
+2024.04.19 09:36:39 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:36:41 INFO  time: compiled projektmemory in 2.1s
+Apr. 19, 2024 9:36:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 558
+2024.04.19 09:36:45 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:36:46 INFO  time: compiled projektmemory-test in 1.47s
+2024.04.19 09:36:46 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:36:47 INFO  time: compiled projektmemory-test in 1.03s
+2024.04.19 09:37:09 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:37:11 INFO  time: compiled projektmemory in 1.79s
+Apr. 19, 2024 9:37:14 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 611
+2024.04.19 09:37:14 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:37:15 INFO  time: compiled projektmemory-test in 1.06s
+Apr. 19, 2024 9:37:15 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 619
+2024.04.19 09:37:15 INFO  compiling projektmemory-test (2 scala sources)
+2024.04.19 09:37:15 INFO  time: compiled projektmemory-test in 0.84s
+Apr. 19, 2024 9:37:20 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 633
+2024.04.19 09:37:35 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:37:35 INFO  time: compiled projektmemory in 0.37s
+Apr. 19, 2024 9:37:36 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 667
+2024.04.19 09:37:35 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:37:36 INFO  time: compiled projektmemory in 0.27s
+2024.04.19 09:37:37 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:37:37 INFO  time: compiled projektmemory in 0.46s
+2024.04.19 09:37:43 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:37:45 INFO  time: compiled projektmemory in 1.87s
+Apr. 19, 2024 9:37:46 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 708
+2024.04.19 09:37:46 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:37:46 INFO  time: compiled projektmemory-test in 0.77s
+2024.04.19 09:37:51 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:37:51 INFO  time: compiled projektmemory-test in 0.43s
+2024.04.19 09:38:37 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:38:37 INFO  time: compiled projektmemory-test in 0.6s
+2024.04.19 09:38:52 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:38:52 INFO  time: compiled projektmemory-test in 0.54s
+2024.04.19 09:38:58 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:39:03 INFO  time: compiled projektmemory-test in 4.74s
+2024.04.19 09:40:03 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:40:06 INFO  time: compiled projektmemory-test in 2.96s
+Apr. 19, 2024 9:41:15 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 970
+2024.04.19 09:41:24 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:41:24 INFO  time: compiled projektmemory in 0.4s
+2024.04.19 09:41:36 ERROR Failed to tokenize input for semantic tokens for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+scala.meta.tokenizers.TokenizeException: <input>:18: error: unclosed comment
+    } /*catch {
+      ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:55)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:74)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:316)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:214)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:982)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:23)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:16)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:960)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:16)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:331)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:30)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:597)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.04.19 09:41:43 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:41:45 INFO  time: compiled projektmemory in 1.87s
+2024.04.19 09:41:54 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:41:56 INFO  time: compiled projektmemory in 1.59s
+2024.04.19 09:42:15 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:42:16 INFO  time: compiled projektmemory in 1.65s
+2024.04.19 09:44:13 ERROR Failed to tokenize input for semantic tokens for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\test\scala\MainSpec.scala
+scala.meta.tokenizers.TokenizeException: <input>:35: error: unclosed comment
+      /*"handle unhandled exceptions" in {
+      ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:55)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:74)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:316)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:214)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:982)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:23)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:16)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:960)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:16)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:331)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:30)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:597)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.04.19 09:44:16 ERROR Failed to tokenize input for semantic tokens for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\test\scala\MainSpec.scala
+scala.meta.tokenizers.TokenizeException: <input>:35: error: unclosed comment
+      /*"handle unhandled exceptions" in {
+      ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:55)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:74)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:316)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:214)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:982)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:23)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:16)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:960)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:16)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:331)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:30)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:597)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.04.19 09:44:18 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:44:18 INFO  time: compiled projektmemory-test in 0.38s
+2024.04.19 09:44:21 ERROR Failed to tokenize input for semantic tokens for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\test\scala\MainSpec.scala
+scala.meta.tokenizers.TokenizeException: <input>:35: error: unclosed comment
+      /*"handle unhandled exceptions" in {
+      ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:55)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:74)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:316)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:214)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:982)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:23)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:16)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:960)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:16)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:331)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:30)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:597)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.04.19 09:44:23 ERROR Failed to tokenize input for semantic tokens for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\test\scala\MainSpec.scala
+scala.meta.tokenizers.TokenizeException: <input>:35: error: unclosed comment
+      /*"handle unhandled exceptions" in {
+      ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:55)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:74)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:316)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:214)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:982)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:23)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:16)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:960)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:16)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:331)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:30)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:597)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.04.19 09:44:25 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:44:27 INFO  time: compiled projektmemory-test in 2.19s
+2024.04.19 09:48:11 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:48:13 INFO  time: compiled projektmemory in 2.11s
+Apr. 19, 2024 9:48:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 1338
+2024.04.19 09:48:35 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:48:37 INFO  time: compiled projektmemory in 1.93s
+Apr. 19, 2024 9:49:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 1427
+2024.04.19 09:49:50 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:49:52 INFO  time: compiled projektmemory in 2.12s
+2024.04.19 09:50:29 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:50:31 INFO  time: compiled projektmemory in 1.72s
+2024.04.19 09:54:17 INFO  compiling projektmemory (1 scala source)
+2024.04.19 09:54:18 INFO  time: compiled projektmemory in 1.5s
+2024.04.19 09:58:51 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:58:54 INFO  time: compiled projektmemory-test in 2.28s
+2024.04.19 09:58:56 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:58:56 INFO  time: compiled projektmemory-test in 0.56s
+2024.04.19 09:59:16 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:59:16 INFO  time: compiled projektmemory-test in 0.25s
+2024.04.19 09:59:19 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:59:19 INFO  time: compiled projektmemory-test in 0.35s
+2024.04.19 09:59:42 INFO  compiling projektmemory-test (1 scala source)
+2024.04.19 09:59:44 INFO  time: compiled projektmemory-test in 2.57s
