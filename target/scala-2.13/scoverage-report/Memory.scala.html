@@ -26,66 +26,69 @@
 </span>2 <span style=''>import scala.util.{Try, Success, Failure}
 </span>3 <span style=''>
 </span>4 <span style=''>object Memory {
-</span>5 <span style=''>  // $COVERAGE-OFF$
-</span>6 <span style=''>  def main(args: Array[String]): Unit = {
-</span>7 <span style=''>    runApp(RealInputHandler)
-</span>8 <span style=''>  }
-</span>9 <span style=''>  def runApp(inputHandler: InputHandler): Unit = {
-</span>10 <span style=''>    try {
-</span>11 <span style=''>      val gameOutcome = GameStarting(inputHandler)
-</span>12 <span style=''>      gameOutcome match {
-</span>13 <span style=''>        case Success(_) =&gt; println(&quot;Game started successfully.&quot;)
-</span>14 <span style=''>        case Failure(e) =&gt; println(s&quot;Error starting game: ${e.getMessage}&quot;)
-</span>15 <span style=''>      }
-</span>16 <span style=''>    } catch {
-</span>17 <span style=''>      case e: Exception =&gt; println(s&quot;Unhandled error: ${e.getMessage}&quot;)
-</span>18 <span style=''>    }
-</span>19 <span style=''>  }
-</span>20 <span style=''>// $COVERAGE-ON$
-</span>21 <span style=''>
-</span>22 <span style=''>  // Asks for the number of players and validates the input
-</span>23 <span style=''>  def askPlayerCount(inputHandler: InputHandler): Try[Int] </span><span style='background: #AEF1AE'>= Try {
-</span>24 <span style=''></span><span style='background: #AEF1AE'>    println(&quot;How many players will play? (Choose between 1-3)&quot;)
-</span>25 <span style=''></span><span style='background: #AEF1AE'>    val count = inputHandler.readLine().toInt
-</span>26 <span style=''></span><span style='background: #AEF1AE'>    if (count &lt; 1 || count &gt; 3) throw new IllegalArgumentException(&quot;Player count must be between 1 and 3.&quot;)
-</span>27 <span style=''></span><span style='background: #AEF1AE'>    count
-</span>28 <span style=''></span><span style='background: #AEF1AE'> </span><span style=''> }
-</span>29 <span style=''>
-</span>30 <span style=''>  // Checks the number of players
-</span>31 <span style=''>  def checkPlayerCount(count: Int): Try[String] = count match {
-</span>32 <span style=''>    case 1 =</span><span style='background: #AEF1AE'>&gt; Success(&quot;One player has been selected.</span><span style=''>&quot;)
-</span>33 <span style=''>    case _ =</span><span style='background: #AEF1AE'>&gt; Failure(new Exception(&quot;Only 1 player is allowed, as the function for more players is not yet implemented.&quot;</span><span style=''>))
-</span>34 <span style=''>  }
-</span>35 <span style=''>
-</span>36 <span style=''>  // Asks for the player's name
-</span>37 <span style=''>  def askPlayerName(inputHandler: InputHandler): String = {
-</span>38 <span style=''>  </span><span style='background: #AEF1AE'>  println(&quot;Please enter your name:</span><span style=''>&quot;)
-</span>39 <span style=''>  </span><span style='background: #AEF1AE'>  inputHandler.readLine</span><span style=''>()
-</span>40 <span style=''>  }
-</span>41 <span style=''>
-</span>42 <span style=''>  // Greets the player
-</span>43 <span style=''>  def greetPlayer(name: String): Unit = {
-</span>44 <span style=''>  </span><span style='background: #AEF1AE'>  println(s&quot;Welcome to the Memory Game, $name! Have fun!</span><span style=''>&quot;) // 's' for variable interpolation
-</span>45 <span style=''>  }
-</span>46 <span style=''>
-</span>47 <span style=''>  // Start the game, checks if previous processes were successful
-</span>48 <span style=''>  def GameStarting(inputHandler: InputHandler): Try[Unit] </span><span style='background: #AEF1AE'>= for {
-</span>49 <span style=''></span><span style='background: #AEF1AE'>    count &lt;- askPlayerCount(inputHandler)
-</span>50 <span style=''></span><span style='background: #AEF1AE'>    check &lt;- checkPlayerCount(count)
-</span>51 <span style=''></span><span style='background: #AEF1AE'>    name = askPlayerName(inputHandler)
-</span>52 <span style=''></span><span style='background: #AEF1AE'>  } yield {
-</span>53 <span style=''></span><span style='background: #AEF1AE'>    greetPlayer(nam</span><span style=''>e)
-</span>54 <span style=''>  }
-</span>55 <span style=''>
-</span>56 <span style=''>}
-</span>57 <span style=''>
-</span>58 <span style=''>trait InputHandler {
-</span>59 <span style=''>  def readLine(): String
-</span>60 <span style=''>}
-</span>61 <span style=''>
-</span>62 <span style=''>object RealInputHandler extends InputHandler {
-</span>63 <span style=''>  def readLine(): String </span><span style='background: #AEF1AE'>= scala.io.StdIn.readLine</span><span style=''>()
-</span>64 <span style=''>}
+</span>5 <span style=''>  def main(args: Array[String]): Unit = {
+</span>6 <span style=''>     // $COVERAGE-OFF$
+</span>7 <span style=''>    MemoryInput.runApp(RealInputHandler)
+</span>8 <span style=''>     // $COVERAGE-ON$
+</span>9 <span style=''>  }
+</span>10 <span style=''>  
+</span>11 <span style=''>object MemoryInput {
+</span>12 <span style=''>  def runApp(inputHandler: InputHandler): Unit = {
+</span>13 <span style=''>    //try 
+</span>14 <span style=''>      {
+</span>15 <span style=''>      val gameOutcome = </span><span style='background: #AEF1AE'>GameStarting(inputHandler)</span><span style=''>
+</span>16 <span style=''>      gameOutcome match {
+</span>17 <span style=''>        case Success(_) =&gt; </span><span style='background: #AEF1AE'>println(&quot;Game started successfully.&quot;)</span><span style=''>
+</span>18 <span style=''>        case Failure(e) =&gt; </span><span style='background: #AEF1AE'>println(s&quot;Error starting game: ${e.getMessage}&quot;)</span><span style=''>
+</span>19 <span style=''>      }
+</span>20 <span style=''>    } /*catch {
+</span>21 <span style=''>      case e: Exception =&gt; println(s&quot;Unhandled error: ${e.getMessage}&quot;)
+</span>22 <span style=''>    }*/
+</span>23 <span style=''>  }
+</span>24 <span style=''>}
+</span>25 <span style=''>  // Asks for the number of players and validates the input
+</span>26 <span style=''>  def askPlayerCount(inputHandler: InputHandler): Try[Int] = </span><span style='background: #AEF1AE'>Try {
+</span>27 <span style=''></span><span style='background: #AEF1AE'>    println(&quot;How many players will play? (Choose between 1-3)&quot;)
+</span>28 <span style=''></span><span style='background: #AEF1AE'>    val count = inputHandler.readLine().toInt
+</span>29 <span style=''></span><span style='background: #AEF1AE'>    if (count &lt; 1 || count &gt; 3) throw new IllegalArgumentException(&quot;Player count must be between 1 and 3.&quot;)
+</span>30 <span style=''></span><span style='background: #AEF1AE'>    count
+</span>31 <span style=''></span><span style='background: #AEF1AE'>  }</span><span style=''>
+</span>32 <span style=''>
+</span>33 <span style=''>  // Checks the number of players
+</span>34 <span style=''>  def checkPlayerCount(count: Int): Try[String] = count match {
+</span>35 <span style=''>    case 1 =&gt; </span><span style='background: #AEF1AE'>Success(&quot;One player has been selected.&quot;)</span><span style=''>
+</span>36 <span style=''>    case _ =&gt; </span><span style='background: #AEF1AE'>Failure(new Exception(&quot;Only 1 player is allowed, as the function for more players is not yet implemented.&quot;))</span><span style=''>
+</span>37 <span style=''>  }
+</span>38 <span style=''>
+</span>39 <span style=''>  // Asks for the player's name
+</span>40 <span style=''>  def askPlayerName(inputHandler: InputHandler): String = {
+</span>41 <span style=''>    </span><span style='background: #AEF1AE'>println(&quot;Please enter your name:&quot;)</span><span style=''>
+</span>42 <span style=''>    </span><span style='background: #AEF1AE'>inputHandler.readLine()</span><span style=''>
+</span>43 <span style=''>  }
+</span>44 <span style=''>
+</span>45 <span style=''>  // Greets the player
+</span>46 <span style=''>  def greetPlayer(name: String): Unit = {
+</span>47 <span style=''>    </span><span style='background: #AEF1AE'>println(s&quot;Welcome to the Memory Game, $name! Have fun!&quot;)</span><span style=''>
+</span>48 <span style=''>  }
+</span>49 <span style=''>
+</span>50 <span style=''>  // Start the game, checks if previous processes were successful
+</span>51 <span style=''>  def GameStarting(inputHandler: InputHandler): Try[Unit] = </span><span style='background: #AEF1AE'>for {
+</span>52 <span style=''></span><span style='background: #AEF1AE'>    count &lt;- askPlayerCount(inputHandler)
+</span>53 <span style=''></span><span style='background: #AEF1AE'>    check &lt;- checkPlayerCount(count)
+</span>54 <span style=''></span><span style='background: #AEF1AE'>    name = askPlayerName(inputHandler)
+</span>55 <span style=''></span><span style='background: #AEF1AE'>  } yield {
+</span>56 <span style=''></span><span style='background: #AEF1AE'>    greetPlayer(name)</span><span style=''>
+</span>57 <span style=''>  }
+</span>58 <span style=''>
+</span>59 <span style=''>}
+</span>60 <span style=''>
+</span>61 <span style=''>trait InputHandler {
+</span>62 <span style=''>  def readLine(): String
+</span>63 <span style=''>}
+</span>64 <span style=''>
+</span>65 <span style=''>object RealInputHandler extends InputHandler {
+</span>66 <span style=''>  def readLine(): String = </span><span style='background: #AEF1AE'>scala.io.StdIn.readLine()</span><span style=''>
+</span>67 <span style=''>}
 </span></pre>
           </div>
           <div class="tab-pane" id="statementlist">
@@ -100,15 +103,135 @@
         <th>Code</th>
       </tr><tr>
         <td>
-          23
+          15
         </td>
         <td>
-          20
+          2
         </td>
         <td>
-          727
+          354
           -
-          969
+          380
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Memory.GameStarting
+        </td>
+        <td>
+          memoryspec
+        </td>
+        <td style="background: #AEF1AE">
+          Memory.this.GameStarting(inputHandler)
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          436
+          -
+          473
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memoryspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Game started successfully.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          436
+          -
+          473
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memoryspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Game started successfully.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          502
+          -
+          550
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memoryspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Error starting game: &quot;.+(e.getMessage()))
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          502
+          -
+          550
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memoryspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Error starting game: &quot;.+(e.getMessage()))
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          790
+          -
+          1032
         </td>
         <td>
           Apply
@@ -117,7 +240,7 @@
           scala.util.Try.apply
         </td>
         <td>
-          memorygamespec
+          memorygamespec,memoryspec
         </td>
         <td style="background: #AEF1AE">
           scala.util.Try.apply[Int]({
@@ -132,15 +255,15 @@
         </td>
       </tr><tr>
         <td>
-          24
+          27
         </td>
         <td>
-          10
+          7
         </td>
         <td>
-          738
+          801
           -
-          797
+          860
         </td>
         <td>
           Apply
@@ -149,22 +272,22 @@
           scala.Predef.println
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.println(&quot;How many players will play? (Choose between 1-3)&quot;)
         </td>
       </tr><tr>
         <td>
-          25
+          28
         </td>
         <td>
-          11
+          8
         </td>
         <td>
-          815
+          878
           -
-          838
+          901
         </td>
         <td>
           Apply
@@ -173,22 +296,22 @@
           InputHandler.readLine
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           inputHandler.readLine()
         </td>
       </tr><tr>
         <td>
-          25
+          28
         </td>
         <td>
-          12
+          9
         </td>
         <td>
-          815
+          878
           -
-          844
+          907
         </td>
         <td>
           Select
@@ -197,22 +320,46 @@
           scala.collection.StringOps.toInt
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.augmentString(inputHandler.readLine()).toInt
         </td>
       </tr><tr>
         <td>
-          26
+          29
         </td>
         <td>
-          17
+          11
         </td>
         <td>
-          878
+          930
           -
-          953
+          939
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td>
+          memorygamespec,memoryspec
+        </td>
+        <td style="background: #AEF1AE">
+          count.&gt;(3)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          941
+          -
+          1016
         </td>
         <td>
           Block
@@ -228,63 +375,15 @@
         </td>
       </tr><tr>
         <td>
-          26
-        </td>
-        <td>
-          14
-        </td>
-        <td>
-          867
-          -
-          876
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          scala.Int.&gt;
-        </td>
-        <td>
-          memorygamespec
-        </td>
-        <td style="background: #AEF1AE">
-          count.&gt;(3)
-        </td>
-      </tr><tr>
-        <td>
-          26
+          29
         </td>
         <td>
           13
         </td>
         <td>
-          862
+          941
           -
-          863
-        </td>
-        <td>
-          Literal
-        </td>
-        <td>
-          &lt;nosymbol&gt;
-        </td>
-        <td>
-          memorygamespec
-        </td>
-        <td style="background: #AEF1AE">
-          1
-        </td>
-      </tr><tr>
-        <td>
-          26
-        </td>
-        <td>
-          16
-        </td>
-        <td>
-          878
-          -
-          953
+          1016
         </td>
         <td>
           Throw
@@ -300,15 +399,15 @@
         </td>
       </tr><tr>
         <td>
-          26
+          29
         </td>
         <td>
-          19
+          16
         </td>
         <td>
-          850
+          913
           -
-          850
+          913
         </td>
         <td>
           Block
@@ -317,22 +416,22 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          memorygamespec
+          memorygamespec,memoryspec
         </td>
         <td style="background: #AEF1AE">
           ()
         </td>
       </tr><tr>
         <td>
-          26
+          29
         </td>
         <td>
-          18
+          10
         </td>
         <td>
-          850
+          925
           -
-          850
+          926
         </td>
         <td>
           Literal
@@ -341,22 +440,22 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          memorygamespec
+          memorygamespec,memoryspec
         </td>
         <td style="background: #AEF1AE">
-          ()
+          1
         </td>
       </tr><tr>
         <td>
-          26
+          29
         </td>
         <td>
-          15
+          12
         </td>
         <td>
-          854
+          917
           -
-          876
+          939
         </td>
         <td>
           Apply
@@ -365,22 +464,46 @@
           scala.Boolean.||
         </td>
         <td>
-          memorygamespec
+          memorygamespec,memoryspec
         </td>
         <td style="background: #AEF1AE">
           count.&lt;(1).||(count.&gt;(3))
         </td>
       </tr><tr>
         <td>
-          32
+          29
         </td>
         <td>
-          22
+          15
         </td>
         <td>
-          1087
+          913
           -
-          1127
+          913
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorygamespec,memoryspec
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          1150
+          -
+          1190
         </td>
         <td>
           Block
@@ -389,22 +512,22 @@
           scala.util.Success.apply
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           scala.util.Success.apply[String](&quot;One player has been selected.&quot;)
         </td>
       </tr><tr>
         <td>
-          32
+          35
         </td>
         <td>
-          21
+          18
         </td>
         <td>
-          1087
+          1150
           -
-          1127
+          1190
         </td>
         <td>
           Apply
@@ -413,22 +536,22 @@
           scala.util.Success.apply
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           scala.util.Success.apply[String](&quot;One player has been selected.&quot;)
         </td>
       </tr><tr>
         <td>
-          33
+          36
         </td>
         <td>
-          23
+          20
         </td>
         <td>
-          1151
+          1214
           -
-          1250
+          1313
         </td>
         <td>
           Apply
@@ -444,15 +567,15 @@
         </td>
       </tr><tr>
         <td>
-          33
+          36
         </td>
         <td>
-          25
+          22
         </td>
         <td>
-          1143
+          1206
           -
-          1251
+          1314
         </td>
         <td>
           Block
@@ -468,15 +591,15 @@
         </td>
       </tr><tr>
         <td>
-          33
+          36
         </td>
         <td>
-          24
+          21
         </td>
         <td>
-          1143
+          1206
           -
-          1251
+          1314
         </td>
         <td>
           Apply
@@ -492,15 +615,15 @@
         </td>
       </tr><tr>
         <td>
-          38
+          41
         </td>
         <td>
-          26
+          23
         </td>
         <td>
-          1358
+          1421
           -
-          1392
+          1455
         </td>
         <td>
           Apply
@@ -509,22 +632,22 @@
           scala.Predef.println
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.println(&quot;Please enter your name:&quot;)
         </td>
       </tr><tr>
         <td>
-          39
+          42
         </td>
         <td>
-          27
+          24
         </td>
         <td>
-          1398
+          1461
           -
-          1421
+          1484
         </td>
         <td>
           Apply
@@ -533,22 +656,22 @@
           InputHandler.readLine
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           inputHandler.readLine()
         </td>
       </tr><tr>
         <td>
-          44
+          47
         </td>
         <td>
-          28
+          25
         </td>
         <td>
-          1501
+          1564
           -
-          1557
+          1620
         </td>
         <td>
           Apply
@@ -557,22 +680,22 @@
           scala.Predef.println
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.println(&quot;Welcome to the Memory Game, &quot;.+(name).+(&quot;! Have fun!&quot;))
         </td>
       </tr><tr>
         <td>
-          49
+          52
         </td>
         <td>
-          34
+          31
         </td>
         <td>
-          1727
+          1756
           -
-          1889
+          1918
         </td>
         <td>
           Apply
@@ -581,7 +704,7 @@
           scala.util.Try.flatMap
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           Memory.this.askPlayerCount(inputHandler).flatMap[Unit](((count: Int) =&gt; Memory.this.checkPlayerCount(count).map[(String, String)](((check: String) =&gt; {
@@ -593,15 +716,15 @@
         </td>
       </tr><tr>
         <td>
-          50
+          53
         </td>
         <td>
-          30
+          27
         </td>
         <td>
-          1781
+          1810
           -
-          1781
+          1810
         </td>
         <td>
           Apply
@@ -610,22 +733,22 @@
           scala.Tuple2.apply
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           scala.Tuple2.apply[String, String](check, name)
         </td>
       </tr><tr>
         <td>
-          50
+          53
         </td>
         <td>
-          33
+          30
         </td>
         <td>
-          1781
+          1810
           -
-          1889
+          1918
         </td>
         <td>
           Apply
@@ -634,7 +757,7 @@
           scala.util.Try.map
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           Memory.this.checkPlayerCount(count).map[(String, String)](((check: String) =&gt; {
@@ -646,15 +769,15 @@
         </td>
       </tr><tr>
         <td>
-          51
+          54
         </td>
         <td>
-          29
+          26
         </td>
         <td>
-          1826
+          1855
           -
-          1853
+          1882
         </td>
         <td>
           Apply
@@ -663,22 +786,22 @@
           Memory.askPlayerName
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           Memory.this.askPlayerName(inputHandler)
         </td>
       </tr><tr>
         <td>
-          53
+          56
         </td>
         <td>
-          32
+          29
         </td>
         <td>
-          1872
+          1901
           -
-          1889
+          1918
         </td>
         <td>
           Block
@@ -687,22 +810,22 @@
           Memory.greetPlayer
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           Memory.this.greetPlayer(name)
         </td>
       </tr><tr>
         <td>
-          53
+          56
         </td>
         <td>
-          31
+          28
         </td>
         <td>
-          1872
+          1901
           -
-          1889
+          1918
         </td>
         <td>
           Apply
@@ -711,22 +834,22 @@
           Memory.greetPlayer
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           Memory.this.greetPlayer(name)
         </td>
       </tr><tr>
         <td>
-          63
+          66
         </td>
         <td>
-          35
+          32
         </td>
         <td>
-          2031
+          2060
           -
-          2056
+          2085
         </td>
         <td>
           Apply
@@ -735,7 +858,7 @@
           scala.io.StdIn.readLine
         </td>
         <td>
-          memorygamespec
+          memoryspec
         </td>
         <td style="background: #AEF1AE">
           scala.io.StdIn.readLine()

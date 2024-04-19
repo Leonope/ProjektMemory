@@ -10,4 +10,5 @@
 [0m[[0m[0mdebug[0m] [0m[0m	RealInputHandler.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	InputHandler.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Memory.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Memory$MemoryInput$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13\classes.bak[0m

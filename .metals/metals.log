@@ -4900,3 +4900,30 @@ WARNUNG: Unmatched cancel notification for request id 547
 2024.04.19 08:20:06 INFO  Shut down connection with build server.
 2024.04.19 08:20:06 INFO  Shut down connection with build server.
 2024.04.19 08:20:06 INFO  Exiting server
+2024.04.19 09:12:04 INFO  Started: Metals version 1.3.0 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory' for client Visual Studio Code 1.88.1.
+SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [scribe.slf4j.ScribeServiceProvider@3971e509]
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@17ada6d0]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual provider is of type [scribe.slf4j.ScribeServiceProvider@3971e509]
+2024.04.19 09:12:04 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.04.19 09:12:06 INFO  Attempting to connect to the build server...
+2024.04.19 09:12:13 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.19 09:12:13 INFO  Attempting to connect to the build server...
+2024.04.19 09:12:13 INFO  Attempting to connect to the build server...
+2024.04.19 09:12:13 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.19 09:12:13 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.19 09:12:14 INFO  time: Connected to build server in 7.47s
+2024.04.19 09:12:14 INFO  Connected to Build server: Bloop v1.5.17
+2024.04.19 09:12:13 INFO  time: Imported build in 0.27s
+2024.04.19 09:12:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\test\scala\MemorySpec.scala. Using presentation compiler with project's scala-library version: 3.3.3
+Apr. 19, 2024 9:12:33 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 17
+2024.04.19 09:12:47 INFO  time: indexed workspace in 25s
+Apr. 19, 2024 9:13:04 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 43
+2024.04.19 09:13:09 INFO  time: code lens generation in 5.57s
+Apr. 19, 2024 9:13:29 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
+Apr. 19, 2024 9:15:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 67

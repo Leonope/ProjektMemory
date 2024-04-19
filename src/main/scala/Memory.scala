@@ -2,23 +2,26 @@ import scala.io.StdIn.readLine
 import scala.util.{Try, Success, Failure}
 
 object Memory {
-  // $COVERAGE-OFF$
   def main(args: Array[String]): Unit = {
-    runApp(RealInputHandler)
+     // $COVERAGE-OFF$
+    MemoryInput.runApp(RealInputHandler)
+     // $COVERAGE-ON$
   }
+  
+object MemoryInput {
   def runApp(inputHandler: InputHandler): Unit = {
-    try {
+    //try 
+      {
       val gameOutcome = GameStarting(inputHandler)
       gameOutcome match {
         case Success(_) => println("Game started successfully.")
         case Failure(e) => println(s"Error starting game: ${e.getMessage}")
       }
-    } catch {
+    } /*catch {
       case e: Exception => println(s"Unhandled error: ${e.getMessage}")
-    }
+    }*/
   }
-// $COVERAGE-ON$
-
+}
   // Asks for the number of players and validates the input
   def askPlayerCount(inputHandler: InputHandler): Try[Int] = Try {
     println("How many players will play? (Choose between 1-3)")
@@ -41,7 +44,7 @@ object Memory {
 
   // Greets the player
   def greetPlayer(name: String): Unit = {
-    println(s"Welcome to the Memory Game, $name! Have fun!") // 's' for variable interpolation
+    println(s"Welcome to the Memory Game, $name! Have fun!")
   }
 
   // Start the game, checks if previous processes were successful

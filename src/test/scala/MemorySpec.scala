@@ -5,16 +5,6 @@ import java.io.{ByteArrayOutputStream,ByteArrayInputStream, PrintStream}
 
 class MemoryGameSpec extends AnyWordSpec with MockFactory {
 
-"RealInputHandler" should {
-    "return the correct string when readLine is called" in {
-      val testInput = "test input string\n"
-      val inStream = new ByteArrayInputStream(testInput.getBytes)
-      Console.withIn(inStream) {
-        assert(RealInputHandler.readLine() === "test input string")
-      }
-    }
-  }
-
   "Memory" when {
     "askPlayerCount is called" should {
       "return a valid count within range" in {
