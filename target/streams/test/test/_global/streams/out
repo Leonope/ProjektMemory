@@ -1,24 +1,34 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ExampleSpec, org.scalatest.tools.Framework$$anon$1@104e2af, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MemorySpec, org.scalatest.tools.Framework$$anon$1@104e2af, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MemoryGameSpec, org.scalatest.tools.Framework$$anon$1@104e2af, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(test, org.scalatest.tools.Framework$$anon$1@104e2af, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(test, org.scalatest.tools.Framework$$anon$1@5968c9, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MatrixSpec, org.scalatest.tools.Framework$$anon$1@5968c9, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ExampleSpec, org.scalatest.tools.Framework$$anon$1@5968c9, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MemoryGameSpec, org.scalatest.tools.Framework$$anon$1@5968c9, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MemoryMainSpec, org.scalatest.tools.Framework$$anon$1@5968c9, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mExampleSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mA Set[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mExampleSpec A Set[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  when empty[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should have size 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should produce NoSuchElementException when head is invoked[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mtest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mAn example[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should be true[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mMemorySpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mMemory[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMemoryMainSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMainSpec[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  when runApp is called[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should print success message when game starts successfully[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should print error message when game fails to start[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m    should RealInputHandler[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m    - should return the correct string when readLine is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMatrixSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA Matrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when newly created[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should fill all cells with the initial value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when updated at a specific cell[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should reflect the new value in the updated cell[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should not affect other cells[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when accessed out of bounds[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should throw an IndexOutOfBoundsException[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mtest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAn Test example[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mMemoryGameSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mMemory[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMemoryGameSpec[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  when askPlayerCount is called[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should return a valid count within range[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should return failure on invalid number[0m[0m
@@ -29,15 +39,17 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m  when GameStarting is called[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should handle valid player count and name[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should fail with invalid player count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should fail with invalid card count[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  when greetPlayer is called[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should print the correct greeting[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 168 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 14[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 4, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 14, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 95 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 19[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 5, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 19, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	MemoryGameSpec[0m
 [0m[[0m[0mdebug[0m] [0m[0m	test[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MemoryGameSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MatrixSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MemoryMainSpec[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ExampleSpec[0m
-[0m[[0m[0mdebug[0m] [0m[0m	MemorySpec[0m

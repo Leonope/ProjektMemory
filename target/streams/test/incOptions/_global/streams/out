@@ -6,14 +6,16 @@
 [0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
 [0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	MemoryGameSpec$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	MemorySpec$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	MemorySpec.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	MemorySpec$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MemoryMainSpec.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	MemoryGameSpec$$anon$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	MemoryGameSpec$$anon$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	test.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	MemoryGameSpec$$anon$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MemoryMainSpec$$anon$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	MemoryGameSpec.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MemoryMainSpec$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MatrixSpec.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	MemoryGameSpec$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MemoryGameSpec$$anon$6.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ExampleSpec.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13\test-classes.bak[0m

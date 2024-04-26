@@ -1,0 +1,495 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          Matrix.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>import scala.reflect.ClassTag
+</span>2 <span style=''>import scala.util.Try
+</span>3 <span style=''>
+</span>4 <span style=''>class Matrix[T: ClassTag](val rows: Int, val cols: Int, fill: T) {
+</span>5 <span style=''>  private val grid: Array[Array[T]] = </span><span style='background: #AEF1AE'>Array.fill(rows, cols)(fill)</span><span style=''>
+</span>6 <span style=''>
+</span>7 <span style=''>  def apply(row: Int, col: Int): T = </span><span style='background: #AEF1AE'>grid(row)(col)</span><span style=''>
+</span>8 <span style=''>  def update(row: Int, col: Int, value: T): Unit = </span><span style='background: #AEF1AE'>grid(row)(col) = value</span><span style=''>
+</span>9 <span style=''>  override def toString: String = </span><span style='background: #AEF1AE'>grid.map(row =&gt; row.mkString(&quot; &quot;)).mkString(&quot;\n&quot;)</span><span style=''>
+</span>10 <span style=''>}
+</span>11 <span style=''>
+</span>12 <span style=''>object Matrix {
+</span>13 <span style=''>  def setupMatrix(cardCount: Int): Try[Matrix[String]] = </span><span style='background: #AEF1AE'>Try {
+</span>14 <span style=''></span><span style='background: #AEF1AE'>    val factors = (1 to cardCount).filter(cardCount % _ == 0)
+</span>15 <span style=''></span><span style='background: #AEF1AE'>    val (rows, cols) = factors.foldLeft((1, cardCount)) { (best, current) =&gt;
+</span>16 <span style=''></span><span style='background: #AEF1AE'>      val other = cardCount / current
+</span>17 <span style=''></span><span style='background: #AEF1AE'>      if (Math.abs(current - other) &lt; Math.abs(best._1 - best._2)) (current, other) else best
+</span>18 <span style=''></span><span style='background: #AEF1AE'>    }
+</span>19 <span style=''></span><span style='background: #AEF1AE'>
+</span>20 <span style=''></span><span style='background: #AEF1AE'>    val (finalRows, finalCols) = if (rows &gt; cols) (cols, rows) else (rows, cols)
+</span>21 <span style=''></span><span style='background: #AEF1AE'>    new Matrix[String](finalRows, finalCols, &quot;_&quot;)
+</span>22 <span style=''></span><span style='background: #AEF1AE'>  }</span><span style=''>
+</span>23 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Tests</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          5
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          175
+          -
+          179
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          Matrix.cols
+        </td>
+        <td>
+          matrixspec
+        </td>
+        <td style="background: #AEF1AE">
+          Matrix.this.cols
+        </td>
+      </tr><tr>
+        <td>
+          5
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          158
+          -
+          186
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.Array.fill
+        </td>
+        <td>
+          matrixspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Array.fill[T](Matrix.this.rows, Matrix.this.cols)(Matrix.this.fill)(Matrix.this.evidence$1)
+        </td>
+      </tr><tr>
+        <td>
+          5
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          169
+          -
+          173
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          Matrix.rows
+        </td>
+        <td>
+          matrixspec
+        </td>
+        <td style="background: #AEF1AE">
+          Matrix.this.rows
+        </td>
+      </tr><tr>
+        <td>
+          5
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          181
+          -
+          185
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          Matrix.fill
+        </td>
+        <td>
+          matrixspec
+        </td>
+        <td style="background: #AEF1AE">
+          Matrix.this.fill
+        </td>
+      </tr><tr>
+        <td>
+          7
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          225
+          -
+          239
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Array.apply
+        </td>
+        <td>
+          matrixspec
+        </td>
+        <td style="background: #AEF1AE">
+          Matrix.this.grid.apply(row).apply(col)
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          291
+          -
+          313
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Array.update
+        </td>
+        <td>
+          matrixspec
+        </td>
+        <td style="background: #AEF1AE">
+          Matrix.this.grid.apply(row).update(col, value)
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          348
+          -
+          397
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.mkString
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.wrapRefArray[String](scala.Predef.refArrayOps[Array[T]](Matrix.this.grid).map[String](((row: Array[T]) =&gt; scala.Predef.genericWrapArray[T](row).mkString(&quot; &quot;)))((ClassTag.apply[String](classOf[java.lang.String]): scala.reflect.ClassTag[String]))).mkString(&quot;\n&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          474
+          -
+          892
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Try.apply
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Try.apply[Matrix[String]]({
+  val factors: IndexedSeq[Int] = scala.Predef.intWrapper(1).to(cardCount).filter(((x$1: Int) =&gt; cardCount.%(x$1).==(0)));
+  &lt;synthetic&gt; &lt;artifact&gt; private[this] val x$2: (Int, Int) = (factors.foldLeft[(Int, Int)](scala.Tuple2.apply[Int, Int](1, cardCount))(((best: (Int, Int), current: Int) =&gt; {
+    val other: Int = cardCount./(current);
+    if (java.lang.Math.abs(current.-(other)).&lt;(java.lang.Math.abs(best._1.-(best._2))))
+      scala.Tuple2.apply[Int, Int](current, other)
+    else
+      best
+  })): (Int, Int) @unchecked) match {
+    case (_1: Int, _2: Int): (Int, Int)((rows @ _), (cols @ _)) =&gt; scala.Tuple2.apply[Int, Int](rows, cols)
+  };
+  val rows: Int = x$2._1;
+  val cols: Int = x$2._2;
+  &lt;synthetic&gt; &lt;artifact&gt; private[this] val x$3: (Int, Int) = (if (rows.&gt;(cols))
+    scala.Tuple2.apply[Int, Int](cols, rows)
+  else
+    scala.Tuple2.apply[Int, Int](rows, cols): (Int, Int) @unchecked) match {
+    case (_1: Int, _2: Int): (Int, Int)((finalRows @ _), (finalCols @ _)) =&gt; scala.Tuple2.apply[Int, Int](finalRows, finalCols)
+  };
+  val finalRows: Int = x$3._1;
+  val finalCols: Int = x$3._2;
+  new Matrix[String](finalRows, finalCols, &quot;_&quot;)((ClassTag.apply[String](classOf[java.lang.String]): scala.reflect.ClassTag[String]))
+})
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          499
+          -
+          500
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          498
+          -
+          541
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.StrictOptimizedIterableOps.filter
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intWrapper(1).to(cardCount).filter(((x$1: Int) =&gt; cardCount.%(x$1).==(0)))
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          522
+          -
+          540
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          cardCount.%(x$1).==(0)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          551
+          -
+          551
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._1
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          x$2._1
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          557
+          -
+          557
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._2
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          x$2._2
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          778
+          -
+          778
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._2
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          x$3._2
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          767
+          -
+          767
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._1
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          x$3._1
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          843
+          -
+          888
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          Matrix.&lt;init&gt;
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          new Matrix[String](finalRows, finalCols, &quot;_&quot;)((ClassTag.apply[String](classOf[java.lang.String]): scala.reflect.ClassTag[String]))
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          884
+          -
+          887
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;_&quot;
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

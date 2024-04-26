@@ -2,7 +2,7 @@ import org.scalatest.wordspec.AnyWordSpec
 import org.scalatest.matchers.should.Matchers
 
 class ExampleSpec extends AnyWordSpec with Matchers {
-  "A Set" when {
+  "ExampleSpec A Set" when {
     "empty" should {
       "have size 0" in {
         assert(Set.empty.size == 0)

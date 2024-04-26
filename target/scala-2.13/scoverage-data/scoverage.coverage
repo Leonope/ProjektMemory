@@ -19,6 +19,334 @@
 # '' sign
 # ------------------------------------------
 1
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Class
+Matrix
+<none>
+169
+173
+5
+Matrix.rows
+Select
+false
+0
+false
+Matrix.this.rows
+
+2
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Class
+Matrix
+<none>
+175
+179
+5
+Matrix.cols
+Select
+false
+0
+false
+Matrix.this.cols
+
+3
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Class
+Matrix
+<none>
+181
+185
+5
+Matrix.fill
+Select
+false
+0
+false
+Matrix.this.fill
+
+4
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Class
+Matrix
+<none>
+158
+186
+5
+scala.Array.fill
+ApplyToImplicitArgs
+false
+0
+false
+scala.Array.fill[T](Matrix.this.rows, Matrix.this.cols)(Matrix.this.fill)(Matrix.this.evidence$1)
+
+5
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Class
+Matrix
+apply
+225
+239
+7
+scala.Array.apply
+Apply
+false
+0
+false
+Matrix.this.grid.apply(row).apply(col)
+
+6
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Class
+Matrix
+update
+291
+313
+8
+scala.Array.update
+Apply
+false
+0
+false
+Matrix.this.grid.apply(row).update(col, value)
+
+7
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Class
+Matrix
+toString
+348
+397
+9
+scala.collection.IterableOnceOps.mkString
+Apply
+false
+0
+false
+scala.Predef.wrapRefArray[String](scala.Predef.refArrayOps[Array[T]](Matrix.this.grid).map[String](((row: Array[T]) => scala.Predef.genericWrapArray[T](row).mkString(" ")))((ClassTag.apply[String](classOf[java.lang.String]): scala.reflect.ClassTag[String]))).mkString("\n")
+
+8
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Object
+Matrix
+setupMatrix
+499
+500
+14
+<nosymbol>
+Literal
+false
+0
+false
+1
+
+9
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Object
+Matrix
+setupMatrix
+522
+540
+14
+scala.Int.==
+Apply
+false
+0
+false
+cardCount.%(x$1).==(0)
+
+10
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Object
+Matrix
+setupMatrix
+498
+541
+14
+scala.collection.StrictOptimizedIterableOps.filter
+Apply
+false
+0
+false
+scala.Predef.intWrapper(1).to(cardCount).filter(((x$1: Int) => cardCount.%(x$1).==(0)))
+
+11
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Object
+Matrix
+setupMatrix
+551
+551
+15
+scala.Tuple2._1
+Select
+false
+0
+false
+x$2._1
+
+12
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Object
+Matrix
+setupMatrix
+557
+557
+15
+scala.Tuple2._2
+Select
+false
+0
+false
+x$2._2
+
+13
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Object
+Matrix
+setupMatrix
+767
+767
+20
+scala.Tuple2._1
+Select
+false
+0
+false
+x$3._1
+
+14
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Object
+Matrix
+setupMatrix
+778
+778
+20
+scala.Tuple2._2
+Select
+false
+0
+false
+x$3._2
+
+15
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Object
+Matrix
+setupMatrix
+884
+887
+21
+<nosymbol>
+Literal
+false
+0
+false
+"_"
+
+16
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Object
+Matrix
+setupMatrix
+843
+888
+21
+Matrix.<init>
+ApplyToImplicitArgs
+false
+0
+false
+new Matrix[String](finalRows, finalCols, "_")((ClassTag.apply[String](classOf[java.lang.String]): scala.reflect.ClassTag[String]))
+
+17
+src\main\scala\Matrix.scala
+<empty>
+Matrix
+Object
+Matrix
+setupMatrix
+474
+892
+13
+scala.util.Try.apply
+Apply
+false
+0
+false
+scala.util.Try.apply[Matrix[String]]({
+  val factors: IndexedSeq[Int] = scala.Predef.intWrapper(1).to(cardCount).filter(((x$1: Int) => cardCount.%(x$1).==(0)));
+  <synthetic> <artifact> private[this] val x$2: (Int, Int) = (factors.foldLeft[(Int, Int)](scala.Tuple2.apply[Int, Int](1, cardCount))(((best: (Int, Int), current: Int) => {
+    val other: Int = cardCount./(current);
+    if (java.lang.Math.abs(current.-(other)).<(java.lang.Math.abs(best._1.-(best._2))))
+      scala.Tuple2.apply[Int, Int](current, other)
+    else
+      best
+  })): (Int, Int) @unchecked) match {
+    case (_1: Int, _2: Int): (Int, Int)((rows @ _), (cols @ _)) => scala.Tuple2.apply[Int, Int](rows, cols)
+  };
+  val rows: Int = x$2._1;
+  val cols: Int = x$2._2;
+  <synthetic> <artifact> private[this] val x$3: (Int, Int) = (if (rows.>(cols))
+    scala.Tuple2.apply[Int, Int](cols, rows)
+  else
+    scala.Tuple2.apply[Int, Int](rows, cols): (Int, Int) @unchecked) match {
+    case (_1: Int, _2: Int): (Int, Int)((finalRows @ _), (finalCols @ _)) => scala.Tuple2.apply[Int, Int](finalRows, finalCols)
+  };
+  val finalRows: Int = x$3._1;
+  val finalCols: Int = x$3._2;
+  new Matrix[String](finalRows, finalCols, "_")((ClassTag.apply[String](classOf[java.lang.String]): scala.reflect.ClassTag[String]))
+})
+
+18
+src\main\scala\Memory.scala
+<empty>
+Memory
+Object
+Memory
+main
+184
+200
+7
+Memory.RealInputHandler
+Select
+false
+0
+true
+Memory.this.RealInputHandler
+
+19
 src\main\scala\Memory.scala
 <empty>
 Memory
@@ -33,69 +361,69 @@ Apply
 false
 0
 true
-Memory.this.MemoryInput.runApp(RealInputHandler)
+Memory.this.MemoryInput.runApp(Memory.this.RealInputHandler)
 
-2
+20
 src\main\scala\Memory.scala
 <empty>
 MemoryInput
 Object
 Memory.MemoryInput
 runApp
-354
-380
+334
+360
+13
+Memory.MemoryInput.GameStarting
+Apply
+false
+0
+false
+MemoryInput.this.GameStarting(inputHandler)
+
+21
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+runApp
+416
+461
 15
-Memory.GameStarting
-Apply
-false
-0
-false
-Memory.this.GameStarting(inputHandler)
-
-3
-src\main\scala\Memory.scala
-<empty>
-MemoryInput
-Object
-Memory.MemoryInput
-runApp
-436
-473
-17
 scala.Predef.println
 Apply
 false
 0
 false
-scala.Predef.println("Game started successfully.")
+scala.Predef.println("Game setup completed successfully.")
 
-4
+22
 src\main\scala\Memory.scala
 <empty>
 MemoryInput
 Object
 Memory.MemoryInput
 runApp
-436
-473
-17
+416
+461
+15
 scala.Predef.println
 Block
 true
 0
 false
-scala.Predef.println("Game started successfully.")
+scala.Predef.println("Game setup completed successfully.")
 
-5
+23
 src\main\scala\Memory.scala
 <empty>
 MemoryInput
 Object
 Memory.MemoryInput
 runApp
-502
-550
-18
+490
+538
+16
 scala.Predef.println
 Apply
 false
@@ -103,16 +431,16 @@ false
 false
 scala.Predef.println("Error starting game: ".+(e.getMessage()))
 
-6
+24
 src\main\scala\Memory.scala
 <empty>
 MemoryInput
 Object
 Memory.MemoryInput
 runApp
-502
-550
-18
+490
+538
+16
 scala.Predef.println
 Block
 true
@@ -120,16 +448,216 @@ true
 false
 scala.Predef.println("Error starting game: ".+(e.getMessage()))
 
-7
+25
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
-askPlayerCount
-801
-860
+Memory.MemoryInput
+GameStarting
+786
+813
+23
+Memory.MemoryInput.askPlayerName
+Apply
+false
+0
+false
+MemoryInput.this.askPlayerName(inputHandler)
+
+26
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+GameStarting
+678
+678
+22
+scala.Tuple2.apply
+Apply
+false
+0
+false
+scala.Tuple2.apply[String, String](check, name)
+
 27
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+GameStarting
+930
+947
+27
+Memory.MemoryInput.greetPlayer
+Apply
+false
+0
+false
+MemoryInput.this.greetPlayer(name)
+
+28
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+GameStarting
+955
+984
+28
+scala.Predef.println
+Apply
+false
+0
+false
+scala.Predef.println("Memory game setup:")
+
+29
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+GameStarting
+992
+1007
+29
+scala.Predef.println
+Apply
+false
+0
+false
+scala.Predef.println(matrix)
+
+30
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+GameStarting
+868
+1014
+25
+scala.util.Try.map
+Apply
+false
+0
+false
+Matrix.setupMatrix(cardCount).map[Unit](((matrix: Matrix[String]) => {
+  MemoryInput.this.greetPlayer(name);
+  scala.Predef.println("Memory game setup:");
+  scala.Predef.println(matrix)
+}))
+
+31
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+GameStarting
+821
+1014
+24
+scala.util.Try.flatMap
+Apply
+false
+0
+false
+MemoryInput.this.askCardCount(inputHandler).flatMap[Unit](((cardCount: Int) => Matrix.setupMatrix(cardCount).map[Unit](((matrix: Matrix[String]) => {
+  MemoryInput.this.greetPlayer(name);
+  scala.Predef.println("Memory game setup:");
+  scala.Predef.println(matrix)
+}))))
+
+32
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+GameStarting
+821
+1014
+24
+scala.util.Try.flatMap
+Block
+true
+0
+false
+MemoryInput.this.askCardCount(inputHandler).flatMap[Unit](((cardCount: Int) => Matrix.setupMatrix(cardCount).map[Unit](((matrix: Matrix[String]) => {
+  MemoryInput.this.greetPlayer(name);
+  scala.Predef.println("Memory game setup:");
+  scala.Predef.println(matrix)
+}))))
+
+33
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+GameStarting
+678
+1014
+22
+scala.util.Try.flatMap
+Apply
+false
+0
+false
+MemoryInput.this.checkPlayerCount(count).map[(String, String)](((check: String) => {
+  val name: String = MemoryInput.this.askPlayerName(inputHandler);
+  scala.Tuple2.apply[String, String](check, name)
+})).flatMap[Unit](((x$1: (String, String)) => (x$1: (String, String) @unchecked) match {
+  case (_1: String, _2: String): (String, String)((check @ _), (name @ _)) => MemoryInput.this.askCardCount(inputHandler).flatMap[Unit](((cardCount: Int) => Matrix.setupMatrix(cardCount).map[Unit](((matrix: Matrix[String]) => {
+    MemoryInput.this.greetPlayer(name);
+    scala.Predef.println("Memory game setup:");
+    scala.Predef.println(matrix)
+  }))))
+}))
+
+34
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+GameStarting
+620
+1014
+21
+scala.util.Try.flatMap
+Apply
+false
+0
+false
+MemoryInput.this.askPlayerCount(inputHandler).flatMap[Unit](((count: Int) => MemoryInput.this.checkPlayerCount(count).map[(String, String)](((check: String) => {
+  val name: String = MemoryInput.this.askPlayerName(inputHandler);
+  scala.Tuple2.apply[String, String](check, name)
+})).flatMap[Unit](((x$1: (String, String)) => (x$1: (String, String) @unchecked) match {
+  case (_1: String, _2: String): (String, String)((check @ _), (name @ _)) => MemoryInput.this.askCardCount(inputHandler).flatMap[Unit](((cardCount: Int) => Matrix.setupMatrix(cardCount).map[Unit](((matrix: Matrix[String]) => {
+    MemoryInput.this.greetPlayer(name);
+    scala.Predef.println("Memory game setup:");
+    scala.Predef.println(matrix)
+  }))))
+}))))
+
+35
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+askPlayerCount
+1094
+1153
+33
 scala.Predef.println
 Apply
 false
@@ -137,33 +665,33 @@ false
 false
 scala.Predef.println("How many players will play? (Choose between 1-3)")
 
-8
+36
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 askPlayerCount
-878
-901
-28
-InputHandler.readLine
+1173
+1196
+34
+Memory.InputHandler.readLine
 Apply
 false
 0
 false
 inputHandler.readLine()
 
-9
+37
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 askPlayerCount
-878
-907
-28
+1173
+1202
+34
 scala.collection.StringOps.toInt
 Select
 false
@@ -171,16 +699,16 @@ false
 false
 scala.Predef.augmentString(inputHandler.readLine()).toInt
 
-10
+38
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 askPlayerCount
-925
-926
-29
+1222
+1223
+35
 <nosymbol>
 Literal
 false
@@ -188,16 +716,16 @@ false
 false
 1
 
-11
+39
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 askPlayerCount
-930
-939
-29
+1227
+1236
+35
 scala.Int.>
 Apply
 false
@@ -205,16 +733,16 @@ false
 false
 count.>(3)
 
-12
+40
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 askPlayerCount
-917
-939
-29
+1214
+1236
+35
 scala.Boolean.||
 Apply
 false
@@ -222,16 +750,16 @@ false
 false
 count.<(1).||(count.>(3))
 
-13
+41
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 askPlayerCount
-941
-1016
-29
+1238
+1313
+35
 <nosymbol>
 Throw
 false
@@ -239,16 +767,16 @@ false
 false
 throw new scala.`package`.IllegalArgumentException("Player count must be between 1 and 3.")
 
-14
+42
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 askPlayerCount
-941
-1016
-29
+1238
+1313
+35
 <nosymbol>
 Block
 true
@@ -256,16 +784,16 @@ true
 false
 throw new scala.`package`.IllegalArgumentException("Player count must be between 1 and 3.")
 
-15
+43
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 askPlayerCount
-913
-913
-29
+1210
+1210
+35
 <nosymbol>
 Literal
 false
@@ -273,16 +801,16 @@ false
 false
 ()
 
-16
+44
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 askPlayerCount
-913
-913
-29
+1210
+1210
+35
 <nosymbol>
 Block
 true
@@ -290,16 +818,16 @@ true
 false
 ()
 
-17
+45
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 askPlayerCount
-790
-1032
-26
+1081
+1333
+32
 scala.util.Try.apply
 Apply
 false
@@ -315,16 +843,16 @@ scala.util.Try.apply[Int]({
   count
 })
 
-18
+46
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 checkPlayerCount
-1150
-1190
-35
+1417
+1457
+40
 scala.util.Success.apply
 Apply
 false
@@ -332,16 +860,16 @@ false
 false
 scala.util.Success.apply[String]("One player has been selected.")
 
-19
+47
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 checkPlayerCount
-1150
-1190
-35
+1417
+1457
+40
 scala.util.Success.apply
 Block
 true
@@ -349,16 +877,16 @@ true
 false
 scala.util.Success.apply[String]("One player has been selected.")
 
-20
+48
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 checkPlayerCount
-1214
-1313
-36
+1481
+1580
+41
 java.lang.Exception.<init>
 Apply
 false
@@ -366,16 +894,16 @@ false
 false
 new scala.`package`.Exception("Only 1 player is allowed, as the function for more players is not yet implemented.")
 
-21
+49
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 checkPlayerCount
-1206
-1314
-36
+1473
+1581
+41
 scala.util.Failure.apply
 Apply
 false
@@ -383,16 +911,16 @@ false
 false
 scala.util.Failure.apply[Nothing](new scala.`package`.Exception("Only 1 player is allowed, as the function for more players is not yet implemented."))
 
-22
+50
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 checkPlayerCount
-1206
-1314
-36
+1473
+1581
+41
 scala.util.Failure.apply
 Block
 true
@@ -400,16 +928,194 @@ true
 false
 scala.util.Failure.apply[Nothing](new scala.`package`.Exception("Only 1 player is allowed, as the function for more players is not yet implemented."))
 
-23
+51
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
+askCardCount
+1664
+1717
+45
+scala.Predef.println
+Apply
+false
+0
+false
+scala.Predef.println("How many unique cards will be in the game?")
+
+52
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+askCardCount
+1737
+1760
+46
+Memory.InputHandler.readLine
+Apply
+false
+0
+false
+inputHandler.readLine()
+
+53
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+askCardCount
+1737
+1766
+46
+scala.collection.StringOps.toInt
+Select
+false
+0
+false
+scala.Predef.augmentString(inputHandler.readLine()).toInt
+
+54
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+askCardCount
+1778
+1788
+47
+scala.Int.<=
+Apply
+false
+0
+false
+count.<=(0)
+
+55
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+askCardCount
+1790
+1880
+47
+<nosymbol>
+Throw
+false
+0
+false
+throw new scala.`package`.IllegalArgumentException("The count must be a positive integer greater than 0.")
+
+56
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+askCardCount
+1790
+1880
+47
+<nosymbol>
+Block
+true
+0
+false
+throw new scala.`package`.IllegalArgumentException("The count must be a positive integer greater than 0.")
+
+57
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+askCardCount
+1774
+1774
+47
+<nosymbol>
+Literal
+false
+0
+false
+()
+
+58
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+askCardCount
+1774
+1774
+47
+<nosymbol>
+Block
+true
+0
+false
+()
+
+59
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+askCardCount
+1888
+1897
+48
+scala.Int.*
+Apply
+false
+0
+false
+count.*(2)
+
+60
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
+askCardCount
+1651
+1904
+44
+scala.util.Try.apply
+Apply
+false
+0
+false
+scala.util.Try.apply[Int]({
+  scala.Predef.println("How many unique cards will be in the game?");
+  val count: Int = scala.Predef.augmentString(inputHandler.readLine()).toInt;
+  if (count.<=(0))
+    throw new scala.`package`.IllegalArgumentException("The count must be a positive integer greater than 0.")
+  else
+    ();
+  count.*(2)
+})
+
+61
+src\main\scala\Memory.scala
+<empty>
+MemoryInput
+Object
+Memory.MemoryInput
 askPlayerName
-1421
-1455
-41
+1977
+2011
+52
 scala.Predef.println
 Apply
 false
@@ -417,33 +1123,33 @@ false
 false
 scala.Predef.println("Please enter your name:")
 
-24
+62
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 askPlayerName
-1461
-1484
-42
-InputHandler.readLine
+2019
+2042
+53
+Memory.InputHandler.readLine
 Apply
 false
 0
 false
 inputHandler.readLine()
 
-25
+63
 src\main\scala\Memory.scala
 <empty>
-Memory
+MemoryInput
 Object
-Memory
+Memory.MemoryInput
 greetPlayer
-1564
-1620
-47
+2104
+2160
+57
 scala.Predef.println
 Apply
 false
@@ -451,127 +1157,15 @@ false
 false
 scala.Predef.println("Welcome to the Memory Game, ".+(name).+("! Have fun!"))
 
-26
-src\main\scala\Memory.scala
-<empty>
-Memory
-Object
-Memory
-GameStarting
-1855
-1882
-54
-Memory.askPlayerName
-Apply
-false
-0
-false
-Memory.this.askPlayerName(inputHandler)
-
-27
-src\main\scala\Memory.scala
-<empty>
-Memory
-Object
-Memory
-GameStarting
-1810
-1810
-53
-scala.Tuple2.apply
-Apply
-false
-0
-false
-scala.Tuple2.apply[String, String](check, name)
-
-28
-src\main\scala\Memory.scala
-<empty>
-Memory
-Object
-Memory
-GameStarting
-1901
-1918
-56
-Memory.greetPlayer
-Apply
-false
-0
-false
-Memory.this.greetPlayer(name)
-
-29
-src\main\scala\Memory.scala
-<empty>
-Memory
-Object
-Memory
-GameStarting
-1901
-1918
-56
-Memory.greetPlayer
-Block
-true
-0
-false
-Memory.this.greetPlayer(name)
-
-30
-src\main\scala\Memory.scala
-<empty>
-Memory
-Object
-Memory
-GameStarting
-1810
-1918
-53
-scala.util.Try.map
-Apply
-false
-0
-false
-Memory.this.checkPlayerCount(count).map[(String, String)](((check: String) => {
-  val name: String = Memory.this.askPlayerName(inputHandler);
-  scala.Tuple2.apply[String, String](check, name)
-})).map[Unit](((x$1: (String, String)) => (x$1: (String, String) @unchecked) match {
-  case (_1: String, _2: String): (String, String)((check @ _), (name @ _)) => Memory.this.greetPlayer(name)
-}))
-
-31
-src\main\scala\Memory.scala
-<empty>
-Memory
-Object
-Memory
-GameStarting
-1756
-1918
-52
-scala.util.Try.flatMap
-Apply
-false
-0
-false
-Memory.this.askPlayerCount(inputHandler).flatMap[Unit](((count: Int) => Memory.this.checkPlayerCount(count).map[(String, String)](((check: String) => {
-  val name: String = Memory.this.askPlayerName(inputHandler);
-  scala.Tuple2.apply[String, String](check, name)
-})).map[Unit](((x$1: (String, String)) => (x$1: (String, String) @unchecked) match {
-  case (_1: String, _2: String): (String, String)((check @ _), (name @ _)) => Memory.this.greetPlayer(name)
-}))))
-
-32
+64
 src\main\scala\Memory.scala
 <empty>
 RealInputHandler
 Object
-RealInputHandler
+Memory.RealInputHandler
 readLine
-2060
-2085
+2314
+2339
 66
 scala.io.StdIn.readLine
 Apply

@@ -2,55 +2,65 @@ import org.scalatest.wordspec.AnyWordSpec
 import org.scalamock.scalatest.MockFactory
 import scala.util.{Success, Failure}
 import java.io.{ByteArrayOutputStream,ByteArrayInputStream, PrintStream}
+import Memory.MemoryInput
+import org.scalatest.matchers.should.Matchers
 
-class MemoryGameSpec extends AnyWordSpec with MockFactory {
+class MemoryGameSpec extends AnyWordSpec with Matchers with MockFactory {
 
-  "Memory" when {
+  "MemoryGameSpec" when {
     "askPlayerCount is called" should {
       "return a valid count within range" in {
-        val mockInputHandler = mock[InputHandler]
+        val mockInputHandler = mock[Memory.InputHandler]
         (mockInputHandler.readLine _).expects().returning("2")
-        assert(Memory.askPlayerCount(mockInputHandler) == Success(2))
+        Memory.MemoryInput.askPlayerCount(mockInputHandler) should be (Success(2))
       }
 
       "return failure on invalid number" in {
-        val mockInputHandler = mock[InputHandler]
+        val mockInputHandler = mock[Memory.InputHandler]
         (mockInputHandler.readLine _).expects().returning("4")
-        assert(Memory.askPlayerCount(mockInputHandler).isFailure)
+        Memory.MemoryInput.askPlayerCount(mockInputHandler).isFailure should be (true)
       }
 
       "return success for edge cases" in {
-        val mockInputHandler = mock[InputHandler]
+        val mockInputHandler = mock[Memory.InputHandler]
         (mockInputHandler.readLine _).expects().returning("1")
-        assert(Memory.askPlayerCount(mockInputHandler) == Success(1))
+        Memory.MemoryInput.askPlayerCount(mockInputHandler) should be (Success(1))
         (mockInputHandler.readLine _).expects().returning("3")
-        assert(Memory.askPlayerCount(mockInputHandler) == Success(3))
+        Memory.MemoryInput.askPlayerCount(mockInputHandler) should be (Success(3))
       }
     }
 
     "checkPlayerCount is called" should {
       "handle only one player" in {
-        assert(Memory.checkPlayerCount(1) == Success("One player has been selected."))
+        Memory.MemoryInput.checkPlayerCount(1) should be (Success("One player has been selected."))
       }
       
       "fail for more than one player" in {
-        assert(Memory.checkPlayerCount(2).isFailure)
-        assert(Memory.checkPlayerCount(3).isFailure)
+        Memory.MemoryInput.checkPlayerCount(2).isFailure should be (true)
+        Memory.MemoryInput.checkPlayerCount(3).isFailure should be (true)
       }
     }
 
     "GameStarting is called" should {
       "handle valid player count and name" in {
-        val mockInputHandler = mock[InputHandler]
+        val mockInputHandler = mock[Memory.InputHandler]
         (mockInputHandler.readLine _).expects().returning("1")
         (mockInputHandler.readLine _).expects().returning("Bob")
-        assert(Memory.GameStarting(mockInputHandler).isSuccess)
+        (mockInputHandler.readLine _).expects().returning("2").once()
+        Memory.MemoryInput.GameStarting(mockInputHandler).isSuccess should be (true)
       }
 
       "fail with invalid player count" in {
-        val mockInputHandler = mock[InputHandler]
+        val mockInputHandler = mock[Memory.InputHandler]
         (mockInputHandler.readLine _).expects().returning("4")
-        assert(Memory.GameStarting(mockInputHandler).isFailure)
+        Memory.MemoryInput.GameStarting(mockInputHandler).isFailure should be (true)
+      }
+      "fail with invalid card count" in {
+        val mockInputHandler = mock[Memory.InputHandler]
+        (mockInputHandler.readLine _).expects().returning("1")
+        (mockInputHandler.readLine _).expects().returning("Bob")
+        (mockInputHandler.readLine _).expects().returning("0")
+        Memory.MemoryInput.GameStarting(mockInputHandler).isFailure should be (true)
       }
     }
 
@@ -59,11 +69,10 @@ class MemoryGameSpec extends AnyWordSpec with MockFactory {
         val name = "Bob"
         val outCapture = new ByteArrayOutputStream()
         Console.withOut(new PrintStream(outCapture)) {
-          Memory.greetPlayer(name)
+          Memory.MemoryInput.greetPlayer(name)
         }
-        assert(outCapture.toString.contains("Welcome to the Memory Game, Bob! Have fun!"))
+       outCapture.toString should include ("Welcome to the Memory Game, Bob! Have fun!")
       }
     }
   }
 }
-
