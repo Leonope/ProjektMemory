@@ -1,0 +1,1236 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          Memory.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>import scala.io.StdIn.readLine
+</span>2 <span style=''>import scala.util.{Try, Success, Failure}
+</span>3 <span style=''>
+</span>4 <span style=''>object Memory {
+</span>5 <span style=''>  def main(args: Array[String]): Unit = {
+</span>6 <span style=''>     // $COVERAGE-OFF$
+</span>7 <span style=''>    MemoryInput.runApp(RealInputHandler)
+</span>8 <span style=''>    // $COVERAGE-ON$
+</span>9 <span style=''>  }
+</span>10 <span style=''>
+</span>11 <span style=''>  object MemoryInput {
+</span>12 <span style=''>    def runApp(inputHandler: InputHandler): Unit = {
+</span>13 <span style=''>      val gameOutcome = </span><span style='background: #AEF1AE'>GameStarting(inputHandler)</span><span style=''>
+</span>14 <span style=''>      gameOutcome match {
+</span>15 <span style=''>        case Success(_) =&gt; </span><span style='background: #AEF1AE'>println(&quot;Game setup completed successfully.&quot;)</span><span style=''>
+</span>16 <span style=''>        case Failure(e) =&gt; </span><span style='background: #AEF1AE'>println(s&quot;Error starting game: ${e.getMessage}&quot;)</span><span style=''>
+</span>17 <span style=''>      }
+</span>18 <span style=''>    }
+</span>19 <span style=''>
+</span>20 <span style=''>    def GameStarting(inputHandler: InputHandler): Try[Unit] = </span><span style='background: #AEF1AE'>for {
+</span>21 <span style=''></span><span style='background: #AEF1AE'>      count &lt;- askPlayerCount(inputHandler)
+</span>22 <span style=''></span><span style='background: #AEF1AE'>      check &lt;- checkPlayerCount(count) // Check the number of players and proceed only if it passes
+</span>23 <span style=''></span><span style='background: #AEF1AE'>      name = askPlayerName(inputHandler)
+</span>24 <span style=''></span><span style='background: #AEF1AE'>      cardCount &lt;- askCardCount(inputHandler)
+</span>25 <span style=''></span><span style='background: #AEF1AE'>      matrix &lt;- Matrix.setupMatrix(cardCount)
+</span>26 <span style=''></span><span style='background: #AEF1AE'>    } yield {
+</span>27 <span style=''></span><span style='background: #AEF1AE'>      greetPlayer(name)
+</span>28 <span style=''></span><span style='background: #AEF1AE'>      println(&quot;Memory game setup:&quot;)
+</span>29 <span style=''></span><span style='background: #AEF1AE'>      println(matrix)
+</span>30 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>31 <span style=''>
+</span>32 <span style=''>    def askPlayerCount(inputHandler: InputHandler): Try[Int] = </span><span style='background: #AEF1AE'>Try {
+</span>33 <span style=''></span><span style='background: #AEF1AE'>      println(&quot;How many players will play? (Choose between 1-3)&quot;)
+</span>34 <span style=''></span><span style='background: #AEF1AE'>      val count = inputHandler.readLine().toInt
+</span>35 <span style=''></span><span style='background: #AEF1AE'>      if (count &lt; 1 || count &gt; 3) throw new IllegalArgumentException(&quot;Player count must be between 1 and 3.&quot;)
+</span>36 <span style=''></span><span style='background: #AEF1AE'>      count
+</span>37 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>38 <span style=''>
+</span>39 <span style=''>   def checkPlayerCount(count: Int): Try[String] = count match {
+</span>40 <span style=''>    case 1 =&gt; </span><span style='background: #AEF1AE'>Success(&quot;One player has been selected.&quot;)</span><span style=''>
+</span>41 <span style=''>    case _ =&gt; </span><span style='background: #AEF1AE'>Failure(new Exception(&quot;Only 1 player is allowed, as the function for more players is not yet implemented.&quot;))</span><span style=''>
+</span>42 <span style=''>  }
+</span>43 <span style=''>
+</span>44 <span style=''>    def askCardCount(inputHandler: InputHandler): Try[Int] = </span><span style='background: #AEF1AE'>Try {
+</span>45 <span style=''></span><span style='background: #AEF1AE'>      println(&quot;How many unique cards will be in the game?&quot;)
+</span>46 <span style=''></span><span style='background: #AEF1AE'>      val count = inputHandler.readLine().toInt
+</span>47 <span style=''></span><span style='background: #AEF1AE'>      if (count &lt;= 0) throw new IllegalArgumentException(&quot;The count must be a positive integer greater than 0.&quot;)
+</span>48 <span style=''></span><span style='background: #AEF1AE'>      count * 2
+</span>49 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>50 <span style=''>
+</span>51 <span style=''>    def askPlayerName(inputHandler: InputHandler): String = {
+</span>52 <span style=''>      </span><span style='background: #AEF1AE'>println(&quot;Please enter your name:&quot;)</span><span style=''>
+</span>53 <span style=''>      </span><span style='background: #AEF1AE'>inputHandler.readLine()</span><span style=''>
+</span>54 <span style=''>    }
+</span>55 <span style=''>
+</span>56 <span style=''>    def greetPlayer(name: String): Unit = {
+</span>57 <span style=''>      </span><span style='background: #AEF1AE'>println(s&quot;Welcome to the Memory Game, $name! Have fun!&quot;)</span><span style=''>
+</span>58 <span style=''>    }
+</span>59 <span style=''>  }
+</span>60 <span style=''>
+</span>61 <span style=''>  trait InputHandler {
+</span>62 <span style=''>    def readLine(): String
+</span>63 <span style=''>  }
+</span>64 <span style=''>
+</span>65 <span style=''>  object RealInputHandler extends InputHandler {
+</span>66 <span style=''>    def readLine(): String = </span><span style='background: #AEF1AE'>scala.io.StdIn.readLine()</span><span style=''>
+</span>67 <span style=''>  }
+</span>68 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Tests</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          334
+          -
+          360
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Memory.MemoryInput.GameStarting
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          MemoryInput.this.GameStarting(inputHandler)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          416
+          -
+          461
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Game setup completed successfully.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          416
+          -
+          461
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Game setup completed successfully.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          490
+          -
+          538
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Error starting game: &quot;.+(e.getMessage()))
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          490
+          -
+          538
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Error starting game: &quot;.+(e.getMessage()))
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          620
+          -
+          1014
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Try.flatMap
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          MemoryInput.this.askPlayerCount(inputHandler).flatMap[Unit](((count: Int) =&gt; MemoryInput.this.checkPlayerCount(count).map[(String, String)](((check: String) =&gt; {
+  val name: String = MemoryInput.this.askPlayerName(inputHandler);
+  scala.Tuple2.apply[String, String](check, name)
+})).flatMap[Unit](((x$1: (String, String)) =&gt; (x$1: (String, String) @unchecked) match {
+  case (_1: String, _2: String): (String, String)((check @ _), (name @ _)) =&gt; MemoryInput.this.askCardCount(inputHandler).flatMap[Unit](((cardCount: Int) =&gt; Matrix.setupMatrix(cardCount).map[Unit](((matrix: Matrix[String]) =&gt; {
+    MemoryInput.this.greetPlayer(name);
+    scala.Predef.println(&quot;Memory game setup:&quot;);
+    scala.Predef.println(matrix)
+  }))))
+}))))
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          678
+          -
+          678
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple2.apply
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple2.apply[String, String](check, name)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          678
+          -
+          1014
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Try.flatMap
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          MemoryInput.this.checkPlayerCount(count).map[(String, String)](((check: String) =&gt; {
+  val name: String = MemoryInput.this.askPlayerName(inputHandler);
+  scala.Tuple2.apply[String, String](check, name)
+})).flatMap[Unit](((x$1: (String, String)) =&gt; (x$1: (String, String) @unchecked) match {
+  case (_1: String, _2: String): (String, String)((check @ _), (name @ _)) =&gt; MemoryInput.this.askCardCount(inputHandler).flatMap[Unit](((cardCount: Int) =&gt; Matrix.setupMatrix(cardCount).map[Unit](((matrix: Matrix[String]) =&gt; {
+    MemoryInput.this.greetPlayer(name);
+    scala.Predef.println(&quot;Memory game setup:&quot;);
+    scala.Predef.println(matrix)
+  }))))
+}))
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          786
+          -
+          813
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Memory.MemoryInput.askPlayerName
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          MemoryInput.this.askPlayerName(inputHandler)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          821
+          -
+          1014
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.util.Try.flatMap
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          MemoryInput.this.askCardCount(inputHandler).flatMap[Unit](((cardCount: Int) =&gt; Matrix.setupMatrix(cardCount).map[Unit](((matrix: Matrix[String]) =&gt; {
+  MemoryInput.this.greetPlayer(name);
+  scala.Predef.println(&quot;Memory game setup:&quot;);
+  scala.Predef.println(matrix)
+}))))
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          821
+          -
+          1014
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Try.flatMap
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          MemoryInput.this.askCardCount(inputHandler).flatMap[Unit](((cardCount: Int) =&gt; Matrix.setupMatrix(cardCount).map[Unit](((matrix: Matrix[String]) =&gt; {
+  MemoryInput.this.greetPlayer(name);
+  scala.Predef.println(&quot;Memory game setup:&quot;);
+  scala.Predef.println(matrix)
+}))))
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          868
+          -
+          1014
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Try.map
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          Matrix.setupMatrix(cardCount).map[Unit](((matrix: Matrix[String]) =&gt; {
+  MemoryInput.this.greetPlayer(name);
+  scala.Predef.println(&quot;Memory game setup:&quot;);
+  scala.Predef.println(matrix)
+}))
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          930
+          -
+          947
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Memory.MemoryInput.greetPlayer
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          MemoryInput.this.greetPlayer(name)
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          955
+          -
+          984
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Memory game setup:&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          992
+          -
+          1007
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(matrix)
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          1081
+          -
+          1333
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Try.apply
+        </td>
+        <td>
+          memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Try.apply[Int]({
+  scala.Predef.println(&quot;How many players will play? (Choose between 1-3)&quot;);
+  val count: Int = scala.Predef.augmentString(inputHandler.readLine()).toInt;
+  if (count.&lt;(1).||(count.&gt;(3)))
+    throw new scala.`package`.IllegalArgumentException(&quot;Player count must be between 1 and 3.&quot;)
+  else
+    ();
+  count
+})
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          1094
+          -
+          1153
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memorymainspec,memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;How many players will play? (Choose between 1-3)&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          1173
+          -
+          1202
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.StringOps.toInt
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(inputHandler.readLine()).toInt
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          1173
+          -
+          1196
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Memory.InputHandler.readLine
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          inputHandler.readLine()
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          1238
+          -
+          1313
+        </td>
+        <td>
+          Throw
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          throw new scala.`package`.IllegalArgumentException(&quot;Player count must be between 1 and 3.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          1210
+          -
+          1210
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorymainspec,memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          1222
+          -
+          1223
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorymainspec,memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          1214
+          -
+          1236
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.||
+        </td>
+        <td>
+          memorymainspec,memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          count.&lt;(1).||(count.&gt;(3))
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          1210
+          -
+          1210
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorymainspec,memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          1227
+          -
+          1236
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td>
+          memorymainspec,memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          count.&gt;(3)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          1238
+          -
+          1313
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          throw new scala.`package`.IllegalArgumentException(&quot;Player count must be between 1 and 3.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          1417
+          -
+          1457
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.util.Success.apply
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Success.apply[String](&quot;One player has been selected.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          1417
+          -
+          1457
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Success.apply
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Success.apply[String](&quot;One player has been selected.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          1473
+          -
+          1581
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.util.Failure.apply
+        </td>
+        <td>
+          memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Failure.apply[Nothing](new scala.`package`.Exception(&quot;Only 1 player is allowed, as the function for more players is not yet implemented.&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          1473
+          -
+          1581
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Failure.apply
+        </td>
+        <td>
+          memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Failure.apply[Nothing](new scala.`package`.Exception(&quot;Only 1 player is allowed, as the function for more players is not yet implemented.&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          1481
+          -
+          1580
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Exception.&lt;init&gt;
+        </td>
+        <td>
+          memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          new scala.`package`.Exception(&quot;Only 1 player is allowed, as the function for more players is not yet implemented.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          1651
+          -
+          1904
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Try.apply
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Try.apply[Int]({
+  scala.Predef.println(&quot;How many unique cards will be in the game?&quot;);
+  val count: Int = scala.Predef.augmentString(inputHandler.readLine()).toInt;
+  if (count.&lt;=(0))
+    throw new scala.`package`.IllegalArgumentException(&quot;The count must be a positive integer greater than 0.&quot;)
+  else
+    ();
+  count.*(2)
+})
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          1664
+          -
+          1717
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;How many unique cards will be in the game?&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          1737
+          -
+          1766
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.StringOps.toInt
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(inputHandler.readLine()).toInt
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          1737
+          -
+          1760
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Memory.InputHandler.readLine
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          inputHandler.readLine()
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          1790
+          -
+          1880
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          throw new scala.`package`.IllegalArgumentException(&quot;The count must be a positive integer greater than 0.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          1790
+          -
+          1880
+        </td>
+        <td>
+          Throw
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorygamespec
+        </td>
+        <td style="background: #AEF1AE">
+          throw new scala.`package`.IllegalArgumentException(&quot;The count must be a positive integer greater than 0.&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          1774
+          -
+          1774
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          1778
+          -
+          1788
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&lt;=
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          count.&lt;=(0)
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          1774
+          -
+          1774
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          48
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          1888
+          -
+          1897
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.*
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          count.*(2)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          1977
+          -
+          2011
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Please enter your name:&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          53
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          2019
+          -
+          2042
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Memory.InputHandler.readLine
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          inputHandler.readLine()
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          63
+        </td>
+        <td>
+          2104
+          -
+          2160
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Welcome to the Memory Game, &quot;.+(name).+(&quot;! Have fun!&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          66
+        </td>
+        <td>
+          64
+        </td>
+        <td>
+          2314
+          -
+          2339
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.io.StdIn.readLine
+        </td>
+        <td>
+          memorymainspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.io.StdIn.readLine()
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>
