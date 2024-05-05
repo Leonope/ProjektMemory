@@ -33,5 +33,5 @@ jobs:
       run: sbt clean coverage test coverageReport
     - name: Coveralls
       env:
-        COVERALLS_REPO_TOKEN: ${{ secrets.lDuJKjfihmCLIzjZu32EqegYjIqod5cyZ }}
+        COVERALLS_REPO_TOKEN: ${{lDuJKjfihmCLIzjZu32EqegYjIqod5cyZ }}
       run: sbt coverageAggregate coveralls
