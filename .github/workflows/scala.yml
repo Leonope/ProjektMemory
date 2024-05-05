@@ -1,22 +1,10 @@
-name: Scala CI
+language: scala
+scala:
+- 2.12.7
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+script:
+- sbt clean coverage test coverageReport
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+after_success:
+- sbt coverageReport coveralls
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 11
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
-        distribution: 'adopt'
-    - name: Run SBT
-      run: |
-        sbt clean update compile test
