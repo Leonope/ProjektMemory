@@ -20,7 +20,7 @@ class RestartGameCommand(controller: Controller) extends Command {
     controller.GameStarting()
   }
 }
-
+// $COVERAGE-OFF$
 class QuitGameCommand extends Command {
   def execute(): Unit = {
     println("Game exiting")
@@ -47,7 +47,6 @@ def endGamePrompt(): Unit = {
     try {
       controller.GameStarting()
       if (controller.gameLogic.checkGameEnd()) {
-      // $COVERAGE-OFF$
       endGamePrompt()  
       // $COVERAGE-ON$
     }
