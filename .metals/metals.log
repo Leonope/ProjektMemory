@@ -13770,3 +13770,50 @@ Caused by: java.nio.channels.ClosedChannelException
 Mai 10, 2024 9:45:18 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFORMATION: Unsupported notification method: $/setTrace
 2024.05.10 09:45:19 INFO  time: Imported build in 0.32s
+Mai 10, 2024 9:45:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 462
+Mai 10, 2024 9:45:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 461
+Mai 10, 2024 9:45:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 467
+Mai 10, 2024 9:45:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 469
+Mai 10, 2024 9:45:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 472
+2024.05.10 09:46:19 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\plugins.sbt. Using presentation compiler with project's scala-library version: 2.13.12
+2024.05.10 09:46:20 INFO  time: code lens generation in 1m2s
+2024.05.10 09:46:23 INFO  time: code lens generation in 38s
+2024.05.10 09:47:04 INFO  time: indexed workspace in 1m20s
+2024.05.10 09:48:04 WARN  Invalid text document uri received from build server: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/src/main/scala/controller/InputHandler.scala
+2024.05.10 09:48:04 INFO  BSP server: 
+Found names but no class, trait or object is defined in the compilation unit.
+The incremental compiler cannot record the dependency information in such case.
+Some errors like unused import referring to a non-existent class might not be reported.
+    
+2024.05.10 09:48:09 INFO  skipping build import with status 'Installed'
+2024.05.10 09:48:09 INFO  Disconnecting from Bloop session...
+2024.05.10 09:48:09 INFO  Shut down connection with build server.
+2024.05.10 09:48:10 INFO  Shut down connection with build server.
+2024.05.10 09:48:10 INFO  Shut down connection with build server.
+2024.05.10 09:48:10 INFO  Attempting to connect to the build server...
+2024.05.10 09:48:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.05.10 09:48:10 INFO  Attempting to connect to the build server...
+2024.05.10 09:48:10 INFO  Attempting to connect to the build server...
+2024.05.10 09:48:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.05.10 09:48:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.05.10 09:48:10 INFO  time: Connected to build server in 0.2s
+2024.05.10 09:48:10 INFO  Connected to Build server: Bloop v1.5.17
+2024.05.10 09:48:10 INFO  time: Imported build in 0.2s
+2024.05.10 09:49:15 INFO  time: indexed workspace in 1m4s
+2024.05.10 09:49:51 INFO  time: code lens generation in 35s
+2024.05.10 09:50:29 WARN  Invalid text document uri received from build server: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/src/main/scala/controller/InputHandler.scala
+2024.05.10 09:50:29 INFO  BSP server: 
+Found names but no class, trait or object is defined in the compilation unit.
+The incremental compiler cannot record the dependency information in such case.
+Some errors like unused import referring to a non-existent class might not be reported.
+    
+Mai 10, 2024 9:51:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 603
+2024.05.10 09:51:33 INFO  compiling projektmemory (1 scala source)
+2024.05.10 09:51:35 WARN  Invalid text document uri received from build server: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/src/main/scala/controller/InputHandler.scala
+2024.05.10 09:51:35 INFO  time: compiled projektmemory in 2.08s
