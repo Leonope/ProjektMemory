@@ -1,197 +1,676 @@
 <scoverage 
-statement-count="62" statements-invoked="62" statement-rate="100.00" branch-rate="100.00" version="1.0" timestamp="1713880785086">
+statement-count="184" statements-invoked="182" statement-rate="98.91" branch-rate="95.83" version="1.0" timestamp="1715258943254">
     <packages>
-        <package name="&lt;empty&gt;" statement-count="62" statements-invoked="62" statement-rate="100.00">
+        <package name="&lt;empty&gt;" statement-count="173" statements-invoked="171" statement-rate="98.84">
             <classes>
                 <class 
-                name="Memory.MemoryInput" filename="Memory.scala" statement-count="44" statements-invoked="44" statement-rate="100.00" branch-rate="100.00">
+                name="StandardMatrixFactory" filename="model\Matrix.scala" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
                     <methods>
                         <method 
-                        name="&lt;empty&gt;/MemoryInput/checkPlayerCount" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                        name="&lt;empty&gt;/StandardMatrixFactory/create" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="checkPlayerCount" start="1473" end="1581" line="41" branch="true" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="StandardMatrixFactory" class-type="Class" full-class-name="StandardMatrixFactory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="create" start="2047" end="2082" line="60" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="checkPlayerCount" start="1417" end="1457" line="40" branch="true" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="checkPlayerCount" start="1417" end="1457" line="40" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="checkPlayerCount" start="1473" end="1581" line="41" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="checkPlayerCount" start="1481" end="1580" line="41" branch="false" invocation-count="1" ignored="false">
-</statement>
-                            </statements>
-</method>
-                        <method 
-                        name="&lt;empty&gt;/MemoryInput/GameStarting" statement-count="10" statements-invoked="10" statement-rate="100.00" branch-rate="100.00">
-                            <statements>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="821" end="1014" line="24" branch="true" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="678" end="678" line="22" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="992" end="1007" line="29" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="821" end="1014" line="24" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="786" end="813" line="23" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="620" end="1014" line="21" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="955" end="984" line="28" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="930" end="947" line="27" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="868" end="1014" line="25" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="GameStarting" start="678" end="1014" line="22" branch="false" invocation-count="1" ignored="false">
-</statement>
-                            </statements>
-</method>
-                        <method 
-                        name="&lt;empty&gt;/MemoryInput/askPlayerCount" statement-count="11" statements-invoked="11" statement-rate="100.00" branch-rate="100.00">
-                            <statements>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="1238" end="1313" line="35" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="1094" end="1153" line="33" branch="false" invocation-count="2" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="1210" end="1210" line="35" branch="true" invocation-count="2" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="1222" end="1223" line="35" branch="false" invocation-count="2" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="1214" end="1236" line="35" branch="false" invocation-count="2" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="1210" end="1210" line="35" branch="false" invocation-count="2" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="1173" end="1202" line="34" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="1081" end="1333" line="32" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="1173" end="1196" line="34" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="1227" end="1236" line="35" branch="false" invocation-count="2" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerCount" start="1238" end="1313" line="35" branch="true" invocation-count="1" ignored="false">
-</statement>
-                            </statements>
-</method>
-                        <method 
-                        name="&lt;empty&gt;/MemoryInput/greetPlayer" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
-                            <statements>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="greetPlayer" start="2104" end="2160" line="57" branch="false" invocation-count="1" ignored="false">
-</statement>
-                            </statements>
-</method>
-                        <method 
-                        name="&lt;empty&gt;/MemoryInput/askPlayerName" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
-                            <statements>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerName" start="2019" end="2042" line="53" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askPlayerName" start="1977" end="2011" line="52" branch="false" invocation-count="1" ignored="false">
-</statement>
-                            </statements>
-</method>
-                        <method 
-                        name="&lt;empty&gt;/MemoryInput/runApp" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
-                            <statements>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="runApp" start="490" end="538" line="16" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="runApp" start="334" end="360" line="13" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="runApp" start="416" end="461" line="15" branch="true" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="runApp" start="416" end="461" line="15" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="runApp" start="490" end="538" line="16" branch="true" invocation-count="1" ignored="false">
-</statement>
-                            </statements>
-</method>
-                        <method 
-                        name="&lt;empty&gt;/MemoryInput/askCardCount" statement-count="10" statements-invoked="10" statement-rate="100.00" branch-rate="100.00">
-                            <statements>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askCardCount" start="1888" end="1897" line="48" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askCardCount" start="1737" end="1766" line="46" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askCardCount" start="1790" end="1880" line="47" branch="true" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askCardCount" start="1790" end="1880" line="47" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askCardCount" start="1774" end="1774" line="47" branch="true" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askCardCount" start="1737" end="1760" line="46" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askCardCount" start="1651" end="1904" line="44" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askCardCount" start="1778" end="1788" line="47" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askCardCount" start="1774" end="1774" line="47" branch="false" invocation-count="1" ignored="false">
-</statement>
-                                <statement 
-                                package="&lt;empty&gt;" class="MemoryInput" class-type="Object" full-class-name="Memory.MemoryInput" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="askCardCount" start="1664" end="1717" line="45" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="StandardMatrixFactory" class-type="Class" full-class-name="StandardMatrixFactory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="create" start="2008" end="2042" line="59" branch="false" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
                     </methods>
 </class>
                 <class 
-                name="Matrix" filename="Matrix.scala" statement-count="17" statements-invoked="17" statement-rate="100.00" branch-rate="100.00">
+                name="RandomMatrixFactory" filename="model\Matrix.scala" statement-count="4" statements-invoked="4" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/RandomMatrixFactory/create" statement-count="4" statements-invoked="4" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="RandomMatrixFactory" class-type="Class" full-class-name="RandomMatrixFactory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="create" start="2325" end="2346" line="68" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RandomMatrixFactory" class-type="Class" full-class-name="RandomMatrixFactory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="create" start="2339" end="2339" line="68" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RandomMatrixFactory" class-type="Class" full-class-name="RandomMatrixFactory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="create" start="2351" end="2392" line="69" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RandomMatrixFactory" class-type="Class" full-class-name="RandomMatrixFactory" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="create" start="2266" end="2300" line="67" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="Tui.RestartGameCommand" filename="aview\tui.scala" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/RestartGameCommand/execute" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="RestartGameCommand" class-type="Class" full-class-name="Tui.RestartGameCommand" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="execute" start="563" end="588" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RestartGameCommand" class-type="Class" full-class-name="Tui.RestartGameCommand" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="execute" start="525" end="558" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RestartGameCommand" class-type="Class" full-class-name="Tui.RestartGameCommand" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="execute" start="586" end="586" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="Tui.QuitGameCommand" filename="aview\tui.scala" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/QuitGameCommand/execute" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="QuitGameCommand" class-type="Class" full-class-name="Tui.QuitGameCommand" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="execute" start="694" end="708" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="QuitGameCommand" class-type="Class" full-class-name="Tui.QuitGameCommand" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="execute" start="666" end="689" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="FaceUpState" filename="model\Card.scala" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/FaceUpState/isFaceUp" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="FaceUpState" class-type="Object" full-class-name="FaceUpState" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="isFaceUp" start="426" end="430" line="11" branch="false" invocation-count="2" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/FaceUpState/display" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="FaceUpState" class-type="Object" full-class-name="FaceUpState" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="display" start="383" end="399" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/FaceUpState/click" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="FaceUpState" class-type="Object" full-class-name="FaceUpState" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="click" start="314" end="346" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="Card" filename="model\Card.scala" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/Card/turnCard" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Card" class-type="Class" full-class-name="Card" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="turnCard" start="770" end="795" line="23" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Card" class-type="Class" full-class-name="Card" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="turnCard" start="805" end="832" line="24" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Card" class-type="Class" full-class-name="Card" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="turnCard" start="770" end="795" line="23" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Card" class-type="Class" full-class-name="Card" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="turnCard" start="746" end="768" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Card" class-type="Class" full-class-name="Card" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="turnCard" start="805" end="832" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Card/toString" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Card" class-type="Class" full-class-name="Card" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="toString" start="912" end="931" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Card/isFaceUp" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Card" class-type="Class" full-class-name="Card" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="isFaceUp" start="863" end="877" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="Tui" filename="aview\tui.scala" statement-count="23" statements-invoked="23" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/Tui/update" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="update" start="319" end="362" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Tui/endGamePrompt" statement-count="11" statements-invoked="11" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="endGamePrompt" start="886" end="986" line="35" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="endGamePrompt" start="1005" end="1086" line="38" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="endGamePrompt" start="942" end="952" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="endGamePrompt" start="805" end="845" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="endGamePrompt" start="1112" end="1175" line="42" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="endGamePrompt" start="962" end="986" line="37" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="endGamePrompt" start="1065" end="1086" line="40" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="endGamePrompt" start="1035" end="1056" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="endGamePrompt" start="1112" end="1175" line="42" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="endGamePrompt" start="750" end="787" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="endGamePrompt" start="919" end="953" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Tui/run" statement-count="8" statements-invoked="8" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="run" start="1225" end="1250" line="48" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="run" start="1481" end="1502" line="55" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="run" start="1217" end="1447" line="47" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="run" start="1481" end="1502" line="55" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="run" start="1257" end="1257" line="49" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="run" start="1257" end="1257" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="run" start="1489" end="1501" line="55" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="run" start="1261" end="1296" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Tui/&lt;none&gt;" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="&lt;none&gt;" start="174" end="194" line="6" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="&lt;none&gt;" start="155" end="171" line="5" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Tui/displayMessage" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Tui" class-type="Class" full-class-name="Tui" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\aview\tui.scala" method="displayMessage" start="1593" end="1609" line="60" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="StandardScoring" filename="model\Logic.scala" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/StandardScoring/calculateScore" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="StandardScoring" class-type="Class" full-class-name="StandardScoring" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="calculateScore" start="2242" end="2259" line="64" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="StandardScoring" class-type="Class" full-class-name="StandardScoring" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="calculateScore" start="2269" end="2281" line="65" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="StandardScoring" class-type="Class" full-class-name="StandardScoring" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="calculateScore" start="2242" end="2259" line="64" branch="true" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="BonusScoring" filename="model\Logic.scala" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/BonusScoring/calculateScore" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="BonusScoring" class-type="Class" full-class-name="BonusScoring" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="calculateScore" start="2470" end="2492" line="71" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="BonusScoring" class-type="Class" full-class-name="BonusScoring" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="calculateScore" start="2449" end="2493" line="71" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="BonusScoring" class-type="Class" full-class-name="BonusScoring" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="calculateScore" start="2464" end="2466" line="71" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="BonusScoring" class-type="Class" full-class-name="BonusScoring" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="calculateScore" start="2449" end="2493" line="71" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="BonusScoring" class-type="Class" full-class-name="BonusScoring" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="calculateScore" start="2503" end="2515" line="72" branch="true" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="Controller" filename="controller\Controller.scala" statement-count="13" statements-invoked="13" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/Controller/withNotification" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="withNotification" start="352" end="367" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Controller/GameStarting" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="GameStarting" start="519" end="756" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="GameStarting" start="418" end="1273" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="GameStarting" start="560" end="756" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="GameStarting" start="441" end="1269" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="GameStarting" start="592" end="756" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="GameStarting" start="471" end="756" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Controller/updateGameView" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="updateGameView" start="4190" end="4205" line="125" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="updateGameView" start="4148" end="4187" line="124" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="updateGameView" start="4061" end="4076" line="120" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Controller/greetPlayer" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="greetPlayer" start="3950" end="3965" line="116" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="greetPlayer" start="3876" end="3945" line="115" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Controller/&lt;none&gt;" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Controller" class-type="Class" full-class-name="Controller" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\controller\Controller.scala" method="&lt;none&gt;" start="214" end="230" line="6" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="FaceDownState" filename="model\Card.scala" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/FaceDownState/isFaceUp" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="FaceDownState" class-type="Object" full-class-name="FaceDownState" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="isFaceUp" start="609" end="614" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/FaceDownState/display" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="FaceDownState" class-type="Object" full-class-name="FaceDownState" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="display" start="579" end="582" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/FaceDownState/click" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="FaceDownState" class-type="Object" full-class-name="FaceDownState" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Card.scala" method="click" start="512" end="542" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="Logic" filename="model\Logic.scala" statement-count="60" statements-invoked="58" statement-rate="96.67" branch-rate="90.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/Logic/removeCards" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="removeCards" start="1522" end="1540" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="removeCards" start="1489" end="1507" line="40" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="removeCards" start="1653" end="1669" line="43" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="removeCards" start="1761" end="1796" line="47" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="removeCards" start="1558" end="1574" line="42" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="removeCards" start="1723" end="1758" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Logic/checkCards" statement-count="10" statements-invoked="10" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkCards" start="1386" end="1391" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkCards" start="1147" end="1155" line="29" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkCards" start="1108" end="1126" line="28" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkCards" start="1165" end="1240" line="30" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkCards" start="1290" end="1379" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkCards" start="1157" end="1276" line="29" branch="true" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkCards" start="1073" end="1091" line="27" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkCards" start="1282" end="1397" line="33" branch="true" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkCards" start="1135" end="1155" line="29" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkCards" start="1266" end="1270" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Logic/turnCard" statement-count="34" statements-invoked="32" statement-rate="94.12" branch-rate="87.50">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="880" end="937" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="340" end="340" line="10" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="579" end="595" line="14" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="746" end="768" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="863" end="863" line="19" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="647" end="663" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="835" end="853" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="319" end="335" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="863" end="863" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="816" end="821" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="382" end="397" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="636" end="692" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="777" end="854" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="946" end="962" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="340" end="340" line="10" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="717" end="740" line="17" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="910" end="926" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="584" end="594" line="14" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="567" end="595" line="14" branch="true" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="360" end="976" line="10" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="567" end="595" line="14" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="880" end="937" line="19" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="746" end="768" line="17" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="785" end="854" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="958" end="962" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="344" end="358" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="665" end="681" line="16" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="892" end="908" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="538" end="555" line="13" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="717" end="740" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="455" end="487" line="12" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="609" end="970" line="15" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="867" end="878" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="turnCard" start="717" end="740" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Logic/checkGameEnd" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkGameEnd" start="1852" end="1852" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkGameEnd" start="1867" end="1877" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkGameEnd" start="1837" end="1851" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkGameEnd" start="1837" end="1859" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="checkGameEnd" start="1837" end="1878" line="52" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Logic/&lt;none&gt;" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="&lt;none&gt;" start="169" end="173" line="3" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="&lt;none&gt;" start="121" end="122" line="2" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="&lt;none&gt;" start="214" end="215" line="4" branch="false" invocation-count="2" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Logic/getScore" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="getScore" start="1904" end="1909" line="55" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Logic/getMatrix" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Logic" class-type="Class" full-class-name="Logic" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Logic.scala" method="getMatrix" start="251" end="257" line="6" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="Matrix" filename="model\Matrix.scala" statement-count="45" statements-invoked="45" statement-rate="100.00" branch-rate="100.00">
                     <methods>
                         <method 
                         name="&lt;empty&gt;/Matrix/&lt;none&gt;" statement-count="4" statements-invoked="4" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="&lt;none&gt;" start="175" end="179" line="5" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="&lt;none&gt;" start="200" end="204" line="6" branch="false" invocation-count="2" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="&lt;none&gt;" start="158" end="186" line="5" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="&lt;none&gt;" start="183" end="211" line="6" branch="false" invocation-count="2" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="&lt;none&gt;" start="169" end="173" line="5" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="&lt;none&gt;" start="194" end="198" line="6" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="&lt;none&gt;" start="181" end="185" line="5" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="&lt;none&gt;" start="206" end="210" line="6" branch="false" invocation-count="2" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Matrix/initializeWithCards" statement-count="14" statements-invoked="14" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="590" end="591" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="579" end="583" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="623" end="635" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="537" end="541" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="585" end="655" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="506" end="542" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="571" end="572" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="598" end="602" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="514" end="541" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="641" end="651" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="610" end="636" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="530" end="541" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="557" end="558" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="initializeWithCards" start="561" end="655" line="19" branch="false" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
@@ -199,7 +678,7 @@ statement-count="62" statements-invoked="62" statement-rate="100.00" branch-rate
                         name="&lt;empty&gt;/Matrix/apply" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="apply" start="225" end="239" line="7" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="apply" start="250" end="264" line="8" branch="false" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
@@ -207,42 +686,68 @@ statement-count="62" statements-invoked="62" statement-rate="100.00" branch-rate
                         name="&lt;empty&gt;/Matrix/toString" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="toString" start="348" end="397" line="9" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="toString" start="378" end="443" line="12" branch="false" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
                         <method 
-                        name="&lt;empty&gt;/Matrix/setupMatrix" statement-count="10" statements-invoked="10" statement-rate="100.00" branch-rate="100.00">
+                        name="&lt;empty&gt;/Matrix/getGrid" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="setupMatrix" start="474" end="892" line="13" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="getGrid" start="729" end="733" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Matrix/setupMatrix" statement-count="16" statements-invoked="16" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1561" end="1658" line="47" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="setupMatrix" start="499" end="500" line="14" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1258" end="1258" line="42" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="setupMatrix" start="551" end="551" line="15" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1596" end="1657" line="47" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="setupMatrix" start="778" end="778" line="20" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1205" end="1248" line="41" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="setupMatrix" start="767" end="767" line="20" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1664" end="1735" line="49" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="setupMatrix" start="843" end="888" line="21" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1473" end="1473" line="46" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="setupMatrix" start="498" end="541" line="14" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1567" end="1580" line="47" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="setupMatrix" start="522" end="540" line="14" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1562" end="1563" line="47" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="setupMatrix" start="557" end="557" line="15" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1629" end="1656" line="47" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="setupMatrix" start="884" end="887" line="21" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1229" end="1247" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1701" end="1727" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1264" end="1264" line="42" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1181" end="1739" line="40" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1484" end="1484" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1600" end="1627" line="47" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Object" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="setupMatrix" start="1206" end="1207" line="41" branch="false" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
@@ -250,20 +755,110 @@ statement-count="62" statements-invoked="62" statement-rate="100.00" branch-rate
                         name="&lt;empty&gt;/Matrix/update" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Matrix.scala" method="update" start="291" end="313" line="8" branch="false" invocation-count="1" ignored="false">
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="update" start="316" end="338" line="9" branch="false" invocation-count="2" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Matrix/select" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="select" start="845" end="860" line="31" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="select" start="779" end="793" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="select" start="918" end="959" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="select" start="1011" end="1013" line="33" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="select" start="1011" end="1013" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="select" start="935" end="958" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Matrix" class-type="Class" full-class-name="Matrix" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\Matrix.scala" method="select" start="822" end="959" line="30" branch="true" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+        <package name="util" statement-count="11" statements-invoked="11" statement-rate="100.00">
+            <classes>
+                <class 
+                name="util.Observable" filename="util\Observable.scala" statement-count="8" statements-invoked="8" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="util/Observable/remove" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="util" class="Observable" class-type="Class" full-class-name="util.Observable" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\util\Observable.scala" method="remove" start="231" end="265" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="util" class="Observable" class-type="Class" full-class-name="util.Observable" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\util\Observable.scala" method="remove" start="258" end="264" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="util" class="Observable" class-type="Class" full-class-name="util.Observable" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\util\Observable.scala" method="remove" start="217" end="265" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="util/Observable/notifyObservers" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="util" class="Observable" class-type="Class" full-class-name="util.Observable" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\util\Observable.scala" method="notifyObservers" start="297" end="331" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="util" class="Observable" class-type="Class" full-class-name="util.Observable" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\util\Observable.scala" method="notifyObservers" start="322" end="330" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="util/Observable/add" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="util" class="Observable" class-type="Class" full-class-name="util.Observable" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\util\Observable.scala" method="add" start="165" end="181" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="util" class="Observable" class-type="Class" full-class-name="util.Observable" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\util\Observable.scala" method="add" start="151" end="181" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="util/Observable/&lt;none&gt;" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="util" class="Observable" class-type="Class" full-class-name="util.Observable" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\util\Observable.scala" method="&lt;none&gt;" start="110" end="118" line="8" branch="false" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
                     </methods>
 </class>
                 <class 
-                name="Memory.RealInputHandler" filename="Memory.scala" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                name="util.RealInputHandler" filename="util\InputHandler.scala" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
                     <methods>
                         <method 
-                        name="&lt;empty&gt;/RealInputHandler/readLine" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                        name="util/RealInputHandler/askForInput" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="&lt;empty&gt;" class="RealInputHandler" class-type="Object" full-class-name="Memory.RealInputHandler" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala" method="readLine" start="2314" end="2339" line="66" branch="false" invocation-count="1" ignored="false">
+                                package="util" class="RealInputHandler" class-type="Object" full-class-name="util.RealInputHandler" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\util\InputHandler.scala" method="askForInput" start="316" end="331" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="util" class="RealInputHandler" class-type="Object" full-class-name="util.RealInputHandler" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\util\InputHandler.scala" method="askForInput" start="363" end="373" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="util/RealInputHandler/readLine" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="util" class="RealInputHandler" class-type="Object" full-class-name="util.RealInputHandler" source="C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\util\InputHandler.scala" method="readLine" start="230" end="255" line="10" branch="false" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>

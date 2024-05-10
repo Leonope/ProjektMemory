@@ -213,7 +213,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "C:\\Program Files (x86)\\Java\\jre1.8.0_321",
+                "home": "C:\\Program Files\\Java\\jdk-13.0.1",
                 "options": [
                     "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\project"
                 ]
@@ -222,7 +222,7 @@
                 
             ],
             "runtimeConfig": {
-                "home": "C:\\Program Files (x86)\\Java\\jre1.8.0_321",
+                "home": "C:\\Program Files\\Java\\jdk-13.0.1",
                 "options": [
                     "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\project"
                 ]

@@ -1,0 +1,279 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(early(addDefaultCommands), None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(addDefaultCommands, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(early(initialize), None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(initialize, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(boot, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(writeSbtVersion, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(reload, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(sbtStashOnFailure, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(onFailure loadFailed, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(loadp, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0mwelcome to sbt 1.9.8 (Oracle Corporation Java 1.8.0_321)[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.defaultLoad until apply took 73.5174ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                      Load.loadUnit: plugins took 58.7928ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                      Load.loadUnit: defsScala took 0.25ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\project[0m
+[0m[[0m[0mdebug[0m] [0m[0m                        Load.loadUnit: mkEval took 5.5927ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\project, returning: ()[0m
+[0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))[0m
+[0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 10.8642 ms[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project projektmemory-build-build-build from metals.sbt ...[0m
+[0m[[0m[0mdebug[0m] [0m[0m                          Load.resolveProject(projektmemory-build-build-build) took 35.0872ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                        Load.loadTransitive: finalizeProject(Project(id projektmemory-build-build-build, base: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\project, plugins: List(<none>))) took 63.9208ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\project, returning: (projektmemory-build-build-build)[0m
+[0m[[0m[0mdebug[0m] [0m[0m                      Load.loadUnit: loadedProjectsRaw took 414.3564ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                      Load.loadUnit: cleanEvalClasses took 4.7048ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                    Load.loadUnit(file:/C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/project/project/project/, ...) took 482.0858ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                  Load.apply: load took 557.2008ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                  Load.apply: resolveProjects took 3.7452ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                  Load.apply: finalTransforms took 37.6497ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                  Load.apply: config.delegates took 5.5606ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                  Load.apply: Def.make(settings)... took 309.5848ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                  Load.apply: structureIndex took 76.9605ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                  Load.apply: mkStreams took 1.3357ms[0m
+[0m[[0m[0minfo[0m] [0m[0mloading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\project[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0m                Load.loadUnit: plugins took 1747.2965ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                Load.loadUnit: defsScala took 0.002ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project[0m
+[0m[[0m[0mdebug[0m] [0m[0m                  Load.loadUnit: mkEval took 0.3539ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project, returning: ()[0m
+[0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(bloop.integrations.sbt.BloopPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(bloop.integrations.sbt.BloopPlugin))))[0m
+[0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,bloop.integrations.sbt.BloopPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 1.5639 ms[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project projektmemory-build-build from metals.sbt ...[0m
+[0m[[0m[0mdebug[0m] [0m[0m                    Load.resolveProject(projektmemory-build-build) took 17.0508ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                  Load.loadTransitive: finalizeProject(Project(id projektmemory-build-build, base: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project, plugins: List(<none>))) took 18.9223ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project, returning: (projektmemory-build-build)[0m
+[0m[[0m[0mdebug[0m] [0m[0m                Load.loadUnit: loadedProjectsRaw took 40.2187ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m                Load.loadUnit: cleanEvalClasses took 1.1495ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m              Load.loadUnit(file:/C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/project/project/, ...) took 1789.5485ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.apply: load took 1790.9675ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.apply: resolveProjects took 0.0965ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.apply: finalTransforms took 11.1672ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.apply: config.delegates took 0.2108ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.apply: Def.make(settings)... took 63.3866ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.apply: structureIndex took 59.7684ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.apply: mkStreams took 0.0018ms[0m
+[0m[[0m[0minfo[0m] [0m[0mloading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: bloopInstall[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop\projektmemory-build-build.json[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 4 s, completed 04.05.2024 22:25:58[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: plugins took 6258.1384ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: defsScala took 0.0017ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.loadUnit: mkEval took 0.2266ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project, returning: ()[0m
+[0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(bloop.integrations.sbt.BloopPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(bloop.integrations.sbt.BloopPlugin))))[0m
+[0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,bloop.integrations.sbt.BloopPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 1.1738 ms[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project projektmemory-build from metals.sbt,plugins.sbt ...[0m
+[0m[[0m[0mdebug[0m] [0m[0m              Load.resolveProject(projektmemory-build) took 24.4935ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.loadTransitive: finalizeProject(Project(id projektmemory-build, base: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project, plugins: List(<none>))) took 26.0357ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project, returning: (projektmemory-build)[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: loadedProjectsRaw took 59.0017ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: cleanEvalClasses took 2.8136ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m        Load.loadUnit(file:/C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/project/, ...) took 6321.0174ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: load took 6322.7966ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: resolveProjects took 0.1153ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: finalTransforms took 16.6318ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: config.delegates took 0.3545ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: Def.make(settings)... took 105.7312ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: structureIndex took 21.2706ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: mkStreams took 0.0017ms[0m
+[0m[[0m[0minfo[0m] [0m[0mloading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: bloopInstall[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop\projektmemory-build.json[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 1 s, completed 04.05.2024 22:26:00[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: plugins took 7725.0984ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: defsScala took 0.002ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: mkEval took 0.1709ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory, returning: ()[0m
+[0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(bloop.integrations.sbt.BloopPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(scoverage.ScoverageSbtPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(bloop.integrations.sbt.BloopPlugin)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(scoverage.ScoverageSbtPlugin))))[0m
+[0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,scoverage.ScoverageSbtPlugin,bloop.integrations.sbt.BloopPlugin,sbt.plugins.SemanticdbPlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.MiniDependencyTreePlugin)[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 1.0911 ms[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project projektmemory from build.sbt ...[0m
+[0m[[0m[0mdebug[0m] [0m[0m        Load.resolveProject(projektmemory) took 18.4559ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadTransitive: finalizeProject(Project(id projektmemory, base: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory, plugins: List(<none>))) took 19.9138ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory, returning: (projektmemory)[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: loadedProjectsRaw took 74.6665ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: cleanEvalClasses took 2.1728ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.loadUnit(file:/C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/, ...) took 7802.7396ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: load took 7816.2273ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: resolveProjects took 0.1281ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: finalTransforms took 11.1486ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: config.delegates took 0.3522ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: Def.make(settings)... took 70.0932ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: structureIndex took 17.7676ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: mkStreams took 0.0019ms[0m
+[0m[[0m[0minfo[0m] [0m[0mset current project to ProjektMemory (in build file:/C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(sbtPopOnFailure, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(resumeFromFailure, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(notifyUsersAboutShell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(iflast shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(clean, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: clean[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 0 s, completed 04.05.2024 22:26:01[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(coverage, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(;set ThisBuild / coverageEnabled := true, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(set ThisBuild / coverageEnabled := true, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0mDefining ThisBuild / coverageEnabled[0m
+[0m[[0m[0minfo[0m] [0m[0mThe new value will be used by Compile / compile / scalacOptions, libraryDependencies[0m
+[0m[[0m[0mdebug[0m] [0m[0mDefining [0m
+[0m[[0m[0mdebug[0m] [0m[0m	ThisBuild / coverageEnabled[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe new value will be used by [0m
+[0m[[0m[0mdebug[0m] [0m[0m	Compile / compile / scalacOptions[0m
+[0m[[0m[0mdebug[0m] [0m[0m	libraryDependencies[0m
+[0m[[0m[0minfo[0m] [0m[0mReapplying settings...[0m
+[0m[[0m[0minfo[0m] [0m[0mset current project to ProjektMemory (in build file:/C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(test, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 8 Scala sources to C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13\classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mscoverage excludedSymbols: List(scala.reflect.api.Exprs.Expr, scala.reflect.api.Trees.Tree, scala.reflect.macros.Universe.Tree)[0m
+[0m[[0m[0minfo[0m] [0m[0mCleaning datadir [C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13/scoverage-data][0m
+[0m[[0m[0minfo[0m] [0m[0mBeginning coverage instrumentation[0m
+[0m[[0m[0minfo[0m] [0m[0mInstrumentation completed [222 statements][0m
+[0m[[0m[0minfo[0m] [0m[0mWrote instrumentation file [C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13\scoverage-data\scoverage.coverage][0m
+[0m[[0m[0minfo[0m] [0m[0mWill write measurement data to [C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13/scoverage-data][0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 9 Scala sources to C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13\test-classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mLogicSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mLogic[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should get the current state of the matrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should turn a card and check for first card selection[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should turn a second card and check for a match[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should turn a second card that does not match and remove both cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should not increase score when cards do not match[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should check if the game ends when all cards are face up[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the correct score[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mtest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAn Test example[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mExampleSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mExampleSpec A Set[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when empty[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should have size 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should produce NoSuchElementException when head is invoked[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMatrixSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA Matrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when newly created[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should fill all cells with the initial value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when toString[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return a correct string representation of the matrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when updated at a specific cell[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should reflect the new value in the updated cell[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should not affect other cells[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when accessed out of bounds[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should throw an IndexOutOfBoundsException[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when accessing its grid[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return the correct internal grid structure[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when A Matrix with Cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should correctly select and turn a card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when selecting a non-card element[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should do nothing if the selected element is not a card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32minitialized with cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should correctly place the cards in the matrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfilled with a sequence of cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should have all cells filled according to the sequence[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32minitialized with shuffled cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should contain all the provided cards in a randomized order[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- do nothing if the selected element is not a card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32msetupMatrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should correctly setup a matrix with the optimal rows and columns[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should initialize with shuffled cards correctly[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInputHandlerSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRealInputHandler[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should read a line of input without a prompt[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should ask for input with a prompt and return the user input[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mTuiSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA Tui[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when update is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should print that the game state has been updated[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when run is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should handle exceptions by printing them[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should execute GameStarting without any exceptions[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when displayMessage is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should print the provided message[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mCardSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA Card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when newly created[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should be face down[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when turnCard is called on a face down card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should turn the card face up[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when turnCard is called on a face up card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should turn the card face down[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mThe Card object[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should generate unique IDs incrementally[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mits face is down[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return '*' as its string representation[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mits face is up[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return its ID as string representation[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mObserverSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAn Observable[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should allow adding observers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should allow removing observers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should notify all its observers[0m[0m

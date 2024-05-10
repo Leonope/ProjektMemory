@@ -1,55 +1,171 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(test, org.scalatest.tools.Framework$$anon$1@5968c9, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MatrixSpec, org.scalatest.tools.Framework$$anon$1@5968c9, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ExampleSpec, org.scalatest.tools.Framework$$anon$1@5968c9, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MemoryGameSpec, org.scalatest.tools.Framework$$anon$1@5968c9, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MemoryMainSpec, org.scalatest.tools.Framework$$anon$1@5968c9, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(StandardScoringSpec, org.scalatest.tools.Framework$$anon$1@3d9b500f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(InputHandlerSpec, org.scalatest.tools.Framework$$anon$1@3d9b500f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ObserverSpec, org.scalatest.tools.Framework$$anon$1@3d9b500f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ControllerSpec, org.scalatest.tools.Framework$$anon$1@3d9b500f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(test, org.scalatest.tools.Framework$$anon$1@3d9b500f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MatrixStandardSpec, org.scalatest.tools.Framework$$anon$1@3d9b500f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(LogicSpec, org.scalatest.tools.Framework$$anon$1@3d9b500f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ExampleSpec, org.scalatest.tools.Framework$$anon$1@3d9b500f, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInputHandlerSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRealInputHandler[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should read a line of input without a prompt[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should ask for input with a prompt and return the user input[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(CardSpec, org.scalatest.tools.Framework$$anon$1@3d9b500f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MatrixSpec, org.scalatest.tools.Framework$$anon$1@3d9b500f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(TuiSpec, org.scalatest.tools.Framework$$anon$1@3d9b500f, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mStandardScoringSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mLogic[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should get the current state of the matrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should turn a card and check for first card selection[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should turn a second card and check for a match[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should turn a second card that does not match and remove both cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should not increase score when cards do not match[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should check if the game ends when all cards are face up[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the correct score[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mLogicSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mLogic[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should get the current state of the matrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should turn a card and check for first card selection[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should turn a second card and check for a match[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should turn a second card that does not match and remove both cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should not increase score when cards do not match[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should check if the game ends when all cards are face up[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the correct score[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mObserverSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAn Observable[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should allow adding observers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should allow removing observers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should notify all its observers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mtest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAn Test example[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mExampleSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mExampleSpec A Set[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  when empty[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should have size 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should produce NoSuchElementException when head is invoked[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mMemoryMainSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mMainSpec[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  when runApp is called[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should print success message when game starts successfully[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should print error message when game fails to start[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m    should RealInputHandler[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m    - should return the correct string when readLine is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mCardSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA Card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when newly created[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should be face down by default[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mControllerSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mControllerSpec[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when askPlayerCount is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return a valid count within range[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return failure on invalid number[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when checkPlayerCount is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should handle only one player[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should fail for more than one player[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when GameStarting is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should fail with invalid player count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should fail with invalid card count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when askCardCount[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return the correct card count for valid input[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when askCardCount[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should fail with invalid input[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should fail with zero card count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when askCardCount[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should print success message for valid input[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should print failure message for invalid input[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when greetPlayer is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should print the correct greeting[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when turnCard is called on a face down card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should turn the card face up[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when turnCard is called on a face up card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should turn the card face down[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when its face is down[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return '*' as its string representation[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when its face is up[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return its ID as string representation[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when clicked while face down[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should turn face up[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when clicked while face up[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should turn face down[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mMatrixSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mA Matrix[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  when newly created[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should fill all cells with the initial value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when toString[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return a correct string representation of the matrix[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  when updated at a specific cell[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should reflect the new value in the updated cell[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should not affect other cells[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  when accessed out of bounds[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should throw an IndexOutOfBoundsException[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mtest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mAn Test example[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should be true[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mMemoryGameSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mMemoryGameSpec[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  when askPlayerCount is called[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should return a valid count within range[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should return failure on invalid number[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should return success for edge cases[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  when checkPlayerCount is called[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should handle only one player[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should fail for more than one player[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  when GameStarting is called[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should handle valid player count and name[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should fail with invalid player count[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should fail with invalid card count[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  when greetPlayer is called[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m  - should print the correct greeting[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 95 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 19[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 5, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 19, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when accessing its grid[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return the correct internal grid structure[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when A Matrix with Cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should correctly select and turn a card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when selecting a non-card element[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should do nothing if the selected element is not a card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32minitialized with cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should correctly place the cards in the matrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfilled with a sequence of cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should have all cells filled according to the sequence[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32minitialized with shuffled cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should contain all the provided cards in a randomized order[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- do nothing if the selected element is not a card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32msetupMatrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should correctly setup a matrix with the optimal rows and columns[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should initialize with shuffled cards correctly[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMatrixStandardSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA Matrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when newly created[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should fill all cells with the initial value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when toString[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return a correct string representation of the matrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when updated at a specific cell[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should reflect the new value in the updated cell[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should not affect other cells[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when accessed out of bounds[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should throw an IndexOutOfBoundsException[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when accessing its grid[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should return the correct internal grid structure[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when A Matrix with Cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should correctly select and turn a card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when selecting a non-card element[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should do nothing if the selected element is not a card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32minitialized with cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should correctly place the cards in the matrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfilled with a sequence of cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should have all cells filled according to the sequence[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32minitialized with shuffled cards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should contain all the provided cards in a randomized order[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- do nothing if the selected element is not a card[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32msetupMatrix[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should correctly setup a matrix with the optimal rows and columns[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should initialize with shuffled cards correctly[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mTuiSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA Tui[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when update is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should print that the game state has been updated[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when run is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should handle exceptions by printing them[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should execute GameStarting without any exceptions[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when displayMessage is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should print the provided message[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- when invoke GameStarting at the beginning[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- when terminate the application[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when RestartGameCommand is executed[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should restart the game[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  when endGamePrompt is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should execute restart command when 'restart' is input[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should execute quit command when 'quit' is input[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should prompt again when an unknown command is input[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 79 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 79[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 11, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 79, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	test[0m
-[0m[[0m[0mdebug[0m] [0m[0m	MemoryGameSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TuiSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ControllerSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CardSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MatrixStandardSpec[0m
 [0m[[0m[0mdebug[0m] [0m[0m	MatrixSpec[0m
-[0m[[0m[0mdebug[0m] [0m[0m	MemoryMainSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	InputHandlerSpec[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ExampleSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StandardScoringSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	LogicSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ObserverSpec[0m
