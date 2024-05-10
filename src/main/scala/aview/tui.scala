@@ -48,7 +48,7 @@ def endGamePrompt(): Unit = {
       controller.GameStarting()
       if (controller.gameLogic.checkGameEnd()) {
       // $COVERAGE-OFF$
-      endGamePrompt()  // Ruft die Methode auf, die den Benutzer nach dem Spielende fragt 
+      endGamePrompt()  
       // $COVERAGE-ON$
     }
   } catch {

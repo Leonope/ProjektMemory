@@ -13645,3 +13645,55 @@ WARNUNG: Unmatched cancel notification for request id 7732
 2024.05.09 14:49:58 INFO  Shut down connection with build server.
 2024.05.09 14:49:58 INFO  Shut down connection with build server.
 2024.05.09 14:49:57 INFO  Exiting server
+2024.05.10 09:05:47 INFO  Started: Metals version 1.3.0 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory' for client Visual Studio Code 1.89.0.
+SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [scribe.slf4j.ScribeServiceProvider@1cc06e07]
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@4eba1a4]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual provider is of type [scribe.slf4j.ScribeServiceProvider@1cc06e07]
+2024.05.10 09:05:49 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.05.10 09:05:51 INFO  Attempting to connect to the build server...
+2024.05.10 09:05:51 INFO  Replacing bloop java home C:\Users\leo11\AppData\Local\Coursier\cache\arc\https\github.com\adoptium\temurin17-binaries\releases\download\jdk-17%252B35\OpenJDK17-jdk_x64_windows_hotspot_17_35.zip\jdk-17+35 with java home at C:\Program Files\Java\jdk-22.
+2024.05.10 09:05:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.05.10 09:05:57 INFO  Attempting to connect to the build server...
+2024.05.10 09:05:57 INFO  Attempting to connect to the build server...
+2024.05.10 09:05:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.05.10 09:05:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.05.10 09:05:57 INFO  time: Connected to build server in 6.87s
+2024.05.10 09:05:57 INFO  Connected to Build server: Bloop v1.5.17
+2024.05.10 09:05:58 INFO  time: Imported build in 0.34s
+2024.05.10 09:06:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 3.3.3
+Mai 10, 2024 9:06:07 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 15
+Mai 10, 2024 9:06:07 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 12
+Mai 10, 2024 9:06:08 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 21
+Mai 10, 2024 9:06:08 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 22
+Mai 10, 2024 9:06:08 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 30
+Mai 10, 2024 9:06:08 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 36
+Mai 10, 2024 9:06:50 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
+2024.05.10 09:06:54 INFO  time: indexed workspace in 47s
+2024.05.10 09:06:55 INFO  compiling projektmemory (8 scala sources)
+2024.05.10 09:07:08 WARN  Invalid text document uri received from build server: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/src/main/scala/controller/InputHandler.scala
+2024.05.10 09:07:08 INFO  compiling projektmemory-test (11 scala sources)
+2024.05.10 09:07:18 INFO  time: compiled projektmemory in 22s
+2024.05.10 09:07:27 WARN  9 deprecations (since 1); re-run with -deprecation for details
+2024.05.10 09:07:27 INFO  time: compiled projektmemory-test in 18s
+2024.05.10 09:10:57 INFO  compiling projektmemory (1 scala source)
+2024.05.10 09:10:59 WARN  Invalid text document uri received from build server: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/src/main/scala/controller/InputHandler.scala
+2024.05.10 09:10:59 INFO  time: compiled projektmemory in 2.48s
+2024.05.10 09:11:05 INFO  compiling projektmemory (1 scala source)
+2024.05.10 09:11:08 WARN  Invalid text document uri received from build server: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/src/main/scala/controller/InputHandler.scala
+2024.05.10 09:11:08 INFO  time: compiled projektmemory in 2.61s
+2024.05.10 09:11:30 INFO  compiling projektmemory (1 scala source)
+2024.05.10 09:11:32 WARN  Invalid text document uri received from build server: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/src/main/scala/controller/InputHandler.scala
+2024.05.10 09:11:32 INFO  time: compiled projektmemory in 2.18s
+2024.05.10 09:12:13 INFO  compiling projektmemory (1 scala source)
+2024.05.10 09:12:15 WARN  Invalid text document uri received from build server: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/src/main/scala/controller/InputHandler.scala
+2024.05.10 09:12:15 INFO  time: compiled projektmemory in 2.17s
+2024.05.10 09:40:45 INFO  time: code lens generation in 3.98s

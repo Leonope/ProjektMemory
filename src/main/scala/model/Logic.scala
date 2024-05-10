@@ -39,7 +39,7 @@ class Logic(private val matrix: Matrix[Card], private var scoringStrategy: Scori
   def removeCards(row1: Int, col1: Int, row2: Int, col2: Int): Unit = {
   val card1 = matrix(row1, col1)
   val card2 = matrix(row2, col2)
-  val newCard1 = card1.turnCard()  // Assuming turnCard() flips the card to the opposite state
+  val newCard1 = card1.turnCard() 
   val newCard2 = card2.turnCard()
   
   // Update the matrix with the new card states

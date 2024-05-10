@@ -2,7 +2,7 @@
 sealed trait CardState {//state pattern
   def click(card: Card): Card
   def display(card: Card): String
-  def isFaceUp: Boolean  // Adding this method to determine if the card is face up
+  def isFaceUp: Boolean  //  to determine if the card is face up
 }
 
 case object FaceUpState extends CardState {
@@ -17,7 +17,6 @@ case object FaceDownState extends CardState {
   def isFaceUp: Boolean = false
 }
 
-// Card class remains unchanged
 case class Card(id: Int, state: CardState = FaceDownState) {
   def turnCard(): Card = {
     if (state == FaceDownState) copy(state = FaceUpState)
