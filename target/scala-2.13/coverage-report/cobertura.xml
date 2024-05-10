@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "https://cobertura.sourceforge.net/xml/coverage-04.dtd">
 <coverage 
-line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branches-covered="23" branch-rate="0.96" complexity="0" version="1.0" timestamp="1715258943136">
+line-rate="0.99" lines-valid="163" lines-covered="161" branches-valid="19" branches-covered="18" branch-rate="0.95" complexity="0" version="1.0" timestamp="1715329078213">
     <sources>
         <source>--source</source>
         <source>C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester 3/Software-Engineering/ProjektMemory/src/main/scala</source>
     </sources>
     <packages>
-        <package name="&lt;empty&gt;" line-rate="0.99" branch-rate="0.96" complexity="0">
+        <package name="&lt;empty&gt;" line-rate="0.99" branch-rate="0.95" complexity="0">
             <classes>
                 <class name="StandardMatrixFactory" filename="model\Matrix.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
                     <methods>
@@ -43,43 +43,11 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                         <line number="67" hits="1" branch="false"/>
                     </lines>
                 </class>
-                <class name="Tui.RestartGameCommand" filename="aview\tui.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method 
-                        name="&lt;empty&gt;/RestartGameCommand/execute" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="20" hits="1" branch="false"/>
-                                <line number="19" hits="1" branch="false"/>
-                                <line number="20" hits="1" branch="false"/>
-                            </lines>
-</method>
-                    </methods>
-                    <lines>
-                        <line number="20" hits="1" branch="false"/>
-                        <line number="19" hits="1" branch="false"/>
-                        <line number="20" hits="1" branch="false"/>
-                    </lines>
-                </class>
-                <class name="Tui.QuitGameCommand" filename="aview\tui.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method 
-                        name="&lt;empty&gt;/QuitGameCommand/execute" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="27" hits="1" branch="false"/>
-                                <line number="26" hits="1" branch="false"/>
-                            </lines>
-</method>
-                    </methods>
-                    <lines>
-                        <line number="27" hits="1" branch="false"/>
-                        <line number="26" hits="1" branch="false"/>
-                    </lines>
-                </class>
                 <class name="FaceUpState" filename="model\Card.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
                     <methods>
                         <method name="&lt;empty&gt;/FaceUpState/isFaceUp" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="11" hits="2" branch="false"/>
+                                <line number="11" hits="1" branch="false"/>
                             </lines>
                         </method>
                         <method name="&lt;empty&gt;/FaceUpState/display" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
@@ -94,7 +62,7 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                         </method>
                     </methods>
                     <lines>
-                        <line number="11" hits="2" branch="false"/>
+                        <line number="11" hits="1" branch="false"/>
                         <line number="10" hits="1" branch="false"/>
                         <line number="9" hits="1" branch="false"/>
                     </lines>
@@ -103,66 +71,41 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                     <methods>
                         <method name="&lt;empty&gt;/Card/turnCard" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
+                                <line number="22" hits="1" branch="true"/>
                                 <line number="23" hits="1" branch="true"/>
-                                <line number="24" hits="1" branch="true"/>
-                                <line number="23" hits="2" branch="false"/>
+                                <line number="22" hits="3" branch="false"/>
+                                <line number="22" hits="1" branch="false"/>
                                 <line number="23" hits="1" branch="false"/>
-                                <line number="24" hits="1" branch="false"/>
                             </lines>
                         </method>
                         <method name="&lt;empty&gt;/Card/toString" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="27" hits="1" branch="false"/>
+                                <line number="26" hits="1" branch="false"/>
                             </lines>
                         </method>
                         <method name="&lt;empty&gt;/Card/isFaceUp" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="26" hits="1" branch="false"/>
+                                <line number="25" hits="1" branch="false"/>
                             </lines>
                         </method>
                     </methods>
                     <lines>
+                        <line number="22" hits="1" branch="true"/>
                         <line number="23" hits="1" branch="true"/>
-                        <line number="24" hits="1" branch="true"/>
-                        <line number="23" hits="2" branch="false"/>
+                        <line number="22" hits="3" branch="false"/>
+                        <line number="22" hits="1" branch="false"/>
                         <line number="23" hits="1" branch="false"/>
-                        <line number="24" hits="1" branch="false"/>
-                        <line number="27" hits="1" branch="false"/>
                         <line number="26" hits="1" branch="false"/>
+                        <line number="25" hits="1" branch="false"/>
                     </lines>
                 </class>
                 <class name="Tui" filename="aview\tui.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
                     <methods>
-                        <method name="&lt;empty&gt;/Tui/update" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="10" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Tui/endGamePrompt" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="35" hits="1" branch="true"/>
-                                <line number="38" hits="1" branch="true"/>
-                                <line number="36" hits="1" branch="false"/>
-                                <line number="33" hits="1" branch="false"/>
-                                <line number="42" hits="1" branch="true"/>
-                                <line number="37" hits="1" branch="false"/>
-                                <line number="40" hits="1" branch="false"/>
-                                <line number="39" hits="1" branch="false"/>
-                                <line number="42" hits="1" branch="false"/>
-                                <line number="32" hits="1" branch="false"/>
-                                <line number="36" hits="1" branch="false"/>
-                            </lines>
-                        </method>
                         <method name="&lt;empty&gt;/Tui/run" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="48" hits="1" branch="false"/>
-                                <line number="55" hits="1" branch="true"/>
-                                <line number="47" hits="1" branch="true"/>
-                                <line number="55" hits="1" branch="false"/>
-                                <line number="49" hits="1" branch="true"/>
-                                <line number="49" hits="1" branch="false"/>
-                                <line number="55" hits="1" branch="false"/>
-                                <line number="49" hits="1" branch="false"/>
+                                <line number="54" hits="1" branch="true"/>
+                                <line number="54" hits="1" branch="false"/>
+                                <line number="54" hits="1" branch="false"/>
                             </lines>
                         </method>
                         <method name="&lt;empty&gt;/Tui/&lt;none&gt;" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
@@ -173,33 +116,22 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                         </method>
                         <method name="&lt;empty&gt;/Tui/displayMessage" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="60" hits="1" branch="false"/>
+                                <line number="59" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="&lt;empty&gt;/Tui/update" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="10" hits="1" branch="false"/>
                             </lines>
                         </method>
                     </methods>
                     <lines>
-                        <line number="48" hits="1" branch="false"/>
-                        <line number="55" hits="1" branch="true"/>
-                        <line number="35" hits="1" branch="true"/>
-                        <line number="47" hits="1" branch="true"/>
-                        <line number="38" hits="1" branch="true"/>
+                        <line number="54" hits="1" branch="true"/>
                         <line number="6" hits="1" branch="false"/>
-                        <line number="36" hits="1" branch="false"/>
-                        <line number="33" hits="1" branch="false"/>
                         <line number="5" hits="1" branch="false"/>
-                        <line number="42" hits="1" branch="true"/>
-                        <line number="55" hits="1" branch="false"/>
-                        <line number="37" hits="1" branch="false"/>
-                        <line number="40" hits="1" branch="false"/>
-                        <line number="49" hits="1" branch="true"/>
-                        <line number="49" hits="1" branch="false"/>
-                        <line number="39" hits="1" branch="false"/>
-                        <line number="42" hits="1" branch="false"/>
-                        <line number="32" hits="1" branch="false"/>
-                        <line number="55" hits="1" branch="false"/>
-                        <line number="36" hits="1" branch="false"/>
-                        <line number="60" hits="1" branch="false"/>
-                        <line number="49" hits="1" branch="false"/>
+                        <line number="54" hits="1" branch="false"/>
+                        <line number="54" hits="1" branch="false"/>
+                        <line number="59" hits="1" branch="false"/>
                         <line number="10" hits="1" branch="false"/>
                     </lines>
                 </class>
@@ -325,12 +257,12 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                     <methods>
                         <method name="&lt;empty&gt;/Logic/removeCards" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="41" hits="1" branch="false"/>
-                                <line number="40" hits="1" branch="false"/>
-                                <line number="43" hits="1" branch="false"/>
-                                <line number="47" hits="1" branch="false"/>
+                                <line number="41" hits="2" branch="false"/>
+                                <line number="40" hits="2" branch="false"/>
+                                <line number="43" hits="2" branch="false"/>
+                                <line number="47" hits="2" branch="false"/>
                                 <line number="42" hits="1" branch="false"/>
-                                <line number="46" hits="1" branch="false"/>
+                                <line number="46" hits="2" branch="false"/>
                             </lines>
                         </method>
                         <method name="&lt;empty&gt;/Logic/checkCards" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
@@ -342,53 +274,53 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                                 <line number="34" hits="1" branch="false"/>
                                 <line number="29" hits="2" branch="true"/>
                                 <line number="27" hits="2" branch="false"/>
-                                <line number="33" hits="2" branch="true"/>
+                                <line number="33" hits="1" branch="true"/>
                                 <line number="29" hits="2" branch="false"/>
                                 <line number="32" hits="1" branch="false"/>
                             </lines>
                         </method>
                         <method name="&lt;empty&gt;/Logic/turnCard" signature="()V" line-rate="0.94" branch-rate="0.88" complexity="0">
                             <lines>
-                                <line number="19" hits="1" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
                                 <line number="10" hits="0" branch="true"/>
                                 <line number="14" hits="2" branch="false"/>
-                                <line number="17" hits="1" branch="false"/>
+                                <line number="17" hits="2" branch="false"/>
                                 <line number="19" hits="1" branch="true"/>
-                                <line number="16" hits="1" branch="false"/>
-                                <line number="18" hits="1" branch="false"/>
+                                <line number="16" hits="2" branch="false"/>
+                                <line number="18" hits="2" branch="false"/>
                                 <line number="9" hits="1" branch="false"/>
-                                <line number="19" hits="1" branch="false"/>
-                                <line number="18" hits="1" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="18" hits="2" branch="false"/>
                                 <line number="11" hits="1" branch="false"/>
-                                <line number="16" hits="1" branch="false"/>
-                                <line number="18" hits="1" branch="false"/>
-                                <line number="20" hits="1" branch="false"/>
+                                <line number="16" hits="2" branch="false"/>
+                                <line number="18" hits="2" branch="false"/>
+                                <line number="20" hits="2" branch="false"/>
                                 <line number="10" hits="0" branch="false"/>
                                 <line number="17" hits="1" branch="true"/>
-                                <line number="19" hits="1" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
                                 <line number="14" hits="2" branch="false"/>
                                 <line number="14" hits="2" branch="true"/>
                                 <line number="10" hits="1" branch="true"/>
                                 <line number="14" hits="2" branch="false"/>
-                                <line number="19" hits="1" branch="true"/>
+                                <line number="19" hits="2" branch="true"/>
                                 <line number="17" hits="1" branch="true"/>
                                 <line number="18" hits="1" branch="false"/>
-                                <line number="20" hits="1" branch="false"/>
-                                <line number="10" hits="1" branch="false"/>
+                                <line number="20" hits="2" branch="false"/>
                                 <line number="16" hits="2" branch="false"/>
-                                <line number="19" hits="1" branch="false"/>
+                                <line number="10" hits="1" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
                                 <line number="13" hits="2" branch="false"/>
                                 <line number="17" hits="1" branch="false"/>
                                 <line number="12" hits="2" branch="false"/>
-                                <line number="15" hits="1" branch="true"/>
+                                <line number="15" hits="2" branch="true"/>
                                 <line number="19" hits="1" branch="false"/>
-                                <line number="17" hits="1" branch="false"/>
+                                <line number="17" hits="2" branch="false"/>
                             </lines>
                         </method>
                         <method name="&lt;empty&gt;/Logic/checkGameEnd" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="52" hits="1" branch="false"/>
-                                <line number="52" hits="1" branch="false"/>
+                                <line number="52" hits="2" branch="false"/>
+                                <line number="52" hits="2" branch="false"/>
                                 <line number="52" hits="1" branch="false"/>
                                 <line number="52" hits="1" branch="false"/>
                                 <line number="52" hits="1" branch="false"/>
@@ -403,76 +335,76 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                         </method>
                         <method name="&lt;empty&gt;/Logic/getScore" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="55" hits="1" branch="false"/>
+                                <line number="55" hits="2" branch="false"/>
                             </lines>
                         </method>
                         <method name="&lt;empty&gt;/Logic/getMatrix" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="6" hits="1" branch="false"/>
+                                <line number="6" hits="2" branch="false"/>
                             </lines>
                         </method>
                     </methods>
                     <lines>
                         <line number="3" hits="2" branch="false"/>
-                        <line number="52" hits="1" branch="false"/>
-                        <line number="19" hits="1" branch="false"/>
-                        <line number="35" hits="1" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
+                        <line number="52" hits="2" branch="false"/>
                         <line number="10" hits="0" branch="true"/>
+                        <line number="35" hits="1" branch="false"/>
                         <line number="14" hits="2" branch="false"/>
-                        <line number="17" hits="1" branch="false"/>
-                        <line number="41" hits="1" branch="false"/>
+                        <line number="17" hits="2" branch="false"/>
                         <line number="19" hits="1" branch="true"/>
-                        <line number="16" hits="1" branch="false"/>
-                        <line number="18" hits="1" branch="false"/>
+                        <line number="41" hits="2" branch="false"/>
+                        <line number="16" hits="2" branch="false"/>
+                        <line number="18" hits="2" branch="false"/>
                         <line number="29" hits="2" branch="false"/>
                         <line number="9" hits="1" branch="false"/>
-                        <line number="40" hits="1" branch="false"/>
                         <line number="28" hits="2" branch="false"/>
-                        <line number="19" hits="1" branch="false"/>
-                        <line number="18" hits="1" branch="false"/>
-                        <line number="52" hits="1" branch="false"/>
+                        <line number="40" hits="2" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
+                        <line number="18" hits="2" branch="false"/>
+                        <line number="52" hits="2" branch="false"/>
                         <line number="11" hits="1" branch="false"/>
-                        <line number="16" hits="1" branch="false"/>
-                        <line number="18" hits="1" branch="false"/>
-                        <line number="20" hits="1" branch="false"/>
+                        <line number="16" hits="2" branch="false"/>
+                        <line number="18" hits="2" branch="false"/>
+                        <line number="20" hits="2" branch="false"/>
                         <line number="30" hits="2" branch="false"/>
-                        <line number="43" hits="1" branch="false"/>
+                        <line number="43" hits="2" branch="false"/>
                         <line number="10" hits="0" branch="false"/>
                         <line number="17" hits="1" branch="true"/>
-                        <line number="19" hits="1" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
                         <line number="52" hits="1" branch="false"/>
                         <line number="34" hits="1" branch="false"/>
                         <line number="2" hits="2" branch="false"/>
                         <line number="14" hits="2" branch="false"/>
-                        <line number="6" hits="1" branch="false"/>
                         <line number="14" hits="2" branch="true"/>
+                        <line number="6" hits="2" branch="false"/>
                         <line number="29" hits="2" branch="true"/>
                         <line number="10" hits="1" branch="true"/>
-                        <line number="47" hits="1" branch="false"/>
-                        <line number="4" hits="2" branch="false"/>
+                        <line number="47" hits="2" branch="false"/>
                         <line number="14" hits="2" branch="false"/>
-                        <line number="19" hits="1" branch="true"/>
+                        <line number="4" hits="2" branch="false"/>
+                        <line number="19" hits="2" branch="true"/>
                         <line number="27" hits="2" branch="false"/>
                         <line number="17" hits="1" branch="true"/>
-                        <line number="33" hits="2" branch="true"/>
+                        <line number="33" hits="1" branch="true"/>
                         <line number="52" hits="1" branch="false"/>
                         <line number="29" hits="2" branch="false"/>
                         <line number="18" hits="1" branch="false"/>
-                        <line number="20" hits="1" branch="false"/>
-                        <line number="10" hits="1" branch="false"/>
+                        <line number="20" hits="2" branch="false"/>
                         <line number="16" hits="2" branch="false"/>
-                        <line number="55" hits="1" branch="false"/>
+                        <line number="10" hits="1" branch="false"/>
                         <line number="42" hits="1" branch="false"/>
-                        <line number="19" hits="1" branch="false"/>
+                        <line number="55" hits="2" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
                         <line number="13" hits="2" branch="false"/>
                         <line number="17" hits="1" branch="false"/>
                         <line number="52" hits="1" branch="false"/>
-                        <line number="32" hits="1" branch="false"/>
                         <line number="12" hits="2" branch="false"/>
-                        <line number="15" hits="1" branch="true"/>
+                        <line number="15" hits="2" branch="true"/>
+                        <line number="32" hits="1" branch="false"/>
                         <line number="19" hits="1" branch="false"/>
-                        <line number="17" hits="1" branch="false"/>
-                        <line number="46" hits="1" branch="false"/>
+                        <line number="17" hits="2" branch="false"/>
+                        <line number="46" hits="2" branch="false"/>
                     </lines>
                 </class>
                 <class name="Matrix" filename="model\Matrix.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
@@ -481,32 +413,32 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                             <lines>
                                 <line number="6" hits="2" branch="false"/>
                                 <line number="6" hits="2" branch="false"/>
-                                <line number="6" hits="1" branch="false"/>
+                                <line number="6" hits="2" branch="false"/>
                                 <line number="6" hits="2" branch="false"/>
                             </lines>
                         </method>
                         <method 
                         name="&lt;empty&gt;/Matrix/initializeWithCards" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="19" hits="1" branch="false"/>
-                                <line number="19" hits="1" branch="false"/>
-                                <line number="20" hits="1" branch="false"/>
-                                <line number="17" hits="1" branch="false"/>
-                                <line number="19" hits="1" branch="false"/>
-                                <line number="17" hits="1" branch="false"/>
-                                <line number="19" hits="1" branch="false"/>
-                                <line number="19" hits="1" branch="false"/>
-                                <line number="17" hits="1" branch="false"/>
-                                <line number="21" hits="1" branch="false"/>
-                                <line number="20" hits="1" branch="false"/>
-                                <line number="17" hits="1" branch="false"/>
-                                <line number="18" hits="1" branch="false"/>
-                                <line number="19" hits="1" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="20" hits="2" branch="false"/>
+                                <line number="17" hits="2" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="17" hits="2" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="17" hits="2" branch="false"/>
+                                <line number="21" hits="2" branch="false"/>
+                                <line number="20" hits="2" branch="false"/>
+                                <line number="17" hits="2" branch="false"/>
+                                <line number="18" hits="2" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
                             </lines>
 </method>
                         <method name="&lt;empty&gt;/Matrix/apply" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="8" hits="1" branch="false"/>
+                                <line number="8" hits="2" branch="false"/>
                             </lines>
                         </method>
                         <method name="&lt;empty&gt;/Matrix/toString" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
@@ -516,7 +448,7 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                         </method>
                         <method name="&lt;empty&gt;/Matrix/getGrid" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="26" hits="1" branch="false"/>
+                                <line number="26" hits="2" branch="false"/>
                             </lines>
                         </method>
                         <method name="&lt;empty&gt;/Matrix/setupMatrix" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
@@ -546,62 +478,62 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                         </method>
                         <method name="&lt;empty&gt;/Matrix/select" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="31" hits="1" branch="false"/>
-                                <line number="29" hits="1" branch="false"/>
-                                <line number="32" hits="1" branch="false"/>
+                                <line number="31" hits="2" branch="false"/>
+                                <line number="29" hits="2" branch="false"/>
+                                <line number="32" hits="2" branch="false"/>
                                 <line number="33" hits="1" branch="true"/>
-                                <line number="33" hits="1" branch="false"/>
-                                <line number="32" hits="1" branch="false"/>
-                                <line number="30" hits="1" branch="true"/>
+                                <line number="33" hits="2" branch="false"/>
+                                <line number="32" hits="2" branch="false"/>
+                                <line number="30" hits="2" branch="true"/>
                             </lines>
                         </method>
                     </methods>
                     <lines>
-                        <line number="19" hits="1" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
                         <line number="9" hits="2" branch="false"/>
                         <line number="47" hits="1" branch="false"/>
                         <line number="42" hits="1" branch="false"/>
-                        <line number="31" hits="1" branch="false"/>
+                        <line number="31" hits="2" branch="false"/>
                         <line number="47" hits="1" branch="false"/>
                         <line number="41" hits="1" branch="false"/>
-                        <line number="19" hits="1" branch="false"/>
-                        <line number="29" hits="1" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
+                        <line number="29" hits="2" branch="false"/>
                         <line number="49" hits="1" branch="false"/>
                         <line number="46" hits="1" branch="false"/>
-                        <line number="20" hits="1" branch="false"/>
-                        <line number="17" hits="1" branch="false"/>
-                        <line number="32" hits="1" branch="false"/>
+                        <line number="20" hits="2" branch="false"/>
+                        <line number="17" hits="2" branch="false"/>
+                        <line number="32" hits="2" branch="false"/>
                         <line number="47" hits="1" branch="false"/>
-                        <line number="19" hits="1" branch="false"/>
-                        <line number="17" hits="1" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
+                        <line number="17" hits="2" branch="false"/>
                         <line number="6" hits="2" branch="false"/>
                         <line number="33" hits="1" branch="true"/>
-                        <line number="8" hits="1" branch="false"/>
+                        <line number="8" hits="2" branch="false"/>
                         <line number="47" hits="1" branch="false"/>
-                        <line number="33" hits="1" branch="false"/>
-                        <line number="19" hits="1" branch="false"/>
+                        <line number="33" hits="2" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
                         <line number="6" hits="2" branch="false"/>
                         <line number="47" hits="1" branch="false"/>
-                        <line number="26" hits="1" branch="false"/>
+                        <line number="26" hits="2" branch="false"/>
                         <line number="41" hits="1" branch="false"/>
                         <line number="49" hits="1" branch="false"/>
-                        <line number="19" hits="1" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
                         <line number="12" hits="1" branch="false"/>
                         <line number="42" hits="1" branch="false"/>
-                        <line number="32" hits="1" branch="false"/>
-                        <line number="17" hits="1" branch="false"/>
-                        <line number="6" hits="1" branch="false"/>
-                        <line number="21" hits="1" branch="false"/>
-                        <line number="20" hits="1" branch="false"/>
+                        <line number="32" hits="2" branch="false"/>
+                        <line number="17" hits="2" branch="false"/>
+                        <line number="6" hits="2" branch="false"/>
+                        <line number="21" hits="2" branch="false"/>
+                        <line number="20" hits="2" branch="false"/>
                         <line number="40" hits="1" branch="false"/>
                         <line number="46" hits="1" branch="false"/>
-                        <line number="17" hits="1" branch="false"/>
-                        <line number="30" hits="1" branch="true"/>
+                        <line number="17" hits="2" branch="false"/>
+                        <line number="30" hits="2" branch="true"/>
                         <line number="6" hits="2" branch="false"/>
                         <line number="47" hits="1" branch="false"/>
                         <line number="41" hits="1" branch="false"/>
-                        <line number="18" hits="1" branch="false"/>
-                        <line number="19" hits="1" branch="false"/>
+                        <line number="18" hits="2" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
                     </lines>
                 </class>
             </classes>
@@ -631,7 +563,7 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                         </method>
                         <method name="util/Observable/&lt;none&gt;" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="8" hits="1" branch="false"/>
+                                <line number="8" hits="2" branch="false"/>
                             </lines>
                         </method>
                     </methods>
@@ -639,7 +571,7 @@ line-rate="0.99" lines-valid="184" lines-covered="182" branches-valid="24" branc
                         <line number="12" hits="1" branch="false"/>
                         <line number="14" hits="1" branch="false"/>
                         <line number="10" hits="1" branch="false"/>
-                        <line number="8" hits="1" branch="false"/>
+                        <line number="8" hits="2" branch="false"/>
                         <line number="12" hits="1" branch="false"/>
                         <line number="14" hits="1" branch="false"/>
                         <line number="12" hits="1" branch="false"/>

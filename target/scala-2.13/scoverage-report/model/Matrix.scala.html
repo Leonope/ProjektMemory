@@ -173,7 +173,7 @@
           Matrix.rows
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.rows
@@ -221,7 +221,7 @@
           scala.Array.apply
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.grid.apply(row).apply(col)
@@ -269,7 +269,7 @@
           scala.collection.IterableOnceOps.mkString
         </td>
         <td>
-          matrixstandardspec
+          matrixspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.wrapRefArray[String](scala.Predef.refArrayOps[Array[T]](Matrix.this.grid).map[String](((row: Array[T]) =&gt; scala.Predef.wrapRefArray[String](scala.Predef.genericArrayOps[T](row).map[String](((x$1: T) =&gt; x$1.toString()))((ClassTag.apply[String](classOf[java.lang.String]): scala.reflect.ClassTag[String]))).mkString(&quot; &quot;)))((ClassTag.apply[String](classOf[java.lang.String]): scala.reflect.ClassTag[String]))).mkString(&quot;\n&quot;)
@@ -293,7 +293,7 @@
           Matrix.cols
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.cols
@@ -317,7 +317,7 @@
           scala.Predef.require
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.require(cards.length.==(Matrix.this.rows.*(Matrix.this.cols)))
@@ -341,7 +341,7 @@
           scala.Int.==
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           cards.length.==(Matrix.this.rows.*(Matrix.this.cols))
@@ -365,7 +365,7 @@
           scala.Int.*
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.rows.*(Matrix.this.cols)
@@ -389,7 +389,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           0
@@ -413,7 +413,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           0
@@ -437,7 +437,7 @@
           Matrix.rows
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.rows
@@ -461,7 +461,7 @@
           scala.collection.immutable.Range.foreach
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.intWrapper(0).until(Matrix.this.cols).foreach[Unit](((j: Int) =&gt; {
@@ -488,7 +488,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           0
@@ -512,7 +512,7 @@
           Matrix.cols
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.cols
@@ -536,7 +536,7 @@
           scala.collection.immutable.Range.foreach
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.intWrapper(0).until(Matrix.this.rows).foreach[Unit](((i: Int) =&gt; scala.Predef.intWrapper(0).until(Matrix.this.cols).foreach[Unit](((j: Int) =&gt; {
@@ -563,7 +563,7 @@
           scala.collection.SeqOps.apply
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           cards.apply(index)
@@ -587,7 +587,7 @@
           Matrix.update
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.update(i, j, cards.apply(index))
@@ -611,7 +611,7 @@
           scala.Int.+
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           index.+(1)
@@ -635,7 +635,7 @@
           Matrix.grid
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.grid
@@ -659,7 +659,7 @@
           scala.Array.apply
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.grid.apply(row).apply(col)
@@ -683,7 +683,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           {
@@ -710,7 +710,7 @@
           Card.turnCard
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           card.turnCard()
@@ -734,7 +734,7 @@
           Matrix.update
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.update(row, col, newCard.asInstanceOf[T])
@@ -758,7 +758,7 @@
           scala.Any.asInstanceOf
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           newCard.asInstanceOf[T]
@@ -806,7 +806,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          matrixstandardspec
+          matrixstandardspec,matrixspec
         </td>
         <td style="background: #AEF1AE">
           ()

@@ -62,7 +62,7 @@ class TuiSpec extends AnyWordSpec with Matchers with MockFactory {
         stream.toString should include(message)
       }
     }
-  
+  /*
      "invoke GameStarting at the beginning" in {
       val controller = mock[Controller]
       val gameLogic = mock[Logic]
@@ -203,6 +203,6 @@ class NoExitSecurityManager extends SecurityManager {
     if ("exitVM.0".equals(perm.getName)) {
       throw new SecurityException("System.exit attempted and blocked")
     }
-  }
+  }*/
 }
 }

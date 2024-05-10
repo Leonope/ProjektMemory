@@ -127,14 +127,14 @@ RestartGameCommand
 Class
 Tui.RestartGameCommand
 execute
-525
-558
+542
+575
 19
 scala.Predef.println
 Apply
 false
 0
-false
+true
 scala.Predef.println("Game is starting again")
 
 8
@@ -144,14 +144,14 @@ RestartGameCommand
 Class
 Tui.RestartGameCommand
 execute
-563
-588
+580
+605
 20
 Controller.GameStarting
 Apply
 false
 0
-false
+true
 RestartGameCommand.this.controller.GameStarting()
 
 9
@@ -161,14 +161,14 @@ RestartGameCommand
 Class
 Tui.RestartGameCommand
 execute
-586
-586
+603
+603
 20
 <nosymbol>
 Literal
 false
 0
-false
+true
 ()
 
 10
@@ -178,14 +178,14 @@ QuitGameCommand
 Class
 Tui.QuitGameCommand
 execute
-666
-689
+683
+706
 26
 scala.Predef.println
 Apply
 false
 0
-false
+true
 scala.Predef.println("Game exiting")
 
 11
@@ -195,14 +195,14 @@ QuitGameCommand
 Class
 Tui.QuitGameCommand
 execute
-694
-708
+711
+725
 27
 java.lang.System.exit
 Apply
 false
 0
-false
+true
 java.lang.System.exit(0)
 
 12
@@ -212,14 +212,14 @@ Tui
 Class
 Tui
 endGamePrompt
-750
-787
+767
+804
 32
 scala.Predef.println
 Apply
 false
 0
-false
+true
 scala.Predef.println("Play again? (restart/quit)")
 
 13
@@ -229,14 +229,14 @@ Tui
 Class
 Tui
 endGamePrompt
-805
-845
+822
+862
 33
 java.lang.String.toLowerCase
 Apply
 false
 0
-false
+true
 Tui.this.inputHandler.readLine().trim().toLowerCase()
 
 14
@@ -246,14 +246,14 @@ Tui
 Class
 Tui
 endGamePrompt
-942
-952
+959
+969
 36
 Tui.controller
 Select
 false
 0
-false
+true
 Tui.this.controller
 
 15
@@ -263,14 +263,14 @@ Tui
 Class
 Tui
 endGamePrompt
-919
-953
+936
+970
 36
 Tui.RestartGameCommand.<init>
 Apply
 false
 0
-false
+true
 new Tui.this.RestartGameCommand(Tui.this.controller)
 
 16
@@ -280,14 +280,14 @@ Tui
 Class
 Tui
 endGamePrompt
-962
-986
+979
+1003
 37
 Tui.RestartGameCommand.execute
 Apply
 false
 0
-false
+true
 restartCommand.execute()
 
 17
@@ -297,14 +297,14 @@ Tui
 Class
 Tui
 endGamePrompt
-886
-986
+903
+1003
 35
 <nosymbol>
 Block
 true
 0
-false
+true
 {
   val restartCommand: Tui.this.RestartGameCommand = new Tui.this.RestartGameCommand(Tui.this.controller);
   restartCommand.execute()
@@ -317,14 +317,14 @@ Tui
 Class
 Tui
 endGamePrompt
-1035
-1056
+1052
+1073
 39
 Tui.QuitGameCommand.<init>
 Apply
 false
 0
-false
+true
 new Tui.this.QuitGameCommand()
 
 19
@@ -334,14 +334,14 @@ Tui
 Class
 Tui
 endGamePrompt
-1065
-1086
+1082
+1103
 40
 Tui.QuitGameCommand.execute
 Apply
 false
 0
-false
+true
 quitCommand.execute()
 
 20
@@ -351,14 +351,14 @@ Tui
 Class
 Tui
 endGamePrompt
-1005
-1086
+1022
+1103
 38
 <nosymbol>
 Block
 true
 0
-false
+true
 {
   val quitCommand: Tui.this.QuitGameCommand = new Tui.this.QuitGameCommand();
   quitCommand.execute()
@@ -371,14 +371,14 @@ Tui
 Class
 Tui
 endGamePrompt
-1112
-1175
+1129
+1192
 42
 scala.Predef.println
 Apply
 false
 0
-false
+true
 scala.Predef.println("Unknown Command pls type either \'quit\' or \'restart\'.")
 
 22
@@ -388,14 +388,14 @@ Tui
 Class
 Tui
 endGamePrompt
-1112
-1175
+1129
+1192
 42
 scala.Predef.println
-Block
+Apply
 true
 0
-false
+true
 scala.Predef.println("Unknown Command pls type either \'quit\' or \'restart\'.")
 
 23
@@ -405,14 +405,14 @@ Tui
 Class
 Tui
 run
-1225
-1250
+1242
+1267
 48
 Controller.GameStarting
 Apply
 false
 0
-false
+true
 Tui.this.controller.GameStarting()
 
 24
@@ -422,14 +422,14 @@ Tui
 Class
 Tui
 run
-1261
-1296
+1278
+1313
 49
 Logic.checkGameEnd
 Apply
 false
 0
-false
+true
 Tui.this.controller.gameLogic.checkGameEnd()
 
 25
@@ -439,9 +439,9 @@ Tui
 Class
 Tui
 run
-1330
-1345
-51
+1323
+1338
+50
 Tui.endGamePrompt
 Apply
 false
@@ -456,9 +456,9 @@ Tui
 Class
 Tui
 run
-1330
-1345
-51
+1323
+1338
+50
 Tui.endGamePrompt
 Apply
 true
@@ -473,14 +473,14 @@ Tui
 Class
 Tui
 run
-1257
-1257
+1274
+1274
 49
 <nosymbol>
 Literal
 false
 0
-false
+true
 ()
 
 28
@@ -490,14 +490,14 @@ Tui
 Class
 Tui
 run
-1257
-1257
+1274
+1274
 49
 <nosymbol>
-Block
+Literal
 true
 0
-false
+true
 ()
 
 29
@@ -507,14 +507,14 @@ Tui
 Class
 Tui
 run
-1217
-1447
+1234
+1373
 47
 <nosymbol>
 Block
 true
 0
-false
+true
 {
   Tui.this.controller.GameStarting();
   if (Tui.this.controller.gameLogic.checkGameEnd())
@@ -530,9 +530,9 @@ Tui
 Class
 Tui
 run
-1489
-1501
-55
+1415
+1427
+54
 java.lang.Throwable.getMessage
 Apply
 false
@@ -547,9 +547,9 @@ Tui
 Class
 Tui
 run
-1481
-1502
-55
+1407
+1428
+54
 scala.Predef.println
 Apply
 false
@@ -564,9 +564,9 @@ Tui
 Class
 Tui
 run
-1481
-1502
-55
+1407
+1428
+54
 scala.Predef.println
 Block
 true
@@ -581,9 +581,9 @@ Tui
 Class
 Tui
 displayMessage
-1593
-1609
-60
+1519
+1535
+59
 scala.Predef.println
 Apply
 false
@@ -2414,8 +2414,8 @@ FaceUpState
 Object
 FaceUpState
 click
-314
-346
+296
+328
 9
 Card.copy
 Apply
@@ -2431,8 +2431,8 @@ FaceUpState
 Object
 FaceUpState
 display
-383
-399
+365
+381
 10
 scala.Any.toString
 Apply
@@ -2448,8 +2448,8 @@ FaceUpState
 Object
 FaceUpState
 isFaceUp
-426
-430
+408
+412
 11
 <nosymbol>
 Literal
@@ -2465,8 +2465,8 @@ FaceDownState
 Object
 FaceDownState
 click
-512
-542
+494
+524
 15
 Card.copy
 Apply
@@ -2482,8 +2482,8 @@ FaceDownState
 Object
 FaceDownState
 display
-579
-582
+561
+564
 16
 <nosymbol>
 Literal
@@ -2499,8 +2499,8 @@ FaceDownState
 Object
 FaceDownState
 isFaceUp
-609
-614
+591
+596
 17
 <nosymbol>
 Literal
@@ -2516,9 +2516,9 @@ Card
 Class
 Card
 turnCard
-746
-768
-23
+696
+718
+22
 java.lang.Object.==
 Apply
 false
@@ -2533,9 +2533,9 @@ Card
 Class
 Card
 turnCard
-770
-795
-23
+720
+745
+22
 Card.copy
 Apply
 false
@@ -2550,9 +2550,9 @@ Card
 Class
 Card
 turnCard
-770
-795
-23
+720
+745
+22
 <nosymbol>
 Block
 true
@@ -2571,9 +2571,9 @@ Card
 Class
 Card
 turnCard
-805
-832
-24
+755
+782
+23
 Card.copy
 Apply
 false
@@ -2588,9 +2588,9 @@ Card
 Class
 Card
 turnCard
-805
-832
-24
+755
+782
+23
 <nosymbol>
 Block
 true
@@ -2609,9 +2609,9 @@ Card
 Class
 Card
 isFaceUp
-863
-877
-26
+813
+827
+25
 CardState.isFaceUp
 Select
 false
@@ -2626,9 +2626,9 @@ Card
 Class
 Card
 toString
-912
-931
-27
+862
+881
+26
 CardState.display
 Apply
 false
@@ -3547,8 +3547,8 @@ Logic
 Class
 Logic
 removeCards
-1653
-1669
+1593
+1609
 43
 Card.turnCard
 Apply
@@ -3564,8 +3564,8 @@ Logic
 Class
 Logic
 removeCards
-1723
-1758
+1663
+1698
 46
 Matrix.update
 Apply
@@ -3581,8 +3581,8 @@ Logic
 Class
 Logic
 removeCards
-1761
-1796
+1701
+1736
 47
 Matrix.update
 Apply
@@ -3598,8 +3598,8 @@ Logic
 Class
 Logic
 checkGameEnd
-1837
-1851
+1777
+1791
 52
 Matrix.getGrid
 Select
@@ -3615,8 +3615,8 @@ Logic
 Class
 Logic
 checkGameEnd
-1852
-1852
+1792
+1792
 52
 scala.LowPriorityImplicits.wrapRefArray
 Apply
@@ -3632,8 +3632,8 @@ Logic
 Class
 Logic
 checkGameEnd
-1837
-1859
+1777
+1799
 52
 scala.collection.ArrayOps.flatten
 ApplyToImplicitArgs
@@ -3649,8 +3649,8 @@ Logic
 Class
 Logic
 checkGameEnd
-1867
-1877
+1807
+1817
 52
 Card.isFaceUp
 Select
@@ -3666,8 +3666,8 @@ Logic
 Class
 Logic
 checkGameEnd
-1837
-1878
+1777
+1818
 52
 scala.collection.ArrayOps.forall
 Apply
@@ -3683,8 +3683,8 @@ Logic
 Class
 Logic
 getScore
-1904
-1909
+1844
+1849
 55
 Logic.score
 Select
@@ -3700,8 +3700,8 @@ StandardScoring
 Class
 StandardScoring
 calculateScore
-2242
-2259
+2182
+2199
 64
 scala.Int.+
 Apply
@@ -3717,8 +3717,8 @@ StandardScoring
 Class
 StandardScoring
 calculateScore
-2242
-2259
+2182
+2199
 64
 scala.Int.+
 Block
@@ -3734,8 +3734,8 @@ StandardScoring
 Class
 StandardScoring
 calculateScore
-2269
-2281
+2209
+2221
 65
 StandardScoring.currentScore
 Ident
@@ -3751,8 +3751,8 @@ BonusScoring
 Class
 BonusScoring
 calculateScore
-2464
-2466
+2404
+2406
 71
 <nosymbol>
 Literal
@@ -3768,8 +3768,8 @@ BonusScoring
 Class
 BonusScoring
 calculateScore
-2470
-2492
+2410
+2432
 71
 scala.Int.*
 Apply
@@ -3785,8 +3785,8 @@ BonusScoring
 Class
 BonusScoring
 calculateScore
-2449
-2493
+2389
+2433
 71
 scala.Int.+
 Apply
@@ -3802,8 +3802,8 @@ BonusScoring
 Class
 BonusScoring
 calculateScore
-2449
-2493
+2389
+2433
 71
 scala.Int.+
 Block
@@ -3819,8 +3819,8 @@ BonusScoring
 Class
 BonusScoring
 calculateScore
-2503
-2515
+2443
+2455
 72
 BonusScoring.currentScore
 Ident

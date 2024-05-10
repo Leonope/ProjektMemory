@@ -10,7 +10,7 @@
 [0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
 [0m[[0m[0minfo[0m] [0m[0mcompiling 8 Scala sources to C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13\classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: C:\Users\leo11\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala2-sbt-bridge\2.13.12\scala2-sbt-bridge-2.13.12.jar.[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 5d3994ba for Scala compiler version 2.13.12[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler fd7e2d6 for Scala compiler version 2.13.12[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-Xplugin:C:\Users\leo11\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scoverage\scalac-scoverage-plugin_2.13.12\2.1.0\scalac-scoverage-plugin_2.13.12-2.1.0.jar;C:\Users\leo11\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scoverage\scalac-scoverage-domain_2.13\2.1.0\scalac-scoverage-domain_2.13-2.1.0.jar;C:\Users\leo11\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scoverage\scalac-scoverage-serializer_2.13\2.1.0\scalac-scoverage-serializer_2.13-2.1.0.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-P:scoverage:dataDir:C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13/scoverage-data[0m
@@ -21,5 +21,5 @@
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\leo11\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.12\scala-library-2.13.12.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13\classes;C:\Users\leo11\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scoverage\scalac-scoverage-domain_2.13\2.1.0\scalac-scoverage-domain_2.13-2.1.0.jar;C:\Users\leo11\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scoverage\scalac-scoverage-reporter_2.13\2.1.0\scalac-scoverage-reporter_2.13-2.1.0.jar;C:\Users\leo11\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scoverage\scalac-scoverage-serializer_2.13\2.1.0\scalac-scoverage-serializer_2.13-2.1.0.jar;C:\Users\leo11\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scoverage\scalac-scoverage-runtime_2.13\2.1.0\scalac-scoverage-runtime_2.13-2.1.0.jar;C:\Users\leo11\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.13\2.2.0\scala-xml_2.13-2.2.0.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 5.9961087 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 10.3338791 s[0m
 [0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m

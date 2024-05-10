@@ -63,7 +63,7 @@
 </span>39 <span style=''>  def removeCards(row1: Int, col1: Int, row2: Int, col2: Int): Unit = {
 </span>40 <span style=''>  val card1 = </span><span style='background: #AEF1AE'>matrix(row1, col1)</span><span style=''>
 </span>41 <span style=''>  val card2 = </span><span style='background: #AEF1AE'>matrix(row2, col2)</span><span style=''>
-</span>42 <span style=''>  val newCard1 = </span><span style='background: #AEF1AE'>card1.turnCard()</span><span style=''>  // Assuming turnCard() flips the card to the opposite state
+</span>42 <span style=''>  val newCard1 = </span><span style='background: #AEF1AE'>card1.turnCard()</span><span style=''> 
 </span>43 <span style=''>  val newCard2 = </span><span style='background: #AEF1AE'>card2.turnCard()</span><span style=''>
 </span>44 <span style=''>  
 </span>45 <span style=''>  // Update the matrix with the new card states
@@ -199,7 +199,7 @@
           Logic.matrix
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.matrix
@@ -223,7 +223,7 @@
           Matrix.apply
         </td>
         <td>
-          standardscoringspec
+          logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.matrix.apply(row, col)
@@ -295,7 +295,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          standardscoringspec
+          logicspec
         </td>
         <td style="background: #AEF1AE">
           {
@@ -338,7 +338,7 @@
           scala.Boolean.unary_!
         </td>
         <td>
-          standardscoringspec
+          logicspec
         </td>
         <td style="background: #AEF1AE">
           card.isFaceUp.unary_!
@@ -362,7 +362,7 @@
           Card.turnCard
         </td>
         <td>
-          standardscoringspec
+          logicspec
         </td>
         <td style="background: #AEF1AE">
           card.turnCard()
@@ -530,7 +530,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           {
@@ -566,7 +566,7 @@
           scala.Tuple2._1
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.firstCard.get._1
@@ -590,7 +590,7 @@
           Logic.checkCards
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.checkCards(Logic.this.firstCard.get._1, Logic.this.firstCard.get._2, row, col)
@@ -638,7 +638,7 @@
           Logic.consecutiveMatches_=
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.consecutiveMatches_=(0)
@@ -662,7 +662,7 @@
           Logic.consecutiveMatches_=
         </td>
         <td>
-          logicspec
+          standardscoringspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.consecutiveMatches_=(Logic.this.consecutiveMatches.+(1))
@@ -710,7 +710,7 @@
           Logic.consecutiveMatches_=
         </td>
         <td>
-          logicspec
+          standardscoringspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.consecutiveMatches_=(Logic.this.consecutiveMatches.+(1))
@@ -734,7 +734,7 @@
           scala.Int.+
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.consecutiveMatches.+(1)
@@ -758,7 +758,7 @@
           Logic.consecutiveMatches
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.consecutiveMatches
@@ -782,7 +782,7 @@
           Logic.score
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.score
@@ -806,7 +806,7 @@
           Logic.score_=
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.score_=(Logic.this.scoringStrategy.calculateScore(Logic.this.score, matchFound, Logic.this.consecutiveMatches))
@@ -830,7 +830,7 @@
           ScoringStrategy.calculateScore
         </td>
         <td>
-          logicspec
+          standardscoringspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.scoringStrategy.calculateScore(Logic.this.score, matchFound, Logic.this.consecutiveMatches)
@@ -854,7 +854,7 @@
           Logic.removeCards
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.removeCards(Logic.this.firstCard.get._1, Logic.this.firstCard.get._2, row, col)
@@ -878,7 +878,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          logicspec
+          standardscoringspec
         </td>
         <td style="background: #AEF1AE">
           ()
@@ -902,7 +902,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           ()
@@ -926,7 +926,7 @@
           scala.Tuple2._2
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.firstCard.get._2
@@ -950,7 +950,7 @@
           Logic.removeCards
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.removeCards(Logic.this.firstCard.get._1, Logic.this.firstCard.get._2, row, col)
@@ -974,7 +974,7 @@
           scala.Tuple2._1
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.firstCard.get._1
@@ -998,7 +998,7 @@
           scala.Boolean.unary_!
         </td>
         <td>
-          logicspec
+          standardscoringspec
         </td>
         <td style="background: #AEF1AE">
           matchFound.unary_!
@@ -1022,7 +1022,7 @@
           Logic.firstCard_=
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.firstCard_=(scala.None)
@@ -1046,7 +1046,7 @@
           scala.None
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           scala.None
@@ -1217,7 +1217,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          logicspec
+          standardscoringspec
         </td>
         <td style="background: #AEF1AE">
           true
@@ -1241,7 +1241,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          standardscoringspec,logicspec
+          logicspec
         </td>
         <td style="background: #AEF1AE">
           {
@@ -1316,7 +1316,7 @@
           Matrix.apply
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.matrix.apply(row1, col1)
@@ -1340,7 +1340,7 @@
           Matrix.apply
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.matrix.apply(row2, col2)
@@ -1377,9 +1377,9 @@
           196
         </td>
         <td>
-          1653
+          1593
           -
-          1669
+          1609
         </td>
         <td>
           Apply
@@ -1388,7 +1388,7 @@
           Card.turnCard
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           card2.turnCard()
@@ -1401,9 +1401,9 @@
           197
         </td>
         <td>
-          1723
+          1663
           -
-          1758
+          1698
         </td>
         <td>
           Apply
@@ -1412,7 +1412,7 @@
           Matrix.update
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.matrix.update(row1, col1, newCard1)
@@ -1425,9 +1425,9 @@
           198
         </td>
         <td>
-          1761
+          1701
           -
-          1796
+          1736
         </td>
         <td>
           Apply
@@ -1436,7 +1436,7 @@
           Matrix.update
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.matrix.update(row2, col2, newCard2)
@@ -1449,9 +1449,9 @@
           200
         </td>
         <td>
-          1852
+          1792
           -
-          1852
+          1792
         </td>
         <td>
           Apply
@@ -1460,7 +1460,7 @@
           scala.LowPriorityImplicits.wrapRefArray
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.wrapRefArray[Card](xs)
@@ -1473,9 +1473,9 @@
           202
         </td>
         <td>
-          1867
+          1807
           -
-          1877
+          1817
         </td>
         <td>
           Select
@@ -1484,7 +1484,7 @@
           Card.isFaceUp
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           x$1.isFaceUp
@@ -1497,9 +1497,9 @@
           199
         </td>
         <td>
-          1837
+          1777
           -
-          1851
+          1791
         </td>
         <td>
           Select
@@ -1508,7 +1508,7 @@
           Matrix.getGrid
         </td>
         <td>
-          logicspec
+          standardscoringspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.matrix.getGrid
@@ -1521,9 +1521,9 @@
           201
         </td>
         <td>
-          1837
+          1777
           -
-          1859
+          1799
         </td>
         <td>
           ApplyToImplicitArgs
@@ -1532,7 +1532,7 @@
           scala.collection.ArrayOps.flatten
         </td>
         <td>
-          logicspec
+          standardscoringspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.refArrayOps[Array[Card]](Logic.this.matrix.getGrid).flatten[Card](((xs: Array[Card]) =&gt; scala.Predef.wrapRefArray[Card](xs)), (ClassTag.apply[Card](classOf[Card]): scala.reflect.ClassTag[Card]))
@@ -1545,9 +1545,9 @@
           203
         </td>
         <td>
-          1837
+          1777
           -
-          1878
+          1818
         </td>
         <td>
           Apply
@@ -1556,7 +1556,7 @@
           scala.collection.ArrayOps.forall
         </td>
         <td>
-          logicspec
+          standardscoringspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.refArrayOps[Card](scala.Predef.refArrayOps[Array[Card]](Logic.this.matrix.getGrid).flatten[Card](((xs: Array[Card]) =&gt; scala.Predef.wrapRefArray[Card](xs)), (ClassTag.apply[Card](classOf[Card]): scala.reflect.ClassTag[Card]))).forall(((x$1: Card) =&gt; x$1.isFaceUp))
@@ -1569,9 +1569,9 @@
           204
         </td>
         <td>
-          1904
+          1844
           -
-          1909
+          1849
         </td>
         <td>
           Select
@@ -1580,7 +1580,7 @@
           Logic.score
         </td>
         <td>
-          logicspec
+          standardscoringspec,logicspec
         </td>
         <td style="background: #AEF1AE">
           Logic.this.score
@@ -1593,9 +1593,9 @@
           205
         </td>
         <td>
-          2242
+          2182
           -
-          2259
+          2199
         </td>
         <td>
           Apply
@@ -1617,9 +1617,9 @@
           206
         </td>
         <td>
-          2242
+          2182
           -
-          2259
+          2199
         </td>
         <td>
           Block
@@ -1641,9 +1641,9 @@
           207
         </td>
         <td>
-          2269
+          2209
           -
-          2281
+          2221
         </td>
         <td>
           Ident
@@ -1665,9 +1665,9 @@
           209
         </td>
         <td>
-          2470
+          2410
           -
-          2492
+          2432
         </td>
         <td>
           Apply
@@ -1689,9 +1689,9 @@
           211
         </td>
         <td>
-          2449
+          2389
           -
-          2493
+          2433
         </td>
         <td>
           Block
@@ -1713,9 +1713,9 @@
           208
         </td>
         <td>
-          2464
+          2404
           -
-          2466
+          2406
         </td>
         <td>
           Literal
@@ -1737,9 +1737,9 @@
           210
         </td>
         <td>
-          2449
+          2389
           -
-          2493
+          2433
         </td>
         <td>
           Apply
@@ -1761,9 +1761,9 @@
           212
         </td>
         <td>
-          2503
+          2443
           -
-          2515
+          2455
         </td>
         <td>
           Ident

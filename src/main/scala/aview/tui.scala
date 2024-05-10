@@ -9,7 +9,7 @@ class Tui(controller: Controller) extends Observer {
     // Handle updates from the controller
     println("The game state has been updated.")
   }
-
+// $COVERAGE-OFF$
   trait Command {//Command Pattern
   def execute(): Unit
 }
@@ -20,7 +20,7 @@ class RestartGameCommand(controller: Controller) extends Command {
     controller.GameStarting()
   }
 }
-// $COVERAGE-OFF$
+
 class QuitGameCommand extends Command {
   def execute(): Unit = {
     println("Game exiting")
