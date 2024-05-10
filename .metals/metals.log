@@ -13817,3 +13817,9 @@ WARNUNG: Unmatched cancel notification for request id 603
 2024.05.10 09:51:33 INFO  compiling projektmemory (1 scala source)
 2024.05.10 09:51:35 WARN  Invalid text document uri received from build server: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/src/main/scala/controller/InputHandler.scala
 2024.05.10 09:51:35 INFO  time: compiled projektmemory in 2.08s
+2024.05.10 10:01:18 INFO  Shutting down server
+2024.05.10 10:01:18 INFO  shutting down Metals
+2024.05.10 10:01:18 INFO  Shut down connection with build server.
+2024.05.10 10:01:18 INFO  Shut down connection with build server.
+2024.05.10 10:01:18 INFO  Shut down connection with build server.
+2024.05.10 10:01:18 INFO  Exiting server
