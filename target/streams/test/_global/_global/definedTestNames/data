@@ -1,1 +1,1 @@
-["test","MemoryGameSpec","MatrixSpec","MemoryMainSpec","ExampleSpec"]
+["test","TuiSpec","ControllerSpec","CardSpec","MatrixStandardSpec","MatrixSpec","InputHandlerSpec","ExampleSpec","StandardScoringSpec","LogicSpec","ObserverSpec"]
