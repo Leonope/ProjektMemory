@@ -1,3 +1,5 @@
+package model
+
 import scala.io.StdIn.readLine
 import scala.util.{Try, Success, Failure}
 import util.InputHandler

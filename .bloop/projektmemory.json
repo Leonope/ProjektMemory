@@ -15,7 +15,12 @@
             
         ],
         "classpath": [
-            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.12\\scala-library-2.13.12.jar"
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.12\\scala-library-2.13.12.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-domain_2.13\\2.1.0\\scalac-scoverage-domain_2.13-2.1.0.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-reporter_2.13\\2.1.0\\scalac-scoverage-reporter_2.13-2.1.0.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-serializer_2.13\\2.1.0\\scalac-scoverage-serializer_2.13-2.1.0.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-runtime_2.13\\2.1.0\\scalac-scoverage-runtime_2.13-2.1.0.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-xml_2.13\\2.2.0\\scala-xml_2.13-2.2.0.jar"
         ],
         "out": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\.bloop\\projektmemory",
         "classesDir": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\.bloop\\projektmemory\\scala-2.13\\classes",
@@ -28,7 +33,11 @@
             "name": "scala-compiler",
             "version": "2.13.12",
             "options": [
-                
+                "-Xplugin:C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-plugin_2.13.12\\2.1.0\\scalac-scoverage-plugin_2.13.12-2.1.0.jar;C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-domain_2.13\\2.1.0\\scalac-scoverage-domain_2.13-2.1.0.jar;C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-serializer_2.13\\2.1.0\\scalac-scoverage-serializer_2.13-2.1.0.jar",
+                "-P:scoverage:dataDir:C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\target\\scala-2.13/scoverage-data",
+                "-P:scoverage:sourceRoot:C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory",
+                "-P:scoverage:reportTestName",
+                "-Yrangepos"
             ],
             "jars": [
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.12\\scala-library-2.13.12.jar",
@@ -114,7 +123,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\cache\\arc\\https\\github.com\\adoptium\\temurin17-binaries\\releases\\download\\jdk-17%252B35\\OpenJDK17-jdk_x64_windows_hotspot_17_35.zip\\jdk-17+35",
+                "home": "C:\\Program Files\\Java\\jdk-22",
                 "options": [
                     "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory"
                 ]
@@ -123,14 +132,19 @@
                 
             ],
             "runtimeConfig": {
-                "home": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\cache\\arc\\https\\github.com\\adoptium\\temurin17-binaries\\releases\\download\\jdk-17%252B35\\OpenJDK17-jdk_x64_windows_hotspot_17_35.zip\\jdk-17+35",
+                "home": "C:\\Program Files\\Java\\jdk-22",
                 "options": [
                     "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory"
                 ]
             },
             "classpath": [
                 "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\.bloop\\projektmemory\\scala-2.13\\classes",
-                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.12\\scala-library-2.13.12.jar"
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.12\\scala-library-2.13.12.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-domain_2.13\\2.1.0\\scalac-scoverage-domain_2.13-2.1.0.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-reporter_2.13\\2.1.0\\scalac-scoverage-reporter_2.13-2.1.0.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-serializer_2.13\\2.1.0\\scalac-scoverage-serializer_2.13-2.1.0.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-runtime_2.13\\2.1.0\\scalac-scoverage-runtime_2.13-2.1.0.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-xml_2.13\\2.2.0\\scala-xml_2.13-2.2.0.jar"
             ]
         },
         "resolution": {
@@ -149,6 +163,91 @@
                             "name": "scala-library",
                             "classifier": "sources",
                             "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.12\\scala-library-2.13.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scoverage",
+                    "name": "scalac-scoverage-domain_2.13",
+                    "version": "2.1.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalac-scoverage-domain_2.13",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-domain_2.13\\2.1.0\\scalac-scoverage-domain_2.13-2.1.0.jar"
+                        },
+                        {
+                            "name": "scalac-scoverage-domain_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-domain_2.13\\2.1.0\\scalac-scoverage-domain_2.13-2.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scoverage",
+                    "name": "scalac-scoverage-reporter_2.13",
+                    "version": "2.1.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalac-scoverage-reporter_2.13",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-reporter_2.13\\2.1.0\\scalac-scoverage-reporter_2.13-2.1.0.jar"
+                        },
+                        {
+                            "name": "scalac-scoverage-reporter_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-reporter_2.13\\2.1.0\\scalac-scoverage-reporter_2.13-2.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scoverage",
+                    "name": "scalac-scoverage-serializer_2.13",
+                    "version": "2.1.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalac-scoverage-serializer_2.13",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-serializer_2.13\\2.1.0\\scalac-scoverage-serializer_2.13-2.1.0.jar"
+                        },
+                        {
+                            "name": "scalac-scoverage-serializer_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-serializer_2.13\\2.1.0\\scalac-scoverage-serializer_2.13-2.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scoverage",
+                    "name": "scalac-scoverage-runtime_2.13",
+                    "version": "2.1.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalac-scoverage-runtime_2.13",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-runtime_2.13\\2.1.0\\scalac-scoverage-runtime_2.13-2.1.0.jar"
+                        },
+                        {
+                            "name": "scalac-scoverage-runtime_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-runtime_2.13\\2.1.0\\scalac-scoverage-runtime_2.13-2.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-xml_2.13",
+                    "version": "2.2.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-xml_2.13",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-xml_2.13\\2.2.0\\scala-xml_2.13-2.2.0.jar"
+                        },
+                        {
+                            "name": "scala-xml_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-xml_2.13\\2.2.0\\scala-xml_2.13-2.2.0-sources.jar"
                         }
                     ]
                 },

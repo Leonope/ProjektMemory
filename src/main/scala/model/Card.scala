@@ -1,8 +1,9 @@
+package model
 // Adjusted CardState trait and concrete states
-sealed trait CardState {//state pattern
+sealed trait CardState { // state pattern
   def click(card: Card): Card
   def display(card: Card): String
-  def isFaceUp: Boolean  //  to determine if the card is face up
+  def isFaceUp: Boolean  // to determine if the card is face up
 }
 
 case object FaceUpState extends CardState {
@@ -18,10 +19,7 @@ case object FaceDownState extends CardState {
 }
 
 case class Card(id: Int, state: CardState = FaceDownState) {
-  def turnCard(): Card = {
-    if (state == FaceDownState) copy(state = FaceUpState)
-    else copy(state = FaceDownState)
-  }
+  def turnCard(): Card = copy(state = state.click(this).state)
   def isFaceUp: Boolean = state.isFaceUp
   override def toString: String = state.display(this)
 }

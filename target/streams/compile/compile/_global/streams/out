@@ -1,6 +1,0 @@
-[0m[[0m[0minfo[0m] [0m[0mscoverage excludedSymbols: List(scala.reflect.api.Exprs.Expr, scala.reflect.api.Trees.Tree, scala.reflect.macros.Universe.Tree)[0m
-[0m[[0m[0minfo[0m] [0m[0mCleaning datadir [C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13/scoverage-data][0m
-[0m[[0m[0minfo[0m] [0m[0mBeginning coverage instrumentation[0m
-[0m[[0m[0minfo[0m] [0m[0mInstrumentation completed [274 statements][0m
-[0m[[0m[0minfo[0m] [0m[0mWrote instrumentation file [C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13\scoverage-data\scoverage.coverage][0m
-[0m[[0m[0minfo[0m] [0m[0mWill write measurement data to [C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\target\scala-2.13/scoverage-data][0m

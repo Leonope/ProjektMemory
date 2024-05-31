@@ -1,3 +1,5 @@
+package model
+
 class Logic(private val matrix: Matrix[Card], private var scoringStrategy: ScoringStrategy) {
   private var score: Int = 0
   private var firstCard: Option[(Int, Int)] = None
@@ -71,5 +73,15 @@ class BonusScoring extends ScoringStrategy {
     if (matchFound) currentScore + 10 + (consecutiveMatches * 5)
     else currentScore
   }
+}
+
+class LogicDecorator(private val decoratedLogic: Logic) extends Logic(decoratedLogic.getMatrix, new StandardScoring) {
+  override def turnCard(row: Int, col: Int): Unit = {
+    super.turnCard(row, col)
+    // Wow so cool more infomation
+    println(s"Current score after turning card: ${getScore}")
+  }
+  
+  override def getScore: Int = decoratedLogic.getScore
 }
 

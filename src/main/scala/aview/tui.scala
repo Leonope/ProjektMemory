@@ -1,3 +1,4 @@
+package model
 import util.Observer
 import util.{InputHandler, RealInputHandler}
 
@@ -14,7 +15,7 @@ class Tui(controller: Controller) extends Observer {
   def execute(): Unit
 }
 
-class RestartGameCommand(controller: Controller) extends Command {
+class RestartGameCommand(controller: Controller) extends Command {//
   def execute(): Unit = {
     println("Game is starting again")
     controller.GameStarting()
@@ -59,3 +60,4 @@ def endGamePrompt(): Unit = {
     println(message)
   }
 }
+

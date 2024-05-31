@@ -1,3 +1,5 @@
+package model
+
 import scala.reflect.ClassTag
 import scala.util.Try
 import scala.util.Random
@@ -62,7 +64,7 @@ class StandardMatrixFactory extends MatrixFactory[Card] {
   }
 }
 
-class RandomMatrixFactory extends MatrixFactory[Card] {
+class RandomMatrixFactory extends MatrixFactory[Card] {//Factory zählt nicht
   override def create(rows: Int, cols: Int, fill: Card, cards: Seq[Card]): Matrix[Card] = {
     val matrix = new Matrix[Card](rows, cols, fill)
     val shuffledCards = Random.shuffle(cards)

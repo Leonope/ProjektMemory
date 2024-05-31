@@ -1,3 +1,5 @@
+package model
+
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalamock.scalatest.MockFactory
 import scala.util.{Success, Failure}

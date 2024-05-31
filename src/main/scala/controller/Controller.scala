@@ -1,3 +1,4 @@
+package model
 import scala.io.StdIn.readLine
 import scala.util.{Try, Success, Failure}
 import util.{Observable, Observer, InputHandler, RealInputHandler}
@@ -125,6 +126,10 @@ class Controller extends Observable {
   notifyObservers
 }
 }
+
+
+
+
 
 
 
