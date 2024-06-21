@@ -18,10 +18,10 @@
         "classpath": [
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\sbt\\1.9.8\\sbt-1.9.8.jar",
             "C:\\Users\\leo11\\.sbt\\boot\\scala-2.12.18\\lib\\scala-library.jar",
-            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.17\\sbt-bloop_2.12_1.0-1.5.17.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.18\\sbt-bloop_2.12_1.0-1.5.18.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\main_2.12\\1.9.8\\main_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\io_2.12\\1.9.8\\io_2.12-1.9.8.jar",
-            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\1.5.5\\bloop-config_2.12-1.5.5.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.0.0\\bloop-config_2.12-2.0.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\logic_2.12\\1.9.8\\logic_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\actions_2.12\\1.9.8\\actions_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\main-settings_2.12\\1.9.8\\main-settings_2.12-1.9.8.jar",
@@ -229,8 +229,8 @@
             },
             "classpath": [
                 "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\project\\.bloop\\projektmemory-build-build\\scala-2.12\\sbt-1.0\\classes",
-                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.17\\sbt-bloop_2.12_1.0-1.5.17.jar",
-                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\1.5.5\\bloop-config_2.12-1.5.5.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.18\\sbt-bloop_2.12_1.0-1.5.18.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.0.0\\bloop-config_2.12-2.0.0.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.4.0\\jsoniter-scala-core_2.12-2.4.0.jar",
                 "C:\\Users\\leo11\\.sbt\\boot\\scala-2.12.18\\lib\\scala-library.jar"
             ]
@@ -240,34 +240,34 @@
                 {
                     "organization": "ch.epfl.scala",
                     "name": "sbt-bloop",
-                    "version": "1.5.17",
+                    "version": "1.5.18",
                     "configurations": "default",
                     "artifacts": [
                         {
                             "name": "sbt-bloop",
-                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.17\\sbt-bloop_2.12_1.0-1.5.17.jar"
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.18\\sbt-bloop_2.12_1.0-1.5.18.jar"
                         },
                         {
                             "name": "sbt-bloop",
                             "classifier": "sources",
-                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.17\\sbt-bloop_2.12_1.0-1.5.17-sources.jar"
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.18\\sbt-bloop_2.12_1.0-1.5.18-sources.jar"
                         }
                     ]
                 },
                 {
                     "organization": "ch.epfl.scala",
                     "name": "bloop-config_2.12",
-                    "version": "1.5.5",
+                    "version": "2.0.0",
                     "configurations": "default",
                     "artifacts": [
                         {
                             "name": "bloop-config_2.12",
-                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\1.5.5\\bloop-config_2.12-1.5.5.jar"
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.0.0\\bloop-config_2.12-2.0.0.jar"
                         },
                         {
                             "name": "bloop-config_2.12",
                             "classifier": "sources",
-                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\1.5.5\\bloop-config_2.12-1.5.5-sources.jar"
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.0.0\\bloop-config_2.12-2.0.0-sources.jar"
                         }
                     ]
                 },
