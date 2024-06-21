@@ -1,0 +1,1581 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          model\LogicGameComponent\Logic.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package model.LogicGameComponent
+</span>2 <span style=''>
+</span>3 <span style=''>import com.google.inject.Inject
+</span>4 <span style=''>import model.{ilogic, ICard, IScoringStrategy, ICardState}
+</span>5 <span style=''>
+</span>6 <span style=''>class Logic @Inject()(private val matrix: Matrix[Card], private var scoringStrategy: IScoringStrategy) extends ilogic {
+</span>7 <span style=''>  private var score: Int = </span><span style='background: #AEF1AE'>0</span><span style=''>
+</span>8 <span style=''>  private var firstCard: Option[(Int, Int)] = </span><span style='background: #AEF1AE'>None</span><span style=''>
+</span>9 <span style=''>  private var consecutiveMatches: Int = </span><span style='background: #AEF1AE'>0</span><span style=''>
+</span>10 <span style=''>  
+</span>11 <span style=''>  override def getMatrix: Matrix[Card] = </span><span style='background: #AEF1AE'>matrix</span><span style=''>
+</span>12 <span style=''>
+</span>13 <span style=''>  override def turnCard(row: Int, col: Int): Unit = {
+</span>14 <span style=''>    val card = </span><span style='background: #AEF1AE'>matrix(row, col)</span><span style=''>
+</span>15 <span style=''>    if (</span><span style='background: #AEF1AE'>!card.isFaceUp</span><span style=''>) </span><span style='background: #AEF1AE'>{
+</span>16 <span style=''></span><span style='background: #AEF1AE'>      val newCard = card.turnCard()  // This returns a new Card with the state changed
+</span>17 <span style=''></span><span style='background: #AEF1AE'>      matrix.update(row, col, newCard)  // Update the matrix with the new card
+</span>18 <span style=''></span><span style='background: #AEF1AE'>      if (firstCard.isEmpty) {
+</span>19 <span style=''></span><span style='background: #AEF1AE'>        firstCard = Some((row, col))
+</span>20 <span style=''></span><span style='background: #AEF1AE'>      } else {
+</span>21 <span style=''></span><span style='background: #AEF1AE'>        val matchFound = checkCards(firstCard.get._1, firstCard.get._2, row, col)
+</span>22 <span style=''></span><span style='background: #AEF1AE'>        if (matchFound) consecutiveMatches += 1 else consecutiveMatches = 0
+</span>23 <span style=''></span><span style='background: #AEF1AE'>        score = scoringStrategy.calculateScore(score, matchFound, consecutiveMatches)
+</span>24 <span style=''></span><span style='background: #AEF1AE'>        if (!matchFound) removeCards(firstCard.get._1, firstCard.get._2, row, col)
+</span>25 <span style=''></span><span style='background: #AEF1AE'>        firstCard = None
+</span>26 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>27 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>28 <span style=''>  }
+</span>29 <span style=''>
+</span>30 <span style=''>
+</span>31 <span style=''>  def checkCards(row1: Int, col1: Int, row2: Int, col2: Int): Boolean = {
+</span>32 <span style=''>    val card1 = </span><span style='background: #AEF1AE'>matrix(row1, col1)</span><span style=''>
+</span>33 <span style=''>    val card2 = </span><span style='background: #AEF1AE'>matrix(row2, col2)</span><span style=''>
+</span>34 <span style=''>    if (</span><span style='background: #AEF1AE'>card1.id == card2.id</span><span style=''>) </span><span style='background: #AEF1AE'>{
+</span>35 <span style=''></span><span style='background: #AEF1AE'>      println(s&quot;Congratulations! You found a matching pair with ID ${card1.id}.&quot;)
+</span>36 <span style=''></span><span style='background: #AEF1AE'>      //score += 1
+</span>37 <span style=''></span><span style='background: #AEF1AE'>      true
+</span>38 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''> else </span><span style='background: #AEF1AE'>{
+</span>39 <span style=''></span><span style='background: #AEF1AE'>      println(s&quot;Sorry, the cards with ID ${card1.id} and ${card2.id} do not match. Try again.&quot;)
+</span>40 <span style=''></span><span style='background: #AEF1AE'>      false
+</span>41 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>42 <span style=''>  }
+</span>43 <span style=''>
+</span>44 <span style=''>  def removeCards(row1: Int, col1: Int, row2: Int, col2: Int): Unit = {
+</span>45 <span style=''>  val card1 = </span><span style='background: #AEF1AE'>matrix(row1, col1)</span><span style=''>
+</span>46 <span style=''>  val card2 = </span><span style='background: #AEF1AE'>matrix(row2, col2)</span><span style=''>
+</span>47 <span style=''>  val newCard1 = </span><span style='background: #AEF1AE'>card1.turnCard()</span><span style=''> 
+</span>48 <span style=''>  val newCard2 = </span><span style='background: #AEF1AE'>card2.turnCard()</span><span style=''>
+</span>49 <span style=''>  
+</span>50 <span style=''>  // Update the matrix with the new card states
+</span>51 <span style=''>  </span><span style='background: #AEF1AE'>matrix.update(row1, col1, newCard1)</span><span style=''>
+</span>52 <span style=''>  </span><span style='background: #AEF1AE'>matrix.update(row2, col2, newCard2)</span><span style=''>
+</span>53 <span style=''>}
+</span>54 <span style=''>
+</span>55 <span style=''>
+</span>56 <span style=''>  override def checkGameEnd(): Boolean = {
+</span>57 <span style=''>  </span><span style='background: #AEF1AE'>matrix.getGrid.flatten.forall(_.isFaceUp)</span><span style=''>
+</span>58 <span style=''>}
+</span>59 <span style=''>
+</span>60 <span style=''>  override def getScore: Int = </span><span style='background: #AEF1AE'>score</span><span style=''>
+</span>61 <span style=''>}
+</span>62 <span style=''>
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Tests</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          7
+        </td>
+        <td>
+          539
+        </td>
+        <td>
+          279
+          -
+          280
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          540
+        </td>
+        <td>
+          328
+          -
+          332
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td>
+          model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          541
+        </td>
+        <td>
+          374
+          -
+          375
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          542
+        </td>
+        <td>
+          422
+          -
+          428
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.matrix
+        </td>
+        <td>
+          model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.matrix
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          543
+        </td>
+        <td>
+          502
+          -
+          518
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Matrix.apply
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.matrix.apply(row, col)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          576
+        </td>
+        <td>
+          524
+          -
+          524
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #F0ADAD">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          575
+        </td>
+        <td>
+          524
+          -
+          524
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #F0ADAD">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          544
+        </td>
+        <td>
+          528
+          -
+          542
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Boolean.unary_!
+        </td>
+        <td>
+          model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          card.isFaceUp.unary_!
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          574
+        </td>
+        <td>
+          544
+          -
+          1172
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  val newCard: model.LogicGameComponent.Card = card.turnCard();
+  Logic.this.matrix.update(row, col, newCard);
+  if (Logic.this.firstCard.isEmpty)
+    Logic.this.firstCard_=(scala.Some.apply[(Int, Int)](scala.Tuple2.apply[Int, Int](row, col)))
+  else
+    {
+      val matchFound: Boolean = Logic.this.checkCards(Logic.this.firstCard.get._1, Logic.this.firstCard.get._2, row, col);
+      if (matchFound)
+        Logic.this.consecutiveMatches_=(Logic.this.consecutiveMatches.+(1))
+      else
+        Logic.this.consecutiveMatches_=(0);
+      Logic.this.score_=(Logic.this.scoringStrategy.calculateScore(Logic.this.score, matchFound, Logic.this.consecutiveMatches));
+      if (matchFound.unary_!)
+        Logic.this.removeCards(Logic.this.firstCard.get._1, Logic.this.firstCard.get._2, row, col)
+      else
+        ();
+      Logic.this.firstCard_=(scala.None)
+    }
+}
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          545
+        </td>
+        <td>
+          567
+          -
+          582
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Card.turnCard
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          card.turnCard()
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          546
+        </td>
+        <td>
+          641
+          -
+          673
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Matrix.update
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.matrix.update(row, col, newCard)
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          547
+        </td>
+        <td>
+          725
+          -
+          742
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Option.isEmpty
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.firstCard.isEmpty
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          550
+        </td>
+        <td>
+          755
+          -
+          783
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.firstCard_=
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.firstCard_=(scala.Some.apply[(Int, Int)](scala.Tuple2.apply[Int, Int](row, col)))
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          549
+        </td>
+        <td>
+          767
+          -
+          783
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[(Int, Int)](scala.Tuple2.apply[Int, Int](row, col))
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          548
+        </td>
+        <td>
+          772
+          -
+          782
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple2.apply
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple2.apply[Int, Int](row, col)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          551
+        </td>
+        <td>
+          755
+          -
+          783
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.firstCard_=
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.firstCard_=(scala.Some.apply[(Int, Int)](scala.Tuple2.apply[Int, Int](row, col)))
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          573
+        </td>
+        <td>
+          798
+          -
+          1165
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  val matchFound: Boolean = Logic.this.checkCards(Logic.this.firstCard.get._1, Logic.this.firstCard.get._2, row, col);
+  if (matchFound)
+    Logic.this.consecutiveMatches_=(Logic.this.consecutiveMatches.+(1))
+  else
+    Logic.this.consecutiveMatches_=(0);
+  Logic.this.score_=(Logic.this.scoringStrategy.calculateScore(Logic.this.score, matchFound, Logic.this.consecutiveMatches));
+  if (matchFound.unary_!)
+    Logic.this.removeCards(Logic.this.firstCard.get._1, Logic.this.firstCard.get._2, row, col)
+  else
+    ();
+  Logic.this.firstCard_=(scala.None)
+}
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          552
+        </td>
+        <td>
+          837
+          -
+          853
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._1
+        </td>
+        <td>
+          model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.firstCard.get._1
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          554
+        </td>
+        <td>
+          826
+          -
+          882
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.checkCards
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.checkCards(Logic.this.firstCard.get._1, Logic.this.firstCard.get._2, row, col)
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          553
+        </td>
+        <td>
+          855
+          -
+          871
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._2
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.firstCard.get._2
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          559
+        </td>
+        <td>
+          937
+          -
+          959
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.consecutiveMatches_=
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.consecutiveMatches_=(0)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          558
+        </td>
+        <td>
+          937
+          -
+          959
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.consecutiveMatches_=
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.consecutiveMatches_=(0)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          555
+        </td>
+        <td>
+          908
+          -
+          931
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.consecutiveMatches.+(1)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          557
+        </td>
+        <td>
+          908
+          -
+          931
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.consecutiveMatches_=
+        </td>
+        <td>
+          model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.consecutiveMatches_=(Logic.this.consecutiveMatches.+(1))
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          556
+        </td>
+        <td>
+          908
+          -
+          931
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.consecutiveMatches_=
+        </td>
+        <td>
+          model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.consecutiveMatches_=(Logic.this.consecutiveMatches.+(1))
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          561
+        </td>
+        <td>
+          1027
+          -
+          1045
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.consecutiveMatches
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.consecutiveMatches
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          563
+        </td>
+        <td>
+          969
+          -
+          1046
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.score_=
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.score_=(Logic.this.scoringStrategy.calculateScore(Logic.this.score, matchFound, Logic.this.consecutiveMatches))
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          560
+        </td>
+        <td>
+          1008
+          -
+          1013
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.score
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.score
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          562
+        </td>
+        <td>
+          977
+          -
+          1046
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.IScoringStrategy.calculateScore
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.scoringStrategy.calculateScore(Logic.this.score, matchFound, Logic.this.consecutiveMatches)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          568
+        </td>
+        <td>
+          1073
+          -
+          1130
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.removeCards
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.removeCards(Logic.this.firstCard.get._1, Logic.this.firstCard.get._2, row, col)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          567
+        </td>
+        <td>
+          1073
+          -
+          1130
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.removeCards
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.removeCards(Logic.this.firstCard.get._1, Logic.this.firstCard.get._2, row, col)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          570
+        </td>
+        <td>
+          1056
+          -
+          1056
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          564
+        </td>
+        <td>
+          1060
+          -
+          1071
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Boolean.unary_!
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          matchFound.unary_!
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          566
+        </td>
+        <td>
+          1103
+          -
+          1119
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._2
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.firstCard.get._2
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          569
+        </td>
+        <td>
+          1056
+          -
+          1056
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          565
+        </td>
+        <td>
+          1085
+          -
+          1101
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._1
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.firstCard.get._1
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          572
+        </td>
+        <td>
+          1140
+          -
+          1156
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.firstCard_=
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.firstCard_=(scala.None)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          571
+        </td>
+        <td>
+          1152
+          -
+          1156
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          577
+        </td>
+        <td>
+          1274
+          -
+          1292
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Matrix.apply
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.matrix.apply(row1, col1)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          578
+        </td>
+        <td>
+          1310
+          -
+          1328
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Matrix.apply
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.matrix.apply(row2, col2)
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          579
+        </td>
+        <td>
+          1350
+          -
+          1358
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          model.LogicGameComponent.Card.id
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          card2.id
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          580
+        </td>
+        <td>
+          1338
+          -
+          1358
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          card1.id.==(card2.id)
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          583
+        </td>
+        <td>
+          1360
+          -
+          1483
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  scala.Predef.println(&quot;Congratulations! You found a matching pair with ID &quot;.+(card1.id).+(&quot;.&quot;));
+  true
+}
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          581
+        </td>
+        <td>
+          1369
+          -
+          1444
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Congratulations! You found a matching pair with ID &quot;.+(card1.id).+(&quot;.&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          582
+        </td>
+        <td>
+          1472
+          -
+          1476
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          true
+        </td>
+      </tr><tr>
+        <td>
+          38
+        </td>
+        <td>
+          586
+        </td>
+        <td>
+          1489
+          -
+          1607
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  scala.Predef.println(&quot;Sorry, the cards with ID &quot;.+(card1.id).+(&quot; and &quot;).+(card2.id).+(&quot; do not match. Try again.&quot;));
+  false
+}
+        </td>
+      </tr><tr>
+        <td>
+          39
+        </td>
+        <td>
+          584
+        </td>
+        <td>
+          1498
+          -
+          1587
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Sorry, the cards with ID &quot;.+(card1.id).+(&quot; and &quot;).+(card2.id).+(&quot; do not match. Try again.&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          585
+        </td>
+        <td>
+          1595
+          -
+          1600
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          false
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          587
+        </td>
+        <td>
+          1703
+          -
+          1721
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Matrix.apply
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.matrix.apply(row1, col1)
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          588
+        </td>
+        <td>
+          1737
+          -
+          1755
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Matrix.apply
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.matrix.apply(row2, col2)
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          589
+        </td>
+        <td>
+          1774
+          -
+          1790
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Card.turnCard
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          card1.turnCard()
+        </td>
+      </tr><tr>
+        <td>
+          48
+        </td>
+        <td>
+          590
+        </td>
+        <td>
+          1810
+          -
+          1826
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Card.turnCard
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          card2.turnCard()
+        </td>
+      </tr><tr>
+        <td>
+          51
+        </td>
+        <td>
+          591
+        </td>
+        <td>
+          1883
+          -
+          1918
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Matrix.update
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.matrix.update(row1, col1, newCard1)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          592
+        </td>
+        <td>
+          1922
+          -
+          1957
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          model.LogicGameComponent.Matrix.update
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.matrix.update(row2, col2, newCard2)
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          594
+        </td>
+        <td>
+          2027
+          -
+          2027
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.LowPriorityImplicits.wrapRefArray
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.wrapRefArray[model.LogicGameComponent.Card](xs)
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          597
+        </td>
+        <td>
+          2012
+          -
+          2053
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.ArrayOps.forall
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.refArrayOps[model.LogicGameComponent.Card](scala.Predef.refArrayOps[Array[model.LogicGameComponent.Card]](Logic.this.matrix.getGrid).flatten[model.LogicGameComponent.Card](((xs: Array[model.LogicGameComponent.Card]) =&gt; scala.Predef.wrapRefArray[model.LogicGameComponent.Card](xs)), (ClassTag.apply[model.LogicGameComponent.Card](classOf[model.LogicGameComponent.Card]): scala.reflect.ClassTag[model.LogicGameComponent.Card]))).forall(((x$1: model.LogicGameComponent.Card) =&gt; x$1.isFaceUp))
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          593
+        </td>
+        <td>
+          2012
+          -
+          2026
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          model.LogicGameComponent.Matrix.getGrid
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.matrix.getGrid
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          596
+        </td>
+        <td>
+          2042
+          -
+          2052
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          model.LogicGameComponent.Card.isFaceUp
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          x$1.isFaceUp
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          595
+        </td>
+        <td>
+          2012
+          -
+          2034
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.ArrayOps.flatten
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.refArrayOps[Array[model.LogicGameComponent.Card]](Logic.this.matrix.getGrid).flatten[model.LogicGameComponent.Card](((xs: Array[model.LogicGameComponent.Card]) =&gt; scala.Predef.wrapRefArray[model.LogicGameComponent.Card](xs)), (ClassTag.apply[model.LogicGameComponent.Card](classOf[model.LogicGameComponent.Card]): scala.reflect.ClassTag[model.LogicGameComponent.Card]))
+        </td>
+      </tr><tr>
+        <td>
+          60
+        </td>
+        <td>
+          598
+        </td>
+        <td>
+          2091
+          -
+          2096
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          model.LogicGameComponent.Logic.score
+        </td>
+        <td>
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
+        </td>
+        <td style="background: #AEF1AE">
+          Logic.this.score
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>
