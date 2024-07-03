@@ -37,6 +37,9 @@
 </span>13 <span style=''>
 </span>14 <span style=''>  def notifyObservers: Unit = </span><span style='background: #AEF1AE'>subscribers.foreach(o =&gt; o.update)</span><span style=''>
 </span>15 <span style=''>}
+</span>16 <span style=''>
+</span>17 <span style=''>
+</span>18 <span style=''>
 </span></pre>
           </div>
           <div class="tab-pane" id="statementlist">
@@ -54,12 +57,12 @@
           8
         </td>
         <td>
-          267
+          661
         </td>
         <td>
-          110
+          117
           -
-          118
+          125
         </td>
         <td>
           Apply
@@ -68,7 +71,7 @@
           scala.collection.IterableFactory.apply
         </td>
         <td>
-          tuispec,observerspec
+          observerspec
         </td>
         <td style="background: #AEF1AE">
           scala.`package`.Vector.apply[Nothing]()
@@ -78,36 +81,12 @@
           10
         </td>
         <td>
-          268
+          663
         </td>
         <td>
-          165
+          160
           -
-          181
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          scala.collection.SeqOps.:+
-        </td>
-        <td>
-          observerspec
-        </td>
-        <td style="background: #AEF1AE">
-          Observable.this.subscribers.:+[util.Observer](s)
-        </td>
-      </tr><tr>
-        <td>
-          10
-        </td>
-        <td>
-          269
-        </td>
-        <td>
-          151
-          -
-          181
+          190
         </td>
         <td>
           Apply
@@ -123,15 +102,63 @@
         </td>
       </tr><tr>
         <td>
+          10
+        </td>
+        <td>
+          662
+        </td>
+        <td>
+          174
+          -
+          190
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.SeqOps.:+
+        </td>
+        <td>
+          observerspec
+        </td>
+        <td style="background: #AEF1AE">
+          Observable.this.subscribers.:+[util.Observer](s)
+        </td>
+      </tr><tr>
+        <td>
           12
         </td>
         <td>
-          271
+          666
         </td>
         <td>
-          231
+          228
           -
-          265
+          276
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          util.Observable.subscribers_=
+        </td>
+        <td>
+          observerspec
+        </td>
+        <td style="background: #AEF1AE">
+          Observable.this.subscribers_=(Observable.this.subscribers.filterNot(((o: util.Observer) =&gt; o.==(s))))
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          665
+        </td>
+        <td>
+          242
+          -
+          276
         </td>
         <td>
           Apply
@@ -150,12 +177,12 @@
           12
         </td>
         <td>
-          270
+          664
         </td>
         <td>
-          258
+          269
           -
-          264
+          275
         </td>
         <td>
           Apply
@@ -171,39 +198,15 @@
         </td>
       </tr><tr>
         <td>
-          12
-        </td>
-        <td>
-          272
-        </td>
-        <td>
-          217
-          -
-          265
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          util.Observable.subscribers_=
-        </td>
-        <td>
-          observerspec
-        </td>
-        <td style="background: #AEF1AE">
-          Observable.this.subscribers_=(Observable.this.subscribers.filterNot(((o: util.Observer) =&gt; o.==(s))))
-        </td>
-      </tr><tr>
-        <td>
           14
         </td>
         <td>
-          274
+          668
         </td>
         <td>
-          297
+          310
           -
-          331
+          344
         </td>
         <td>
           Apply
@@ -222,12 +225,12 @@
           14
         </td>
         <td>
-          273
+          667
         </td>
         <td>
-          322
+          335
           -
-          330
+          343
         </td>
         <td>
           Select

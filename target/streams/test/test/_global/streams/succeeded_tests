@@ -1,13 +1,12 @@
 #Successful Tests
-#Fri May 10 10:17:23 CEST 2024
-CardSpec=1715329042421
-ControllerSpec=1715329042682
-ExampleSpec=1715329042564
-InputHandlerSpec=1715329042549
-LogicSpec=1715329042422
-MatrixSpec=1715329042926
-MatrixStandardSpec=1715329043016
-ObserverSpec=1715329042421
-StandardScoringSpec=1715329042457
-TuiSpec=1715329042445
-test=1715329042419
+#Fri Jun 21 14:11:13 CEST 2024
+ExampleSpec=1718971873095
+InputHandlerSpec=1718971873136
+ObserverSpec=1718971873240
+model.LogicGameComponent.CardSpec=1718971873152
+model.LogicGameComponent.DecoratorSpec=1718971872961
+model.LogicGameComponent.LogicSpec=1718971873256
+model.LogicGameComponent.MatrixSpec=1718971873414
+model.LogicGameComponent.MatrixStandardSpec=1718971873332
+model.LogicGameComponent.StandardScoringSpec=1718971873299
+test=1718971873095

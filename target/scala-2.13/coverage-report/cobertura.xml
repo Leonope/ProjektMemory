@@ -1,547 +1,551 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "https://cobertura.sourceforge.net/xml/coverage-04.dtd">
 <coverage 
-line-rate="0.99" lines-valid="163" lines-covered="161" branches-valid="19" branches-covered="18" branch-rate="0.95" complexity="0" version="1.0" timestamp="1715329078213">
+line-rate="0.95" lines-valid="148" lines-covered="141" branches-valid="18" branches-covered="17" branch-rate="0.94" complexity="0" version="1.0" timestamp="1718971900908">
     <sources>
         <source>--source</source>
         <source>C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester 3/Software-Engineering/ProjektMemory/src/main/scala</source>
     </sources>
     <packages>
-        <package name="&lt;empty&gt;" line-rate="0.99" branch-rate="0.95" complexity="0">
+        <package name="model.LogicGameComponent" line-rate="0.95" branch-rate="0.94" complexity="0">
             <classes>
-                <class name="StandardMatrixFactory" filename="model\Matrix.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                <class 
+                name="model.LogicGameComponent.LogicDecorator" filename="model\LogicGameComponent\LogicDecorator.scala" line-rate="0.00" branch-rate="0.00" complexity="0">
                     <methods>
                         <method 
-                        name="&lt;empty&gt;/StandardMatrixFactory/create" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                        name="model.LogicGameComponent/LogicDecorator/turnCard" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
                             <lines>
-                                <line number="60" hits="1" branch="false"/>
-                                <line number="59" hits="1" branch="false"/>
-                            </lines>
-</method>
-                    </methods>
-                    <lines>
-                        <line number="60" hits="1" branch="false"/>
-                        <line number="59" hits="1" branch="false"/>
-                    </lines>
-                </class>
-                <class name="RandomMatrixFactory" filename="model\Matrix.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method 
-                        name="&lt;empty&gt;/RandomMatrixFactory/create" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="68" hits="1" branch="false"/>
-                                <line number="68" hits="1" branch="false"/>
-                                <line number="69" hits="1" branch="false"/>
-                                <line number="67" hits="1" branch="false"/>
-                            </lines>
-</method>
-                    </methods>
-                    <lines>
-                        <line number="68" hits="1" branch="false"/>
-                        <line number="68" hits="1" branch="false"/>
-                        <line number="69" hits="1" branch="false"/>
-                        <line number="67" hits="1" branch="false"/>
-                    </lines>
-                </class>
-                <class name="FaceUpState" filename="model\Card.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method name="&lt;empty&gt;/FaceUpState/isFaceUp" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="11" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/FaceUpState/display" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="10" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/FaceUpState/click" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="9" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                    </methods>
-                    <lines>
-                        <line number="11" hits="1" branch="false"/>
-                        <line number="10" hits="1" branch="false"/>
-                        <line number="9" hits="1" branch="false"/>
-                    </lines>
-                </class>
-                <class name="Card" filename="model\Card.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method name="&lt;empty&gt;/Card/turnCard" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="22" hits="1" branch="true"/>
-                                <line number="23" hits="1" branch="true"/>
-                                <line number="22" hits="3" branch="false"/>
-                                <line number="22" hits="1" branch="false"/>
-                                <line number="23" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Card/toString" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="26" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Card/isFaceUp" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="25" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                    </methods>
-                    <lines>
-                        <line number="22" hits="1" branch="true"/>
-                        <line number="23" hits="1" branch="true"/>
-                        <line number="22" hits="3" branch="false"/>
-                        <line number="22" hits="1" branch="false"/>
-                        <line number="23" hits="1" branch="false"/>
-                        <line number="26" hits="1" branch="false"/>
-                        <line number="25" hits="1" branch="false"/>
-                    </lines>
-                </class>
-                <class name="Tui" filename="aview\tui.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method name="&lt;empty&gt;/Tui/run" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="54" hits="1" branch="true"/>
-                                <line number="54" hits="1" branch="false"/>
-                                <line number="54" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Tui/&lt;none&gt;" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="6" hits="1" branch="false"/>
-                                <line number="5" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Tui/displayMessage" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="59" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Tui/update" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="10" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                    </methods>
-                    <lines>
-                        <line number="54" hits="1" branch="true"/>
-                        <line number="6" hits="1" branch="false"/>
-                        <line number="5" hits="1" branch="false"/>
-                        <line number="54" hits="1" branch="false"/>
-                        <line number="54" hits="1" branch="false"/>
-                        <line number="59" hits="1" branch="false"/>
-                        <line number="10" hits="1" branch="false"/>
-                    </lines>
-                </class>
-                <class name="StandardScoring" filename="model\Logic.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method 
-                        name="&lt;empty&gt;/StandardScoring/calculateScore" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="64" hits="1" branch="false"/>
-                                <line number="65" hits="1" branch="true"/>
-                                <line number="64" hits="1" branch="true"/>
-                            </lines>
-</method>
-                    </methods>
-                    <lines>
-                        <line number="64" hits="1" branch="false"/>
-                        <line number="65" hits="1" branch="true"/>
-                        <line number="64" hits="1" branch="true"/>
-                    </lines>
-                </class>
-                <class name="BonusScoring" filename="model\Logic.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method 
-                        name="&lt;empty&gt;/BonusScoring/calculateScore" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="71" hits="1" branch="false"/>
-                                <line number="71" hits="1" branch="true"/>
-                                <line number="71" hits="1" branch="false"/>
-                                <line number="71" hits="1" branch="false"/>
-                                <line number="72" hits="1" branch="true"/>
-                            </lines>
-</method>
-                    </methods>
-                    <lines>
-                        <line number="71" hits="1" branch="false"/>
-                        <line number="71" hits="1" branch="true"/>
-                        <line number="71" hits="1" branch="false"/>
-                        <line number="71" hits="1" branch="false"/>
-                        <line number="72" hits="1" branch="true"/>
-                    </lines>
-                </class>
-                <class name="Controller" filename="controller\Controller.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method 
-                        name="&lt;empty&gt;/Controller/withNotification" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="11" hits="1" branch="false"/>
-                            </lines>
-</method>
-                        <method 
-                        name="&lt;empty&gt;/Controller/GameStarting" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="19" hits="1" branch="false"/>
-                                <line number="15" hits="1" branch="false"/>
-                                <line number="20" hits="1" branch="false"/>
-                                <line number="16" hits="1" branch="false"/>
-                                <line number="21" hits="1" branch="false"/>
-                                <line number="18" hits="1" branch="false"/>
-                            </lines>
-</method>
-                        <method 
-                        name="&lt;empty&gt;/Controller/updateGameView" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="125" hits="1" branch="false"/>
-                                <line number="124" hits="1" branch="false"/>
-                                <line number="120" hits="1" branch="false"/>
-                            </lines>
-</method>
-                        <method name="&lt;empty&gt;/Controller/greetPlayer" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="116" hits="1" branch="false"/>
-                                <line number="115" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method 
-                        name="&lt;empty&gt;/Controller/&lt;none&gt;" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="6" hits="1" branch="false"/>
-                            </lines>
-</method>
-                    </methods>
-                    <lines>
-                        <line number="116" hits="1" branch="false"/>
-                        <line number="125" hits="1" branch="false"/>
-                        <line number="19" hits="1" branch="false"/>
-                        <line number="11" hits="1" branch="false"/>
-                        <line number="115" hits="1" branch="false"/>
-                        <line number="15" hits="1" branch="false"/>
-                        <line number="20" hits="1" branch="false"/>
-                        <line number="124" hits="1" branch="false"/>
-                        <line number="6" hits="1" branch="false"/>
-                        <line number="120" hits="1" branch="false"/>
-                        <line number="16" hits="1" branch="false"/>
-                        <line number="21" hits="1" branch="false"/>
-                        <line number="18" hits="1" branch="false"/>
-                    </lines>
-                </class>
-                <class name="FaceDownState" filename="model\Card.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method name="&lt;empty&gt;/FaceDownState/isFaceUp" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="17" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/FaceDownState/display" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="16" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/FaceDownState/click" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="15" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                    </methods>
-                    <lines>
-                        <line number="17" hits="1" branch="false"/>
-                        <line number="16" hits="1" branch="false"/>
-                        <line number="15" hits="1" branch="false"/>
-                    </lines>
-                </class>
-                <class name="Logic" filename="model\Logic.scala" line-rate="0.97" branch-rate="0.90" complexity="0">
-                    <methods>
-                        <method name="&lt;empty&gt;/Logic/removeCards" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="41" hits="2" branch="false"/>
-                                <line number="40" hits="2" branch="false"/>
-                                <line number="43" hits="2" branch="false"/>
-                                <line number="47" hits="2" branch="false"/>
-                                <line number="42" hits="1" branch="false"/>
-                                <line number="46" hits="2" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Logic/checkCards" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="35" hits="1" branch="false"/>
-                                <line number="29" hits="2" branch="false"/>
-                                <line number="28" hits="2" branch="false"/>
-                                <line number="30" hits="2" branch="false"/>
-                                <line number="34" hits="1" branch="false"/>
-                                <line number="29" hits="2" branch="true"/>
-                                <line number="27" hits="2" branch="false"/>
-                                <line number="33" hits="1" branch="true"/>
-                                <line number="29" hits="2" branch="false"/>
-                                <line number="32" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Logic/turnCard" signature="()V" line-rate="0.94" branch-rate="0.88" complexity="0">
-                            <lines>
-                                <line number="19" hits="2" branch="false"/>
-                                <line number="10" hits="0" branch="true"/>
-                                <line number="14" hits="2" branch="false"/>
-                                <line number="17" hits="2" branch="false"/>
-                                <line number="19" hits="1" branch="true"/>
-                                <line number="16" hits="2" branch="false"/>
-                                <line number="18" hits="2" branch="false"/>
-                                <line number="9" hits="1" branch="false"/>
-                                <line number="19" hits="2" branch="false"/>
-                                <line number="18" hits="2" branch="false"/>
-                                <line number="11" hits="1" branch="false"/>
-                                <line number="16" hits="2" branch="false"/>
-                                <line number="18" hits="2" branch="false"/>
-                                <line number="20" hits="2" branch="false"/>
+                                <line number="9" hits="0" branch="false"/>
                                 <line number="10" hits="0" branch="false"/>
-                                <line number="17" hits="1" branch="true"/>
-                                <line number="19" hits="2" branch="false"/>
-                                <line number="14" hits="2" branch="false"/>
-                                <line number="14" hits="2" branch="true"/>
-                                <line number="10" hits="1" branch="true"/>
-                                <line number="14" hits="2" branch="false"/>
-                                <line number="19" hits="2" branch="true"/>
-                                <line number="17" hits="1" branch="true"/>
-                                <line number="18" hits="1" branch="false"/>
-                                <line number="20" hits="2" branch="false"/>
-                                <line number="16" hits="2" branch="false"/>
-                                <line number="10" hits="1" branch="false"/>
-                                <line number="19" hits="2" branch="false"/>
-                                <line number="13" hits="2" branch="false"/>
-                                <line number="17" hits="1" branch="false"/>
-                                <line number="12" hits="2" branch="false"/>
-                                <line number="15" hits="2" branch="true"/>
-                                <line number="19" hits="1" branch="false"/>
-                                <line number="17" hits="2" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Logic/checkGameEnd" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="52" hits="2" branch="false"/>
-                                <line number="52" hits="2" branch="false"/>
-                                <line number="52" hits="1" branch="false"/>
-                                <line number="52" hits="1" branch="false"/>
-                                <line number="52" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Logic/&lt;none&gt;" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="3" hits="2" branch="false"/>
-                                <line number="2" hits="2" branch="false"/>
-                                <line number="4" hits="2" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Logic/getScore" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="55" hits="2" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Logic/getMatrix" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="6" hits="2" branch="false"/>
-                            </lines>
-                        </method>
-                    </methods>
-                    <lines>
-                        <line number="3" hits="2" branch="false"/>
-                        <line number="19" hits="2" branch="false"/>
-                        <line number="52" hits="2" branch="false"/>
-                        <line number="10" hits="0" branch="true"/>
-                        <line number="35" hits="1" branch="false"/>
-                        <line number="14" hits="2" branch="false"/>
-                        <line number="17" hits="2" branch="false"/>
-                        <line number="19" hits="1" branch="true"/>
-                        <line number="41" hits="2" branch="false"/>
-                        <line number="16" hits="2" branch="false"/>
-                        <line number="18" hits="2" branch="false"/>
-                        <line number="29" hits="2" branch="false"/>
-                        <line number="9" hits="1" branch="false"/>
-                        <line number="28" hits="2" branch="false"/>
-                        <line number="40" hits="2" branch="false"/>
-                        <line number="19" hits="2" branch="false"/>
-                        <line number="18" hits="2" branch="false"/>
-                        <line number="52" hits="2" branch="false"/>
-                        <line number="11" hits="1" branch="false"/>
-                        <line number="16" hits="2" branch="false"/>
-                        <line number="18" hits="2" branch="false"/>
-                        <line number="20" hits="2" branch="false"/>
-                        <line number="30" hits="2" branch="false"/>
-                        <line number="43" hits="2" branch="false"/>
-                        <line number="10" hits="0" branch="false"/>
-                        <line number="17" hits="1" branch="true"/>
-                        <line number="19" hits="2" branch="false"/>
-                        <line number="52" hits="1" branch="false"/>
-                        <line number="34" hits="1" branch="false"/>
-                        <line number="2" hits="2" branch="false"/>
-                        <line number="14" hits="2" branch="false"/>
-                        <line number="14" hits="2" branch="true"/>
-                        <line number="6" hits="2" branch="false"/>
-                        <line number="29" hits="2" branch="true"/>
-                        <line number="10" hits="1" branch="true"/>
-                        <line number="47" hits="2" branch="false"/>
-                        <line number="14" hits="2" branch="false"/>
-                        <line number="4" hits="2" branch="false"/>
-                        <line number="19" hits="2" branch="true"/>
-                        <line number="27" hits="2" branch="false"/>
-                        <line number="17" hits="1" branch="true"/>
-                        <line number="33" hits="1" branch="true"/>
-                        <line number="52" hits="1" branch="false"/>
-                        <line number="29" hits="2" branch="false"/>
-                        <line number="18" hits="1" branch="false"/>
-                        <line number="20" hits="2" branch="false"/>
-                        <line number="16" hits="2" branch="false"/>
-                        <line number="10" hits="1" branch="false"/>
-                        <line number="42" hits="1" branch="false"/>
-                        <line number="55" hits="2" branch="false"/>
-                        <line number="19" hits="2" branch="false"/>
-                        <line number="13" hits="2" branch="false"/>
-                        <line number="17" hits="1" branch="false"/>
-                        <line number="52" hits="1" branch="false"/>
-                        <line number="12" hits="2" branch="false"/>
-                        <line number="15" hits="2" branch="true"/>
-                        <line number="32" hits="1" branch="false"/>
-                        <line number="19" hits="1" branch="false"/>
-                        <line number="17" hits="2" branch="false"/>
-                        <line number="46" hits="2" branch="false"/>
-                    </lines>
-                </class>
-                <class name="Matrix" filename="model\Matrix.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method name="&lt;empty&gt;/Matrix/&lt;none&gt;" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="6" hits="2" branch="false"/>
-                                <line number="6" hits="2" branch="false"/>
-                                <line number="6" hits="2" branch="false"/>
-                                <line number="6" hits="2" branch="false"/>
-                            </lines>
-                        </method>
-                        <method 
-                        name="&lt;empty&gt;/Matrix/initializeWithCards" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="19" hits="2" branch="false"/>
-                                <line number="19" hits="2" branch="false"/>
-                                <line number="20" hits="2" branch="false"/>
-                                <line number="17" hits="2" branch="false"/>
-                                <line number="19" hits="2" branch="false"/>
-                                <line number="17" hits="2" branch="false"/>
-                                <line number="19" hits="2" branch="false"/>
-                                <line number="19" hits="2" branch="false"/>
-                                <line number="17" hits="2" branch="false"/>
-                                <line number="21" hits="2" branch="false"/>
-                                <line number="20" hits="2" branch="false"/>
-                                <line number="17" hits="2" branch="false"/>
-                                <line number="18" hits="2" branch="false"/>
-                                <line number="19" hits="2" branch="false"/>
                             </lines>
 </method>
-                        <method name="&lt;empty&gt;/Matrix/apply" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                        <method 
+                        name="model.LogicGameComponent/LogicDecorator/getScore" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
                             <lines>
-                                <line number="8" hits="2" branch="false"/>
+                                <line number="15" hits="0" branch="false"/>
                             </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Matrix/toString" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+</method>
+                        <method 
+                        name="model.LogicGameComponent/LogicDecorator/getMatrix" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
+                            <lines>
+                                <line number="6" hits="0" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/LogicDecorator/checkGameEnd" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
+                            <lines>
+                                <line number="13" hits="0" branch="false"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="9" hits="0" branch="false"/>
+                        <line number="15" hits="0" branch="false"/>
+                        <line number="6" hits="0" branch="false"/>
+                        <line number="13" hits="0" branch="false"/>
+                        <line number="10" hits="0" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="model.LogicGameComponent.FaceDownState" filename="model\LogicGameComponent\FaceDownState.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method 
+                        name="model.LogicGameComponent/FaceDownState/display" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="8" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/FaceDownState/click" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="7" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/FaceDownState/isFaceUp" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="9" hits="1" branch="false"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="8" hits="1" branch="false"/>
+                        <line number="7" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="model.LogicGameComponent.Matrix" filename="model\LogicGameComponent\Matrix.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method 
+                        name="model.LogicGameComponent/Matrix/&lt;none&gt;" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="9" hits="2" branch="false"/>
+                                <line number="9" hits="2" branch="false"/>
+                                <line number="9" hits="2" branch="false"/>
+                                <line number="9" hits="2" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Matrix/update" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="12" hits="2" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Matrix/select" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="32" hits="2" branch="false"/>
+                                <line number="33" hits="2" branch="false"/>
+                                <line number="31" hits="2" branch="false"/>
+                                <line number="30" hits="2" branch="true"/>
+                                <line number="33" hits="2" branch="true"/>
+                                <line number="29" hits="2" branch="false"/>
+                                <line number="32" hits="2" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Matrix/initializeWithCards" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="21" hits="2" branch="false"/>
+                                <line number="22" hits="2" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="20" hits="2" branch="false"/>
+                                <line number="21" hits="2" branch="false"/>
+                                <line number="21" hits="2" branch="false"/>
+                                <line number="21" hits="2" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="22" hits="2" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="23" hits="1" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="21" hits="2" branch="false"/>
+                                <line number="21" hits="2" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Matrix/getGrid" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="37" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Matrix/toString" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="15" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Matrix/apply" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="11" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Matrix/setupMatrix" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="48" hits="1" branch="false"/>
+                                <line number="43" hits="1" branch="false"/>
+                                <line number="41" hits="1" branch="false"/>
+                                <line number="47" hits="1" branch="false"/>
+                                <line number="42" hits="1" branch="false"/>
+                                <line number="48" hits="1" branch="false"/>
+                                <line number="48" hits="1" branch="false"/>
+                                <line number="48" hits="1" branch="false"/>
+                                <line number="42" hits="1" branch="false"/>
+                                <line number="47" hits="1" branch="false"/>
+                                <line number="50" hits="1" branch="false"/>
+                                <line number="50" hits="1" branch="false"/>
+                                <line number="48" hits="1" branch="false"/>
+                                <line number="48" hits="1" branch="false"/>
+                                <line number="42" hits="1" branch="false"/>
+                                <line number="43" hits="1" branch="false"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="12" hits="2" branch="false"/>
+                        <line number="48" hits="1" branch="false"/>
+                        <line number="43" hits="1" branch="false"/>
+                        <line number="32" hits="2" branch="false"/>
+                        <line number="21" hits="2" branch="false"/>
+                        <line number="41" hits="1" branch="false"/>
+                        <line number="47" hits="1" branch="false"/>
+                        <line number="22" hits="2" branch="false"/>
+                        <line number="33" hits="2" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
+                        <line number="9" hits="2" branch="false"/>
+                        <line number="20" hits="2" branch="false"/>
+                        <line number="42" hits="1" branch="false"/>
+                        <line number="21" hits="2" branch="false"/>
+                        <line number="48" hits="1" branch="false"/>
+                        <line number="21" hits="2" branch="false"/>
+                        <line number="48" hits="1" branch="false"/>
+                        <line number="37" hits="1" branch="false"/>
+                        <line number="48" hits="1" branch="false"/>
+                        <line number="42" hits="1" branch="false"/>
+                        <line number="31" hits="2" branch="false"/>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="21" hits="2" branch="false"/>
+                        <line number="47" hits="1" branch="false"/>
+                        <line number="30" hits="2" branch="true"/>
+                        <line number="19" hits="2" branch="false"/>
+                        <line number="22" hits="2" branch="false"/>
+                        <line number="50" hits="1" branch="false"/>
+                        <line number="9" hits="2" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
+                        <line number="50" hits="1" branch="false"/>
+                        <line number="48" hits="1" branch="false"/>
+                        <line number="33" hits="2" branch="true"/>
+                        <line number="23" hits="1" branch="false"/>
+                        <line number="9" hits="2" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
+                        <line number="48" hits="1" branch="false"/>
+                        <line number="42" hits="1" branch="false"/>
+                        <line number="21" hits="2" branch="false"/>
+                        <line number="29" hits="2" branch="false"/>
+                        <line number="9" hits="2" branch="false"/>
+                        <line number="32" hits="2" branch="false"/>
+                        <line number="15" hits="1" branch="false"/>
+                        <line number="43" hits="1" branch="false"/>
+                        <line number="21" hits="2" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="model.LogicGameComponent.FaceUpState" filename="model\LogicGameComponent\FaceUpState.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method 
+                        name="model.LogicGameComponent/FaceUpState/display" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="8" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/FaceUpState/click" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="7" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/FaceUpState/isFaceUp" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="9" hits="1" branch="false"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="8" hits="1" branch="false"/>
+                        <line number="7" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="model.LogicGameComponent.StandardMatrixFactory" filename="model\LogicGameComponent\Matrix.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method 
+                        name="model.LogicGameComponent/StandardMatrixFactory/create" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="61" hits="1" branch="false"/>
+                                <line number="60" hits="1" branch="false"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="61" hits="1" branch="false"/>
+                        <line number="60" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="model.LogicGameComponent.BonusScoring" filename="model\LogicGameComponent\BonusScoring.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method 
+                        name="model.LogicGameComponent/BonusScoring/calculateScore" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="8" hits="1" branch="false"/>
+                                <line number="9" hits="1" branch="true"/>
+                                <line number="8" hits="1" branch="false"/>
+                                <line number="8" hits="1" branch="false"/>
+                                <line number="8" hits="1" branch="true"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="8" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="true"/>
+                        <line number="8" hits="1" branch="false"/>
+                        <line number="8" hits="1" branch="false"/>
+                        <line number="8" hits="1" branch="true"/>
+                    </lines>
+</class>
+                <class 
+                name="model.LogicGameComponent.StandardScoring" filename="model\LogicGameComponent\StandardScoring.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method 
+                        name="model.LogicGameComponent/StandardScoring/calculateScore" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="8" hits="1" branch="true"/>
+                                <line number="7" hits="1" branch="true"/>
+                                <line number="7" hits="1" branch="false"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="8" hits="1" branch="true"/>
+                        <line number="7" hits="1" branch="true"/>
+                        <line number="7" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="model.LogicGameComponent.Logic" filename="model\LogicGameComponent\Logic.scala" line-rate="0.97" branch-rate="0.90" complexity="0">
+                    <methods>
+                        <method 
+                        name="model.LogicGameComponent/Logic/getMatrix" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="11" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Logic/&lt;none&gt;" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="9" hits="2" branch="false"/>
+                                <line number="8" hits="2" branch="false"/>
+                                <line number="7" hits="2" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Logic/checkCards" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="32" hits="2" branch="false"/>
+                                <line number="40" hits="1" branch="false"/>
+                                <line number="34" hits="2" branch="false"/>
+                                <line number="37" hits="1" branch="false"/>
+                                <line number="35" hits="2" branch="false"/>
+                                <line number="39" hits="2" branch="false"/>
+                                <line number="33" hits="2" branch="false"/>
+                                <line number="38" hits="2" branch="true"/>
+                                <line number="34" hits="2" branch="false"/>
+                                <line number="34" hits="2" branch="true"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Logic/turnCard" signature="()V" line-rate="0.94" branch-rate="0.88" complexity="0">
+                            <lines>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="24" hits="2" branch="true"/>
+                                <line number="22" hits="1" branch="true"/>
+                                <line number="24" hits="2" branch="false"/>
+                                <line number="15" hits="0" branch="true"/>
+                                <line number="22" hits="2" branch="false"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="21" hits="2" branch="false"/>
+                                <line number="23" hits="2" branch="false"/>
+                                <line number="14" hits="2" branch="false"/>
+                                <line number="24" hits="2" branch="true"/>
+                                <line number="24" hits="1" branch="false"/>
+                                <line number="20" hits="2" branch="true"/>
+                                <line number="17" hits="2" branch="false"/>
+                                <line number="22" hits="1" branch="false"/>
+                                <line number="23" hits="2" branch="false"/>
+                                <line number="25" hits="2" branch="false"/>
+                                <line number="22" hits="1" branch="true"/>
+                                <line number="19" hits="2" branch="false"/>
+                                <line number="24" hits="2" branch="false"/>
+                                <line number="15" hits="0" branch="false"/>
+                                <line number="24" hits="2" branch="false"/>
+                                <line number="19" hits="2" branch="true"/>
+                                <line number="23" hits="2" branch="false"/>
+                                <line number="21" hits="2" branch="false"/>
+                                <line number="16" hits="2" branch="false"/>
+                                <line number="23" hits="2" branch="false"/>
+                                <line number="21" hits="2" branch="false"/>
+                                <line number="15" hits="2" branch="false"/>
+                                <line number="25" hits="2" branch="false"/>
+                                <line number="22" hits="2" branch="false"/>
+                                <line number="24" hits="2" branch="false"/>
+                                <line number="18" hits="2" branch="false"/>
+                                <line number="15" hits="2" branch="true"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Logic/removeCards" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="46" hits="1" branch="false"/>
+                                <line number="51" hits="2" branch="false"/>
+                                <line number="48" hits="2" branch="false"/>
+                                <line number="45" hits="2" branch="false"/>
+                                <line number="47" hits="2" branch="false"/>
+                                <line number="52" hits="2" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Logic/getScore" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="60" hits="2" branch="false"/>
+                            </lines>
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Logic/checkGameEnd" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="57" hits="1" branch="false"/>
+                                <line number="57" hits="1" branch="false"/>
+                                <line number="57" hits="1" branch="false"/>
+                                <line number="57" hits="2" branch="false"/>
+                                <line number="57" hits="1" branch="false"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="19" hits="2" branch="false"/>
+                        <line number="24" hits="2" branch="true"/>
+                        <line number="22" hits="1" branch="true"/>
+                        <line number="32" hits="2" branch="false"/>
+                        <line number="9" hits="2" branch="false"/>
+                        <line number="24" hits="2" branch="false"/>
+                        <line number="15" hits="0" branch="true"/>
+                        <line number="22" hits="2" branch="false"/>
+                        <line number="40" hits="1" branch="false"/>
+                        <line number="57" hits="1" branch="false"/>
+                        <line number="8" hits="2" branch="false"/>
+                        <line number="19" hits="2" branch="false"/>
+                        <line number="21" hits="2" branch="false"/>
+                        <line number="57" hits="1" branch="false"/>
+                        <line number="34" hits="2" branch="false"/>
+                        <line number="46" hits="1" branch="false"/>
+                        <line number="23" hits="2" branch="false"/>
+                        <line number="14" hits="2" branch="false"/>
+                        <line number="24" hits="2" branch="true"/>
+                        <line number="24" hits="1" branch="false"/>
+                        <line number="20" hits="2" branch="true"/>
+                        <line number="17" hits="2" branch="false"/>
+                        <line number="22" hits="1" branch="false"/>
+                        <line number="37" hits="1" branch="false"/>
+                        <line number="51" hits="2" branch="false"/>
+                        <line number="23" hits="2" branch="false"/>
+                        <line number="48" hits="2" branch="false"/>
+                        <line number="25" hits="2" branch="false"/>
+                        <line number="35" hits="2" branch="false"/>
+                        <line number="22" hits="1" branch="true"/>
+                        <line number="19" hits="2" branch="false"/>
+                        <line number="7" hits="2" branch="false"/>
+                        <line number="39" hits="2" branch="false"/>
+                        <line number="57" hits="1" branch="false"/>
+                        <line number="24" hits="2" branch="false"/>
+                        <line number="15" hits="0" branch="false"/>
+                        <line number="45" hits="2" branch="false"/>
+                        <line number="24" hits="2" branch="false"/>
+                        <line number="33" hits="2" branch="false"/>
+                        <line number="57" hits="2" branch="false"/>
+                        <line number="19" hits="2" branch="true"/>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="23" hits="2" branch="false"/>
+                        <line number="21" hits="2" branch="false"/>
+                        <line number="16" hits="2" branch="false"/>
+                        <line number="57" hits="1" branch="false"/>
+                        <line number="38" hits="2" branch="true"/>
+                        <line number="23" hits="2" branch="false"/>
+                        <line number="60" hits="2" branch="false"/>
+                        <line number="21" hits="2" branch="false"/>
+                        <line number="47" hits="2" branch="false"/>
+                        <line number="15" hits="2" branch="false"/>
+                        <line number="25" hits="2" branch="false"/>
+                        <line number="34" hits="2" branch="false"/>
+                        <line number="52" hits="2" branch="false"/>
+                        <line number="22" hits="2" branch="false"/>
+                        <line number="24" hits="2" branch="false"/>
+                        <line number="18" hits="2" branch="false"/>
+                        <line number="15" hits="2" branch="true"/>
+                        <line number="34" hits="2" branch="true"/>
+                    </lines>
+</class>
+                <class 
+                name="model.LogicGameComponent.Card" filename="model\LogicGameComponent\Card.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method 
+                        name="model.LogicGameComponent/Card/toString" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
                                 <line number="12" hits="1" branch="false"/>
                             </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Matrix/getGrid" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Card/turnCard" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="26" hits="2" branch="false"/>
+                                <line number="8" hits="1" branch="true"/>
+                                <line number="9" hits="1" branch="true"/>
+                                <line number="8" hits="1" branch="false"/>
+                                <line number="8" hits="1" branch="false"/>
+                                <line number="9" hits="1" branch="false"/>
                             </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Matrix/setupMatrix" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+</method>
+                        <method 
+                        name="model.LogicGameComponent/Card/isFaceUp" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="47" hits="1" branch="false"/>
-                                <line number="42" hits="1" branch="false"/>
-                                <line number="47" hits="1" branch="false"/>
-                                <line number="41" hits="1" branch="false"/>
-                                <line number="49" hits="1" branch="false"/>
-                                <line number="46" hits="1" branch="false"/>
-                                <line number="47" hits="1" branch="false"/>
-                                <line number="47" hits="1" branch="false"/>
-                                <line number="47" hits="1" branch="false"/>
-                                <line number="41" hits="1" branch="false"/>
-                                <line number="49" hits="1" branch="false"/>
-                                <line number="42" hits="1" branch="false"/>
-                                <line number="40" hits="1" branch="false"/>
-                                <line number="46" hits="1" branch="false"/>
-                                <line number="47" hits="1" branch="false"/>
-                                <line number="41" hits="1" branch="false"/>
+                                <line number="11" hits="1" branch="false"/>
                             </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Matrix/update" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="9" hits="2" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="&lt;empty&gt;/Matrix/select" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="31" hits="2" branch="false"/>
-                                <line number="29" hits="2" branch="false"/>
-                                <line number="32" hits="2" branch="false"/>
-                                <line number="33" hits="1" branch="true"/>
-                                <line number="33" hits="2" branch="false"/>
-                                <line number="32" hits="2" branch="false"/>
-                                <line number="30" hits="2" branch="true"/>
-                            </lines>
-                        </method>
+</method>
                     </methods>
                     <lines>
-                        <line number="19" hits="2" branch="false"/>
-                        <line number="9" hits="2" branch="false"/>
-                        <line number="47" hits="1" branch="false"/>
-                        <line number="42" hits="1" branch="false"/>
-                        <line number="31" hits="2" branch="false"/>
-                        <line number="47" hits="1" branch="false"/>
-                        <line number="41" hits="1" branch="false"/>
-                        <line number="19" hits="2" branch="false"/>
-                        <line number="29" hits="2" branch="false"/>
-                        <line number="49" hits="1" branch="false"/>
-                        <line number="46" hits="1" branch="false"/>
-                        <line number="20" hits="2" branch="false"/>
-                        <line number="17" hits="2" branch="false"/>
-                        <line number="32" hits="2" branch="false"/>
-                        <line number="47" hits="1" branch="false"/>
-                        <line number="19" hits="2" branch="false"/>
-                        <line number="17" hits="2" branch="false"/>
-                        <line number="6" hits="2" branch="false"/>
-                        <line number="33" hits="1" branch="true"/>
-                        <line number="8" hits="2" branch="false"/>
-                        <line number="47" hits="1" branch="false"/>
-                        <line number="33" hits="2" branch="false"/>
-                        <line number="19" hits="2" branch="false"/>
-                        <line number="6" hits="2" branch="false"/>
-                        <line number="47" hits="1" branch="false"/>
-                        <line number="26" hits="2" branch="false"/>
-                        <line number="41" hits="1" branch="false"/>
-                        <line number="49" hits="1" branch="false"/>
-                        <line number="19" hits="2" branch="false"/>
                         <line number="12" hits="1" branch="false"/>
-                        <line number="42" hits="1" branch="false"/>
-                        <line number="32" hits="2" branch="false"/>
-                        <line number="17" hits="2" branch="false"/>
-                        <line number="6" hits="2" branch="false"/>
-                        <line number="21" hits="2" branch="false"/>
-                        <line number="20" hits="2" branch="false"/>
-                        <line number="40" hits="1" branch="false"/>
-                        <line number="46" hits="1" branch="false"/>
-                        <line number="17" hits="2" branch="false"/>
-                        <line number="30" hits="2" branch="true"/>
-                        <line number="6" hits="2" branch="false"/>
-                        <line number="47" hits="1" branch="false"/>
-                        <line number="41" hits="1" branch="false"/>
-                        <line number="18" hits="2" branch="false"/>
-                        <line number="19" hits="2" branch="false"/>
+                        <line number="8" hits="1" branch="true"/>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="true"/>
+                        <line number="8" hits="1" branch="false"/>
+                        <line number="8" hits="1" branch="false"/>
+                        <line number="9" hits="1" branch="false"/>
                     </lines>
-                </class>
+</class>
+                <class 
+                name="model.LogicGameComponent.RandomMatrixFactory" filename="model\LogicGameComponent\Matrix.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method 
+                        name="model.LogicGameComponent/RandomMatrixFactory/create" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="70" hits="1" branch="false"/>
+                                <line number="68" hits="1" branch="false"/>
+                                <line number="69" hits="1" branch="false"/>
+                                <line number="69" hits="1" branch="false"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="70" hits="1" branch="false"/>
+                        <line number="68" hits="1" branch="false"/>
+                        <line number="69" hits="1" branch="false"/>
+                        <line number="69" hits="1" branch="false"/>
+                    </lines>
+</class>
             </classes>
         </package>
         <package name="util" line-rate="1.00" branch-rate="1.00" complexity="0">
             <classes>
+                <class 
+                name="util.RealInputHandler" filename="util\InputHandler.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="util/RealInputHandler/askForInput" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="14" hits="1" branch="false"/>
+                                <line number="13" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="util/RealInputHandler/readLine" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="10" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="14" hits="1" branch="false"/>
+                        <line number="13" hits="1" branch="false"/>
+                        <line number="10" hits="1" branch="false"/>
+                    </lines>
+</class>
                 <class name="util.Observable" filename="util\Observable.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
                     <methods>
+                        <method name="util/Observable/add" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="10" hits="1" branch="false"/>
+                                <line number="10" hits="1" branch="false"/>
+                            </lines>
+                        </method>
                         <method name="util/Observable/remove" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
                                 <line number="12" hits="1" branch="false"/>
@@ -555,50 +559,23 @@ line-rate="0.99" lines-valid="163" lines-covered="161" branches-valid="19" branc
                                 <line number="14" hits="1" branch="false"/>
                             </lines>
                         </method>
-                        <method name="util/Observable/add" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="10" hits="1" branch="false"/>
-                                <line number="10" hits="1" branch="false"/>
-                            </lines>
-                        </method>
                         <method name="util/Observable/&lt;none&gt;" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
                             <lines>
-                                <line number="8" hits="2" branch="false"/>
+                                <line number="8" hits="1" branch="false"/>
                             </lines>
                         </method>
                     </methods>
                     <lines>
+                        <line number="10" hits="1" branch="false"/>
                         <line number="12" hits="1" branch="false"/>
                         <line number="14" hits="1" branch="false"/>
                         <line number="10" hits="1" branch="false"/>
-                        <line number="8" hits="2" branch="false"/>
+                        <line number="12" hits="1" branch="false"/>
                         <line number="12" hits="1" branch="false"/>
                         <line number="14" hits="1" branch="false"/>
-                        <line number="12" hits="1" branch="false"/>
-                        <line number="10" hits="1" branch="false"/>
+                        <line number="8" hits="1" branch="false"/>
                     </lines>
                 </class>
-                <class 
-                name="util.RealInputHandler" filename="util\InputHandler.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
-                    <methods>
-                        <method name="util/RealInputHandler/askForInput" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="13" hits="1" branch="false"/>
-                                <line number="14" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                        <method name="util/RealInputHandler/readLine" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
-                            <lines>
-                                <line number="10" hits="1" branch="false"/>
-                            </lines>
-                        </method>
-                    </methods>
-                    <lines>
-                        <line number="13" hits="1" branch="false"/>
-                        <line number="10" hits="1" branch="false"/>
-                        <line number="14" hits="1" branch="false"/>
-                    </lines>
-</class>
             </classes>
         </package>
     </packages>

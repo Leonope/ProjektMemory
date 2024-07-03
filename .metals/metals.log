@@ -457,3 +457,964 @@ SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@4c2b39e
 2024.06.21 13:58:19 INFO  time: indexed workspace in 6.25s
 Juni 21, 2024 1:58:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFORMATION: Unsupported notification method: $/setTrace
+2024.06.21 14:03:33 INFO  Started: Metals version 1.3.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@502575ca]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@4554ca60]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@502575ca]
+2024.06.21 14:03:38 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.06.21 14:03:39 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.21 14:03:39 INFO  Attempting to connect to the build server...
+2024.06.21 14:03:39 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.21 14:03:39 INFO  Attempting to connect to the build server...
+2024.06.21 14:03:39 INFO  Attempting to connect to the build server...
+2024.06.21 14:03:39 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.21 14:03:40 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.21 14:03:40 INFO  time: Connected to build server in 0.61s
+2024.06.21 14:03:40 INFO  Connected to Build server: Bloop v1.5.18
+2024.06.21 14:03:40 INFO  time: Imported build in 0.19s
+Juni 21, 2024 2:03:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 8
+2024.06.21 14:03:50 INFO  time: indexed workspace in 9.47s
+2024.06.21 14:03:59 INFO  compiling projektmemory (21 scala sources)
+2024.06.21 14:04:01 INFO  time: code lens generation in 1.25s
+2024.06.21 14:04:03 INFO  time: compiled projektmemory in 3.93s
+2024.06.21 14:12:10 INFO  Shutting down server
+2024.06.21 14:12:10 INFO  shutting down Metals
+2024.06.21 14:12:10 INFO  Shut down connection with build server.
+2024.06.21 14:12:10 INFO  Shut down connection with build server.
+2024.06.21 14:12:10 INFO  Shut down connection with build server.
+2024.06.21 14:12:10 INFO  Exiting server
+2024.06.27 10:36:29 INFO  Started: Metals version 1.3.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@52609854]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@349062c7]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@52609854]
+2024.06.27 10:36:32 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.06.27 10:36:34 INFO  Attempting to connect to the build server...
+2024.06.27 10:36:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.27 10:36:45 INFO  Attempting to connect to the build server...
+2024.06.27 10:36:45 INFO  Attempting to connect to the build server...
+2024.06.27 10:36:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.27 10:36:46 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.27 10:36:46 INFO  time: Connected to build server in 11s
+2024.06.27 10:36:46 INFO  Connected to Build server: Bloop v1.5.18
+2024.06.27 10:36:46 INFO  time: Imported build in 0.62s
+2024.06.27 10:37:04 INFO  time: indexed workspace in 17s
+2024.06.27 10:41:27 INFO  compiling projektmemory (1 scala source)
+2024.06.27 10:41:33 INFO  time: compiled projektmemory in 6.02s
+2024.06.27 10:41:39 INFO  compiling projektmemory (1 scala source)
+2024.06.27 10:41:41 INFO  time: compiled projektmemory in 2.04s
+2024.06.27 10:42:04 INFO  compiling projektmemory (1 scala source)
+2024.06.27 10:42:05 INFO  time: compiled projektmemory in 1.26s
+2024.06.27 10:53:26 INFO  compiling projektmemory (1 scala source)
+2024.06.27 10:53:28 INFO  time: compiled projektmemory in 2.5s
+2024.06.27 10:55:14 INFO  compiling projektmemory (1 scala source)
+2024.06.27 10:55:16 INFO  time: compiled projektmemory in 1.82s
+2024.06.27 10:57:35 INFO  compiling projektmemory (1 scala source)
+2024.06.27 10:57:35 INFO  time: compiled projektmemory in 0.67s
+2024.06.27 10:58:45 INFO  compiling projektmemory (2 scala sources)
+2024.06.27 10:58:45 INFO  time: compiled projektmemory in 0.29s
+2024.06.27 10:59:02 INFO  compiling projektmemory (2 scala sources)
+2024.06.27 10:59:02 INFO  time: compiled projektmemory in 0.27s
+Juni 27, 2024 10:59:29 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 480
+2024.06.27 10:59:36 INFO  time: code lens generation in 6.98s
+Juni 27, 2024 11:02:46 AM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\.reports\metals-full\2024-06-27\r_compiler-error_(projektmemory-build)_11-02-46-282.md
+Juni 27, 2024 11:02:52 AM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\.reports\metals-full\2024-06-27\r_compiler-error_(projektmemory-build)_11-02-52-447.md
+Juni 27, 2024 11:02:55 AM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\.reports\metals-full\2024-06-27\r_compiler-error_(projektmemory-build)_11-02-55-664.md
+Juni 27, 2024 11:02:59 AM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\.reports\metals-full\2024-06-27\r_compiler-error_(projektmemory-build)_11-02-59-831.md
+Juni 27, 2024 11:03:14 AM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\.reports\metals-full\2024-06-27\r_compiler-error_(projektmemory-build)_11-03-14-871.md
+Juni 27, 2024 11:03:40 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 670
+2024.06.27 11:04:40 INFO  running 'C:\Program Files\Java\jdk-22\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\leo11\AppData\Local\Temp\metals13627519809158322860\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.06.27 11:04:45 INFO  [info] welcome to sbt 1.9.8 (Oracle Corporation Java 22.0.1)
+2024.06.27 11:04:46 INFO  [info] loading settings for project projektmemory-build-build-build from metals.sbt ...
+2024.06.27 11:04:49 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\project
+2024.06.27 11:04:51 INFO  [info] loading settings for project projektmemory-build-build from metals.sbt ...
+2024.06.27 11:04:51 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project
+2024.06.27 11:04:56 INFO  [success] Generated .bloop\projektmemory-build-build.json
+2024.06.27 11:04:56 INFO  [success] Total time: 5 s, completed 27.06.2024, 11:04:56
+2024.06.27 11:04:56 INFO  [info] loading settings for project projektmemory-build from metals.sbt,plugins.sbt ...
+2024.06.27 11:04:56 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project
+2024.06.27 11:04:58 INFO  [success] Generated .bloop\projektmemory-build.json
+2024.06.27 11:04:58 INFO  [success] Total time: 2 s, completed 27.06.2024, 11:04:59
+2024.06.27 11:05:04 INFO  [info] loading settings for project projektmemory from build.sbt ...
+2024.06.27 11:05:04 INFO  [info] set current project to ProjektMemory (in build file:/C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester%203/Software-Engineering/ProjektMemory/)
+2024.06.27 11:05:08 INFO  [success] Generated .bloop\projektmemory-test.json
+2024.06.27 11:05:08 INFO  [success] Generated .bloop\projektmemory.json
+2024.06.27 11:05:08 INFO  [success] Total time: 4 s, completed 27.06.2024, 11:05:08
+2024.06.27 11:05:08 INFO  time: ran 'sbt bloopInstall' in 28s
+2024.06.27 11:05:08 INFO  Disconnecting from Bloop session...
+2024.06.27 11:05:09 INFO  Shut down connection with build server.
+2024.06.27 11:05:09 INFO  Shut down connection with build server.
+2024.06.27 11:05:08 INFO  Shut down connection with build server.
+2024.06.27 11:05:09 INFO  Attempting to connect to the build server...
+2024.06.27 11:05:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.27 11:05:09 INFO  Attempting to connect to the build server...
+2024.06.27 11:05:09 INFO  Attempting to connect to the build server...
+2024.06.27 11:05:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.27 11:05:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.27 11:05:08 INFO  time: Connected to build server in 0.25s
+2024.06.27 11:05:08 INFO  Connected to Build server: Bloop v1.5.18
+2024.06.27 11:05:09 INFO  time: Imported build in 0.16s
+Juni 27, 2024 11:05:13 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 732
+2024.06.27 11:05:14 INFO  compiling projektmemory (24 scala sources)
+Juni 27, 2024 11:05:20 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 745
+2024.06.27 11:05:21 INFO  time: compiled projektmemory in 7.14s
+2024.06.27 11:05:23 INFO  time: indexed workspace in 13s
+2024.06.27 11:05:23 INFO  compiling projektmemory (24 scala sources)
+2024.06.27 11:05:29 INFO  time: compiled projektmemory in 5.14s
+Juni 27, 2024 11:05:30 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 761
+Juni 27, 2024 11:06:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 832
+2024.06.27 11:06:40 INFO  compiling projektmemory (24 scala sources)
+Juni 27, 2024 11:06:48 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 906
+2024.06.27 11:06:49 ERROR Failed to tokenize input for semantic tokens for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\FileIOComponent\FileIOJson\FileIO.scala
+scala.meta.tokenizers.TokenizeException: <input>:45: error: unclosed comment
+  /*implicit val cardWrites = new Writes[Card] {
+  ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:32)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:28)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:28)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:32)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:61)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:77)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:300)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:201)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:912)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:23)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:960)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:322)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:22)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:13)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:30)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:545)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1570)
+
+Juni 27, 2024 11:06:49 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 922
+2024.06.27 11:06:52 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2024.06.27 11:06:52 INFO  time: compiled projektmemory in 12s
+2024.06.27 11:06:53 ERROR Failed to tokenize input for semantic tokens for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\FileIOComponent\FileIOJson\FileIO.scala
+scala.meta.tokenizers.TokenizeException: <input>:45: error: unclosed comment
+  /*implicit val cardWrites = new Writes[Card] {
+  ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:32)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:28)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:28)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:32)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:61)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:77)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:300)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:201)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:912)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:23)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:960)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:322)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:22)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:13)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:30)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:545)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1570)
+
+Juni 27, 2024 11:07:14 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 978
+2024.06.27 11:07:26 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:07:26 INFO  time: compiled projektmemory in 0.8s
+2024.06.27 11:07:27 WARN  Could not load snapshot text for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\FileIOComponent\FileIOJson\FileIO.scala
+2024.06.27 11:07:35 WARN  Could not load snapshot text for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\FileIOComponent\FileIOJson\FileIO.scala
+2024.06.27 11:07:35 ERROR Failed to tokenize input for semantic tokens for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\FileIOComponent\FileIOJson\FileIO.scala
+scala.meta.tokenizers.TokenizeException: <input>:45: error: unclosed comment
+  /*implicit val cardWrites = new Writes[Card] {
+  ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:32)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:28)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:28)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:32)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:61)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:77)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:300)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:201)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:912)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:23)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:960)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:322)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:22)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:13)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:30)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:545)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1570)
+
+2024.06.27 11:07:36 WARN  Could not load snapshot text for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\FileIOComponent\FileIOJson\FileIO.scala
+2024.06.27 11:07:37 ERROR Failed to tokenize input for semantic tokens for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\FileIOComponent\FileIOJson\FileIO.scala
+scala.meta.tokenizers.TokenizeException: <input>:45: error: unclosed comment
+  /*implicit val cardWrites = new Writes[Card] {
+  ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:32)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:28)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:28)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:32)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:61)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:77)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:300)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:201)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:912)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:23)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:960)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:322)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:22)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:13)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:30)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:545)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1570)
+
+Juni 27, 2024 11:07:39 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 1035
+2024.06.27 11:07:40 WARN  Could not load snapshot text for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\model\FileIOComponent\FileIOJson\FileIO.scala
+Juni 27, 2024 11:08:06 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 1054
+2024.06.27 11:08:13 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:08:15 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2024.06.27 11:08:15 INFO  time: compiled projektmemory in 3.03s
+Juni 27, 2024 11:08:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 1115
+Juni 27, 2024 11:08:44 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 1124
+2024.06.27 11:10:38 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:10:40 INFO  time: compiled projektmemory in 1.93s
+2024.06.27 11:11:11 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:11:13 INFO  time: compiled projektmemory in 2.05s
+2024.06.27 11:12:16 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:12:16 INFO  time: compiled projektmemory in 0.45s
+2024.06.27 11:12:44 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:12:46 INFO  time: compiled projektmemory in 1.73s
+2024.06.27 11:13:29 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:13:31 INFO  time: compiled projektmemory in 1.76s
+2024.06.27 11:23:36 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:23:38 INFO  time: compiled projektmemory in 2.5s
+2024.06.27 11:24:23 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:24:24 INFO  time: compiled projektmemory in 1.38s
+2024.06.27 11:24:24 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:24:26 INFO  time: compiled projektmemory in 1.79s
+Juni 27, 2024 11:25:15 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 1750
+2024.06.27 11:25:23 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:25:23 INFO  time: compiled projektmemory in 0.64s
+2024.06.27 11:25:49 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:25:51 INFO  time: compiled projektmemory in 2.07s
+2024.06.27 11:25:51 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:25:53 INFO  time: compiled projektmemory in 1.71s
+2024.06.27 11:25:55 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:25:58 INFO  time: compiled projektmemory in 2.7s
+2024.06.27 11:25:58 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:25:59 INFO  time: compiled projektmemory in 0.89s
+2024.06.27 11:28:26 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:28:26 INFO  time: compiled projektmemory in 0.46s
+2024.06.27 11:28:38 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:28:38 INFO  time: compiled projektmemory in 0.5s
+2024.06.27 11:29:27 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:29:27 INFO  time: compiled projektmemory in 0.6s
+2024.06.27 11:43:30 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:43:30 INFO  time: compiled projektmemory in 0.41s
+2024.06.27 11:43:34 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:43:34 INFO  time: compiled projektmemory in 0.71s
+2024.06.27 11:47:48 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:47:51 INFO  time: compiled projektmemory in 2.46s
+2024.06.27 11:48:38 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:48:38 INFO  time: compiled projektmemory in 0.69s
+Juni 27, 2024 11:50:12 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 2340
+2024.06.27 11:50:16 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:50:16 INFO  time: compiled projektmemory in 0.5s
+2024.06.27 11:50:24 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:50:24 INFO  time: compiled projektmemory in 0.59s
+Juni 27, 2024 11:50:29 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 11:50:29 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 11:50:33 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2024.06.27 11:50:39 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:50:39 INFO  time: compiled projektmemory in 0.81s
+Juni 27, 2024 11:51:36 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 2438
+Juni 27, 2024 11:51:37 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 2440
+2024.06.27 11:52:39 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:52:39 INFO  time: compiled projektmemory in 0.25s
+Juni 27, 2024 11:52:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 2490
+2024.06.27 11:52:47 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:52:47 INFO  time: compiled projektmemory in 0.29s
+2024.06.27 11:53:00 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:53:00 INFO  time: compiled projektmemory in 0.53s
+2024.06.27 11:53:10 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:53:11 INFO  time: compiled projektmemory in 1.01s
+2024.06.27 11:53:24 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:53:24 INFO  time: compiled projektmemory in 0.44s
+2024.06.27 11:53:30 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:53:30 INFO  time: compiled projektmemory in 0.35s
+Juni 27, 2024 11:54:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 2604
+2024.06.27 11:54:49 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:54:49 INFO  time: compiled projektmemory in 0.39s
+2024.06.27 11:55:21 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:55:21 INFO  time: compiled projektmemory in 0.41s
+2024.06.27 11:55:35 INFO  compiling projektmemory (3 scala sources)
+2024.06.27 11:55:38 INFO  time: compiled projektmemory in 3.46s
+Juni 27, 2024 11:56:39 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 2705
+2024.06.27 11:58:32 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:58:32 INFO  time: compiled projektmemory in 0.52s
+2024.06.27 11:58:37 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:58:41 INFO  time: compiled projektmemory in 3.28s
+Juni 27, 2024 11:58:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 2863
+Juni 27, 2024 11:58:47 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 2895
+2024.06.27 11:58:51 INFO  compiling projektmemory (1 scala source)
+2024.06.27 11:58:53 INFO  time: compiled projektmemory in 2.87s
+Juni 27, 2024 11:59:00 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
+2024.06.27 12:01:13 INFO  compiling projektmemory (1 scala source)
+Juni 27, 2024 12:01:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 2995
+2024.06.27 12:01:15 INFO  time: compiled projektmemory in 2.26s
+Juni 27, 2024 12:07:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 3169
+Juni 27, 2024 12:08:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 3240
+Juni 27, 2024 12:08:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 3249
+2024.06.27 12:11:40 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:11:40 INFO  time: compiled projektmemory in 0.43s
+2024.06.27 12:12:19 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:12:19 INFO  time: compiled projektmemory in 0.68s
+2024.06.27 12:12:50 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:12:52 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2024.06.27 12:12:52 INFO  time: compiled projektmemory in 2.43s
+2024.06.27 12:16:21 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:16:23 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2024.06.27 12:16:23 INFO  time: compiled projektmemory in 2.67s
+Juni 27, 2024 12:17:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 3517
+Juni 27, 2024 12:18:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 3522
+2024.06.27 12:18:35 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:18:38 INFO  time: compiled projektmemory in 2.62s
+Juni 27, 2024 12:21:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 3731
+2024.06.27 12:25:01 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:25:04 INFO  time: compiled projektmemory in 2.98s
+2024.06.27 12:25:21 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:25:21 INFO  time: compiled projektmemory in 0.26s
+2024.06.27 12:28:14 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:28:14 INFO  time: compiled projektmemory in 0.56s
+Juni 27, 2024 12:28:17 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 12:28:18 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 12:28:18 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\.reports\metals-full\2024-06-27\r_compiler-error_(projektmemory)_12-28-18-653.md
+Juni 27, 2024 12:28:18 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 12:28:18 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\.reports\metals-full\2024-06-27\r_compiler-error_(projektmemory)_12-28-18-960.md
+Juni 27, 2024 12:28:23 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 12:28:23 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\.reports\metals-full\2024-06-27\r_compiler-error_(projektmemory)_12-28-23-311.md
+Juni 27, 2024 12:28:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 4222
+Juni 27, 2024 12:28:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 4231
+2024.06.27 12:33:35 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:33:35 INFO  time: compiled projektmemory in 0.41s
+2024.06.27 12:33:39 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:33:39 INFO  time: compiled projektmemory in 0.45s
+Juni 27, 2024 12:33:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 4378
+2024.06.27 12:36:54 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:36:54 INFO  time: compiled projektmemory in 0.38s
+Juni 27, 2024 12:36:56 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 12:36:57 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 12:36:58 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 12:36:58 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\.reports\metals-full\2024-06-27\r_compiler-error_(projektmemory)_12-36-58-198.md
+Juni 27, 2024 12:38:16 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 12:38:16 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\.reports\metals-full\2024-06-27\r_compiler-error_(projektmemory)_12-38-16-440.md
+Juni 27, 2024 12:40:08 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 12:40:09 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFORMATION: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Juni 27, 2024 12:40:09 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\.reports\metals-full\2024-06-27\r_compiler-error_(projektmemory)_12-40-09-289.md
+2024.06.27 12:40:12 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:40:12 INFO  time: compiled projektmemory in 0.47s
+2024.06.27 12:41:31 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:41:34 INFO  time: compiled projektmemory in 2.62s
+Juni 27, 2024 12:44:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 4740
+2024.06.27 12:45:06 INFO  compiling projektmemory (1 scala source)
+Juni 27, 2024 12:45:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 4769
+2024.06.27 12:45:09 INFO  time: compiled projektmemory in 2.53s
+2024.06.27 12:45:45 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:45:46 INFO  time: compiled projektmemory in 1.26s
+Juni 27, 2024 12:46:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 4872
+2024.06.27 12:46:51 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:46:51 INFO  time: compiled projektmemory in 0.46s
+2024.06.27 12:48:38 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:48:40 INFO  time: compiled projektmemory in 1.83s
+2024.06.27 12:48:47 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:48:47 INFO  time: compiled projektmemory in 0.66s
+Juni 27, 2024 12:48:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 5013
+Juni 27, 2024 12:49:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 5057
+2024.06.27 12:49:23 INFO  compiling projektmemory (2 scala sources)
+2024.06.27 12:49:26 INFO  time: compiled projektmemory in 3.02s
+2024.06.27 12:51:58 INFO  compiling projektmemory (1 scala source)
+2024.06.27 12:51:58 INFO  time: compiled projektmemory in 0.38s
+Juni 27, 2024 12:52:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 5184
+Juni 27, 2024 12:52:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SCHWERWIEGEND: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2218)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:288)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala:1032)
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:587)
+	at scala.meta.internal.metals.debug.DebugProvider.runCommandDiscovery(DebugProvider.scala:523)
+	at scala.meta.internal.metals.MetalsLspService.discoverMainClasses(MetalsLspService.scala:1526)
+	at scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:796)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	... 9 more
+
+2024.06.27 12:52:45 INFO  Shutting down server
+2024.06.27 12:52:45 INFO  shutting down Metals
+2024.06.27 12:52:45 INFO  Shut down connection with build server.
+2024.06.27 12:52:45 INFO  Shut down connection with build server.
+2024.06.27 12:52:45 INFO  Shut down connection with build server.
+2024.06.27 12:52:45 INFO  Exiting server
+2024.06.28 09:07:40 INFO  Started: Metals version 1.3.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@6a947ee8]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@76b9aa39]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@6a947ee8]
+2024.06.28 09:07:41 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+Juni 28, 2024 9:07:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 2
+Juni 28, 2024 9:07:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 1
+2024.06.28 09:07:43 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 09:07:43 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 09:07:43 INFO  Attempting to connect to the build server...
+2024.06.28 09:07:45 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 3.3.3
+Juni 28, 2024 9:07:46 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SCHWERWIEGEND: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2218)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:288)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:589)
+	at scala.meta.internal.metals.debug.DebugProvider.runCommandDiscovery(DebugProvider.scala:523)
+	at scala.meta.internal.metals.MetalsLspService.discoverMainClasses(MetalsLspService.scala:1526)
+	at scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:796)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	... 9 more
+
+2024.06.28 09:07:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.28 09:07:49 INFO  Attempting to connect to the build server...
+2024.06.28 09:07:49 INFO  Attempting to connect to the build server...
+2024.06.28 09:07:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.28 09:07:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.28 09:07:49 INFO  time: Connected to build server in 5.95s
+2024.06.28 09:07:49 INFO  Connected to Build server: Bloop v1.5.18
+2024.06.28 09:07:50 INFO  time: Imported build in 0.4s
+2024.06.28 09:07:57 INFO  time: indexed workspace in 7.31s
+2024.06.28 09:07:59 INFO  compiling projektmemory-test (12 scala sources)
+2024.06.28 09:08:15 INFO  time: compiled projektmemory-test in 15s
+Juni 28, 2024 9:23:43 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
+Juni 28, 2024 9:26:17 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 189
+Juni 28, 2024 9:26:37 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 226
+Juni 28, 2024 9:27:39 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 269
+2024.06.28 09:31:04 INFO  Shutting down server
+2024.06.28 09:31:04 INFO  shutting down Metals
+2024.06.28 09:31:04 INFO  Shut down connection with build server.
+2024.06.28 09:31:04 INFO  Shut down connection with build server.
+2024.06.28 09:31:04 INFO  Shut down connection with build server.
+2024.06.28 09:31:04 INFO  Exiting server
+2024.07.02 10:03:56 INFO  Started: Metals version 1.3.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@4c2b39ef]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@5540d7b2]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@4c2b39ef]
+2024.07.02 10:03:58 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.02 10:04:01 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.02 10:04:01 INFO  Attempting to connect to the build server...
+2024.07.02 10:04:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 10:04:09 INFO  Attempting to connect to the build server...
+2024.07.02 10:04:09 INFO  Attempting to connect to the build server...
+2024.07.02 10:04:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 10:04:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester 3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 10:04:10 INFO  time: Connected to build server in 9.07s
+2024.07.02 10:04:10 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.02 10:04:10 INFO  time: Imported build in 0.4s
+2024.07.02 10:04:20 INFO  time: indexed workspace in 9.92s
+2024.07.02 10:22:20 INFO  Shutting down server
+2024.07.02 10:22:20 INFO  shutting down Metals
+2024.07.02 10:22:20 INFO  Shut down connection with build server.
+2024.07.02 10:22:20 INFO  Shut down connection with build server.
+2024.07.02 10:22:20 INFO  Shut down connection with build server.
+2024.07.02 10:22:20 INFO  Exiting server
+2024.07.02 10:51:24 INFO  Started: Metals version 1.3.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@668595e3]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@5846b16c]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@668595e3]
+2024.07.02 10:51:26 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.02 10:51:28 INFO  Attempting to connect to the build server...
+2024.07.02 10:51:37 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 10:51:37 INFO  Attempting to connect to the build server...
+2024.07.02 10:51:37 INFO  Attempting to connect to the build server...
+2024.07.02 10:51:37 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 10:51:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 10:51:38 INFO  time: Connected to build server in 9.91s
+2024.07.02 10:51:38 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.02 10:51:38 INFO  time: Imported build in 0.58s
+2024.07.02 10:51:52 INFO  time: indexed workspace in 13s
+2024.07.02 10:54:30 INFO  time: code lens generation in 7.24s
+2024.07.02 10:54:30 INFO  time: code lens generation in 6.43s
+2024.07.02 10:54:30 INFO  time: code lens generation in 5.7s
+2024.07.02 11:11:48 INFO  Shutting down server
+2024.07.02 11:11:48 INFO  shutting down Metals
+2024.07.02 11:11:48 INFO  Shut down connection with build server.
+2024.07.02 11:11:48 INFO  Shut down connection with build server.
+2024.07.02 11:11:48 INFO  Shut down connection with build server.
+2024.07.02 11:11:48 INFO  Exiting server
+2024.07.02 11:13:15 INFO  Started: Metals version 1.3.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@19692cab]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@53dbe305]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@19692cab]
+2024.07.02 11:13:18 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.02 11:13:19 INFO  Attempting to connect to the build server...
+2024.07.02 11:13:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 11:13:19 INFO  Attempting to connect to the build server...
+2024.07.02 11:13:19 INFO  Attempting to connect to the build server...
+2024.07.02 11:13:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 11:13:20 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 11:13:20 INFO  time: Connected to build server in 0.63s
+2024.07.02 11:13:19 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.02 11:13:20 INFO  time: Imported build in 0.27s
+2024.07.02 11:13:23 INFO  Shutting down server
+2024.07.02 11:13:23 INFO  shutting down Metals
+2024.07.02 11:13:23 INFO  Shut down connection with build server.
+2024.07.02 11:13:23 INFO  Shut down connection with build server.
+2024.07.02 11:13:23 INFO  Shut down connection with build server.
+2024.07.02 11:13:23 INFO  Exiting server
+2024.07.02 12:04:42 INFO  Started: Metals version 1.3.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@4c2b39ef]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@5540d7b2]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@4c2b39ef]
+2024.07.02 12:04:45 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.02 12:04:47 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.02 12:04:47 INFO  Attempting to connect to the build server...
+2024.07.02 12:04:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 12:04:48 INFO  Attempting to connect to the build server...
+2024.07.02 12:04:48 INFO  Attempting to connect to the build server...
+2024.07.02 12:04:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 12:04:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.02 12:04:48 INFO  time: Connected to build server in 0.81s
+2024.07.02 12:04:48 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.02 12:04:49 INFO  time: Imported build in 0.33s
+2024.07.02 12:04:59 INFO  time: indexed workspace in 9.91s
+2024.07.02 12:04:59 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+2024.07.02 12:05:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.02 12:05:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+Juli 02, 2024 12:05:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 12
+Juli 02, 2024 12:05:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 11
+2024.07.02 12:05:14 INFO  time: code lens generation in 6.27s
+2024.07.02 12:05:14 INFO  time: code lens generation in 12s
+2024.07.02 12:05:14 INFO  time: code lens generation in 12s
+2024.07.02 12:05:14 INFO  time: code lens generation in 12s
+2024.07.02 12:05:35 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.02 12:05:37 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.02 12:05:48 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.02 12:05:48 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.02 12:05:50 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.02 12:05:50 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.02 12:06:17 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.02 12:06:27 INFO  Shutting down server
+2024.07.02 12:06:27 INFO  shutting down Metals
+2024.07.02 12:06:27 INFO  Shut down connection with build server.
+2024.07.02 12:06:27 INFO  Shut down connection with build server.
+2024.07.02 12:06:27 INFO  Shut down connection with build server.
+2024.07.02 12:06:27 INFO  Exiting server
+2024.07.03 13:12:09 INFO  Started: Metals version 1.3.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@377bf26e]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@3103fb91]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@377bf26e]
+2024.07.03 13:12:12 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.03 13:12:13 INFO  Attempting to connect to the build server...
+2024.07.03 13:12:14 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.03 13:12:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:12:19 INFO  Attempting to connect to the build server...
+2024.07.03 13:12:19 INFO  Attempting to connect to the build server...
+2024.07.03 13:12:20 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:12:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:12:19 INFO  time: Connected to build server in 7.08s
+2024.07.03 13:12:19 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.03 13:12:21 INFO  time: Imported build in 0.4s
+2024.07.03 13:12:26 INFO  time: indexed workspace in 5.57s
+2024.07.03 13:12:26 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+2024.07.03 13:12:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:12:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:12:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:12:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:12:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:02 INFO  time: code lens generation in 2.76s
+2024.07.03 13:13:02 INFO  time: code lens generation in 2.76s
+2024.07.03 13:13:02 INFO  time: code lens generation in 2.76s
+Juli 03, 2024 1:13:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SCHWERWIEGEND: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2218)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:288)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:589)
+	at scala.meta.internal.metals.debug.DebugProvider.runCommandDiscovery(DebugProvider.scala:523)
+	at scala.meta.internal.metals.MetalsLspService.discoverMainClasses(MetalsLspService.scala:1526)
+	at scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:796)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	... 9 more
+
+2024.07.03 13:13:04 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:06 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:09 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:15 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:17 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:18 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:18 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:19 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:21 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:22 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+2024.07.03 13:13:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:30 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+2024.07.03 13:13:30 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:32 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:33 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:34 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:34 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+2024.07.03 13:13:35 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:39 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+Juli 03, 2024 1:13:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SCHWERWIEGEND: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2218)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:288)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:589)
+	at scala.meta.internal.metals.debug.DebugProvider.runCommandDiscovery(DebugProvider.scala:523)
+	at scala.meta.internal.metals.MetalsLspService.discoverMainClasses(MetalsLspService.scala:1526)
+	at scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:796)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	... 9 more
+
+2024.07.03 13:13:56 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:14:05 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+Juli 03, 2024 1:14:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 52
+2024.07.03 13:14:09 INFO  time: code lens generation in 4s
+2024.07.03 13:14:09 INFO  time: code lens generation in 1.39s
+2024.07.03 13:14:09 INFO  time: code lens generation in 3.56s
+2024.07.03 13:14:10 INFO  skipping build import with status 'Installed'
+2024.07.03 13:14:10 INFO  Disconnecting from Bloop session...
+2024.07.03 13:14:10 INFO  Shut down connection with build server.
+2024.07.03 13:14:10 INFO  Shut down connection with build server.
+2024.07.03 13:14:10 INFO  Shut down connection with build server.
+2024.07.03 13:14:10 INFO  Attempting to connect to the build server...
+2024.07.03 13:14:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:14:10 INFO  Attempting to connect to the build server...
+2024.07.03 13:14:10 INFO  Attempting to connect to the build server...
+2024.07.03 13:14:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:14:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:14:10 INFO  time: Connected to build server in 0.15s
+2024.07.03 13:14:10 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.03 13:14:11 INFO  time: Imported build in 0.15s
+2024.07.03 13:14:13 INFO  time: indexed workspace in 2.75s
+2024.07.03 13:14:13 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+2024.07.03 13:14:37 INFO  running 'C:\Program Files\Java\jdk-22\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\leo11\AppData\Local\Temp\metals6710550274959463291\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.07.03 13:14:40 INFO  [info] welcome to sbt 1.9.8 (Oracle Corporation Java 22.0.1)
+2024.07.03 13:14:43 INFO  [info] loading settings for project projektmemory-build-build-build from metals.sbt ...
+2024.07.03 13:14:44 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\project
+2024.07.03 13:14:45 INFO  [info] loading settings for project projektmemory-build-build from metals.sbt ...
+2024.07.03 13:14:45 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project
+2024.07.03 13:14:49 INFO  [success] Generated .bloop\projektmemory-build-build.json
+2024.07.03 13:14:49 INFO  [success] Total time: 4 s, completed 03.07.2024, 13:14:49
+2024.07.03 13:14:51 INFO  [info] loading settings for project projektmemory-build from metals.sbt,plugins.sbt ...
+2024.07.03 13:14:51 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project
+2024.07.03 13:14:57 INFO  [success] Generated .bloop\projektmemory-build.json
+2024.07.03 13:14:57 INFO  [success] Total time: 6 s, completed 03.07.2024, 13:14:57
+2024.07.03 13:15:00 ERROR C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\build.sbt:22: warning: method in in trait ScopingSetting is deprecated (since 1.5.0): `in` is deprecated; migrate to slash syntax - https://www.scala-sbt.org/1.x/docs/Migrating-from-sbt-013x.html#slash
+2024.07.03 13:15:00 ERROR assemblyMergeStrategy in assembly := {
+2024.07.03 13:15:00 ERROR                       ^
+2024.07.03 13:15:00 ERROR C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\build.sbt:35: warning: method in in trait ScopingSetting is deprecated (since 1.5.0): `in` is deprecated; migrate to slash syntax - https://www.scala-sbt.org/1.x/docs/Migrating-from-sbt-013x.html#slash
+2024.07.03 13:15:00 ERROR mainClass in assembly := Some("main.Memory")
+2024.07.03 13:15:00 ERROR           ^
+2024.07.03 13:15:00 INFO  [info] loading settings for project projektmemory from build.sbt ...
+2024.07.03 13:15:00 INFO  [info] set current project to ProjektMemory (in build file:/C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester3/Software-Engineering/ProjektMemory/)
+2024.07.03 13:15:01 INFO  [success] Generated .bloop\projektmemory.json
+2024.07.03 13:15:01 INFO  [success] Generated .bloop\projektmemory-test.json
+2024.07.03 13:15:01 INFO  [success] Total time: 1 s, completed 03.07.2024, 13:15:01
+2024.07.03 13:15:01 INFO  time: ran 'sbt bloopInstall' in 24s
+2024.07.03 13:15:02 INFO  Disconnecting from Bloop session...
+2024.07.03 13:15:02 INFO  Shut down connection with build server.
+2024.07.03 13:15:02 INFO  Shut down connection with build server.
+2024.07.03 13:15:02 INFO  Shut down connection with build server.
+2024.07.03 13:15:02 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:02 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:02 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:02 INFO  time: Connected to build server in 0.1s
+2024.07.03 13:15:02 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.03 13:15:07 INFO  time: indexed workspace in 5.14s
+2024.07.03 13:15:11 INFO  skipping build import with status 'Installed'
+2024.07.03 13:15:11 INFO  Disconnecting from Bloop session...
+2024.07.03 13:15:11 INFO  Cancelling compilation on Bloop server
+2024.07.03 13:15:11 INFO  Cancelling compilation on Bloop server
+2024.07.03 13:15:11 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:15:11 INFO  Shut down connection with build server.
+2024.07.03 13:15:11 INFO  Shut down connection with build server.
+2024.07.03 13:15:11 INFO  Shut down connection with build server.
+Juli 03, 2024 1:15:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFORMATION: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.ClosedChannelException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:135)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.sendCancelNotification(RemoteEndpoint.java:191)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint$1.cancel(RemoteEndpoint.java:160)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.$anonfun$cancel$1(FutureWithTimeout.scala:37)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.scala:17)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.cancel(FutureWithTimeout.scala:37)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.utils.RequestRegistry.cancel(RequestRegistry.scala:94)
+	at scala.meta.internal.metals.BuildServerConnection.cancel(BuildServerConnection.scala:450)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1(BuildServerConnection.scala:182)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1$adapted(BuildServerConnection.scala:174)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpenAndConnected(SocketChannelImpl.java:224)
+	at java.base/sun.nio.ch.SocketChannelImpl.implWrite(SocketChannelImpl.java:560)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:618)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:124)
+	at java.base/sun.nio.ch.ChannelOutputStream.writeFully(ChannelOutputStream.java:68)
+	at java.base/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:102)
+	at java.base/java.io.OutputStream.write(OutputStream.java:124)
+	at java.base/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:79)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:139)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:110)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 19 more
+
+2024.07.03 13:15:11 INFO  Scala main classes not supported by server
+2024.07.03 13:15:11 INFO  Scala test classes not supported by server
+2024.07.03 13:15:11 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:11 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:11 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:11 INFO  time: Connected to build server in 0.27s
+2024.07.03 13:15:11 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.03 13:15:12 INFO  time: Imported build in 0.31s
+Juli 03, 2024 1:15:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 122
+2024.07.03 13:15:14 INFO  compiling projektmemory (24 scala sources)
+Juli 03, 2024 1:15:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SCHWERWIEGEND: Internal error: scala.meta.internal.metals.debug.DebugProvider$SemanticDbNotFoundException$: Build misconfiguration. No semanticdb can be found for you file, please check the doctor.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$SemanticDbNotFoundException$: Build misconfiguration. No semanticdb can be found for you file, please check the doctor.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2218)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:288)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$SemanticDbNotFoundException$: Build misconfiguration. No semanticdb can be found for you file, please check the doctor.
+	at scala.meta.internal.metals.debug.DebugProvider$SemanticDbNotFoundException$.<clinit>(DebugProvider.scala:1040)
+	at scala.meta.internal.metals.debug.DebugProvider$$anonfun$1.applyOrElse(DebugProvider.scala:811)
+	at scala.meta.internal.metals.debug.DebugProvider$$anonfun$1.applyOrElse(DebugProvider.scala:806)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:35)
+	at scala.util.Success.foreach(Try.scala:268)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:481)
+	... 3 more
+
+2024.07.03 13:15:17 INFO  time: indexed workspace in 5.17s
+2024.07.03 13:15:17 INFO  Deduplicating compilation of projektmemory from bsp client 'Metals 1.3.2' (since 5.835s)
+2024.07.03 13:15:17 INFO  compiling projektmemory (24 scala sources)
+2024.07.03 13:15:27 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2024.07.03 13:15:27 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2024.07.03 13:15:27 INFO  compiling projektmemory-test (12 scala sources)
+2024.07.03 13:15:28 INFO  time: compiled projektmemory in 10s
+2024.07.03 13:15:35 INFO  time: compiled projektmemory-test in 7.66s
+Juli 03, 2024 1:16:48 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
