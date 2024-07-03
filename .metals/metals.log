@@ -1151,3 +1151,270 @@ WARNUNG: Unmatched cancel notification for request id 11
 2024.07.02 12:06:27 INFO  Shut down connection with build server.
 2024.07.02 12:06:27 INFO  Shut down connection with build server.
 2024.07.02 12:06:27 INFO  Exiting server
+2024.07.03 13:12:09 INFO  Started: Metals version 1.3.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@377bf26e]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@3103fb91]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@377bf26e]
+2024.07.03 13:12:12 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.03 13:12:13 INFO  Attempting to connect to the build server...
+2024.07.03 13:12:14 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.03 13:12:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:12:19 INFO  Attempting to connect to the build server...
+2024.07.03 13:12:19 INFO  Attempting to connect to the build server...
+2024.07.03 13:12:20 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:12:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:12:19 INFO  time: Connected to build server in 7.08s
+2024.07.03 13:12:19 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.03 13:12:21 INFO  time: Imported build in 0.4s
+2024.07.03 13:12:26 INFO  time: indexed workspace in 5.57s
+2024.07.03 13:12:26 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+2024.07.03 13:12:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:12:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:12:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:12:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:12:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:02 INFO  time: code lens generation in 2.76s
+2024.07.03 13:13:02 INFO  time: code lens generation in 2.76s
+2024.07.03 13:13:02 INFO  time: code lens generation in 2.76s
+Juli 03, 2024 1:13:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SCHWERWIEGEND: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2218)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:288)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:589)
+	at scala.meta.internal.metals.debug.DebugProvider.runCommandDiscovery(DebugProvider.scala:523)
+	at scala.meta.internal.metals.MetalsLspService.discoverMainClasses(MetalsLspService.scala:1526)
+	at scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:796)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	... 9 more
+
+2024.07.03 13:13:04 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:06 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:09 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:15 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:17 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:18 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:18 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:19 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:21 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:22 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+2024.07.03 13:13:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:30 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+2024.07.03 13:13:30 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:32 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:33 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:34 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:34 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+2024.07.03 13:13:35 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:13:39 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+Juli 03, 2024 1:13:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SCHWERWIEGEND: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2218)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:288)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:589)
+	at scala.meta.internal.metals.debug.DebugProvider.runCommandDiscovery(DebugProvider.scala:523)
+	at scala.meta.internal.metals.MetalsLspService.discoverMainClasses(MetalsLspService.scala:1526)
+	at scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:796)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	... 9 more
+
+2024.07.03 13:13:56 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:14:05 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.12
+Juli 03, 2024 1:14:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 52
+2024.07.03 13:14:09 INFO  time: code lens generation in 4s
+2024.07.03 13:14:09 INFO  time: code lens generation in 1.39s
+2024.07.03 13:14:09 INFO  time: code lens generation in 3.56s
+2024.07.03 13:14:10 INFO  skipping build import with status 'Installed'
+2024.07.03 13:14:10 INFO  Disconnecting from Bloop session...
+2024.07.03 13:14:10 INFO  Shut down connection with build server.
+2024.07.03 13:14:10 INFO  Shut down connection with build server.
+2024.07.03 13:14:10 INFO  Shut down connection with build server.
+2024.07.03 13:14:10 INFO  Attempting to connect to the build server...
+2024.07.03 13:14:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:14:10 INFO  Attempting to connect to the build server...
+2024.07.03 13:14:10 INFO  Attempting to connect to the build server...
+2024.07.03 13:14:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:14:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:14:10 INFO  time: Connected to build server in 0.15s
+2024.07.03 13:14:10 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.03 13:14:11 INFO  time: Imported build in 0.15s
+2024.07.03 13:14:13 INFO  time: indexed workspace in 2.75s
+2024.07.03 13:14:13 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\src\main\scala\Memory.scala
+2024.07.03 13:14:37 INFO  running 'C:\Program Files\Java\jdk-22\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\leo11\AppData\Local\Temp\metals6710550274959463291\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.07.03 13:14:40 INFO  [info] welcome to sbt 1.9.8 (Oracle Corporation Java 22.0.1)
+2024.07.03 13:14:43 INFO  [info] loading settings for project projektmemory-build-build-build from metals.sbt ...
+2024.07.03 13:14:44 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\project
+2024.07.03 13:14:45 INFO  [info] loading settings for project projektmemory-build-build from metals.sbt ...
+2024.07.03 13:14:45 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project
+2024.07.03 13:14:49 INFO  [success] Generated .bloop\projektmemory-build-build.json
+2024.07.03 13:14:49 INFO  [success] Total time: 4 s, completed 03.07.2024, 13:14:49
+2024.07.03 13:14:51 INFO  [info] loading settings for project projektmemory-build from metals.sbt,plugins.sbt ...
+2024.07.03 13:14:51 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project
+2024.07.03 13:14:57 INFO  [success] Generated .bloop\projektmemory-build.json
+2024.07.03 13:14:57 INFO  [success] Total time: 6 s, completed 03.07.2024, 13:14:57
+2024.07.03 13:15:00 ERROR C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\build.sbt:22: warning: method in in trait ScopingSetting is deprecated (since 1.5.0): `in` is deprecated; migrate to slash syntax - https://www.scala-sbt.org/1.x/docs/Migrating-from-sbt-013x.html#slash
+2024.07.03 13:15:00 ERROR assemblyMergeStrategy in assembly := {
+2024.07.03 13:15:00 ERROR                       ^
+2024.07.03 13:15:00 ERROR C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\build.sbt:35: warning: method in in trait ScopingSetting is deprecated (since 1.5.0): `in` is deprecated; migrate to slash syntax - https://www.scala-sbt.org/1.x/docs/Migrating-from-sbt-013x.html#slash
+2024.07.03 13:15:00 ERROR mainClass in assembly := Some("main.Memory")
+2024.07.03 13:15:00 ERROR           ^
+2024.07.03 13:15:00 INFO  [info] loading settings for project projektmemory from build.sbt ...
+2024.07.03 13:15:00 INFO  [info] set current project to ProjektMemory (in build file:/C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester3/Software-Engineering/ProjektMemory/)
+2024.07.03 13:15:01 INFO  [success] Generated .bloop\projektmemory.json
+2024.07.03 13:15:01 INFO  [success] Generated .bloop\projektmemory-test.json
+2024.07.03 13:15:01 INFO  [success] Total time: 1 s, completed 03.07.2024, 13:15:01
+2024.07.03 13:15:01 INFO  time: ran 'sbt bloopInstall' in 24s
+2024.07.03 13:15:02 INFO  Disconnecting from Bloop session...
+2024.07.03 13:15:02 INFO  Shut down connection with build server.
+2024.07.03 13:15:02 INFO  Shut down connection with build server.
+2024.07.03 13:15:02 INFO  Shut down connection with build server.
+2024.07.03 13:15:02 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:02 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:02 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:02 INFO  time: Connected to build server in 0.1s
+2024.07.03 13:15:02 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.03 13:15:07 INFO  time: indexed workspace in 5.14s
+2024.07.03 13:15:11 INFO  skipping build import with status 'Installed'
+2024.07.03 13:15:11 INFO  Disconnecting from Bloop session...
+2024.07.03 13:15:11 INFO  Cancelling compilation on Bloop server
+2024.07.03 13:15:11 INFO  Cancelling compilation on Bloop server
+2024.07.03 13:15:11 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 2.13.12
+2024.07.03 13:15:11 INFO  Shut down connection with build server.
+2024.07.03 13:15:11 INFO  Shut down connection with build server.
+2024.07.03 13:15:11 INFO  Shut down connection with build server.
+Juli 03, 2024 1:15:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFORMATION: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.ClosedChannelException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:135)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.sendCancelNotification(RemoteEndpoint.java:191)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint$1.cancel(RemoteEndpoint.java:160)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.$anonfun$cancel$1(FutureWithTimeout.scala:37)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.scala:17)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.cancel(FutureWithTimeout.scala:37)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.utils.RequestRegistry.cancel(RequestRegistry.scala:94)
+	at scala.meta.internal.metals.BuildServerConnection.cancel(BuildServerConnection.scala:450)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1(BuildServerConnection.scala:182)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1$adapted(BuildServerConnection.scala:174)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpenAndConnected(SocketChannelImpl.java:224)
+	at java.base/sun.nio.ch.SocketChannelImpl.implWrite(SocketChannelImpl.java:560)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:618)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:124)
+	at java.base/sun.nio.ch.ChannelOutputStream.writeFully(ChannelOutputStream.java:68)
+	at java.base/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:102)
+	at java.base/java.io.OutputStream.write(OutputStream.java:124)
+	at java.base/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:79)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:139)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:110)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 19 more
+
+2024.07.03 13:15:11 INFO  Scala main classes not supported by server
+2024.07.03 13:15:11 INFO  Scala test classes not supported by server
+2024.07.03 13:15:11 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:11 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:11 INFO  Attempting to connect to the build server...
+2024.07.03 13:15:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester3\Software-Engineering\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.03 13:15:11 INFO  time: Connected to build server in 0.27s
+2024.07.03 13:15:11 INFO  Connected to Build server: Bloop v1.5.18
+2024.07.03 13:15:12 INFO  time: Imported build in 0.31s
+Juli 03, 2024 1:15:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 122
+2024.07.03 13:15:14 INFO  compiling projektmemory (24 scala sources)
+Juli 03, 2024 1:15:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SCHWERWIEGEND: Internal error: scala.meta.internal.metals.debug.DebugProvider$SemanticDbNotFoundException$: Build misconfiguration. No semanticdb can be found for you file, please check the doctor.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$SemanticDbNotFoundException$: Build misconfiguration. No semanticdb can be found for you file, please check the doctor.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:747)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:735)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2218)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:288)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$SemanticDbNotFoundException$: Build misconfiguration. No semanticdb can be found for you file, please check the doctor.
+	at scala.meta.internal.metals.debug.DebugProvider$SemanticDbNotFoundException$.<clinit>(DebugProvider.scala:1040)
+	at scala.meta.internal.metals.debug.DebugProvider$$anonfun$1.applyOrElse(DebugProvider.scala:811)
+	at scala.meta.internal.metals.debug.DebugProvider$$anonfun$1.applyOrElse(DebugProvider.scala:806)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:35)
+	at scala.util.Success.foreach(Try.scala:268)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:481)
+	... 3 more
+
+2024.07.03 13:15:17 INFO  time: indexed workspace in 5.17s
+2024.07.03 13:15:17 INFO  Deduplicating compilation of projektmemory from bsp client 'Metals 1.3.2' (since 5.835s)
+2024.07.03 13:15:17 INFO  compiling projektmemory (24 scala sources)
+2024.07.03 13:15:27 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2024.07.03 13:15:27 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2024.07.03 13:15:27 INFO  compiling projektmemory-test (12 scala sources)
+2024.07.03 13:15:28 INFO  time: compiled projektmemory in 10s
+2024.07.03 13:15:35 INFO  time: compiled projektmemory-test in 7.66s
+Juli 03, 2024 1:16:48 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
