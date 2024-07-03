@@ -23,9 +23,15 @@ This is a Scala-based memory game implemented as a desktop GUI application using
 ```sh
 sbt compile
 sbt test
-sbt run```
+sbt run
+```
 
-### Local Execution
+### Local Docker Execution
+```sh
+docker build -t scala-game .
+set DISPLAY=host.docker.internal:0.0
+docker run -e DISPLAY=host.docker.internal:0.0 -v /tmp/.X11-unix:/tmp/.X11-unix scala-game
+```
 
 1. **Clone the repository:**
    ```sh
