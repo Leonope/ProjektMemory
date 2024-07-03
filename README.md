@@ -8,6 +8,8 @@
 
 # Scala Memory Game
 
+![MemoryImage](istockphoto-1189301096-612x612.jpg)
+
 This is a Scala-based memory game implemented as a desktop GUI application using Scala Swing. It allows players to find matching pairs of cards and offers a simple, intuitive user interface.
 
 ## Features
