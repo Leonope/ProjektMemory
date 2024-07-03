@@ -20,7 +20,11 @@ This is a Scala-based memory game implemented as a desktop GUI application using
 - Docker (optional, for Docker-based execution)
 
 ## Installation and Execution
-test
+```sh
+sbt compile
+sbt test
+sbt run
+
 ### Local Execution
 
 1. **Clone the repository:**
