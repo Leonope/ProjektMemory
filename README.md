@@ -1,5 +1,9 @@
 ![Build Status](https://github.com/Leonope/ProjektMemory/actions/workflows/.travis.yml/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/Leonope/ProjektMemory/badge.svg?branch=main)](https://coveralls.io/github/Leonope/ProjektMemory?branch=main)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a864d8e9b58248f695d6666a4ea45128)](https://app.codacy.com/Leonope/ProjektMemory/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Leonope/ProjektMemory)
+![GitHub last commit](https://img.shields.io/github/last-commit/Leonope/ProjektMemory)
+![Github Created At](https://img.shields.io/github/created-at/Leonope/ProjektMemory)
 
 
 # Scala Memory Game
