@@ -126,7 +126,7 @@
           model.LogicGameComponent.Matrix.fill
         </td>
         <td>
-          model.logicgamecomponent.matrixspec,model.logicgamecomponent.logicspec,model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.fill
@@ -150,7 +150,7 @@
           model.LogicGameComponent.Matrix.cols
         </td>
         <td>
-          model.logicgamecomponent.matrixspec,model.logicgamecomponent.logicspec,model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.cols
@@ -174,7 +174,7 @@
           model.LogicGameComponent.Matrix.rows
         </td>
         <td>
-          model.logicgamecomponent.matrixspec,model.logicgamecomponent.logicspec,model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.rows
@@ -198,7 +198,7 @@
           scala.Array.fill
         </td>
         <td>
-          model.logicgamecomponent.matrixspec,model.logicgamecomponent.logicspec,model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
         </td>
         <td style="background: #AEF1AE">
           scala.Array.fill[T](Matrix.this.rows, Matrix.this.cols)(Matrix.this.fill)(Matrix.this.evidence$1)
@@ -222,7 +222,7 @@
           scala.Array.apply
         </td>
         <td>
-          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.grid.apply(row).apply(col)
@@ -246,7 +246,7 @@
           scala.Array.update
         </td>
         <td>
-          model.logicgamecomponent.logicspec
+          model.logicgamecomponent.standardscoringspec,model.logicgamecomponent.logicspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.grid.apply(row).update(col, value)
@@ -270,7 +270,7 @@
           scala.collection.IterableOnceOps.mkString
         </td>
         <td>
-          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.wrapRefArray[String](scala.Predef.refArrayOps[Array[T]](Matrix.this.grid).map[String](((row: Array[T]) =&gt; scala.Predef.wrapRefArray[String](scala.Predef.genericArrayOps[T](row).map[String](((x$1: T) =&gt; x$1.toString()))((ClassTag.apply[String](classOf[java.lang.String]): scala.reflect.ClassTag[String]))).mkString(&quot; &quot;)))((ClassTag.apply[String](classOf[java.lang.String]): scala.reflect.ClassTag[String]))).mkString(&quot;\n&quot;)
@@ -294,7 +294,7 @@
           scala.Int.*
         </td>
         <td>
-          model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.rows.*(Matrix.this.cols)
@@ -342,7 +342,7 @@
           scala.Predef.require
         </td>
         <td>
-          model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.require(cards.length.==(Matrix.this.rows.*(Matrix.this.cols)))
@@ -366,7 +366,7 @@
           scala.Int.==
         </td>
         <td>
-          model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           cards.length.==(Matrix.this.rows.*(Matrix.this.cols))
@@ -390,7 +390,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           0
@@ -414,7 +414,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           0
@@ -438,7 +438,7 @@
           scala.collection.immutable.Range.foreach
         </td>
         <td>
-          model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.intWrapper(0).until(Matrix.this.rows).foreach[Unit](((i: Int) =&gt; scala.Predef.intWrapper(0).until(Matrix.this.cols).foreach[Unit](((j: Int) =&gt; {
@@ -465,7 +465,7 @@
           scala.collection.immutable.Range.foreach
         </td>
         <td>
-          model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           scala.Predef.intWrapper(0).until(Matrix.this.cols).foreach[Unit](((j: Int) =&gt; {
@@ -492,7 +492,7 @@
           model.LogicGameComponent.Matrix.rows
         </td>
         <td>
-          model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.rows
@@ -516,7 +516,7 @@
           &lt;nosymbol&gt;
         </td>
         <td>
-          model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           0
@@ -564,7 +564,7 @@
           model.LogicGameComponent.Matrix.update
         </td>
         <td>
-          model.logicgamecomponent.matrixspec
+          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.update(i, j, cards.apply(index))
@@ -612,7 +612,7 @@
           scala.Int.+
         </td>
         <td>
-          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           index.+(1)
@@ -711,7 +711,7 @@
           scala.Any.asInstanceOf
         </td>
         <td>
-          model.logicgamecomponent.matrixspec
+          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
         </td>
         <td style="background: #AEF1AE">
           newCard.asInstanceOf[T]
@@ -807,7 +807,7 @@
           model.LogicGameComponent.Matrix.grid
         </td>
         <td>
-          model.logicgamecomponent.matrixspec,model.logicgamecomponent.matrixstandardspec
+          model.logicgamecomponent.matrixspec
         </td>
         <td style="background: #AEF1AE">
           Matrix.this.grid

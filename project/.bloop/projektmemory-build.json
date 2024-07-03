@@ -2,15 +2,15 @@
     "version": "1.4.0",
     "project": {
         "name": "projektmemory-build",
-        "directory": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project",
-        "workspaceDir": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project",
+        "directory": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project",
+        "workspaceDir": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project",
         "sources": [
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\scala",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\scala-2.12",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\scala-2",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\java",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\scala-sbt-1.0",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\target\\scala-2.12\\sbt-1.0\\src_managed\\main"
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\scala",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\scala-2.12",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\scala-2",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\java",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\scala-sbt-1.0",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\target\\scala-2.12\\sbt-1.0\\src_managed\\main"
         ],
         "dependencies": [
             
@@ -21,6 +21,7 @@
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.18\\sbt-bloop_2.12_1.0-1.5.18.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\sbt-scoverage_2.12_1.0\\2.0.11\\sbt-scoverage_2.12_1.0-2.0.11.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\sbt-coveralls_2.12_1.0\\1.3.1\\sbt-coveralls-1.3.1.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\sbt-assembly_2.12_1.0\\1.1.0\\sbt-assembly-1.1.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\main_2.12\\1.9.8\\main_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\io_2.12\\1.9.8\\io_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.0.0\\bloop-config_2.12-2.0.0.jar",
@@ -32,6 +33,8 @@
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\fasterxml\\jackson\\module\\jackson-module-scala_2.12\\2.12.3\\jackson-module-scala_2.12-2.12.3.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jgit\\org.eclipse.jgit\\5.12.0.202106070339-r\\org.eclipse.jgit-5.12.0.202106070339-r.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalaj\\scalaj-http_2.12\\2.4.2\\scalaj-http_2.12-2.4.2.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalactic\\scalactic_2.12\\3.0.8\\scalactic_2.12-3.0.8.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\jarjarabrams\\jarjar-abrams-core_2.12\\1.8.0\\jarjar-abrams-core_2.12-1.8.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\logic_2.12\\1.9.8\\logic_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\actions_2.12\\1.9.8\\actions_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\main-settings_2.12\\1.9.8\\main-settings_2.12-1.9.8.jar",
@@ -61,6 +64,8 @@
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\thoughtworks\\paranamer\\paranamer\\2.8\\paranamer-2.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\googlecode\\javaewah\\JavaEWAH\\1.1.7\\JavaEWAH-1.1.7.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\1.7.36\\slf4j-api-1.7.36.jar",
+            "C:\\Users\\leo11\\.sbt\\boot\\scala-2.12.18\\lib\\scala-reflect.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\jarjar\\jarjar\\1.8.0\\jarjar-1.8.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-relation_2.12\\1.9.8\\util-relation_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\completion_2.12\\1.9.8\\completion_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\task-system_2.12\\1.9.8\\task-system_2.12-1.9.8.jar",
@@ -85,7 +90,6 @@
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-terminal-jna\\3.19.0\\jline-terminal-jna-3.19.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-terminal-jansi\\3.19.0\\jline-terminal-jansi-3.19.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lmax\\disruptor\\3.4.2\\disruptor-3.4.2.jar",
-            "C:\\Users\\leo11\\.sbt\\boot\\scala-2.12.18\\lib\\scala-reflect.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\checkerframework\\checker-qual\\3.4.1\\checker-qual-3.4.1.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\google\\errorprone\\error_prone_annotations\\2.4.0\\error_prone_annotations-2.4.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-collection-compat_2.12\\2.10.0\\scala-collection-compat_2.12-2.10.0.jar",
@@ -93,6 +97,11 @@
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\jcraft\\jsch\\0.1.54\\jsch-0.1.54.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\gigahorse-apache-http_2.12\\0.7.0\\gigahorse-apache-http_2.12-0.7.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\ivy\\ivy\\2.3.0-sbt-396a783bba347016e7fe30dacc60d355be607fe2\\ivy-2.3.0-sbt-396a783bba347016e7fe30dacc60d355be607fe2.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm\\9.2\\asm-9.2.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-commons\\9.2\\asm-commons-9.2.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\ant\\ant\\1.9.9\\ant-1.9.9.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-plugin-api\\3.3.9\\maven-plugin-api-3.3.9.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\commons\\commons-lang3\\3.8.1\\commons-lang3-3.8.1.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-reader\\3.19.0\\jline-reader-3.19.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-builtins\\3.19.0\\jline-builtins-3.19.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-agent\\1.9.8\\test-agent-1.9.8.jar",
@@ -110,18 +119,31 @@
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\fusesource\\jansi\\jansi\\2.1.0\\jansi-2.1.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\gigahorse-core_2.12\\0.7.0\\gigahorse-core_2.12-0.7.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\shaded-apache-httpasyncclient\\0.7.0\\shaded-apache-httpasyncclient-0.7.0.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-tree\\9.2\\asm-tree-9.2.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-analysis\\9.2\\asm-analysis-9.2.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\ant\\ant-launcher\\1.9.9\\ant-launcher-1.9.9.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-model\\3.3.9\\maven-model-3.3.9.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-artifact\\3.3.9\\maven-artifact-3.3.9.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\sisu\\org.eclipse.sisu.plexus\\0.3.2\\org.eclipse.sisu.plexus-0.3.2.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-style\\3.19.0\\jline-style-3.19.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-persist-core-assembly\\1.9.5\\zinc-persist-core-assembly-1.9.5.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\sbinary_2.12\\0.5.1\\sbinary_2.12-0.5.1.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\ssl-config-core_2.12\\0.6.1\\ssl-config-core_2.12-0.6.1.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\reactivestreams\\reactive-streams\\1.0.3\\reactive-streams-1.0.3.jar",
-            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\config\\1.4.2\\config-1.4.2.jar"
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-utils\\3.0.22\\plexus-utils-3.0.22.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\enterprise\\cdi-api\\1.0\\cdi-api-1.0.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\sisu\\org.eclipse.sisu.inject\\0.3.2\\org.eclipse.sisu.inject-0.3.2.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-component-annotations\\1.5.5\\plexus-component-annotations-1.5.5.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-classworlds\\2.5.2\\plexus-classworlds-2.5.2.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\config\\1.4.2\\config-1.4.2.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\annotation\\jsr250-api\\1.0\\jsr250-api-1.0.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\inject\\javax.inject\\1\\javax.inject-1.jar"
         ],
-        "out": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\.bloop\\projektmemory-build",
-        "classesDir": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\.bloop\\projektmemory-build\\scala-2.12\\sbt-1.0\\classes",
+        "out": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\.bloop\\projektmemory-build",
+        "classesDir": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\.bloop\\projektmemory-build\\scala-2.12\\sbt-1.0\\classes",
         "resources": [
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\resources",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\target\\scala-2.12\\sbt-1.0\\resource_managed\\main"
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\src\\main\\resources",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\target\\scala-2.12\\sbt-1.0\\resource_managed\\main"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -160,8 +182,8 @@
                 "import _root_.sbt._",
                 "import _root_.sbt.Keys._",
                 "import _root_.sbt.nio.Keys._",
-                "import _root_.sbt.ScriptedPlugin.autoImport._, _root_.sbt.plugins.JUnitXmlReportPlugin.autoImport._, _root_.sbt.plugins.MiniDependencyTreePlugin.autoImport._, _root_.bloop.integrations.sbt.BloopPlugin.autoImport._, _root_.scoverage.ScoverageSbtPlugin.autoImport._, _root_.org.scoverage.coveralls.CoverallsPlugin.autoImport._",
-                "import _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.SemanticdbPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.sbt.plugins.MiniDependencyTreePlugin, _root_.bloop.integrations.sbt.BloopPlugin, _root_.scoverage.ScoverageSbtPlugin, _root_.org.scoverage.coveralls.CoverallsPlugin"
+                "import _root_.sbt.ScriptedPlugin.autoImport._, _root_.sbt.plugins.JUnitXmlReportPlugin.autoImport._, _root_.sbt.plugins.MiniDependencyTreePlugin.autoImport._, _root_.bloop.integrations.sbt.BloopPlugin.autoImport._, _root_.scoverage.ScoverageSbtPlugin.autoImport._, _root_.org.scoverage.coveralls.CoverallsPlugin.autoImport._, _root_.sbtassembly.AssemblyPlugin.autoImport._",
+                "import _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.SemanticdbPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.sbt.plugins.MiniDependencyTreePlugin, _root_.bloop.integrations.sbt.BloopPlugin, _root_.scoverage.ScoverageSbtPlugin, _root_.org.scoverage.coveralls.CoverallsPlugin, _root_.sbtassembly.AssemblyPlugin"
             ]
         },
         "test": {
@@ -228,7 +250,7 @@
             "config": {
                 "home": "C:\\Program Files\\Java\\jdk-22",
                 "options": [
-                    "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project"
+                    "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project"
                 ]
             },
             "mainClass": [
@@ -237,14 +259,15 @@
             "runtimeConfig": {
                 "home": "C:\\Program Files\\Java\\jdk-22",
                 "options": [
-                    "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project"
+                    "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project"
                 ]
             },
             "classpath": [
-                "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester 3\\Software-Engineering\\ProjektMemory\\project\\.bloop\\projektmemory-build\\scala-2.12\\sbt-1.0\\classes",
+                "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\.bloop\\projektmemory-build\\scala-2.12\\sbt-1.0\\classes",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.18\\sbt-bloop_2.12_1.0-1.5.18.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\sbt-scoverage_2.12_1.0\\2.0.11\\sbt-scoverage_2.12_1.0-2.0.11.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\sbt-coveralls_2.12_1.0\\1.3.1\\sbt-coveralls-1.3.1.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\sbt-assembly_2.12_1.0\\1.1.0\\sbt-assembly-1.1.0.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.0.0\\bloop-config_2.12-2.0.0.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-plugin_2.12.19\\2.1.0\\scalac-scoverage-plugin_2.12.19-2.1.0.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\scalac-scoverage-reporter_2.12\\2.1.0\\scalac-scoverage-reporter_2.12-2.1.0.jar",
@@ -254,6 +277,8 @@
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\fasterxml\\jackson\\module\\jackson-module-scala_2.12\\2.12.3\\jackson-module-scala_2.12-2.12.3.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jgit\\org.eclipse.jgit\\5.12.0.202106070339-r\\org.eclipse.jgit-5.12.0.202106070339-r.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalaj\\scalaj-http_2.12\\2.4.2\\scalaj-http_2.12-2.4.2.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalactic\\scalactic_2.12\\3.0.8\\scalactic_2.12-3.0.8.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\jarjarabrams\\jarjar-abrams-core_2.12\\1.8.0\\jarjar-abrams-core_2.12-1.8.0.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.4.0\\jsoniter-scala-core_2.12-2.4.0.jar",
                 "C:\\Users\\leo11\\.sbt\\boot\\scala-2.12.18\\lib\\scala-library.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-xml_2.12\\2.2.0\\scala-xml_2.12-2.2.0.jar",
@@ -261,7 +286,27 @@
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.12.3\\jackson-databind-2.12.3.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\thoughtworks\\paranamer\\paranamer\\2.8\\paranamer-2.8.jar",
                 "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\googlecode\\javaewah\\JavaEWAH\\1.1.7\\JavaEWAH-1.1.7.jar",
-                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\1.7.30\\slf4j-api-1.7.30.jar"
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\1.7.30\\slf4j-api-1.7.30.jar",
+                "C:\\Users\\leo11\\.sbt\\boot\\scala-2.12.18\\lib\\scala-reflect.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\jarjar\\jarjar\\1.8.0\\jarjar-1.8.0.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm\\9.2\\asm-9.2.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-commons\\9.2\\asm-commons-9.2.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\ant\\ant\\1.9.9\\ant-1.9.9.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-plugin-api\\3.3.9\\maven-plugin-api-3.3.9.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\commons\\commons-lang3\\3.8.1\\commons-lang3-3.8.1.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-tree\\9.2\\asm-tree-9.2.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-analysis\\9.2\\asm-analysis-9.2.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\ant\\ant-launcher\\1.9.9\\ant-launcher-1.9.9.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-model\\3.3.9\\maven-model-3.3.9.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-artifact\\3.3.9\\maven-artifact-3.3.9.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\sisu\\org.eclipse.sisu.plexus\\0.3.2\\org.eclipse.sisu.plexus-0.3.2.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-utils\\3.0.22\\plexus-utils-3.0.22.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\enterprise\\cdi-api\\1.0\\cdi-api-1.0.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\sisu\\org.eclipse.sisu.inject\\0.3.2\\org.eclipse.sisu.inject-0.3.2.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-component-annotations\\1.5.5\\plexus-component-annotations-1.5.5.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-classworlds\\2.5.2\\plexus-classworlds-2.5.2.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\annotation\\jsr250-api\\1.0\\jsr250-api-1.0.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\inject\\javax.inject\\1\\javax.inject-1.jar"
             ]
         },
         "resolution": {
@@ -314,6 +359,23 @@
                             "name": "sbt-coveralls",
                             "classifier": "sources",
                             "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scoverage\\sbt-coveralls_2.12_1.0\\1.3.1\\sbt-coveralls-1.3.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.eed3si9n",
+                    "name": "sbt-assembly",
+                    "version": "1.1.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "sbt-assembly",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\sbt-assembly_2.12_1.0\\1.1.0\\sbt-assembly-1.1.0.jar"
+                        },
+                        {
+                            "name": "sbt-assembly",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\sbt-assembly_2.12_1.0\\1.1.0\\sbt-assembly-1.1.0-sources.jar"
                         }
                     ]
                 },
@@ -471,6 +533,40 @@
                     ]
                 },
                 {
+                    "organization": "org.scalactic",
+                    "name": "scalactic_2.12",
+                    "version": "3.0.8",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalactic_2.12",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalactic\\scalactic_2.12\\3.0.8\\scalactic_2.12-3.0.8.jar"
+                        },
+                        {
+                            "name": "scalactic_2.12",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalactic\\scalactic_2.12\\3.0.8\\scalactic_2.12-3.0.8-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.eed3si9n.jarjarabrams",
+                    "name": "jarjar-abrams-core_2.12",
+                    "version": "1.8.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jarjar-abrams-core_2.12",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\jarjarabrams\\jarjar-abrams-core_2.12\\1.8.0\\jarjar-abrams-core_2.12-1.8.0.jar"
+                        },
+                        {
+                            "name": "jarjar-abrams-core_2.12",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\jarjarabrams\\jarjar-abrams-core_2.12\\1.8.0\\jarjar-abrams-core_2.12-1.8.0-sources.jar"
+                        }
+                    ]
+                },
+                {
                     "organization": "com.github.plokhotnyuk.jsoniter-scala",
                     "name": "jsoniter-scala-core_2.12",
                     "version": "2.4.0",
@@ -586,6 +682,346 @@
                             "name": "JavaEWAH",
                             "classifier": "sources",
                             "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\googlecode\\javaewah\\JavaEWAH\\1.1.7\\JavaEWAH-1.1.7-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-reflect",
+                    "version": "2.12.18",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-reflect",
+                            "path": "C:\\Users\\leo11\\.sbt\\boot\\scala-2.12.18\\lib\\scala-reflect.jar"
+                        },
+                        {
+                            "name": "scala-reflect",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.12.18\\scala-reflect-2.12.18-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.eed3si9n.jarjar",
+                    "name": "jarjar",
+                    "version": "1.8.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jarjar",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\jarjar\\jarjar\\1.8.0\\jarjar-1.8.0.jar"
+                        },
+                        {
+                            "name": "jarjar",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\jarjar\\jarjar\\1.8.0\\jarjar-1.8.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm",
+                    "version": "9.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "asm",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm\\9.2\\asm-9.2.jar"
+                        },
+                        {
+                            "name": "asm",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm\\9.2\\asm-9.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm-commons",
+                    "version": "9.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "asm-commons",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-commons\\9.2\\asm-commons-9.2.jar"
+                        },
+                        {
+                            "name": "asm-commons",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-commons\\9.2\\asm-commons-9.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.ant",
+                    "name": "ant",
+                    "version": "1.9.9",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "ant",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\ant\\ant\\1.9.9\\ant-1.9.9.jar"
+                        },
+                        {
+                            "name": "ant",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\ant\\ant\\1.9.9\\ant-1.9.9-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.maven",
+                    "name": "maven-plugin-api",
+                    "version": "3.3.9",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "maven-plugin-api",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-plugin-api\\3.3.9\\maven-plugin-api-3.3.9.jar"
+                        },
+                        {
+                            "name": "maven-plugin-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-plugin-api\\3.3.9\\maven-plugin-api-3.3.9-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-lang3",
+                    "version": "3.8.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-lang3",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\commons\\commons-lang3\\3.8.1\\commons-lang3-3.8.1.jar"
+                        },
+                        {
+                            "name": "commons-lang3",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\commons\\commons-lang3\\3.8.1\\commons-lang3-3.8.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm-tree",
+                    "version": "9.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "asm-tree",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-tree\\9.2\\asm-tree-9.2.jar"
+                        },
+                        {
+                            "name": "asm-tree",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-tree\\9.2\\asm-tree-9.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm-analysis",
+                    "version": "9.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "asm-analysis",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-analysis\\9.2\\asm-analysis-9.2.jar"
+                        },
+                        {
+                            "name": "asm-analysis",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\ow2\\asm\\asm-analysis\\9.2\\asm-analysis-9.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.ant",
+                    "name": "ant-launcher",
+                    "version": "1.9.9",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "ant-launcher",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\ant\\ant-launcher\\1.9.9\\ant-launcher-1.9.9.jar"
+                        },
+                        {
+                            "name": "ant-launcher",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\ant\\ant-launcher\\1.9.9\\ant-launcher-1.9.9-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.maven",
+                    "name": "maven-model",
+                    "version": "3.3.9",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "maven-model",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-model\\3.3.9\\maven-model-3.3.9.jar"
+                        },
+                        {
+                            "name": "maven-model",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-model\\3.3.9\\maven-model-3.3.9-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.maven",
+                    "name": "maven-artifact",
+                    "version": "3.3.9",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "maven-artifact",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-artifact\\3.3.9\\maven-artifact-3.3.9.jar"
+                        },
+                        {
+                            "name": "maven-artifact",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\maven\\maven-artifact\\3.3.9\\maven-artifact-3.3.9-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.sisu",
+                    "name": "org.eclipse.sisu.plexus",
+                    "version": "0.3.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "org.eclipse.sisu.plexus",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\sisu\\org.eclipse.sisu.plexus\\0.3.2\\org.eclipse.sisu.plexus-0.3.2.jar"
+                        },
+                        {
+                            "name": "org.eclipse.sisu.plexus",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\sisu\\org.eclipse.sisu.plexus\\0.3.2\\org.eclipse.sisu.plexus-0.3.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.codehaus.plexus",
+                    "name": "plexus-utils",
+                    "version": "3.0.22",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "plexus-utils",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-utils\\3.0.22\\plexus-utils-3.0.22.jar"
+                        },
+                        {
+                            "name": "plexus-utils",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-utils\\3.0.22\\plexus-utils-3.0.22-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "javax.enterprise",
+                    "name": "cdi-api",
+                    "version": "1.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "cdi-api",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\enterprise\\cdi-api\\1.0\\cdi-api-1.0.jar"
+                        },
+                        {
+                            "name": "cdi-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\enterprise\\cdi-api\\1.0\\cdi-api-1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.sisu",
+                    "name": "org.eclipse.sisu.inject",
+                    "version": "0.3.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "org.eclipse.sisu.inject",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\sisu\\org.eclipse.sisu.inject\\0.3.2\\org.eclipse.sisu.inject-0.3.2.jar"
+                        },
+                        {
+                            "name": "org.eclipse.sisu.inject",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\sisu\\org.eclipse.sisu.inject\\0.3.2\\org.eclipse.sisu.inject-0.3.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.codehaus.plexus",
+                    "name": "plexus-component-annotations",
+                    "version": "1.5.5",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "plexus-component-annotations",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-component-annotations\\1.5.5\\plexus-component-annotations-1.5.5.jar"
+                        },
+                        {
+                            "name": "plexus-component-annotations",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-component-annotations\\1.5.5\\plexus-component-annotations-1.5.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.codehaus.plexus",
+                    "name": "plexus-classworlds",
+                    "version": "2.5.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "plexus-classworlds",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-classworlds\\2.5.2\\plexus-classworlds-2.5.2.jar"
+                        },
+                        {
+                            "name": "plexus-classworlds",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\codehaus\\plexus\\plexus-classworlds\\2.5.2\\plexus-classworlds-2.5.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "javax.annotation",
+                    "name": "jsr250-api",
+                    "version": "1.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jsr250-api",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\annotation\\jsr250-api\\1.0\\jsr250-api-1.0.jar"
+                        },
+                        {
+                            "name": "jsr250-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\annotation\\jsr250-api\\1.0\\jsr250-api-1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "javax.inject",
+                    "name": "javax.inject",
+                    "version": "1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "javax.inject",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\inject\\javax.inject\\1\\javax.inject-1.jar"
+                        },
+                        {
+                            "name": "javax.inject",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\inject\\javax.inject\\1\\javax.inject-1-sources.jar"
                         }
                     ]
                 },
@@ -1436,23 +1872,6 @@
                             "name": "disruptor",
                             "classifier": "sources",
                             "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lmax\\disruptor\\3.4.2\\disruptor-3.4.2-sources.jar"
-                        }
-                    ]
-                },
-                {
-                    "organization": "org.scala-lang",
-                    "name": "scala-reflect",
-                    "version": "2.12.18",
-                    "configurations": "default",
-                    "artifacts": [
-                        {
-                            "name": "scala-reflect",
-                            "path": "C:\\Users\\leo11\\.sbt\\boot\\scala-2.12.18\\lib\\scala-reflect.jar"
-                        },
-                        {
-                            "name": "scala-reflect",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.12.18\\scala-reflect-2.12.18-sources.jar"
                         }
                     ]
                 },

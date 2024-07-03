@@ -1,0 +1,49 @@
+{
+  "matrix" : {
+    "rows" : 2,
+    "cols" : 3,
+    "cells" : [ {
+      "row" : 0,
+      "col" : 0,
+      "cell" : {
+        "id" : 2,
+        "state" : "FaceDownState"
+      }
+    }, {
+      "row" : 0,
+      "col" : 1,
+      "cell" : {
+        "id" : 2,
+        "state" : "FaceDownState"
+      }
+    }, {
+      "row" : 0,
+      "col" : 2,
+      "cell" : {
+        "id" : 3,
+        "state" : "FaceDownState"
+      }
+    }, {
+      "row" : 1,
+      "col" : 0,
+      "cell" : {
+        "id" : 3,
+        "state" : "FaceDownState"
+      }
+    }, {
+      "row" : 1,
+      "col" : 1,
+      "cell" : {
+        "id" : 1,
+        "state" : "FaceDownState"
+      }
+    }, {
+      "row" : 1,
+      "col" : 2,
+      "cell" : {
+        "id" : 1,
+        "state" : "FaceDownState"
+      }
+    } ]
+  }
+}

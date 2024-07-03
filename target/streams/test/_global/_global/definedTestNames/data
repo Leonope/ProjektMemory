@@ -1,1 +1,1 @@
-["test","TuiSpec","ControllerSpec","CardSpec","MatrixStandardSpec","MatrixSpec","InputHandlerSpec","ExampleSpec","StandardScoringSpec","LogicSpec","ObserverSpec"]
+["test","model.LogicGameComponent.DecoratorSpec","model.LogicGameComponent.MatrixSpec","model.LogicGameComponent.StandardScoringSpec","InputHandlerSpec","model.LogicGameComponent.CardSpec","model.LogicGameComponent.LogicSpec","model.LogicGameComponent.MatrixStandardSpec","ExampleSpec","ObserverSpec"]

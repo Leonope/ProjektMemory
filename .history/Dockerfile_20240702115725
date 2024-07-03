@@ -1,0 +1,39 @@
+# Use an official OpenJDK runtime as a parent image
+FROM openjdk:11
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the sbt configuration files
+COPY build.sbt /app/
+COPY project /app/project
+
+# Install sbt and Scala
+RUN apt-get update && \
+    apt-get install -y curl gnupg && \
+    echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | tee /etc/apt/sources.list.d/sbt.list && \
+    echo "deb https://repo.scala-sbt.org/scalasbt/debian /" | tee /etc/apt/sources.list.d/sbt_old.list && \
+    curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x99E82A75642AC823" | apt-key add && \
+    apt-get update && \
+    apt-get install -y sbt && \
+    apt-get install -y scala && \
+    apt-get clean
+
+# Copy the rest of the application code
+COPY . /app
+
+# Build the project and run tests
+RUN sbt compile && sbt test
+
+# Package the application
+RUN sbt assembly
+
+# Expose the port the application runs on
+EXPOSE 8080
+
+# Define the command to run the application
+CMD ["java", "-jar", "target/scala-2.13/ProjektMemory-assembly-0.1.jar"]
+
+
+
+
