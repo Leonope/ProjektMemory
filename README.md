@@ -23,7 +23,7 @@ This is a Scala-based memory game implemented as a desktop GUI application using
 ```sh
 sbt compile
 sbt test
-sbt run
+sbt run```
 
 ### Local Execution
 
