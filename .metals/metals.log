@@ -1418,3 +1418,401 @@ Caused by: scala.meta.internal.metals.debug.DebugProvider$SemanticDbNotFoundExce
 2024.07.03 13:15:35 INFO  time: compiled projektmemory-test in 7.66s
 Juli 03, 2024 1:16:48 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFORMATION: Unsupported notification method: $/setTrace
+2025.10.15 12:05:26 INFO  Started: Metals version 1.6.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory' for client Visual Studio Code 1.105.0.
+2025.10.15 12:05:36 INFO  Attempting to connect to the build server...
+2025.10.15 12:05:36 INFO  No running Bloop server found, starting one.
+2025.10.15 12:06:06 INFO  Starting compilation server
+2025.10.15 12:06:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 12:06:29 INFO  Attempting to connect to the build server...
+2025.10.15 12:06:29 INFO  Found a Bloop server running
+2025.10.15 12:06:29 INFO  Attempting to connect to the build server...
+2025.10.15 12:06:29 INFO  Found a Bloop server running
+2025.10.15 12:06:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 12:06:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 12:06:42 INFO  time: Connected to build server in 1m5s
+2025.10.15 12:06:42 INFO  Connected to Build server: Bloop v2.0.13
+2025.10.15 12:06:43 INFO  time: Imported build in 0.6s
+2025.10.15 12:06:43 WARN  2.13.12 is no longer supported in the current Metals versions, using the last known supported version 1.4.2
+2025.10.15 12:08:03 INFO  time: indexed workspace in 1m20s
+2025.10.15 12:15:00 INFO  time: code lens generation in 7.32s
+Oct 15, 2025 12:23:06 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.10.15 12:24:54 INFO  Shutting down server
+2025.10.15 12:24:54 INFO  shutting down Metals
+2025.10.15 12:24:54 INFO  Shut down connection with build server.
+2025.10.15 12:24:54 INFO  Shut down connection with build server.
+2025.10.15 12:24:54 INFO  Shut down connection with build server.
+2025.10.15 12:24:56 INFO  Exiting server
+2025.10.15 12:48:13 INFO  Started: Metals version 1.6.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory' for client Visual Studio Code 1.105.0.
+2025.10.15 12:48:18 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.15 12:48:33 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.15 12:48:34 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.15 12:48:34 INFO  Attempting to connect to the build server...
+2025.10.15 12:48:34 INFO  Found a Bloop server running
+2025.10.15 12:48:35 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 12:48:35 INFO  Attempting to connect to the build server...
+2025.10.15 12:48:35 INFO  Found a Bloop server running
+2025.10.15 12:48:35 INFO  Attempting to connect to the build server...
+2025.10.15 12:48:35 INFO  Found a Bloop server running
+2025.10.15 12:48:35 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 12:48:35 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 12:48:35 INFO  time: Connected to build server in 0.64s
+2025.10.15 12:48:35 INFO  Connected to Build server: Bloop v2.0.13
+2025.10.15 12:48:35 INFO  time: Imported build in 0.27s
+2025.10.15 12:48:36 WARN  2.13.12 is no longer supported in the current Metals versions, using the last known supported version 1.4.2
+2025.10.15 12:48:38 WARN  Could not find semantic tokens for: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/ProjektMemory/build.sbt
+2025.10.15 12:48:49 INFO  Created report: Optional[file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/ProjektMemory/build.sbt]
+2025.10.15 12:48:49 INFO  empty definition using pc, found symbol in pc: sbt/Keys.libraryDependencies. (full report at: "C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\.reports\metals-full\2025-10-15\r_empty-definition_(projektmemory-build)_12-48-49-695.md")
+2025.10.15 12:48:59 INFO  time: indexed workspace in 23s
+2025.10.15 12:52:04 INFO  Shutting down server
+2025.10.15 12:52:04 INFO  shutting down Metals
+2025.10.15 12:52:04 INFO  Shut down connection with build server.
+2025.10.15 12:52:04 INFO  Shut down connection with build server.
+2025.10.15 12:52:04 INFO  Shut down connection with build server.
+2025.10.15 12:52:04 ERROR Bloop 'bsp' command exited with code 1. Something may be wrong with the current configuration.
+Running the [1mclean[0m sub-command to clear the working directory and remove caches might help.
+If the error persists, please report the issue as a bug and attach a log with increased verbosity by passing [1m-v -v -v[0m.
+2025.10.15 12:52:04 INFO  Exiting server
+2025.10.15 12:55:45 INFO  Started: Metals version 1.6.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory' for client Visual Studio Code 1.105.0.
+2025.10.15 12:55:50 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.15 12:55:51 INFO  Attempting to connect to the build server...
+2025.10.15 12:55:51 INFO  Found a Bloop server running
+2025.10.15 12:55:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 12:55:52 INFO  Attempting to connect to the build server...
+2025.10.15 12:55:52 INFO  Found a Bloop server running
+2025.10.15 12:55:52 INFO  Attempting to connect to the build server...
+2025.10.15 12:55:52 INFO  Found a Bloop server running
+2025.10.15 12:55:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 12:55:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 12:55:52 INFO  time: Connected to build server in 1.28s
+2025.10.15 12:55:52 INFO  Connected to Build server: Bloop v2.0.13
+2025.10.15 12:55:53 INFO  time: Imported build in 0.81s
+2025.10.15 12:55:55 WARN  2.13.12 is no longer supported in the current Metals versions, using the last known supported version 1.4.2
+2025.10.15 12:56:17 INFO  time: indexed workspace in 22s
+2025.10.15 12:56:23 INFO  skipping build import with status 'Installed'
+2025.10.15 13:14:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:14:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:14:02 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala
+2025.10.15 13:14:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:14:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:14:03 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:14:06 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:14:06 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:14:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:14:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:14:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:14:09 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:17:19 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:17:19 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:17:44 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:17:44 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:17:45 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:17:49 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:18:09 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:18:24 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\aview\tui.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:18:49 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:18:49 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala
+2025.10.15 13:18:49 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:18:49 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:18:50 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:18:53 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:18:53 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:18:53 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala
+2025.10.15 13:18:53 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:18:53 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:18:53 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:19:00 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:19:01 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:19:01 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala
+2025.10.15 13:19:00 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:19:01 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:19:01 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:19:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:26:40 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:26:40 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:26:40 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:33:51 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:33:51 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala
+2025.10.15 13:33:51 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:33:51 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:35:12 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:35:12 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:35:12 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:35:12 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:35:12 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:35:12 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:35:13 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:35:13 INFO  time: code lens generation in 1.27s
+2025.10.15 13:35:13 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:35:13 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:35:13 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:35:14 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:36:27 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:25 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:25 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala
+2025.10.15 13:37:25 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:25 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:25 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:27 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:29 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:32 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:32 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala
+2025.10.15 13:37:32 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:32 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:32 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:34 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:34 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:37:51 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\MemoryModule.scala. Using presentation compiler with project's scala-library version: 2.13.16
+2025.10.15 13:38:05 INFO  running 'C:\Program Files\Java\jdk-22\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\leo11\AppData\Local\Temp\metals2317787035791972202\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2025.10.15 13:38:12 INFO  [info] welcome to sbt 1.9.8 (Oracle Corporation Java 22.0.1)
+2025.10.15 13:38:19 INFO  [info] loading settings for project projektmemory-build-build-build from metals.sbt ...
+2025.10.15 13:38:21 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project\project
+2025.10.15 13:38:30 INFO  [info] loading settings for project projektmemory-build-build from metals.sbt ...
+2025.10.15 13:38:30 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project
+2025.10.15 13:38:39 INFO  [success] Generated .bloop\projektmemory-build-build.json
+2025.10.15 13:38:39 INFO  [success] Total time: 8 s, completed 15 Oct 2025, 13:38:39
+2025.10.15 13:38:42 INFO  [info] loading settings for project projektmemory-build from metals.sbt,plugins.sbt ...
+2025.10.15 13:38:42 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project
+2025.10.15 13:38:49 INFO  [success] Generated .bloop\projektmemory-build.json
+2025.10.15 13:38:49 INFO  [success] Total time: 7 s, completed 15 Oct 2025, 13:38:50
+2025.10.15 13:38:58 ERROR C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\build.sbt:22: warning: method in in trait ScopingSetting is deprecated (since 1.5.0): `in` is deprecated; migrate to slash syntax - https://www.scala-sbt.org/1.x/docs/Migrating-from-sbt-013x.html#slash
+2025.10.15 13:38:58 ERROR assemblyMergeStrategy in assembly := {
+2025.10.15 13:38:58 ERROR                       ^
+2025.10.15 13:38:58 ERROR C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\build.sbt:35: warning: method in in trait ScopingSetting is deprecated (since 1.5.0): `in` is deprecated; migrate to slash syntax - https://www.scala-sbt.org/1.x/docs/Migrating-from-sbt-013x.html#slash
+2025.10.15 13:38:58 ERROR mainClass in assembly := Some("main.Memory")
+2025.10.15 13:38:58 ERROR           ^
+2025.10.15 13:38:59 INFO  [info] loading settings for project projektmemory from build.sbt ...
+2025.10.15 13:38:59 INFO  [info] set current project to ProjektMemory (in build file:/C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/ProjektMemory/)
+2025.10.15 13:39:02 INFO  [success] Generated .bloop\projektmemory.json
+2025.10.15 13:39:02 INFO  [success] Generated .bloop\projektmemory-test.json
+2025.10.15 13:39:02 INFO  [success] Total time: 2 s, completed 15 Oct 2025, 13:39:02
+2025.10.15 13:39:03 INFO  time: ran 'sbt bloopInstall' in 57s
+2025.10.15 13:39:03 INFO  Disconnecting from Bloop session...
+2025.10.15 13:39:03 INFO  Shut down connection with build server.
+2025.10.15 13:39:03 INFO  Shut down connection with build server.
+2025.10.15 13:39:03 INFO  Shut down connection with build server.
+2025.10.15 13:39:03 INFO  Attempting to connect to the build server...
+2025.10.15 13:39:03 INFO  Found a Bloop server running
+2025.10.15 13:39:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 13:39:05 INFO  Attempting to connect to the build server...
+2025.10.15 13:39:05 INFO  Found a Bloop server running
+2025.10.15 13:39:05 INFO  Attempting to connect to the build server...
+2025.10.15 13:39:05 INFO  Found a Bloop server running
+2025.10.15 13:39:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 13:39:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 13:39:05 INFO  time: Connected to build server in 2.48s
+2025.10.15 13:39:05 INFO  Connected to Build server: Bloop v2.0.13
+2025.10.15 13:39:05 INFO  time: Imported build in 0.14s
+2025.10.15 13:39:14 INFO  time: indexed workspace in 9.05s
+Oct 15, 2025 1:39:16 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2025.10.15 13:39:16 INFO  Created report: Optional[file:///c:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/ProjektMemory/Main.scala]
+2025.10.15 13:39:16 INFO  java.lang.AssertionError: assertion failed: (List(Stamp(2021-04-12T17:14:06Z,75703,null)),0) (full report at: "C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\.reports\metals-full\2025-10-15\r_compiler-error_13-39-16-649.md")
+Oct 15, 2025 1:39:16 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2025.10.15 13:39:16 INFO  Created report: Optional[file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/ProjektMemory/build.sbt]
+2025.10.15 13:39:16 INFO  java.lang.AssertionError: assertion failed: (List(Stamp(2021-06-26T06:41:53Z,52660,null)),0) (full report at: "C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\.reports\metals-full\2025-10-15\r_compiler-error_(projektmemory-build)_13-39-16-995.md")
+2025.10.15 13:39:17 INFO  compiling projektmemory (24 scala sources)
+2025.10.15 13:39:40 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2025.10.15 13:39:40 INFO  time: compiled projektmemory in 24s
+2025.10.15 13:39:41 INFO  compiling projektmemory-test (12 scala sources)
+2025.10.15 13:39:52 INFO  time: compiled projektmemory-test in 10s
+Oct 15, 2025 1:39:52 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2025.10.15 13:44:34 INFO  running 'C:\Program Files\Java\jdk-22\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\leo11\AppData\Local\Temp\metals4032706526320167794\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2025.10.15 13:44:40 INFO  [info] welcome to sbt 1.9.8 (Oracle Corporation Java 22.0.1)
+2025.10.15 13:44:43 INFO  [info] loading settings for project projektmemory-build-build-build from metals.sbt ...
+2025.10.15 13:44:46 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project\project
+2025.10.15 13:44:50 INFO  [info] loading settings for project projektmemory-build-build from metals.sbt ...
+2025.10.15 13:44:50 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project
+2025.10.15 13:45:00 INFO  [success] Generated .bloop\projektmemory-build-build.json
+2025.10.15 13:45:00 INFO  [success] Total time: 10 s, completed 15 Oct 2025, 13:45:00
+2025.10.15 13:45:01 INFO  [info] loading settings for project projektmemory-build from metals.sbt,plugins.sbt ...
+2025.10.15 13:45:01 INFO  [info] loading project definition from C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project
+2025.10.15 13:45:07 INFO  [success] Generated .bloop\projektmemory-build.json
+2025.10.15 13:45:07 INFO  [success] Total time: 6 s, completed 15 Oct 2025, 13:45:08
+2025.10.15 13:45:16 INFO  [info] loading settings for project projektmemory from build.sbt ...
+2025.10.15 13:45:16 INFO  [info] set current project to ProjektMemory (in build file:/C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/ProjektMemory/)
+2025.10.15 13:45:25 INFO  [success] Generated .bloop\projektmemory.json
+2025.10.15 13:45:25 INFO  [success] Generated .bloop\projektmemory-test.json
+2025.10.15 13:45:25 INFO  [success] Total time: 7 s, completed 15 Oct 2025, 13:45:25
+2025.10.15 13:45:25 INFO  time: ran 'sbt bloopInstall' in 50s
+2025.10.15 13:45:25 INFO  Disconnecting from Bloop session...
+2025.10.15 13:45:25 INFO  Shut down connection with build server.
+2025.10.15 13:45:25 INFO  Shut down connection with build server.
+2025.10.15 13:45:25 INFO  Shut down connection with build server.
+2025.10.15 13:45:25 INFO  Attempting to connect to the build server...
+2025.10.15 13:45:25 INFO  Found a Bloop server running
+2025.10.15 13:45:25 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 13:45:35 INFO  Attempting to connect to the build server...
+2025.10.15 13:45:35 INFO  Found a Bloop server running
+2025.10.15 13:45:35 INFO  Attempting to connect to the build server...
+2025.10.15 13:45:35 INFO  Found a Bloop server running
+2025.10.15 13:45:35 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 13:45:35 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.15 13:45:35 INFO  time: Connected to build server in 10s
+2025.10.15 13:45:35 INFO  Connected to Build server: Bloop v2.0.13
+2025.10.15 13:45:36 INFO  time: Imported build in 0.21s
+2025.10.15 13:45:56 INFO  time: indexed workspace in 20s
+2025.10.15 13:45:57 INFO  compiling projektmemory (24 scala sources)
+Oct 15, 2025 1:45:58 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2025.10.15 13:45:58 INFO  Created report: Optional[file:///c:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/ProjektMemory/Main.scala]
+2025.10.15 13:45:58 INFO  java.lang.AssertionError: assertion failed: (List(Stamp(2022-03-16T22:18:14Z,232003,null)),0) (full report at: "C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\.reports\metals-full\2025-10-15\r_compiler-error_13-45-58-361.md")
+2025.10.15 13:46:00 INFO  time: code lens generation in 2.66s
+2025.10.15 13:46:23 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2025.10.15 13:46:23 INFO  compiling projektmemory-test (12 scala sources)
+2025.10.15 13:46:25 INFO  time: compiled projektmemory in 27s
+2025.10.15 13:46:41 INFO  time: compiled projektmemory-test in 16s
+2025.10.15 15:25:00 INFO  compiling projektmemory (1 scala source)
+2025.10.15 15:25:03 INFO  time: compiled projektmemory in 2.94s
+2025.10.15 15:25:03 INFO  compiling projektmemory (1 scala source)
+2025.10.15 15:25:05 INFO  time: compiled projektmemory in 2.06s
+2025.10.15 15:26:24 INFO  compiling projektmemory (2 scala sources)
+2025.10.15 15:26:24 INFO  time: compiled projektmemory in 0.45s
+2025.10.15 15:26:36 INFO  compiling projektmemory (2 scala sources)
+2025.10.15 15:26:39 INFO  time: compiled projektmemory in 2.64s
+Oct 15, 2025 3:27:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1103
+2025.10.15 15:27:06 INFO  compiling projektmemory (2 scala sources)
+2025.10.15 15:27:10 INFO  time: compiled projektmemory in 3.38s
+2025.10.15 15:29:58 INFO  compiling projektmemory (1 scala source)
+2025.10.15 15:30:03 INFO  time: compiled projektmemory in 4.9s
+2025.10.15 15:30:05 INFO  compiling projektmemory (2 scala sources)
+2025.10.15 15:30:09 INFO  time: compiled projektmemory in 4.57s
+2025.10.15 15:49:36 INFO  Shutting down server
+2025.10.15 15:49:36 INFO  shutting down Metals
+2025.10.15 15:49:36 INFO  Shut down connection with build server.
+2025.10.15 15:49:36 INFO  Shut down connection with build server.
+2025.10.15 15:49:36 INFO  Shut down connection with build server.
+2025.10.15 15:49:36 INFO  Exiting server
+2025.10.16 08:10:24 INFO  Started: Metals version 1.6.2 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory' for client Visual Studio Code 1.105.0.
+2025.10.16 08:10:28 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\controller\IController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.16 08:10:28 INFO  Attempting to connect to the build server...
+2025.10.16 08:10:28 INFO  No running Bloop server found, starting one.
+2025.10.16 08:10:30 INFO  Starting compilation server
+2025.10.16 08:10:33 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.16 08:10:34 INFO  Attempting to connect to the build server...
+2025.10.16 08:10:34 INFO  Found a Bloop server running
+2025.10.16 08:10:34 INFO  Attempting to connect to the build server...
+2025.10.16 08:10:34 INFO  Found a Bloop server running
+2025.10.16 08:10:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.16 08:10:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.16 08:10:34 INFO  time: Connected to build server in 6.37s
+2025.10.16 08:10:34 INFO  Connected to Build server: Bloop v2.0.13
+2025.10.16 08:10:34 INFO  time: Imported build in 0.37s
+2025.10.16 08:10:52 INFO  time: indexed workspace in 17s
+2025.10.16 08:10:53 INFO  compiling projektmemory (24 scala sources)
+2025.10.16 08:11:19 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2025.10.16 08:11:19 INFO  compiling projektmemory-test (12 scala sources)
+2025.10.16 08:11:21 INFO  time: compiled projektmemory in 27s
+2025.10.16 08:11:40 INFO  time: compiled projektmemory-test in 19s
+2025.10.16 10:18:00 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:18:00 INFO  time: compiled projektmemory in 0.97s
+2025.10.16 10:18:16 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:18:18 INFO  time: compiled projektmemory in 1.47s
+2025.10.16 10:19:48 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:19:48 INFO  time: compiled projektmemory in 0.35s
+2025.10.16 10:19:58 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:19:58 INFO  time: compiled projektmemory in 0.23s
+2025.10.16 10:20:21 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:20:24 INFO  time: compiled projektmemory in 3s
+2025.10.16 10:21:54 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:21:54 INFO  time: compiled projektmemory in 0.59s
+Oct 16, 2025 10:21:55 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 16, 2025 10:23:40 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2025.10.16 10:23:42 INFO  Created report: Optional[file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/ProjektMemory/src/main/scala/aview/gui/StartGui.scala]
+2025.10.16 10:23:42 INFO  empty definition using pc, found symbol in pc:  (full report at: "C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\.reports\metals-full\2025-10-16\r_empty-definition_(projektmemory)_10-23-42-198.md")
+Oct 16, 2025 10:23:42 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 16, 2025 10:23:43 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 16, 2025 10:23:44 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2025.10.16 10:23:46 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:23:46 INFO  time: compiled projektmemory in 0.48s
+Oct 16, 2025 10:23:47 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 16, 2025 10:23:53 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 16, 2025 10:23:55 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 16, 2025 10:23:56 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 16, 2025 10:23:57 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2025.10.16 10:23:58 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:24:00 INFO  time: compiled projektmemory in 2.85s
+2025.10.16 10:25:27 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:25:29 INFO  time: compiled projektmemory in 2.17s
+Oct 16, 2025 10:29:17 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 891
+2025.10.16 10:36:48 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:36:54 INFO  time: compiled projektmemory in 5.84s
+2025.10.16 10:39:15 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:39:18 INFO  time: compiled projektmemory in 3.31s
+Oct 16, 2025 10:39:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1250
+2025.10.16 10:40:02 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:40:05 INFO  time: compiled projektmemory in 2.78s
+2025.10.16 10:42:14 INFO  Created report: Optional[file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/ProjektMemory/src/main/scala/aview/tui.scala]
+2025.10.16 10:42:14 INFO  empty definition using pc, found symbol in pc:  (full report at: "C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\.reports\metals-full\2025-10-16\r_empty-definition_(projektmemory)_10-42-14-355.md")
+2025.10.16 10:42:16 INFO  empty definition using pc, found symbol in pc:  (full report at: "C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\.reports\metals-full\2025-10-16\r_empty-definition_(projektmemory)_10-42-14-355.md")
+2025.10.16 10:42:18 INFO  compiling projektmemory (1 scala source)
+2025.10.16 10:42:19 INFO  time: compiled projektmemory in 1.54s
+2025.10.16 10:42:35 ERROR scala.meta.internal.metals.debug.DiscoveryFailures$NoRunOptionException$: There is nothing to run or test in the current file.
+	at scala.meta.internal.metals.debug.DiscoveryFailures$NoRunOptionException$.<clinit>(DiscoveryFailures.scala:62)
+	at scala.meta.internal.metals.debug.DebugDiscovery.$anonfun$runOrTestFile$2(DebugDiscovery.scala:295)
+	at scala.Option.fold(Option.scala:263)
+	at scala.meta.internal.metals.debug.DebugDiscovery.runOrTestFile(DebugDiscovery.scala:237)
+	at scala.meta.internal.metals.debug.DebugDiscovery.$anonfun$debugDiscovery$1(DebugDiscovery.scala:160)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1570)
+
+2025.10.16 10:42:35 ERROR scala.meta.internal.metals.debug.DiscoveryFailures$NoRunOptionException$: There is nothing to run or test in the current file.
+	at scala.meta.internal.metals.debug.DiscoveryFailures$NoRunOptionException$.<clinit>(DiscoveryFailures.scala:62)
+	at scala.meta.internal.metals.debug.DebugDiscovery.$anonfun$runOrTestFile$2(DebugDiscovery.scala:295)
+	at scala.Option.fold(Option.scala:263)
+	at scala.meta.internal.metals.debug.DebugDiscovery.runOrTestFile(DebugDiscovery.scala:237)
+	at scala.meta.internal.metals.debug.DebugDiscovery.$anonfun$debugDiscovery$1(DebugDiscovery.scala:160)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1570)
+
+2025.10.16 11:05:16 INFO  Shutting down server
+2025.10.16 11:05:16 INFO  shutting down Metals
+2025.10.16 11:05:16 INFO  Shut down connection with build server.
+2025.10.16 11:05:16 INFO  Shut down connection with build server.
+2025.10.16 11:05:16 INFO  Shut down connection with build server.
+2025.10.16 11:05:17 INFO  Exiting server
+2025.10.19 16:14:23 INFO  Started: Metals version 1.6.3 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory' for client Visual Studio Code 1.105.1.
+2025.10.19 16:14:27 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.10.19 16:14:28 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\WebLog.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.19 16:14:28 INFO  Attempting to connect to the build server...
+2025.10.19 16:14:28 INFO  No running Bloop server found, starting one.
+2025.10.19 16:14:33 INFO  Starting compilation server
+2025.10.19 16:14:37 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.19 16:14:43 INFO  Attempting to connect to the build server...
+2025.10.19 16:14:43 INFO  Found a Bloop server running
+2025.10.19 16:14:43 INFO  Attempting to connect to the build server...
+2025.10.19 16:14:43 INFO  Found a Bloop server running
+2025.10.19 16:14:43 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.19 16:14:43 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.19 16:14:43 INFO  time: Connected to build server in 15s
+2025.10.19 16:14:44 INFO  Connected to Build server: Bloop v2.0.16
+2025.10.19 16:14:45 INFO  time: Imported build in 0.51s
+2025.10.19 16:14:52 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.10.19 16:15:43 INFO  time: indexed workspace in 58s
+2025.10.19 16:15:44 INFO  compiling projektmemory (25 scala sources)
+2025.10.19 16:16:01 INFO  Shutting down server
+2025.10.19 16:16:01 INFO  shutting down Metals
+2025.10.19 16:16:01 INFO  Shut down connection with build server.
+2025.10.19 16:16:01 INFO  Shut down connection with build server.
+2025.10.19 16:16:01 INFO  Shut down connection with build server.
+2025.10.19 16:16:01 INFO  Cancelling compilation on Bloop server
+2025.10.19 16:16:03 INFO  Exiting server

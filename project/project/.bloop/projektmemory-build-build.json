@@ -2,15 +2,15 @@
     "version": "1.4.0",
     "project": {
         "name": "projektmemory-build-build",
-        "directory": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project",
-        "workspaceDir": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project",
+        "directory": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project",
+        "workspaceDir": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project",
         "sources": [
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project\\src\\main\\scala",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project\\src\\main\\scala-2.12",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project\\src\\main\\scala-2",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project\\src\\main\\java",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project\\src\\main\\scala-sbt-1.0",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project\\target\\scala-2.12\\sbt-1.0\\src_managed\\main"
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project\\src\\main\\scala",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project\\src\\main\\scala-2.12",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project\\src\\main\\scala-2",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project\\src\\main\\java",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project\\src\\main\\scala-sbt-1.0",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project\\target\\scala-2.12\\sbt-1.0\\src_managed\\main"
         ],
         "dependencies": [
             
@@ -18,10 +18,10 @@
         "classpath": [
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\sbt\\1.9.8\\sbt-1.9.8.jar",
             "C:\\Users\\leo11\\.sbt\\boot\\scala-2.12.18\\lib\\scala-library.jar",
-            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.18\\sbt-bloop_2.12_1.0-1.5.18.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\2.0.13\\sbt-bloop_2.12_1.0-2.0.13.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\main_2.12\\1.9.8\\main_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\io_2.12\\1.9.8\\io_2.12-1.9.8.jar",
-            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.0.0\\bloop-config_2.12-2.0.0.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.3.2\\bloop-config_2.12-2.3.2.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\logic_2.12\\1.9.8\\logic_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\actions_2.12\\1.9.8\\actions_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\main-settings_2.12\\1.9.8\\main-settings_2.12-1.9.8.jar",
@@ -45,7 +45,8 @@
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\swoval\\file-tree-views\\2.1.12\\file-tree-views-2.1.12.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\net\\java\\dev\\jna\\jna\\5.13.0\\jna-5.13.0.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\net\\java\\dev\\jna\\jna-platform\\5.13.0\\jna-platform-5.13.0.jar",
-            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.4.0\\jsoniter-scala-core_2.12-2.4.0.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.13.5.2\\jsoniter-scala-core_2.12-2.13.5.2.jar",
+            "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\unroll-annotation_2.12\\0.1.12\\unroll-annotation_2.12-0.1.12.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-relation_2.12\\1.9.8\\util-relation_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\completion_2.12\\1.9.8\\completion_2.12-1.9.8.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\task-system_2.12\\1.9.8\\task-system_2.12-1.9.8.jar",
@@ -103,11 +104,11 @@
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\reactivestreams\\reactive-streams\\1.0.3\\reactive-streams-1.0.3.jar",
             "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\config\\1.4.2\\config-1.4.2.jar"
         ],
-        "out": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project\\.bloop\\projektmemory-build-build",
-        "classesDir": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project\\.bloop\\projektmemory-build-build\\scala-2.12\\sbt-1.0\\classes",
+        "out": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project\\.bloop\\projektmemory-build-build",
+        "classesDir": "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project\\.bloop\\projektmemory-build-build\\scala-2.12\\sbt-1.0\\classes",
         "resources": [
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project\\src\\main\\resources",
-            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project\\target\\scala-2.12\\sbt-1.0\\resource_managed\\main"
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project\\src\\main\\resources",
+            "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project\\target\\scala-2.12\\sbt-1.0\\resource_managed\\main"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -215,7 +216,7 @@
             "config": {
                 "home": "C:\\Program Files\\Java\\jdk-22",
                 "options": [
-                    "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project"
+                    "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project"
                 ]
             },
             "mainClass": [
@@ -224,14 +225,15 @@
             "runtimeConfig": {
                 "home": "C:\\Program Files\\Java\\jdk-22",
                 "options": [
-                    "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project"
+                    "-Duser.dir=C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project"
                 ]
             },
             "classpath": [
-                "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester3\\Software-Engineering\\ProjektMemory\\project\\project\\.bloop\\projektmemory-build-build\\scala-2.12\\sbt-1.0\\classes",
-                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.18\\sbt-bloop_2.12_1.0-1.5.18.jar",
-                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.0.0\\bloop-config_2.12-2.0.0.jar",
-                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.4.0\\jsoniter-scala-core_2.12-2.4.0.jar",
+                "C:\\Users\\leo11\\OneDrive\\Desktop\\HTWG\\AIN\\Semester5\\Web-apps\\ProjektMemory\\project\\project\\.bloop\\projektmemory-build-build\\scala-2.12\\sbt-1.0\\classes",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\2.0.13\\sbt-bloop_2.12_1.0-2.0.13.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.3.2\\bloop-config_2.12-2.3.2.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.13.5.2\\jsoniter-scala-core_2.12-2.13.5.2.jar",
+                "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\unroll-annotation_2.12\\0.1.12\\unroll-annotation_2.12-0.1.12.jar",
                 "C:\\Users\\leo11\\.sbt\\boot\\scala-2.12.18\\lib\\scala-library.jar"
             ]
         },
@@ -240,51 +242,68 @@
                 {
                     "organization": "ch.epfl.scala",
                     "name": "sbt-bloop",
-                    "version": "1.5.18",
+                    "version": "2.0.13",
                     "configurations": "default",
                     "artifacts": [
                         {
                             "name": "sbt-bloop",
-                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.18\\sbt-bloop_2.12_1.0-1.5.18.jar"
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\2.0.13\\sbt-bloop_2.12_1.0-2.0.13.jar"
                         },
                         {
                             "name": "sbt-bloop",
                             "classifier": "sources",
-                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.18\\sbt-bloop_2.12_1.0-1.5.18-sources.jar"
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\2.0.13\\sbt-bloop_2.12_1.0-2.0.13-sources.jar"
                         }
                     ]
                 },
                 {
                     "organization": "ch.epfl.scala",
                     "name": "bloop-config_2.12",
-                    "version": "2.0.0",
+                    "version": "2.3.2",
                     "configurations": "default",
                     "artifacts": [
                         {
                             "name": "bloop-config_2.12",
-                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.0.0\\bloop-config_2.12-2.0.0.jar"
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.3.2\\bloop-config_2.12-2.3.2.jar"
                         },
                         {
                             "name": "bloop-config_2.12",
                             "classifier": "sources",
-                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.0.0\\bloop-config_2.12-2.0.0-sources.jar"
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\2.3.2\\bloop-config_2.12-2.3.2-sources.jar"
                         }
                     ]
                 },
                 {
                     "organization": "com.github.plokhotnyuk.jsoniter-scala",
                     "name": "jsoniter-scala-core_2.12",
-                    "version": "2.4.0",
+                    "version": "2.13.5.2",
                     "configurations": "default",
                     "artifacts": [
                         {
                             "name": "jsoniter-scala-core_2.12",
-                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.4.0\\jsoniter-scala-core_2.12-2.4.0.jar"
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.13.5.2\\jsoniter-scala-core_2.12-2.13.5.2.jar"
                         },
                         {
                             "name": "jsoniter-scala-core_2.12",
                             "classifier": "sources",
-                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.4.0\\jsoniter-scala-core_2.12-2.4.0-sources.jar"
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.13.5.2\\jsoniter-scala-core_2.12-2.13.5.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.lihaoyi",
+                    "name": "unroll-annotation_2.12",
+                    "version": "0.1.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "unroll-annotation_2.12",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\unroll-annotation_2.12\\0.1.12\\unroll-annotation_2.12-0.1.12.jar"
+                        },
+                        {
+                            "name": "unroll-annotation_2.12",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\leo11\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\unroll-annotation_2.12\\0.1.12\\unroll-annotation_2.12-0.1.12-sources.jar"
                         }
                     ]
                 },
