@@ -1816,3 +1816,81 @@ WARNING: Unmatched cancel notification for request id 1250
 2025.10.19 16:16:01 INFO  Shut down connection with build server.
 2025.10.19 16:16:01 INFO  Cancelling compilation on Bloop server
 2025.10.19 16:16:03 INFO  Exiting server
+2025.10.19 16:22:12 INFO  Started: Metals version 1.6.3 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory' for client Visual Studio Code 1.105.1.
+2025.10.19 16:22:19 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.10.19 16:22:20 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.19 16:22:22 ERROR scala.meta.internal.metals.debug.DiscoveryFailures$BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala
+	at scala.meta.internal.metals.debug.DebugDiscovery.validate(DebugDiscovery.scala:88)
+	at scala.meta.internal.metals.debug.DebugDiscovery.debugDiscovery(DebugDiscovery.scala:164)
+	at scala.meta.internal.metals.debug.DebugDiscovery.runCommandDiscovery(DebugDiscovery.scala:66)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$discoverMainClasses$1(MetalsLspService.scala:1586)
+	at scala.meta.internal.metals.MetalsLspService.afterCompilationFinished(MetalsLspService.scala:1543)
+	at scala.meta.internal.metals.MetalsLspService.discoverMainClasses(MetalsLspService.scala:1586)
+	at scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:916)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1570)
+
+2025.10.19 16:22:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.19 16:22:22 ERROR scala.meta.internal.metals.debug.DiscoveryFailures$BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala
+	at scala.meta.internal.metals.debug.DebugDiscovery.validate(DebugDiscovery.scala:88)
+	at scala.meta.internal.metals.debug.DebugDiscovery.debugDiscovery(DebugDiscovery.scala:164)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$debugDiscovery$3(MetalsLspService.scala:1548)
+	at scala.meta.internal.metals.MetalsLspService.afterCompilationFinished(MetalsLspService.scala:1543)
+	at scala.meta.internal.metals.MetalsLspService.debugDiscovery(MetalsLspService.scala:1548)
+	at scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:1118)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1570)
+
+2025.10.19 16:22:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.19 16:22:22 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala
+2025.10.19 16:22:23 INFO  Attempting to connect to the build server...
+2025.10.19 16:22:23 INFO  Found a Bloop server running
+2025.10.19 16:22:23 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\src\main\scala\Memory.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.19 16:22:22 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.19 16:22:23 INFO  Attempting to connect to the build server...
+2025.10.19 16:22:23 INFO  Found a Bloop server running
+2025.10.19 16:22:23 INFO  Attempting to connect to the build server...
+2025.10.19 16:22:23 INFO  Found a Bloop server running
+2025.10.19 16:22:23 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.19 16:22:22 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\ProjektMemory\project\.metals\bsp.trace.json or C:\Users\leo11\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.19 16:22:23 INFO  time: Connected to build server in 0.75s
+2025.10.19 16:22:22 INFO  Connected to Build server: Bloop v2.0.16
+2025.10.19 16:22:24 INFO  time: Imported build in 0.23s
+2025.10.19 16:22:39 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.10.19 16:23:30 INFO  time: indexed workspace in 1m5s
+2025.10.19 16:23:30 INFO  compiling projektmemory (25 scala sources)
+2025.10.19 16:23:48 WARN  1 deprecation (since 2.13.3); re-run with -deprecation for details
+2025.10.19 16:23:48 INFO  compiling projektmemory-test (12 scala sources)
+2025.10.19 16:23:49 INFO  time: compiled projektmemory in 18s
+2025.10.19 16:24:00 INFO  time: compiled projektmemory in 78ms
+2025.10.19 16:24:00 INFO  time: compiled projektmemory-test in 12s
+Oct 19, 2025 4:25:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+Oct 19, 2025 4:25:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
