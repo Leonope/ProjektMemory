@@ -1,0 +1,8 @@
+GET   /              controllers.GameController.index
+POST  /cmd           controllers.GameController.cmd
+POST  /new           controllers.GameController.newGame
+POST    /quit           controllers.GameController.quit      # 👈 hier neu
+
+# Static assets
+GET   /assets/*file  controllers.Assets.versioned(path="/public", file: Asset)
+

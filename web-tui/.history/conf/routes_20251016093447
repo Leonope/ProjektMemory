@@ -1,0 +1,14 @@
+GET   /               controllers.GameController.index
+GET   /state          controllers.GameController.state
+POST  /cmd            controllers.GameController.cmd
+POST  /new            controllers.GameController.newGame
+POST  /quit           controllers.GameController.quit
+GET   /test           controllers.GameController.test
+GET   /assets/*file   controllers.Assets.versioned(path="/public", file: Asset)
+
+
+
+
+
+
+

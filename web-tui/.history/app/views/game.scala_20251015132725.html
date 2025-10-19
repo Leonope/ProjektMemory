@@ -1,0 +1,18 @@
+@(state: String)
+
+@main("ProjektMemory Web") {
+  <h1>ProjektMemory – Web-TUI</h1>
+
+  <pre style="padding:1rem; background:#111; color:#eee; border-radius:8px; white-space:pre-wrap;">
+@state
+  </pre>
+
+  <form method="post" action='@routes.GameController.cmd()' style="margin-top:1rem;">
+    <input name="cmd" placeholder="Befehl eingeben..." autocomplete="off" />
+    <button type="submit">Senden</button>
+  </form>
+
+  <form method="post" action='@routes.GameController.new()' style="margin-top:0.5rem;">
+    <button type="submit">Neues Spiel</button>
+  </form>
+}

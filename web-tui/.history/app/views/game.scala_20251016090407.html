@@ -1,0 +1,30 @@
+@(state: String)(implicit request: RequestHeader)
+@import helper._
+
+@main("ProjektMemory Web") {
+  <h1>ProjektMemory – Web-TUI</h1>
+
+  <pre style="padding:1rem; background:#111; color:#eee; border-radius:8px; white-space:pre-wrap;">
+@state
+  </pre>
+
+  <form method="post" action='@routes.GameController.cmd' style="margin-top:1rem;">
+    @helper.CSRF.formField
+    <input name="cmd" placeholder="Befehl eingeben..." autocomplete="off" />
+    <button type="submit">Senden</button>
+  </form>
+
+  <form method="post" action='@routes.GameController.newGame' style="margin-top:0.5rem;">
+    @helper.CSRF.formField
+    <button type="submit">Neues Spiel</button>
+  </form>
+
+  <form method="post" action='@routes.GameController.quit' style="margin-top:0.5rem;">
+    @helper.CSRF.formField
+    <button type="submit" style="background-color: darkred; color: white;">Quit</button>
+  </form>
+
+  
+}
+
+

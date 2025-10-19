@@ -1,0 +1,29 @@
+@(state: String)(implicit request: RequestHeader)
+@import helper._
+
+@main("ProjektMemory Web – TUI") {
+  <h1>ProjektMemory – Web-TUI</h1>
+
+  <pre id="log" style="padding:1rem; background:#111; color:#eee; border-radius:8px; white-space:pre-wrap;">
+@state
+  </pre>
+
+  <!-- Deine Formulare können bleiben, hier geht’s nur ums Live-Update -->
+
+  <script type="text/javascript">
+    async function refreshLog() {
+      try {
+        const resp = await fetch('@routes.GameController.state', { headers: { 'Accept': 'text/plain' }});
+        if (resp.ok) {
+          const txt = await resp.text();
+          document.getElementById('log').textContent = txt;
+        }
+      } catch(e) { /* ignorieren */ }
+    }
+    // initial + jede Sekunde aktualisieren
+    window.addEventListener('load', refreshLog);
+    setInterval(refreshLog, 1000);
+  </script>
+}
+
+

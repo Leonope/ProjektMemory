@@ -1,0 +1,48 @@
+error id: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/web-tui/app/controllers/AdminController.scala:`<none>`.
+file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/web-tui/app/controllers/AdminController.scala
+empty definition using pc, found symbol in pc: `<none>`.
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+	 -javax/inject/cc.
+	 -javax/inject/cc#
+	 -javax/inject/cc().
+	 -play/api/mvc/cc.
+	 -play/api/mvc/cc#
+	 -play/api/mvc/cc().
+	 -cc.
+	 -cc#
+	 -cc().
+	 -scala/Predef.cc.
+	 -scala/Predef.cc#
+	 -scala/Predef.cc().
+offset: 230
+uri: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/web-tui/app/controllers/AdminController.scala
+text:
+```scala
+package controllers
+
+import javax.inject._
+import play.api.mvc._
+import web.GuiStarter
+import web.WebTUI
+
+@Singleton
+class AdminController @Inject()(cc: ControllerComponents, gui: GuiStarter)
+  extends AbstractController(@@cc) {
+
+  def startGui = Action {
+  // WICHTIG: Tee zuerst sicher installieren
+  WebTUI.render()              // installiert den Tee (ensureInstalled)
+  gui.start()                  // startet dann die GUI im selben Prozess
+  Ok("GUI gestartet.")
+}
+}
+
+
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: `<none>`.
