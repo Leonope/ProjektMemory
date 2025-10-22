@@ -1,0 +1,27 @@
+@()
+
+@main("Memory Game - How to Play") {
+  <div class="explanation-container">
+    <h1>How to Play Memory</h1>
+
+    <div class="game-rules">
+      <h2>Game Rules</h2>
+      <ul>
+        <li>The game consists of pairs of matching cards</li>
+        <li>All cards are placed face down</li>
+        <li>Players take turns flipping two cards at a time</li>
+        <li>If the cards match, the player keeps them and gets another turn</li>
+        <li>If they don't match, the cards are flipped back face down</li>
+        <li>The game ends when all pairs are found</li>
+        <li>The player with the most pairs wins!</li>
+      </ul>
+    </div>
+
+    <div class="controls">
+      <h2>How to Play Our Version</h2>
+      <p>Instructions for your specific implementation here...</p>
+    </div>
+
+    <a href="@routes.HomeController.index" class="back-button">Back to Main Page</a>
+  </div>
+}

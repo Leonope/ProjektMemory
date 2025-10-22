@@ -1,0 +1,12 @@
+@()
+
+@main("Welcome to Play") {
+  <div class="welcome-container">
+    <h1>Welcome to Memory Game!</h1>
+
+    <div class="button-container">
+      <a href="@routes.HomeController.explanation()" class="game-button">How to Play</a>
+      <a href="@routes.GameController.index()" class="game-button">Start Game</a>
+    </div>
+  </div>
+}
