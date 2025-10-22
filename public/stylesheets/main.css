@@ -1,16 +1,38 @@
 :root {
     --base-color: #000028; /*Dark Blue Background*/
     --text-color: #e7e7e7; /*White Text Color*/
+    --dark-text: #202020; /*Darker Text Color for bright Background*/
     --button-color: #3a435d; /*Button Color*/
     --accent-color: #0071ff; /*Accent Color, for example for hovering over a Button*/
+    --default-font: 'JetBrains Mono', Helvetica, Arial; /*Sets font to NetBrains Mono, if not, fall back on the other 2*/
 }
 
 body {
-    background-color: var(--base-color); /*Dark Blue Background*/
-    color: var(--text-color); /*White Text Color*/
-    font-family:'JetBrains Mono', Helvetica, Arial; /*Sets font to Times New Roman*/
+    background-color: var(--base-color);
+    color: var(--text-color);
+    font-family: var(--default-font);
     font-size: 32px; /*Sets base font size*/
     text-align: center; /*Centers all the text*/
+}
+
+button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none; /*Removes the Border*/
+    padding: 10px 20px; /*Padding around the text*/
+    text-align: center; /*Centers text inside button*/
+    text-decoration: none; /*No underline*/
+    display: inline-block; /*Inline-block display*/
+    font-family: var(--default-font);
+    font-size: 24px; /*Font size for button text*/
+    margin: 10px; /*Margin around button*/
+    cursor: pointer; /*Pointer cursor on hover*/
+    border-radius: 5px; /*Rounded corners*/
+    transition:cubic-bezier(0.5, 0, 1, 1) 0.15s;
+}
+
+button:hover {
+    background-color: var(--accent-color); /*Changes button color on hover*/
 }
 
 .removeULBullets {

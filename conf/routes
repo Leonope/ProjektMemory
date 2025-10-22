@@ -9,6 +9,7 @@ POST  /new             controllers.GameController.newGame
 POST  /quit            controllers.GameController.quit
 GET   /state           controllers.GameController.state
 GET   /test            controllers.GameController.test
+GET   /quit            controllers.GameController.quit
 
 # Admin / API / Assets
 GET   /start-gui       controllers.AdminController.startGui
