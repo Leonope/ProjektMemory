@@ -1,6 +1,15 @@
-.default {
-    background-color: #000028; /*Dark Blue Background*/
-    color: #e7e7e7; /*White Text Color*/
+:root {
+    --base-color: #000028; /*Dark Blue Background*/
+    --text-color: #e7e7e7; /*White Text Color*/
+    --button-color: #3a435d; /*Button Color*/
+    --accent-color: #0071ff; /*Accent Color, for example for hovering over a Button*/
+}
+
+body {
+    background-color: var(--base-color); /*Dark Blue Background*/
+    color: var(--text-color); /*White Text Color*/
+    font-family:'JetBrains Mono', Helvetica, Arial; /*Sets font to Times New Roman*/
+    font-size: 32px; /*Sets base font size*/
     text-align: center; /*Centers all the text*/
 }
 

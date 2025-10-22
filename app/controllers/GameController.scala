@@ -20,7 +20,7 @@ class GameController @Inject()(cc: ControllerComponents) extends AbstractControl
     Redirect(routes.GameController.index)
   }
   def quit: Action[AnyContent] = Action { implicit request =>
-    Ok("<h1>Danke!</h1>").as(HTML)
+    Ok(views.html.quit())
   }
 
   def test: Action[AnyContent] = Action {
