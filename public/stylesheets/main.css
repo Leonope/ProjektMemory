@@ -1,0 +1,11 @@
+.default {
+    background-color: #000028; /*Dark Blue Background*/
+    color: #e7e7e7; /*White Text Color*/
+    text-align: center; /*Centers all the text*/
+}
+
+.removeULBullets {
+    list-style-type: none; /*Removes bullets from lists*/
+    padding: 0; /*Removes padding*/
+    margin: 0; /*Removes margin*/
+}
