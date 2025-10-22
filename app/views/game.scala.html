@@ -2,70 +2,75 @@
 @import helper.CSRF
 
 @main("ProjektMemory Web – TUI") {
-  <h1>ProjektMemory – Web-TUI</h1>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjektMemory - Web-TUI</title>
+  </head>
+  <body>  
+    <h1>ProjektMemory – Web-TUI</h1>
 
-  <pre id="log">@state</pre>
+    <pre id="log">@state</pre>
 
-  <h2>Eingabe</h2>
-  <form action='@routes.GameController.cmd' method='post'>
-    @CSRF.formField
-    <label for="cmd">Befehl:</label>
-    <input id="cmd" name="cmd" type="text" autofocus>
-    <button type="submit">Senden</button>
-  </form>
-
-  <h2>Aktionen</h2>
-  <form action='@routes.GameController.newGame' method='post'>
-    @CSRF.formField
-    <button type="submit">Neues Spiel</button>
-  </form>
-
-  <form action='@routes.GameController.quit' method='post'>
-    @CSRF.formField
-    <button type="submit">Beenden</button>
-  </form>
-
-  <p>
-    <a href='@routes.GameController.index'>Aktualisieren</a>
-  </p>
+    <h2>Eingabe</h2>
+    <form action='@routes.GameController.cmd' method='post'>
+      @CSRF.formField
+      <label for="cmd">Befehl:</label>
+      <input id="cmd" name="cmd" type="text" autofocus>
+      <button type="submit">Senden</button>
+    </form>
+    <h2>Aktionen</h2>
+    <form action='@routes.GameController.newGame' method='post'>
+      @CSRF.formField
+      <button type="submit">Neues Spiel</button>
+    </form>
+    <form action='@routes.GameController.quit' method='post'>
+      @CSRF.formField
+      <button type="submit">Beenden</button>
+    </form>
+    <p>
+      <a href='@routes.GameController.index'>Aktualisieren</a>
+    </p>
 
   <!-- Neuer Button: GUI starten im Hintergrund -->
-  <button id="startGuiBtn" type="button">GUI starten</button>
-
-   <script type="text/javascript">
-    // Ruft /start-gui im Hintergrund auf, ohne Seitenwechsel
-    document.getElementById('startGuiBtn').addEventListener('click', async function() {
-      const btn = this;
-      btn.disabled = true;
-      btn.textContent = "GUI wird gestartet...";
-      try {
-        const resp = await fetch('@routes.AdminController.startGui.url', { method: 'GET' });
-        if (resp.ok) {
-          btn.textContent = "GUI gestartet";
-        } else {
+    <button id="startGuiBtn" type="button">GUI starten</button>
+    <script type="text/javascript">
+      // Ruft /start-gui im Hintergrund auf, ohne Seitenwechsel
+      document.getElementById('startGuiBtn').addEventListener('click', async function() {
+        const btn = this;
+        btn.disabled = true;
+        btn.textContent = "GUI wird gestartet...";
+        try {
+          const resp = await fetch('@routes.AdminController.startGui.url', { method: 'GET' });
+          if (resp.ok) {
+            btn.textContent = "GUI gestartet";
+          } else {
+            btn.textContent = "Fehler beim Start";
+            btn.disabled = false;
+          }
+        } catch (e) {
           btn.textContent = "Fehler beim Start";
           btn.disabled = false;
         }
-      } catch (e) {
-        btn.textContent = "Fehler beim Start";
-        btn.disabled = false;
-      }
-    });
-  </script>
+      });
+    </script>
 
-  <script type="text/javascript">
-    async function refreshLog() {
-      try {
-        const resp = await fetch('@routes.GameController.state', { headers: { 'Accept': 'text/plain' }});
-        if (resp.ok) {
-          const txt = await resp.text();
-          document.getElementById('log').textContent = txt;
-        }
-      } catch (e) {}
-    }
-    window.addEventListener('load', refreshLog);
-    setInterval(refreshLog, 1000);
-  </script>
+    <script type="text/javascript">
+      async function refreshLog() {
+        try {
+          const resp = await fetch('@routes.GameController.state', { headers: { 'Accept': 'text/plain' }});
+          if (resp.ok) {
+            const txt = await resp.text();
+            document.getElementById('log').textContent = txt;
+          }
+        } catch (e) {}
+      }
+      window.addEventListener('load', refreshLog);
+      setInterval(refreshLog, 1000);
+    </script>
+  </body>
 }
 
 

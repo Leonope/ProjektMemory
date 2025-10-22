@@ -1,27 +1,37 @@
 @()
 
 @main("Memory Game - How to Play") {
-  <div class="explanation-container">
-    <h1>How to Play Memory</h1>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game - How to Play</title>
+  </head>
+  <body>
+    <div class="explanation-container">
+      <h1>How to Play Memory</h1>
+      <div class="game-rules">
+        <h2>Game Rules</h2>
+        <ul>
+          <li>The board consists of a multitude of pairs of matching cards, like these:</li>
+          <img src="@routes.Assets.versioned("images/matching_cards.png")" alt="matching_cards.png" height="256" width="256"/>
+          <li>When the game begins, all cards are placed face down</li>
+          <img src="@routes.Assets.versioned("images/all_cards_hidden.png")" alt="all_cards_hidden.png" height="256" width="256"/>
+          <li>Players now take turns flipping two cards at a time</li>
+          <img src="@routes.Assets.versioned("images/random_cards_flipped.png")" alt="random_cards_flipped.png" height="256" width="256"/>
+          <li>If the cards match, the player keeps them and gets another turn, but if they don't, they get flipped back down and the next Player takes their turn.</li>
+          <li>The game ends when all pairs are found</li>
+          <img src="@routes.Assets.versioned("images/all_pairs_found.png")" alt="all_pairs_found.png" height="256" width="256"/>
+          <li>The player with the most pairs wins!</li>
+        </ul>
+      </div>
 
-    <div class="game-rules">
-      <h2>Game Rules</h2>
-      <ul>
-        <li>The game consists of pairs of matching cards</li>
-        <li>All cards are placed face down</li>
-        <li>Players take turns flipping two cards at a time</li>
-        <li>If the cards match, the player keeps them and gets another turn</li>
-        <li>If they don't match, the cards are flipped back face down</li>
-        <li>The game ends when all pairs are found</li>
-        <li>The player with the most pairs wins!</li>
-      </ul>
+      <div class="controls">
+        <h2>How to Play Our Version</h2>
+        <p>Right now, our Version does not have the functioning Version of the game linked to the Web-UI.</p>
+      </div>
+      <a href="@routes.HomeController.index" class="back-button">Back to Main Page</a>
     </div>
-
-    <div class="controls">
-      <h2>How to Play Our Version</h2>
-      <p>Instructions for your specific implementation here...</p>
-    </div>
-
-    <a href="@routes.HomeController.index" class="back-button">Back to Main Page</a>
-  </div>
+  </body>
 }

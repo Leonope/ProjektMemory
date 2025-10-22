@@ -1,12 +1,21 @@
 @()
 
 @main("Welcome to Play") {
-  <div class="welcome-container">
-    <h1>Welcome to Memory Game!</h1>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Memory Game!</title>
+  </head>
+  <body>
+    <div class="welcome-container">
+      <h1>Welcome to Memory Game!</h1>
 
-    <div class="button-container">
-      <a href="@routes.HomeController.explanation" class="game-button">How to Play</a>
-      <a href="@routes.GameController.index" class="game-button">Start Game</a>
+      <div class="button-container">
+        <a href="@routes.HomeController.explanation" class="game-button">How to Play</a>
+        <a href="@routes.GameController.index" class="game-button">Start Game</a>
+      </div>
     </div>
-  </div>
+  </body>
 }
