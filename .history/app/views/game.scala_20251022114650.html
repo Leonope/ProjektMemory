@@ -29,29 +29,10 @@
     <a href='@routes.GameController.index'>Aktualisieren</a>
   </p>
 
-  <!-- Neuer Button: GUI starten im Hintergrund -->
-  <button id="startGuiBtn" type="button">GUI starten</button>
-
-   <script type="text/javascript">
-    // Ruft /start-gui im Hintergrund auf, ohne Seitenwechsel
-    document.getElementById('startGuiBtn').addEventListener('click', async function() {
-      const btn = this;
-      btn.disabled = true;
-      btn.textContent = "GUI wird gestartet...";
-      try {
-        const resp = await fetch('@routes.AdminController.startGui.url', { method: 'GET' });
-        if (resp.ok) {
-          btn.textContent = "GUI gestartet";
-        } else {
-          btn.textContent = "Fehler beim Start";
-          btn.disabled = false;
-        }
-      } catch (e) {
-        btn.textContent = "Fehler beim Start";
-        btn.disabled = false;
-      }
-    });
-  </script>
+  <!-- oder als Button in einem Formular (GET, kein CSRF nötig) -->
+<form action='@routes.AdminController.startGui' method='get'>
+  <button type="submit">GUI starten</button>
+</form>
 
   <script type="text/javascript">
     async function refreshLog() {
