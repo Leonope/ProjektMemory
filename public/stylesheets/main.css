@@ -5,14 +5,26 @@
     --button-color: #3a435d; /*Button Color*/
     --accent-color: #0071ff; /*Accent Color, for example for hovering over a Button*/
     --default-font: 'JetBrains Mono', Helvetica, Arial; /*Sets font to NetBrains Mono, if not, fall back on the other 2*/
+    --hyperlink-color: #e81a24; /*Color for hyperlinks*/
 }
 
 body {
+    width: 100vw;
+    display: flex;
     background-color: var(--base-color);
     color: var(--text-color);
     font-family: var(--default-font);
     font-size: 32px; /*Sets base font size*/
     text-align: center; /*Centers all the text*/
+    align-items: center; /*Centers content vertically*/
+    justify-content: center; /*Centers content horizontally*/
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--hyperlink-color); /*Sets hyperlink color*/
+    text-decoration: none; /*Removes underline from hyperlinks*/
 }
 
 button {
@@ -21,7 +33,6 @@ button {
     border: none; /*Removes the Border*/
     padding: 10px 20px; /*Padding around the text*/
     text-align: center; /*Centers text inside button*/
-    text-decoration: none; /*No underline*/
     display: inline-block; /*Inline-block display*/
     font-family: var(--default-font);
     font-size: 24px; /*Font size for button text*/
@@ -35,8 +46,19 @@ button:hover {
     background-color: var(--accent-color); /*Changes button color on hover*/
 }
 
-.removeULBullets {
+ul li {
     list-style-type: none; /*Removes bullets from lists*/
     padding: 0; /*Removes padding*/
-    margin: 0; /*Removes margin*/
+    margin-top: 1.8em; /*Adds margin between list items*/
+    margin-bottom: 0.5em; /*Adds margin between list items*/
+    font-size: 20px; /*Sets font size for list items*/
+}
+
+h2 {
+    text-decoration: underline; /*Underlines h2 elements*/
+}
+
+img {
+    max-width: 17%; /*Ensures images do not exceed container width*/
+    height: auto; /*Maintains aspect ratio*/
 }

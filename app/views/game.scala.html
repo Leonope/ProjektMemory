@@ -14,14 +14,14 @@
 
     <pre id="log">@state</pre>
 
-    <h2>Eingabe</h2>
+    <h2><u>Eingabe</u></h2>
     <form action='@routes.GameController.cmd' method='post'>
       @CSRF.formField
       <label for="cmd">Befehl:</label>
       <input id="cmd" name="cmd" type="text" autofocus>
       <button type="submit">Senden</button>
     </form>
-    <h2>Aktionen</h2>
+    <h2><u>Aktionen</u></h2>
     <form action='@routes.GameController.newGame' method='post'>
       @CSRF.formField
       <button type="submit">Neues Spiel</button>
@@ -72,7 +72,3 @@
     </script>
   </body>
 }
-
-
-
-
