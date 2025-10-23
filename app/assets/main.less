@@ -1,0 +1,101 @@
+@base-color: #000028; /*Dark Blue Background*/
+@text-color: #e7e7e7; /*White Text Color*/
+@dark-text: #202020; /*Darker Text Color for bright Background*/
+@button-color: #3a435d; /*Button Color*/
+@accent-color: #0071ff; /*Accent Color, for example for hovering over a Button*/
+@default-font: 'JetBrains Mono', Helvetica, Arial; /*Sets font to NetBrains Mono, if not, fall back on the other 2*/
+@hyperlink-color: #e81a24; /*Color for hyperlinks*/
+@hyperlink-accent: #ee1e28; /*Accent color for hyperlinks on hover*/
+@tui-color: #212125; /*TUI Background Color*/
+@tui-text-color: #d8cdcd; /*TUI Text Color*/
+
+.main-container {
+    display: flex;
+    flex-direction: column; /*Stacks children vertically*/
+    align-items: center; /*Centers children horizontally*/
+    justify-content: center; /*Centers children vertically*/
+    height: 100vh; /*Full viewport height*/
+    width: 100vw; /*Full viewport width*/
+}
+
+.tui-log {
+    background-color: @tui-color; /*Sets TUI background color*/
+    color: @tui-text-color; /*Sets TUI text color*/
+    font-family: @default-font;
+    font-size: 20px; /*Sets TUI font size*/
+    padding: 20px; /*Adds padding inside the TUI container*/
+    border-radius: 10px; /*Rounds the corners of the TUI container*/
+    width: 30vw; /*Sets TUI width to 80% of viewport width*/
+    height: 20vh; /*Sets TUI height to 60% of viewport height*/
+    overflow-y: auto; /*Adds vertical scrollbar if content overflows*/
+    margin-bottom: 1ex; /*Adds space below the TUI container*/
+}
+
+body {
+    width: 100vw;
+    background-color: @base-color;;
+    color: @text-color;
+    font-family: @default-font;
+    font-size: 32px; /*Sets base font size*/
+    display: flex;
+    text-align: @alignment; /*Centers all the text*/
+    align-items: @alignment; /*Centers content vertically*/
+    justify-content: @alignment; /*Centers content horizontally*/
+    flex-direction: column; /*Stacks children vertically*/
+    margin: 0;
+    padding: 0;
+    h2 {
+        text-decoration: underline; /*Underlines h2 elements*/
+    }
+}
+
+.game-rules {
+    font-size: 20px; /*Sets font size for list items*/
+    li {
+        margin-top: 1.8em; /*Adds margin between list items*/
+        margin-bottom: 0.5em; /*Adds margin between list items*/
+    }
+    img {
+        max-width: 17%; /*Ensures images do not exceed container width*/
+        height: auto; /*Maintains aspect ratio*/
+    }
+}
+
+.remove_bulletpoint {
+    list-style-type: none; /*Removes bullets from lists*/
+    text-align: center;
+}
+
+.controls {
+    clear: both; /*Clears floats*/
+    overflow: auto; /*Ensures proper layout*/
+}
+
+a {
+    color: @hyperlink-color; /*Sets hyperlink color*/
+    text-decoration: none; /*Removes underline from hyperlinks*/
+    transition: cubic-bezier(0.5, 0, 1, 1) 0.15s;
+}
+
+a:hover {
+    color: @hyperlink-accent; /*Changes hyperlink color on hover*/
+}
+
+button {
+        background-color: @button-color;
+        color: @text-color;
+        border: none; /*Removes the Border*/
+        padding: 0.42em 0.83em; /*Padding around the text*/
+        text-align: @alignment; /*Centers text inside button*/
+        display: inline-block; /*Inline-block display*/
+        font-family: @default-font;
+        font-size: 24px; /*Font size for button text*/
+        margin: 0.42em; /*Margin around button*/
+        cursor: pointer; /*Pointer cursor on hover*/
+        border-radius: 5px; /*Rounded corners*/
+        transition:cubic-bezier(0.5, 0, 1, 1) 0.15s;
+}
+
+button:hover {
+    background-color: @accent-color; /*Changes button color on hover*/
+}
