@@ -7,6 +7,8 @@
     --default-font: 'JetBrains Mono', Helvetica, Arial; /*Sets font to NetBrains Mono, if not, fall back on the other 2*/
     --hyperlink-color: #cc1019; /*Color for hyperlinks*/
     --hyperlink-accent: #ee1e28; /*Accent color for hyperlinks on hover*/
+    --tui-color: #212125; /*TUI Background Color*/
+    --tui-text-color: #d8cdcd; /*TUI Text Color*/
 }
 
 .main-container {
@@ -18,12 +20,26 @@
     width: 100vw; /*Full viewport width*/
 }
 
+.tui-log {
+    background-color: var(--tui-color); /*Sets TUI background color*/
+    color: var(--tui-text-color); /*Sets TUI text color*/
+    font-family: var(--default-font);
+    font-size: 20px; /*Sets TUI font size*/
+    padding: 20px; /*Adds padding inside the TUI container*/
+    border-radius: 10px; /*Rounds the corners of the TUI container*/
+    width: 30vw; /*Sets TUI width to 80% of viewport width*/
+    height: 20vh; /*Sets TUI height to 60% of viewport height*/
+    overflow-y: auto; /*Adds vertical scrollbar if content overflows*/
+    margin-bottom: 1ex; /*Adds space below the TUI container*/
+}
+
 body {
     width: 100vw;
     background-color: var(--base-color);
     color: var(--text-color);
     font-family: var(--default-font);
     font-size: 32px; /*Sets base font size*/
+    display: flex;
     text-align: center; /*Centers all the text*/
     align-items: center; /*Centers content vertically*/
     justify-content: center; /*Centers content horizontally*/
