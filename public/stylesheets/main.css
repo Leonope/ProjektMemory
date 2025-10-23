@@ -5,7 +5,8 @@
     --button-color: #3a435d; /*Button Color*/
     --accent-color: #0071ff; /*Accent Color, for example for hovering over a Button*/
     --default-font: 'JetBrains Mono', Helvetica, Arial; /*Sets font to NetBrains Mono, if not, fall back on the other 2*/
-    --hyperlink-color: #e81a24; /*Color for hyperlinks*/
+    --hyperlink-color: #cc1019; /*Color for hyperlinks*/
+    --hyperlink-accent: #ee1e28; /*Accent color for hyperlinks on hover*/
 }
 
 .main-container {
@@ -19,7 +20,6 @@
 
 body {
     width: 100vw;
-    display: flex;
     background-color: var(--base-color);
     color: var(--text-color);
     font-family: var(--default-font);
@@ -39,19 +39,16 @@ body {
 .game-rules li {
     margin-top: 1.8em; /*Adds margin between list items*/
     margin-bottom: 0.5em; /*Adds margin between list items*/
-    /*float: left; /*Puts Text on the Left*/
 }
 
 .game-rules img {
     max-width: 17%; /*Ensures images do not exceed container width*/
     height: auto; /*Maintains aspect ratio*/
-    /*float: right; /*Puts Images on the Right*/
 }
 
 .remove_bulletpoint {
     list-style-type: none; /*Removes bullets from lists*/
-    padding: 0; /*Removes padding*/
-    margin: 0;
+    text-align: center;
 }
 
 .controls {
@@ -62,6 +59,11 @@ body {
 a {
     color: var(--hyperlink-color); /*Sets hyperlink color*/
     text-decoration: none; /*Removes underline from hyperlinks*/
+    transition: cubic-bezier(0.5, 0, 1, 1) 0.15s;
+}
+
+a:hover {
+    color: var(--hyperlink-accent); /*Changes hyperlink color on hover*/
 }
 
 button {
@@ -76,7 +78,7 @@ button {
     margin: 10px; /*Margin around button*/
     cursor: pointer; /*Pointer cursor on hover*/
     border-radius: 5px; /*Rounded corners*/
-    transition:cubic-bezier(0.5, 0, 1, 1) 0.15s;
+    transition: cubic-bezier(0.5, 0, 1, 1) 0.15s;
 }
 
 button:hover {
