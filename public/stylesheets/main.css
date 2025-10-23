@@ -8,6 +8,15 @@
     --hyperlink-color: #e81a24; /*Color for hyperlinks*/
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column; /*Stacks children vertically*/
+    align-items: center; /*Centers children horizontally*/
+    justify-content: center; /*Centers children vertically*/
+    height: 100vh; /*Full viewport height*/
+    width: 100vw; /*Full viewport width*/
+}
+
 body {
     width: 100vw;
     display: flex;
@@ -18,8 +27,36 @@ body {
     text-align: center; /*Centers all the text*/
     align-items: center; /*Centers content vertically*/
     justify-content: center; /*Centers content horizontally*/
+    flex-direction: column; /*Stacks children vertically*/
     margin: 0;
     padding: 0;
+}
+
+.game-rules {
+    font-size: 20px; /*Sets font size for list items*/
+}
+
+.game-rules li {
+    margin-top: 1.8em; /*Adds margin between list items*/
+    margin-bottom: 0.5em; /*Adds margin between list items*/
+    /*float: left; /*Puts Text on the Left*/
+}
+
+.game-rules img {
+    max-width: 17%; /*Ensures images do not exceed container width*/
+    height: auto; /*Maintains aspect ratio*/
+    /*float: right; /*Puts Images on the Right*/
+}
+
+.remove_bulletpoint {
+    list-style-type: none; /*Removes bullets from lists*/
+    padding: 0; /*Removes padding*/
+    margin: 0;
+}
+
+.controls {
+    clear: both; /*Clears floats*/
+    overflow: auto; /*Ensures proper layout*/
 }
 
 a {
@@ -46,19 +83,6 @@ button:hover {
     background-color: var(--accent-color); /*Changes button color on hover*/
 }
 
-ul li {
-    list-style-type: none; /*Removes bullets from lists*/
-    padding: 0; /*Removes padding*/
-    margin-top: 1.8em; /*Adds margin between list items*/
-    margin-bottom: 0.5em; /*Adds margin between list items*/
-    font-size: 20px; /*Sets font size for list items*/
-}
-
 h2 {
     text-decoration: underline; /*Underlines h2 elements*/
-}
-
-img {
-    max-width: 17%; /*Ensures images do not exceed container width*/
-    height: auto; /*Maintains aspect ratio*/
 }
