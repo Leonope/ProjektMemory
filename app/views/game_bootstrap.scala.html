@@ -1,0 +1,74 @@
+@(message: String, pairs: Int, playerName: String, playerCount: Int)(implicit request: RequestHeader)
+@import helper._
+
+@main_bootstrap("Memory – Neues UI") {
+
+  <h1 class="mb-4 text-center">Memory (Bootstrap-Version)</h1>
+
+  @if(message.nonEmpty) {
+    <div class="alert alert-info text-center">@message</div>
+  }
+
+  <form action='@routes.GameController.newGameBootstrap' method="post" class="row g-3 mb-4 justify-content-center">
+    @CSRF.formField
+
+    <div class="col-12 col-md-4">
+      <label for="playerName" class="form-label">Name</label>
+      <input id="playerName" name="playerName" type="text" class="form-control"
+             value='@playerName' placeholder="Dein Name">
+    </div>
+
+    <div class="col-12 col-md-4">
+      <label for="pairs" class="form-label">Anzahl Paare</label>
+      <input id="pairs" name="pairs" type="number" min="2" max="18" step="2" class="form-control" value='@pairs'>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <label for="playerCount" class="form-label">Anzahl Spieler</label>
+      <select id="playerCount" name="playerCount" class="form-select">
+        <option value="1" @if(playerCount == 1){selected}>1</option>
+        <option value="2" @if(playerCount == 2){selected}>2</option>
+        <option value="3" @if(playerCount == 3){selected}>3</option>
+        <option value="4" @if(playerCount == 4){selected}>4</option>
+      </select>
+    </div>
+
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-primary px-4">Neues Spiel starten</button>
+    </div>
+  </form>
+
+  <hr class="border-secondary mb-4">
+
+  <div class="container">
+    <div class="row justify-content-center mb-3">
+      <div class="col-12 col-md-10">
+        <div class="card bg-secondary-subtle border-0 shadow-sm">
+          <div class="card-body text-dark">
+            <strong>Aktuelle Auswahl:</strong>
+            <ul class="mb-0">
+              <li>Spielername: @if(playerName.trim.isEmpty) { <em>–</em> } else { @playerName }</li>
+              <li>Anzahl Spieler: @playerCount</li>
+              <li>Anzahl Paare: @pairs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="board"
+         class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2 g-md-3 justify-content-center">
+      @for(i <- 1 to pairs * 2) {
+        <div class="col">
+          <div class="card text-center p-4 shadow-sm bg-secondary-subtle border-0"
+               style="border-radius: 0.75rem; aspect-ratio: 1 / 1;">
+            <span class="fs-3 fw-bold text-dark">?</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+}
+
+
+

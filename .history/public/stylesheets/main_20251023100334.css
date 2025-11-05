@@ -9,17 +9,6 @@
     --hyperlink-accent: #ee1e28; /*Accent color for hyperlinks on hover*/
 }
 
-.gamecontainer {
-    height: 100%;
-    width: 100%;
-    margin: 1em;
-    display:flex;
-    font-size:40px;
-    font-family: "Verdana",Geneva, sans-serif;
-    font-weight: bold;
-    color:black;
-}
-
 .main-container {
     display: flex;
     flex-direction: column; /*Stacks children vertically*/

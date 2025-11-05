@@ -1,0 +1,62 @@
+@base-color: #000028; /*Dark Blue Background*/
+@text-color: #e7e7e7; /*White Text Color*/
+@dark-text: #202020; /*Darker Text Color for bright Background*/
+@button-color: #3a435d; /*Button Color*/
+@accent-color: #0071ff; /*Accent Color, for example for hovering over a Button*/
+@default-font: 'JetBrains Mono', Helvetica, Arial; /*Sets font to NetBrains Mono, if not, fall back on the other 2*/
+@hyperlink-color: #e81a24; /*Color for hyperlinks*/
+@alignment: center; /*Default alignment for everything*/
+
+body {
+    width: 100vw;
+    display: flex;
+    background-color: @base-color;;
+    color: @text-color;
+    font-family: @default-font;
+    font-size: 32px; /*Sets base font size*/
+    text-align: @alignment; /*Centers all the text*/
+    align-items: @alignment; /*Centers content vertically*/
+    justify-content: @alignment; /*Centers content horizontally*/
+    margin: 0;
+    padding: 0;
+    h2 {
+        text-decoration: underline; /*Underlines h2 elements*/
+    }
+}
+
+a {
+    color: var(--hyperlink-color); /*Sets hyperlink color*/
+    text-decoration: none; /*Removes underline from hyperlinks*/
+    button {
+        background-color: var(--button-color);
+        color: var(--text-color);
+        border: none; /*Removes the Border*/
+        padding: 0.42em 0.83em; /*Padding around the text*/
+        text-align: @alignment; /*Centers text inside button*/
+        display: inline-block; /*Inline-block display*/
+        font-family: var(--default-font);
+        font-size: 24px; /*Font size for button text*/
+        margin: 0.42em; /*Margin around button*/
+        cursor: pointer; /*Pointer cursor on hover*/
+        border-radius: 5px; /*Rounded corners*/
+        transition:cubic-bezier(0.5, 0, 1, 1) 0.15s;
+    }
+    button:hover {
+        background-color: var(--accent-color); /*Changes button color on hover*/
+    }
+}
+
+ul {
+    font-size: 20px; /*Sets font size for list items*/
+    list-style-type: none; /*Removes bullets from lists*/
+    padding: 0; /*Removes padding*/
+    margin-top: 2.5em; /*Adds margin between list items*/
+    margin-bottom: 0.5em; /*Adds margin between list items*/
+    li {
+        margin-bottom: 0.5em; /*Adds margin between list items*/
+    }
+    img {
+        max-width: 17%; /*Ensures images do not exceed container width*/
+        height: auto; /*Maintains aspect ratio*/
+    }
+}

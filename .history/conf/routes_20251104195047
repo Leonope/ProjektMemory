@@ -27,6 +27,3 @@ POST  /game/newui/new    controllers.GameController.newGameBootstrap
 
 
 
-
-
-

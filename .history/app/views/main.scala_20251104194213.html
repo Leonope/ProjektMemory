@@ -1,0 +1,65 @@
+@*
+  Zentrales Layout-Template.
+  Nutze es in anderen Views mit: @main("Seitentitel") { ...Content... }
+*@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@title</title>
+
+    <!-- Bootstrap CSS (Achtung: @ in URL muss als @@ escaped werden) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
+
+    <!-- Dein CSS: nach Bootstrap laden, damit es überschreibt -->
+    <link rel="stylesheet" media="screen" href='@routes.Assets.versioned("stylesheets/main.css")'>
+    <link rel="icon" type="image/png" href='@routes.Assets.versioned("images/favicon.png")'>
+  </head>
+
+  <body class="bg-dark text-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="@routes.HomeController.index()">Memory</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Menü öffnen">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="mainNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="@routes.HomeController.explanation()">How to Play</a></li>
+            <li class="nav-item"><a class="nav-link" href="@routes.GameController.index()">Start Game</a></li>
+          </ul>
+          <button id="startGuiBtn" class="btn btn-outline-light">GUI starten</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Flash-Meldungen (optional) -->
+    @if(flash().data.nonEmpty) {
+      <div class="container mt-3">
+        @for((k,v) <- flash().data) {
+          <div class="alert alert-info alert-dismissible fade show" role="alert">
+            @v
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        }
+      </div>
+    }
+
+    <!-- Hauptinhalt -->
+    <main class="container py-4">
+      @content
+    </main>
+
+    <!-- Bootstrap Bund
+

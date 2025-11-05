@@ -1,0 +1,48 @@
+@(message: String, playerName: String, numPlayers: Int, cardCount: Int)(implicit request: RequestHeader)
+@import helper.CSRF
+@main_bootstrap("Memory – Web-UI") {
+
+  <h1 class="mb-4 text-center">Memory – Web-UI (Bootstrap)</h1>
+
+  <div class="alert alert-info text-center">@message</div>
+
+  <form action='@routes.GameController.configureFromWeb' method="post" class="row g-3 mb-4 justify-content-center">
+    @CSRF.formField
+
+    <div class="col-12 col-md-4">
+      <label for="playerName" class="form-label">Name</label>
+      <input id="playerName" name="playerName" type="text" class="form-control"
+             value='@playerName' placeholder="Dein Name">
+    </div>
+
+    <div class="col-6 col-md-2">
+      <label for="numPlayers" class="form-label">Spieler</label>
+      <input id="numPlayers" name="numPlayers" type="number" min="1" max="4" step="1"
+             class="form-control" value='@numPlayers'>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <label for="cardCount" class="form-label">Karten (gesamt)</label>
+      <input id="cardCount" name="cardCount" type="number" min="8" max="36" step="2"
+             class="form-control" value='@cardCount'>
+      <div class="form-text">Gerade Zahl (z.&nbsp;B. 16&nbsp;Karten = 8&nbsp;Paare).</div>
+    </div>
+
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-primary px-4">Speichern</button>
+    </div>
+  </form>
+
+  <!-- Dein Grid unten kann bleiben; es nutzt cardCount für die Anzahl -->
+  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2 g-md-3 justify-content-center">
+    @for(i <- 1 to cardCount) {
+      <div class="col">
+        <div class="card text-center shadow-sm bg-secondary-subtle border-0" style="border-radius:.75rem;">
+          <div class="card-body d-flex align-items-center justify-content-center" style="aspect-ratio:1/1;">
+            <span class="fs-3 fw-bold text-dark">?</span>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+}

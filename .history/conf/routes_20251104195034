@@ -15,12 +15,9 @@ GET   /quit            controllers.GameController.quit
 GET   /start-gui       controllers.AdminController.startGui
 POST  /api/log         controllers.ApiController.logLine
 GET   /assets/*file    controllers.Assets.versioned(path="/public", file: Asset)
-# New Bootstrap-Layout for game
+# Neues Bootstrap-Layout fürs Spiel
 GET   /game/newui        controllers.GameController.indexBootstrap
 POST  /game/newui/new    controllers.GameController.newGameBootstrap
-
-
-
 
 
 

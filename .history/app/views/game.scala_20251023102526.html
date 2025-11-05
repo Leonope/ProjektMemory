@@ -21,11 +21,10 @@
       <input id="cmd" name="cmd" type="text" autofocus>
       <button type="submit">Senden</button>
     </form>
-    <!--test von game container 
+    <h2><u>Aktionen</u></h2>
+    <!--test von game container -->
     <div class="gamecontainer">
       <h1>Test game container!</h1>
-      </form>-->
-    <h2><u>Aktionen</u></h2>
     <form action='@routes.GameController.newGame' method='post'>
       @CSRF.formField
       <button type="submit">Neues Spiel</button>
