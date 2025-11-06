@@ -1,6 +1,7 @@
 :root {
     --base-color: #000028; /*Dark Blue Background*/
     --text-color: #e7e7e7; /*White Text Color*/
+    --text-accent: #dddddd; /*Lighter Text for hovering, mainly used in navbar*/
     --dark-text: #202020; /*Darker Text Color for bright Background*/
     --button-color: #3a435d; /*Button Color*/
     --accent-color: #0071ff; /*Accent Color, for example for hovering over a Button*/
@@ -110,6 +111,17 @@ button {
 
 button:hover {
     background-color: var(--accent-color); /*Changes button color on hover*/
+}
+
+.navbar-brand {
+    color: var(--text-color); /*Sets navbar brand text color*/
+    font-size: 28px; /*Sets navbar brand font size*/
+    font-weight: bold; /*Makes navbar brand text bold*/
+    transition: cubic-bezier(0.5, 0, 1, 1) 0.15s;
+}
+
+.navbar-brand:hover {
+    color: var(--text-accent); /*Changes navbar brand color on hover*/
 }
 
 h2 {
