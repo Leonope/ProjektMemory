@@ -8,6 +8,7 @@ import backend.Backend // <- Hier holen wir uns die gemeinsame Controller-Instan
 @Singleton
 class GameController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
+  // --- Alte (Text-)UI bleibt unberührt ---
   def index: Action[AnyContent] = Action { implicit request =>
     Ok(views.html.game(WebTUI.render()))
   }

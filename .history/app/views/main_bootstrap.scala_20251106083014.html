@@ -13,8 +13,8 @@
       rel="stylesheet">
     <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/main.css")'>
   </head>
-  <body class="#000028 text-light">
-    <nav class="navbar navbar-dark #000028">
+  <body class="bg-dark text-light">
+    <nav class="navbar navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="/">Memory</a>
       </div>
@@ -23,10 +23,6 @@
     <main class="container py-4">
       @content
     </main>
-
-    <a href="@routes.HomeController.index" class="back-button">
-      <button>Back to Main Page</button>
-    </a>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@@5.3.3/dist/js/bootstrap.bundle.min.js">
