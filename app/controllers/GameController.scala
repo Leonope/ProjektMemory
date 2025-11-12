@@ -32,7 +32,7 @@ class GameController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(
       views.html.game_bootstrap(
         message      = "Willkommen beim Memory!",
-        pairs        = 8,
+        pairs        = 2,
         playerName   = "",
         playerCount  = 1 // Default
       )
@@ -50,7 +50,7 @@ class GameController @Inject()(cc: ControllerComponents) extends AbstractControl
   def newGameBootstrap: Action[AnyContent] = Action { implicit request =>
     val data        = request.body.asFormUrlEncoded.getOrElse(Map.empty)
     val name        = data.get("playerName").flatMap(_.headOption).filter(_.trim.nonEmpty).getOrElse("Player")
-    val pairs: Int  = data.get("pairs").flatMap(_.headOption).flatMap(s => scala.util.Try(s.toInt).toOption).getOrElse(8)
+    val pairs: Int  = data.get("pairs").flatMap(_.headOption).flatMap(s => scala.util.Try(s.toInt).toOption).getOrElse(2)
     val pCount: Int = data.get("playerCount").flatMap(_.headOption).flatMap(s => scala.util.Try(s.toInt).toOption).getOrElse(1)
 
     // --- Übergabe an Backend (IController) ---

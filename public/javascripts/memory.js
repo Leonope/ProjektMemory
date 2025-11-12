@@ -250,6 +250,22 @@
     }));
   }
 
+  // Hide/Unhide Game-Setup-Container and Game-Container for multiple buttons with the same class
+  document.querySelectorAll('.game-window-button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const setup_container = document.querySelector('.game-setup-container');
+      const game_container = document.querySelector('.game-container');
+
+      if (window.getComputedStyle(setup_container).display !== 'none') {
+        setup_container.classList.add('hidden'); // hides
+        game_container.classList.remove('hidden'); // shows
+      } else {
+        setup_container.classList.remove('hidden'); // shows
+        game_container.classList.add('hidden'); // hides
+      }  
+    });
+  });
+
   // Init, wenn DOM bereit ist (falls Script im <head> wäre)
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
@@ -261,4 +277,3 @@
     bindEvents();
   }
 })();
-
