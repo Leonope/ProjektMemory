@@ -3,7 +3,7 @@
     --text-color: #e7e7e7; /*White Text Color*/
     --text-accent: #dddddd; /*Lighter Text for hovering, mainly used in navbar*/
     --dark-text: #202020; /*Darker Text Color for bright Background*/
-    --button-color: #3a435d; /*Button Color*/
+    --button-color: #32395280; /*Button Color*/
     --accent-color: #0071ff; /*Accent Color, for example for hovering over a Button*/
     --default-font: 'JetBrains Mono', Helvetica, Arial; /*Sets font to NetBrains Mono, if not, fall back on the other 2*/
     --hyperlink-color: #cc1019; /*Color for hyperlinks*/
@@ -95,7 +95,7 @@ a:hover {
 }
 
 button {
-    background-color: var(--button-color);
+    background-color: var(--button-color); /**/
     color: var(--text-color);
     border: none; /*Removes the Border*/
     padding: 10px 20px; /*Padding around the text*/
@@ -105,12 +105,15 @@ button {
     font-size: 24px; /*Font size for button text*/
     margin: 10px; /*Margin around button*/
     cursor: pointer; /*Pointer cursor on hover*/
-    border-radius: 5px; /*Rounded corners*/
+    border-radius: 25px; /*Rounded corners*/
     transition: cubic-bezier(0.5, 0, 1, 1) 0.15s;
 }
 
 button:hover {
-    background-color: var(--accent-color); /*Changes button color on hover*/
+    /*background-color: var(--accent-color); /*Changes button color on hover*/
+    background-color: transparent; /*Makes button background invisible on hover*/
+    text-shadow: 0 0 1em #f8f8f8, 0 0 15px #e7e7e7; /*Adds glow effect on hover*/
+    box-shadow: 0 0 0 #000000;
 }
 
 .navbar-brand {
@@ -122,8 +125,19 @@ button:hover {
 
 .navbar-brand:hover {
     color: var(--text-accent); /*Changes navbar brand color on hover*/
+    text-shadow: 0 0 0.5em #0071ff, 0 0 1em #00a1ff; /*Enhances glow effect on hover*/
 }
 
 h2 {
     text-decoration: underline; /*Underlines h2 elements*/
+}
+
+.title {
+    text-shadow: 0 0 10px #0071ff; /*Adds glow effect to title*/
+    padding: 0.5em;
+    transition: cubic-bezier(0.5, 0, 1, 1) 0.15s;
+}
+
+.title:hover {
+    text-shadow: 0 0 10px #0071ff, 0 0 20px #00a1ff; /*Enhances glow effect on hover*/
 }
