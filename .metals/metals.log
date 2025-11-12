@@ -2353,3 +2353,14 @@ INFO: Unsupported notification method: $/setTrace
 2025.11.12 09:18:29 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\backend\Backend.scala. Using presentation compiler with project's scala-library version: 3.3.6
 2025.11.12 09:18:30 INFO  time: code lens generation in 1.2s
 2025.11.12 09:18:53 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\backend\Backend.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.12 10:09:39 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\public\javascripts\memory.java. Using fallback presentation compiler.
+2025.11.12 10:09:39 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\public\javascripts\memory.java
+2025.11.12 10:09:39 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\public\javascripts\memory.java
+2025.11.12 10:09:41 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\public\javascripts\memory.java. Using fallback presentation compiler.
+2025.11.12 10:09:41 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\public\javascripts\memory.java. Using fallback presentation compiler.
+Nov 12, 2025 10:09:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 13
+2025.11.12 10:09:48 INFO  no build target found for c:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\public\javascripts\memory.java. Using fallback presentation compiler.
+2025.11.12 10:35:20 INFO  Shutting down server
+2025.11.12 10:35:20 INFO  shutting down Metals
+2025.11.12 10:35:20 INFO  Exiting server

@@ -1,0 +1,373 @@
+@(message: String, pairs: Int, playerName: String, playerCount: Int)(implicit request: RequestHeader)
+@import helper._
+
+@main_bootstrap("Memory – Neues UI") {
+
+  <h1 class="mb-4 text-center">Memory (Bootstrap-Version)</h1>
+
+  @if(message.nonEmpty) {
+    <div class="alert alert-info text-center">@message</div>
+  }
+
+  <form action='@routes.GameController.newGameBootstrap' method="post" class="row g-3 mb-4 justify-content-center">
+    @CSRF.formField
+
+    <div class="col-12 col-md-4">
+      <label for="playerName" class="form-label">Name</label>
+      <input id="playerName" name="playerName" type="text" class="form-control"
+             value='@playerName' placeholder="Dein Name">
+    </div>
+
+    <div class="col-12 col-md-4">
+      <label for="pairs" class="form-label">Anzahl Paare</label>
+      <input id="pairs" name="pairs" type="number" min="2" max="18" step="2" class="form-control" value='@pairs'>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <label for="playerCount" class="form-label">Anzahl Spieler</label>
+      <select id="playerCount" name="playerCount" class="form-select">
+        <option value="1" @if(playerCount == 1){selected}>1</option>
+        <option value="2" @if(playerCount == 2){selected}>2</option>
+        <option value="3" @if(playerCount == 3){selected}>3</option>
+        <option value="4" @if(playerCount == 4){selected}>4</option>
+      </select>
+    </div>
+
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-primary px-4">Neues Spiel starten</button>
+    </div>
+  </form>
+
+  <hr class="border-secondary mb-4">
+
+  <!-- Statuskarte -->
+  <div class="row justify-content-center mb-3">
+    <div class="col-12 col-md-10">
+      <div class="card bg-secondary-subtle border-0 shadow-sm">
+        <div class="card-body text-dark d-flex flex-wrap gap-3 align-items-center">
+          <div><strong>Spieler:</strong> @if(playerName.trim.isEmpty) { <em>–</em> } else { @playerName }</div>
+          <div><strong>Spieleranzahl:</strong> @playerCount</div>
+          <div><strong>Paare:</strong> @pairs</div>
+          <div class="ms-auto"><strong>Versuche:</strong> <span id="moves">0</span></div>
+          <div><strong>Gefundene Paare:</strong> <span id="found">0</span> / @pairs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Board -->
+  <div id="board"
+       class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2 g-md-3 justify-content-center">
+
+    @for(i <- 1 to pairs * 2) {
+      <div class="col">
+        <!--
+          Jede Karte ist ein Button (tastatur-freundlich).
+          States:
+            - data-state="facedown" | "faceup" | "matched"
+        -->
+        <button class="memory-card w-100"
+                type="button"
+                data-state="facedown"
+                aria-label="Karte verdeckt">
+          <div class="card-outer shadow-sm">
+            <div class="card-inner">
+              <div class="card-face card-back d-flex align-items-center justify-content-center">
+                <!-- Rückseite -->
+                <span class="fs-3 fw-bold">?</span>
+              </div>
+              <div class="card-face card-front d-flex align-items-center justify-content-center">
+                <!-- Vorderseite (wird per JS gesetzt) -->
+                <span class="symbol fs-3 fw-bold"></span>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+    }
+  </div>
+
+  <!-- Styles nur für das Board & Animationen -->
+  <style>
+    /* Kartenlayout & 3D-Flip */
+    .memory-card {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      perspective: 1000px; /* 3D-Raum für Kind-Transform */
+      outline: none;
+    }
+    .memory-card:disabled { cursor: default; }
+
+    .card-outer {
+      border-radius: 0.75rem;
+      background: transparent;
+      aspect-ratio: 1 / 1;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 450ms ease;
+      border-radius: 0.75rem;
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      border-radius: 0.75rem;
+      user-select: none;
+    }
+
+    .card-back {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    .card-front {
+      background: #ffffff;
+      color: #111;
+      transform: rotateY(180deg);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    /* Flip-State */
+    .memory-card[data-state="faceup"] .card-inner,
+    .memory-card.is-flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Match-Animation: Glühen + leichtes „Pop“ */
+    @keyframes match-pop {
+      0%   { transform: scale(1); }
+      40%  { transform: scale(1.06); }
+      80%  { transform: scale(0.98); }
+      100% { transform: scale(1); }
+    }
+    @keyframes match-glow {
+      0%   { box-shadow: 0 0 0 rgba(25, 135, 84, 0); }
+      50%  { box-shadow: 0 0 24px rgba(25, 135, 84, 0.85); }
+      100% { box-shadow: 0 0 0 rgba(25, 135, 84, 0); }
+    }
+    .memory-card.matched .card-outer {
+      animation: match-glow 900ms ease;
+    }
+    .memory-card.matched .card-inner {
+      animation: match-pop 450ms ease;
+    }
+    .memory-card.matched {
+      cursor: default;
+    }
+
+    /* Mismatch-Animation: Shake + roter Blitz */
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+    .memory-card.mismatch .card-outer {
+      animation: shake 350ms ease;
+      box-shadow: 0 0 0 rgba(220, 53, 69, 0);
+    }
+    .memory-card.mismatch .card-back,
+    .memory-card.mismatch .card-front {
+      outline: 2px solid rgba(220, 53, 69, 0.6);
+    }
+
+    /* Deaktivieren von Klicks, während Animationen laufen */
+    .no-click {
+      pointer-events: none !important;
+    }
+  </style>
+
+  <!-- Spiel-Logik & Animationen -->
+  <script>
+    (function () {
+      const board = document.getElementById('board');
+      const moveEl = document.getElementById('moves');
+      const foundEl = document.getElementById('found');
+      const totalPairs = @pairs;
+
+      let deck = [];            // Array der Symbole (2x pro Paar)
+      let firstPick = null;     // {el, symbol}
+      let secondPick = null;    // {el, symbol}
+      let lock = false;         // Eingaben kurz blockieren
+      let moves = 0;
+      let found = 0;
+
+      // === Utilitys ===
+      const shuffle = (arr) => {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      };
+
+      // Erzeuge ein einfaches Symbolset: 1..pairs (du kannst hier später Emojis, Icons o.ä. einsetzen)
+      function buildDeck(pairs) {
+        const base = Array.from({ length: pairs }, (_, i) => String(i + 1));
+        const doubled = base.concat(base);
+        return shuffle(doubled);
+      }
+
+      // Board initialisieren: Symbole in Vorderseiten schreiben
+      function initBoard() {
+        deck = buildDeck(totalPairs);
+        const cards = board.querySelectorAll('.memory-card');
+        cards.forEach((card, idx) => {
+          const symbol = deck[idx];
+          card.dataset.symbol = symbol;               // fürs Matching
+          card.dataset.state = 'facedown';            // Startzustand
+          card.classList.remove('is-flipped','matched','mismatch');
+          card.removeAttribute('disabled');
+
+          const face = card.querySelector('.symbol');
+          face.textContent = symbol;
+          card.setAttribute('aria-label', 'Karte verdeckt');
+        });
+        firstPick = secondPick = null;
+        lock = false;
+        moves = 0;
+        found = 0;
+        moveEl.textContent = '0';
+        foundEl.textContent = '0';
+      }
+
+      // Karte umdrehen (faceup/facedown toggeln)
+      function flipCard(card, toFaceUp) {
+        if (toFaceUp) {
+          card.dataset.state = 'faceup';
+          card.classList.add('is-flipped');
+          card.setAttribute('aria-label', 'Karte aufgedeckt: ' + card.dataset.symbol);
+        } else {
+          card.dataset.state = 'facedown';
+          card.classList.remove('is-flipped');
+          card.setAttribute('aria-label', 'Karte verdeckt');
+        }
+      }
+
+      function setMatched(card) {
+        card.dataset.state = 'matched';
+        card.classList.add('matched');
+        card.classList.remove('mismatch');
+        card.setAttribute('disabled', 'true');
+      }
+
+      function setMismatch(card) {
+        // kurze Markierung (Shake), danach wieder verdecken
+        card.classList.add('mismatch');
+      }
+
+      function clearMismatch(card) {
+        card.classList.remove('mismatch');
+      }
+
+      // Haupt-Click-Handler
+      function onCardClick(e) {
+        const btn = e.currentTarget;
+
+        if (lock) return; // während Animationen blockieren
+        if (btn.dataset.state !== 'facedown') return; // nur verdeckte Karten anklickbar
+
+        flipCard(btn, true);
+
+        const pick = { el: btn, symbol: btn.dataset.symbol };
+
+        if (!firstPick) {
+          firstPick = pick;
+          return;
+        }
+
+        // zweiter Pick
+        secondPick = pick;
+
+        // ab hier keine weiteren Klicks zulassen, bis wir fertig sind
+        lock = true;
+        board.classList.add('no-click');
+
+        moves += 1;
+        moveEl.textContent = String(moves);
+
+        // Match?
+        if (firstPick.symbol === secondPick.symbol) {
+          // Match-Animation
+          setTimeout(() => {
+            setMatched(firstPick.el);
+            setMatched(secondPick.el);
+
+            found += 1;
+            foundEl.textContent = String(found);
+
+            // Reset Auswahl
+            firstPick = null;
+            secondPick = null;
+            lock = false;
+            board.classList.remove('no-click');
+
+            // Win? (Optional: kleines Toast/Alert)
+            if (found === totalPairs) {
+              // Einfache visuelle Bestätigung
+              flashWinBanner();
+            }
+          }, 220); // kurzes Delay für Flip-Transition
+        } else {
+          // Mismatch-Animation, dann beide zurückdrehen
+          setMismatch(firstPick.el);
+          setMismatch(secondPick.el);
+
+          setTimeout(() => {
+            flipCard(firstPick.el, false);
+            flipCard(secondPick.el, false);
+          }, 500); // wackeln lassen
+
+          setTimeout(() => {
+            clearMismatch(firstPick.el);
+            clearMismatch(secondPick.el);
+
+            firstPick = null;
+            secondPick = null;
+            lock = false;
+            board.classList.remove('no-click');
+          }, 500 + 350); // nach Shake-Class entfernen
+        }
+      }
+
+      // Kleines „Gewonnen“-Feedback
+      function flashWinBanner() {
+        const banner = document.createElement('div');
+        banner.textContent = '🎉 Alle Paare gefunden!';
+        banner.className = 'position-fixed top-0 start-50 translate-middle-x mt-3 px-4 py-2 rounded-3 bg-success text-white shadow';
+        document.body.appendChild(banner);
+        setTimeout(() => banner.remove(), 1800);
+      }
+
+      // Event-Listener binden
+      function bindEvents() {
+        const cards = board.querySelectorAll('.memory-card');
+        cards.forEach(c => c.addEventListener('click', onCardClick));
+        // Tastaturfreundlichkeit (Space/Enter)
+        cards.forEach(c => c.addEventListener('keydown', (ev) => {
+          if (ev.key === ' ' || ev.key === 'Enter') {
+            ev.preventDefault();
+            c.click();
+          }
+        }));
+      }
+
+      // Init on load
+      initBoard();
+      bindEvents();
+
+      // Optional: Neu mischen, wenn Nutzer die Paare-Anzahl ändert und erneut submitted → übernimmt der Server.
+      // Wenn du einen „Neu mischen“-Button willst, sag Bescheid – füge ich gern hinzu.
+    })();
+  </script>
+}

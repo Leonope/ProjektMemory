@@ -1,0 +1,22 @@
+/* Vollbild-Canvas hinter allem Content */
+#stars-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 0;            /* Hintergrund */
+  pointer-events: none;  /* klicksicher */
+}
+
+/* Optional: leichte Körnung über dem Canvas (dezent) */
+/*
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  background: radial-gradient(transparent 60%, rgba(0,0,0,0.25));
+}
+*/
