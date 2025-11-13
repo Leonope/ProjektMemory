@@ -13,7 +13,7 @@
       <div class="alert alert-info text-center">@message</div>
     }
 
-    <form action='@routes.GameController.newGameBootstrap' method="post" class="row g-3 mb-4 justify-content-center">
+    <form id="newGameForm" action='@routes.GameController.newGameBootstrap' method="post" class="row g-3 mb-4 justify-content-center">
       @CSRF.formField
 
       <div class="col-12 col-md-4">
@@ -109,4 +109,7 @@
 
   <!-- Externes JavaScript (gesamte Logik) -->
   <script src='@routes.Assets.versioned("javascripts/memory.js")'></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 }

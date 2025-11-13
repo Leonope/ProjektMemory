@@ -3,6 +3,7 @@ package controllers
 import javax.inject._
 import play.api.mvc._
 import web.WebTUI
+import play.api.libs.json._
 import backend.Backend // <- Hier holen wir uns die gemeinsame Controller-Instanz
 
 @Singleton
