@@ -258,9 +258,13 @@
       var data = form.serialize();
 
       $.post("/game/newui/new", data, function(response) {
-        console.log("Server responded: ", response);
+        //console.log("Server responded: ", response);
         $('.game-setup-container').addClass('hidden');
         $('.game-container').removeClass('hidden');
+      });
+
+      $.get("/game-matrix", function(xml) {
+        console.log(xml);
       });
 
       /*$.ajax({

@@ -5,6 +5,7 @@ import play.api.mvc._
 import web.WebTUI
 import play.api.libs.json._
 import backend.Backend // <- Hier holen wir uns die gemeinsame Controller-Instanz
+import java.nio.file.{Files, Paths}
 
 @Singleton
 class GameController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
@@ -72,6 +73,16 @@ class GameController @Inject()(cc: ControllerComponents) extends AbstractControl
         playerCount  = pCount
       )
     )
+  }
+
+  def getXml: Action[AnyContent] = Action {
+    val path = Paths.get("matrix.xml")
+    if (Files.exists(path)) {
+      val data = Files.readAllBytes(path)
+      Ok(data).as("application/xml; charset=utf-8")
+    } else {
+      NotFound("XML not found")
+    }
   }
 
   def test: Action[AnyContent] = Action {
