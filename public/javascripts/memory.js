@@ -252,13 +252,18 @@
 
   $(function() {
     $('#newGameForm').on('submit', function(e) {
-      console.log("Ajax triggered");
       e.preventDefault(); // Prevent normal form submission
 
       var form = $(this);
       var data = form.serialize();
 
-      $.ajax({
+      $.post("/game/newui/new", data, function(response) {
+        console.log("Server responded: ", response);
+        $('.game-setup-container').addClass('hidden');
+        $('.game-container').removeClass('hidden');
+      });
+
+      /*$.ajax({
         url: form.attr('action'), // Uses the form's action attribute
         type: 'POST',
         data: data,
@@ -271,7 +276,7 @@
         error: function(xhr) {
           alert('Fehler beim Starten des Spiels!');
         }
-      });
+      });*/
     });
   });
 
