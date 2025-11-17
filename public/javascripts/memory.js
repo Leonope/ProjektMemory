@@ -250,19 +250,38 @@
     }));
   }
 
+  $(function() {
+    $('#newGameForm').on('submit', function(e) {
+      console.log("Ajax triggered");
+      e.preventDefault(); // Prevent normal form submission
+
+      var form = $(this);
+      var data = form.serialize();
+
+      $.ajax({
+        url: form.attr('action'), // Uses the form's action attribute
+        type: 'POST',
+        data: data,
+        success: function(response) {
+          // Hide setup, show game
+          $('.game-setup-container').addClass('hidden');
+          $('.game-container').removeClass('hidden');
+          // Optionally update game board with response if needed
+        },
+        error: function(xhr) {
+          alert('Fehler beim Starten des Spiels!');
+        }
+      });
+    });
+  });
+
   // Hide/Unhide Game-Setup-Container and Game-Container for multiple buttons with the same class
   document.querySelectorAll('.game-window-button').forEach(btn => {
     btn.addEventListener('click', function(e) {
       const setup_container = document.querySelector('.game-setup-container');
       const game_container = document.querySelector('.game-container');
-
-      if (window.getComputedStyle(setup_container).display !== 'none') {
-        setup_container.classList.add('hidden'); // hides
-        game_container.classList.remove('hidden'); // shows
-      } else {
-        setup_container.classList.remove('hidden'); // shows
-        game_container.classList.add('hidden'); // hides
-      }  
+      setup_container.classList.remove('hidden'); // shows
+      game_container.classList.add('hidden'); // hides
     });
   });
 

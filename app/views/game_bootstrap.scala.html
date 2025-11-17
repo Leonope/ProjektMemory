@@ -6,7 +6,7 @@
   <!-- Page-specific CSS -->
   <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/memory.css")'>
 
-  <div class="game-setup-container hidden">
+  <div class="game-setup-container">
     <h1 class="mb-4 text-center">Memory (Bootstrap-Version)</h1>
 
     @if(message.nonEmpty) {
@@ -36,18 +36,17 @@
           <option value="4" @if(playerCount == 4){selected}>4</option>
         </select>
       </div>
-
       <div class="col-12 text-center">
-        <button type="submit" class="btn game-window-button">Neues Spiel starten</button>
+        <button type="submit">Neues Spiel starten</button>
       </div>
     </form>
   </div>
 
   <hr class="border-secondary mb-4">
 
-  <div class="game-container">
+  <div class="game-container hidden">
     <!-- Statusleiste: Spieler-Infos + Zähler + Timer-Stern -->
-    <div class="row justify-content-center mb-3">
+    <div class="row justify-content-center mb- 3">
       <div class="col-12 col-md-10">
         <div class="card bg-secondary-subtle border-0 shadow-sm">
           <div class="card-body text-dark d-flex flex-wrap gap-3 align-items-center">
@@ -107,9 +106,9 @@
     </div>
   </div>
 
-  <!-- Externes JavaScript (gesamte Logik) -->
-  <script src='@routes.Assets.versioned("javascripts/memory.js")'></script>
-
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Externes JavaScript (gesamte Logik) -->
+  <script src='@routes.Assets.versioned("javascripts/memory.js")'></script>
 }
