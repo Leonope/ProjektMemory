@@ -11,9 +11,11 @@ import java.nio.file.{Files, Paths}
 object GameController {
   case class HighscoreEntry(playerName: String, pairs: Int, moves: Int)
 
+  // unsynchronisiert würde hier auch reichen, aber wir machen es sauber:
   @volatile private var highscores: List[HighscoreEntry] = Nil
 
   def addHighscore(e: HighscoreEntry): Unit = synchronized {
+    // Sortierung: wenige Versuche sind besser, bei Gleichstand mehr Paare besser
     highscores = (e :: highscores)
       .sortBy(h => (h.moves, -h.pairs))
       .take(5)
@@ -106,7 +108,7 @@ class GameController @Inject()(cc: ControllerComponents) extends AbstractControl
     )
   }
 
-  /** XML für Matrix */
+  /** XML für Matrix (hattest du schon) */
   def getXml: Action[AnyContent] = Action {
     val path = Paths.get("matrix.xml")
     if (Files.exists(path)) {
@@ -119,11 +121,10 @@ class GameController @Inject()(cc: ControllerComponents) extends AbstractControl
 
   // --- Presets als JSON ---
   def preset(key: String): Action[AnyContent] = Action {
-    // Name leer, Spieler immer 1
     val presetOpt: Option[(String, Int, Int)] = key match {
-      case "easy"     => Some(("", 4, 1))
-      case "standard" => Some(("", 8, 1))
-      case "pro"      => Some(("", 12, 1))
+      case "easy"     => Some(("Einfach", 4, 1))
+      case "standard" => Some(("Standard", 8, 2))
+      case "pro"      => Some(("Profi", 12, 2))
       case _          => None
     }
 
@@ -153,16 +154,8 @@ class GameController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(Json.obj("status" -> "ok"))
   }
 
-  def getHighscoresJson: Action[AnyContent] = Action { implicit request =>
-    val filterPairsOpt: Option[Int] =
-      request.getQueryString("pairs").flatMap(s => scala.util.Try(s.toInt).toOption)
-
-    val baseList = GameController.getHighscores
-    val list = filterPairsOpt match {
-      case Some(p) => baseList.filter(_.pairs == p)
-      case None    => baseList
-    }
-
+  def getHighscoresJson: Action[AnyContent] = Action {
+    val list = GameController.getHighscores
     val jsonList = list.map { e =>
       Json.obj(
         "playerName" -> e.playerName,
@@ -183,6 +176,5 @@ class GameController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(WebTUI.currentLog).as("text/plain; charset=utf-8")
   }
 }
-
 
 

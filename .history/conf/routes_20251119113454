@@ -16,19 +16,10 @@ GET   /start-gui       controllers.AdminController.startGui
 POST  /api/log         controllers.ApiController.logLine
 GET   /assets/*file    controllers.Assets.versioned(path="/public", file: Asset)
 GET   /game-matrix     controllers.GameController.getXml
-
 # New Bootstrap-Layout for game
-GET   /game/newui                controllers.GameController.indexBootstrap
-POST  /game/newui/new            controllers.GameController.newGameBootstrap
-POST  /game/newui/new-json       controllers.GameController.newGameBootstrapJson
-
-# Presets (JSON)
-GET   /game/preset/:key          controllers.GameController.preset(key: String)
-
-# Highscores (JSON)
-GET   /game/highscores           controllers.GameController.getHighscoresJson
-POST  /game/highscore            controllers.GameController.submitHighscore
-
+GET   /game/newui        controllers.GameController.indexBootstrap
+POST  /game/newui/new    controllers.GameController.newGameBootstrap
+POST  /game/newui/new-json controllers.GameController.newGameBootstrapJson
 
 
 

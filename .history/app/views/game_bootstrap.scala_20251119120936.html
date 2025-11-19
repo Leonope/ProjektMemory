@@ -7,20 +7,7 @@
   <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/memory.css")'>
 
   <div class="game-setup-container">
-    <!-- Titel + Presets oben rechts -->
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <h1 class="mb-0">Memory (Bootstrap-Version)</h1>
-
-      <div class="d-flex align-items-center gap-2">
-        <span class="small text-secondary">Presets:</span>
-        <select id="presetSelect" class="form-select form-select-sm" style="min-width: 210px;">
-          <option value="">– None –</option>
-          <option value="easy">Easy (4 Paare)</option>
-          <option value="standard">Standard (8 Paare)</option>
-          <option value="pro">Pro (12 Paare)</option>
-        </select>
-      </div>
-    </div>
+    <h1 class="mb-4 text-center">Memory (Bootstrap-Version)</h1>
 
     @if(message.nonEmpty) {
       <div class="alert alert-info text-center" id="statusMessage">@message</div>
@@ -51,6 +38,18 @@
           <option value="4" @if(playerCount == 4){selected}>4</option>
         </select>
       </div>
+
+      <!-- Preset-Liste: „On selection of an item from a list, fill the form with the according data“ 
+      <div class="col-12 col-md-4">
+        <label for="presetSelect" class="form-label">Voreinstellung</label>
+        <select id="presetSelect" class="form-select">
+          <option value="">– Keine –</option>
+          <option data-name="Spieler A" data-pairs="4"  data-playercount="1">Schnelles Spiel (4 Paare, 1 Spieler)</option>
+          <option data-name="Team"      data-pairs="8"  data-playercount="2">Standard (8 Paare, 2 Spieler)</option>
+          <option data-name="Profi"     data-pairs="12" data-playercount="2">Lang (12 Paare, 2 Spieler)</option>
+        </select>
+      </div>
+      -->
 
       <div class="col-12 text-center">
         <button type="submit" class="btn btn-primary px-4">Neues Spiel starten</button>
@@ -84,8 +83,7 @@
               <strong>Versuche:</strong> <span id="moves">0</span>
             </div>
             <div>
-              <strong>Gefundene Paare:</strong>
-              <span id="found">0</span> /
+              <strong>Gefundene Paare:</strong> <span id="found">0</span> /
               <span id="pairsTotalDisplay">@pairs</span>
             </div>
 
@@ -109,7 +107,7 @@
       </div>
     </div>
 
-    <!-- Board -->
+    <!-- Board (liefert totalPairs via data-Attribut an die JS-Datei) -->
     <div id="board"
         data-total-pairs="@pairs"
         class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2 g-md-3 justify-content-center">
@@ -135,37 +133,9 @@
       }
     </div>
 
-    <!-- Highscores -->
-    <div class="row justify-content-center mt-4">
-      <div class="col-12 col-md-8">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <button id="showHighscores" class="btn btn-sm btn-outline-info">
-            Highscores anzeigen
-          </button>
-        </div>
-        <div id="highscoreArea" class="table-responsive" style="display:none;">
-          <table class="table table-dark table-striped table-sm mb-0">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Spieler</th>
-                <th>Paare</th>
-                <th>Versuche</th>
-              </tr>
-            </thead>
-            <tbody id="highscoreBody">
-              <!-- Wird per jQuery/Ajax gefüllt -->
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <div class="force-bottom text-center mt-3">
+      <button class="btn btn-outline-light game-window-button">Neues Spiel konfigurieren</button>
     </div>
-
-    <!-- Button unter der Highscoreliste -->
-    <div class="text-center mt-4 mb-3">
-      <button class="btn btn-outline-light game-window-button">Neues Spiel</button>
-    </div>
-
   </div>
 
   <!-- jQuery -->
@@ -174,4 +144,3 @@
   <!-- Externes JavaScript (gesamte Logik) -->
   <script src='@routes.Assets.versioned("javascripts/memory.js")'></script>
 }
-

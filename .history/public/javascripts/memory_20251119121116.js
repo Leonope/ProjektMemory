@@ -27,10 +27,6 @@
   let found = 0;
   let gameOver = false;
 
-  // aktuelle Spiel-Metadaten (für Highscore)
-  let currentPlayerName = '';
-  let currentPlayerCount = 1;
-
   // Timerstatus
   let timerStart = 0;
   let timerRAF = null;
@@ -241,7 +237,6 @@
         if (found === totalPairs) {
           gameOver = true;
           stopTimer();
-          submitHighscore();  // Highscore senden
           flashWinBanner();
         }
       }, 220);
@@ -284,55 +279,7 @@
     }));
   }
 
-  // --- Ajax: CSRF aus hidden Feld ---
-  function getCsrfToken() {
-    return $('input[name="csrfToken"]').val();
-  }
-
-  // --- Highscore-POST ---
-  function submitHighscore() {
-    if (!currentPlayerName) {
-      currentPlayerName = $('#playerNameDisplay').text() || 'Player';
-    }
-    const csrfToken = getCsrfToken();
-    $.ajax({
-      url: '/game/highscore',
-      method: 'POST',
-      contentType: 'application/json',
-      dataType: 'json',
-      headers: {
-        'Csrf-Token': csrfToken,
-        'X-CSRF-Token': csrfToken
-      },
-      data: JSON.stringify({
-        playerName: currentPlayerName || 'Player',
-        pairs: totalPairs,
-        moves: moves
-      })
-    });
-  }
-
-  // --- Highscores laden + Tabelle füllen (gefiltert nach totalPairs) ---
-  function loadHighscores() {
-    $.getJSON('/game/highscores', { pairs: totalPairs }, function(list) {
-      const $body = $('#highscoreBody');
-      $body.empty();
-      list.forEach(function(entry, idx) {
-        const row = `
-          <tr>
-            <td>${idx + 1}</td>
-            <td>${entry.playerName}</td>
-            <td>${entry.pairs}</td>
-            <td>${entry.moves}</td>
-          </tr>`;
-        $body.append(row);
-      });
-      $('#highscoreTitle').text(`Highscores (${totalPairs} Paare)`);
-      $('#highscoreArea').show();
-    });
-  }
-
-  // --- New Game über Ajax + JSON ---
+  // --- jQuery: Ajax + JSON + Presets ---
   function hookNewGameForm() {
     $('#newGameForm').on('submit', function(e) {
       e.preventDefault(); // kein klassisches POST
@@ -341,10 +288,8 @@
       const pairsVal  = parseInt($('#pairs').val() || '2', 10);
       const pCountVal = parseInt($('#playerCount').val() || '1', 10);
 
-      currentPlayerName = nameVal;
-      currentPlayerCount = pCountVal;
-
-      const csrfToken = getCsrfToken();
+      // CSRF-Token aus hidden Feld von @CSRF.formField
+      const csrfToken = $('input[name="csrfToken"]').val();
 
       $.ajax({
         url: '/game/newui/new-json',
@@ -361,6 +306,9 @@
           playerCount: pCountVal
         }),
         success: function(resp) {
+          // Backend aufgerufen: askPlayerCount, askPlayerName, askCardCount, GameStarting
+          // JSON vom Server → UI updaten
+
           totalPairs = resp.pairs || pairsVal;
           board.dataset.totalPairs = String(totalPairs);
 
@@ -374,11 +322,8 @@
           $('.game-container').removeClass('hidden');
 
           // Text aktualisieren
-          currentPlayerName  = resp.playerName || nameVal;
-          currentPlayerCount = resp.playerCount || pCountVal;
-
-          $('#playerNameDisplay').text(currentPlayerName || '–');
-          $('#playerCountDisplay').text(currentPlayerCount);
+          $('#playerNameDisplay').text(resp.playerName || '–');
+          $('#playerCountDisplay').text(resp.playerCount || pCountVal);
           $('#pairsDisplay').text(resp.pairs || pairsVal);
           $('#pairsTotalDisplay').text(resp.pairs || pairsVal);
 
@@ -386,7 +331,7 @@
             $('#statusMessage').text(resp.message).show();
           }
 
-          // Optional: XML vom Backend ansehen
+          // Beispiel: zusätzlich XML holen (falls für Übung nötig)
           $.get('/game-matrix', function(xml) {
             console.log('Matrix XML:', xml);
           });
@@ -398,25 +343,17 @@
     });
   }
 
-  // Preset-Liste: per Ajax JSON holen und Formular füllen
+  // Preset-Liste füllt Formular automatisch
   function hookPresets() {
     $('#presetSelect').on('change', function() {
-      const key = $(this).val();
-      if (!key) return;
+      const $opt = $(this).find('option:selected');
+      const name = $opt.data('name');
+      const p    = $opt.data('pairs');
+      const pc   = $opt.data('playercount');
 
-      $.getJSON('/game/preset/' + encodeURIComponent(key), function(resp) {
-        // Name soll NICHT ausgefüllt werden => nur setzen, wenn resp.playerName nicht leer ist
-        if (resp.playerName && resp.playerName.trim().length > 0) {
-          $('#playerName').val(resp.playerName);
-        } else {
-          $('#playerName').val('');
-        }
-
-        if (resp.pairs) $('#pairs').val(resp.pairs);
-
-        // Spieler immer 1 bei Presets
-        $('#playerCount').val(1);
-      });
+      if (name) $('#playerName').val(name);
+      if (p) $('#pairs').val(p);
+      if (pc) $('#playerCount').val(pc);
     });
   }
 
@@ -425,18 +362,6 @@
     $('.game-window-button').on('click', function() {
       $('.game-setup-container').removeClass('hidden');
       $('.game-container').addClass('hidden');
-    });
-  }
-
-  // Highscore-Button: toggle anzeigen/verstecken
-  function hookHighscoreButton() {
-    $('#showHighscores').on('click', function() {
-      const area = $('#highscoreArea');
-      if (area.is(':visible')) {
-        area.hide();
-      } else {
-        loadHighscores();
-      }
     });
   }
 
@@ -453,7 +378,6 @@
     hookNewGameForm();
     hookPresets();
     hookGameWindowButtons();
-    hookHighscoreButton();
   }
 
   if (document.readyState === 'loading') {

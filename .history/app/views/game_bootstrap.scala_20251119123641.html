@@ -15,9 +15,9 @@
         <span class="small text-secondary">Presets:</span>
         <select id="presetSelect" class="form-select form-select-sm" style="min-width: 210px;">
           <option value="">– None –</option>
-          <option value="easy">Easy (4 Paare)</option>
-          <option value="standard">Standard (8 Paare)</option>
-          <option value="pro">Pro (12 Paare)</option>
+          <option value="easy">Easy (4 Paare, 1 Spieler)</option>
+          <option value="standard">Standard (8 Paare, 1 Spieler)</option>
+          <option value="pro">Pro (12 Paare, 1 Spieler)</option>
         </select>
       </div>
     </div>
@@ -109,7 +109,7 @@
       </div>
     </div>
 
-    <!-- Board -->
+    <!-- Board (liefert totalPairs via data-Attribut an die JS-Datei) -->
     <div id="board"
         data-total-pairs="@pairs"
         class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2 g-md-3 justify-content-center">
@@ -135,8 +135,12 @@
       }
     </div>
 
+    <div class="force-bottom text-center mt-3 mb-3">
+      <button class="btn btn-outline-light game-window-button">Neues Spiel</button>
+    </div>
+
     <!-- Highscores -->
-    <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center mt-3">
       <div class="col-12 col-md-8">
         <div class="d-flex justify-content-between align-items-center mb-2">
           <button id="showHighscores" class="btn btn-sm btn-outline-info">
@@ -159,11 +163,6 @@
           </table>
         </div>
       </div>
-    </div>
-
-    <!-- Button unter der Highscoreliste -->
-    <div class="text-center mt-4 mb-3">
-      <button class="btn btn-outline-light game-window-button">Neues Spiel</button>
     </div>
 
   </div>

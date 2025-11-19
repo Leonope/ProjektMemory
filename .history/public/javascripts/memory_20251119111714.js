@@ -1,7 +1,7 @@
 (function () {
-  // DOM-Refs
+  // -------- DOM Refs --------
   const board = document.getElementById('board');
-  if (!board) return; // Falls View nicht sichtbar
+  if (!board) return;
 
   const moveEl = document.getElementById('moves');
   const foundEl = document.getElementById('found');
@@ -10,15 +10,13 @@
   const timerLabel = document.getElementById('timerLabel');
   const mouth = document.getElementById('smilePath');
 
-  // Konfiguration
-  let totalPairs = parseInt(board.dataset.totalPairs || '2', 10);
+  // -------- Config --------
   const TIMER_DURATION_MS = 17000;
+  const startColor = { r: 255, g: 213, b: 79 };   // gelb
+  const endColor   = { r: 220, g: 53,  b: 69 };   // rot
 
-  // Farben (Start gelb -> Ende rot)
-  const startColor = { r: 255, g: 213, b: 79 };   // #FFD54F
-  const endColor   = { r: 220, g: 53,  b: 69 };   // #DC3545
-
-  // Spielstatus
+  // -------- Spielstatus --------
+  let totalPairs = parseInt(board.dataset.totalPairs || '8', 10);
   let deck = [];
   let firstPick = null;   // {el, symbol}
   let secondPick = null;
@@ -27,17 +25,13 @@
   let found = 0;
   let gameOver = false;
 
-  // aktuelle Spiel-Metadaten (für Highscore)
-  let currentPlayerName = '';
-  let currentPlayerCount = 1;
-
-  // Timerstatus
+  // -------- Timerstatus --------
   let timerStart = 0;
   let timerRAF = null;
   let lastFoundAtReset = 0;
   let timerRunning = false;
 
-  // === Utils ===
+  // -------- Utils --------
   const lerp = (a, b, t) => a + (b - a) * t;
   const clamp01 = (x) => Math.max(0, Math.min(1, x));
   const toRGB = (c) => `rgb(${Math.round(c.r)}, ${Math.round(c.g)}, ${Math.round(c.b)})`;
@@ -55,17 +49,14 @@
     return shuffle(base.concat(base));
   }
 
-  // --- Board dynamisch nach pairs erzeugen ---
+  // ---------- Board (NEU: generiert DOM je nach pairs) ----------
   function renderBoard(pairs) {
     const count = pairs * 2;
-    let html = "";
+    let html = '';
     for (let i = 0; i < count; i++) {
       html += `
         <div class="col">
-          <button class="memory-card w-100"
-                  type="button"
-                  data-state="facedown"
-                  aria-label="Karte verdeckt">
+          <button class="memory-card w-100" type="button" data-state="facedown" aria-label="Karte verdeckt">
             <div class="card-outer shadow-sm">
               <div class="card-inner">
                 <div class="card-face card-back d-flex align-items-center justify-content-center">
@@ -82,11 +73,12 @@
     board.innerHTML = html;
   }
 
+  // ---------- Reset/Init ----------
   function resetCounters() {
     moves = 0;
     found = 0;
-    if (moveEl) moveEl.textContent = "0";
-    if (foundEl) foundEl.textContent = "0";
+    if (moveEl) moveEl.textContent = '0';
+    if (foundEl) foundEl.textContent = '0';
   }
 
   function initBoard() {
@@ -106,10 +98,12 @@
     firstPick = secondPick = null;
     lock = false;
     gameOver = false;
+
+    // Timer frisch
     resetTimer(true);
   }
 
-  // === Timer ===
+  // ---------- Timer ----------
   function startTimer() {
     timerStart = performance.now();
     lastFoundAtReset = found;
@@ -141,6 +135,7 @@
     if (elapsed >= TIMER_DURATION_MS) {
       timerRunning = false;
 
+      // Strafe nur, wenn in diesem Fenster kein Paar gefunden wurde
       if (found === lastFoundAtReset && !gameOver) {
         moves += 1;
         if (moveEl) moveEl.textContent = String(moves);
@@ -168,12 +163,12 @@
     if (timerLabel) timerLabel.textContent = `${Math.max(0, remain)}s`;
 
     if (mouth) {
-      const qy = lerp(70, 58, t);
+      const qy = lerp(70, 58, t); // Smile -> neutral
       mouth.setAttribute('d', `M35,60 Q50,${qy} 65,60`);
     }
   }
 
-  // === Karten-Interaktion & Animationen ===
+  // ---------- Karten-Interaktion ----------
   function flipCard(card, toFaceUp) {
     if (toFaceUp) {
       card.dataset.state = 'faceup';
@@ -220,7 +215,7 @@
     lock = true;
     board.classList.add('no-click');
 
-    moves += 1; // Versuch
+    moves += 1; // ein Versuch
     if (moveEl) moveEl.textContent = String(moves);
 
     if (firstPick.symbol === secondPick.symbol) {
@@ -241,7 +236,6 @@
         if (found === totalPairs) {
           gameOver = true;
           stopTimer();
-          submitHighscore();  // Highscore senden
           flashWinBanner();
         }
       }, 220);
@@ -273,7 +267,7 @@
     setTimeout(() => banner.remove(), 1800);
   }
 
-  function bindEvents() {
+  function bindCardEvents() {
     const cards = board.querySelectorAll('.memory-card');
     cards.forEach(c => c.addEventListener('click', onCardClick));
     cards.forEach(c => c.addEventListener('keydown', (ev) => {
@@ -284,176 +278,88 @@
     }));
   }
 
-  // --- Ajax: CSRF aus hidden Feld ---
-  function getCsrfToken() {
-    return $('input[name="csrfToken"]').val();
-  }
-
-  // --- Highscore-POST ---
-  function submitHighscore() {
-    if (!currentPlayerName) {
-      currentPlayerName = $('#playerNameDisplay').text() || 'Player';
-    }
-    const csrfToken = getCsrfToken();
-    $.ajax({
-      url: '/game/highscore',
-      method: 'POST',
-      contentType: 'application/json',
-      dataType: 'json',
-      headers: {
-        'Csrf-Token': csrfToken,
-        'X-CSRF-Token': csrfToken
-      },
-      data: JSON.stringify({
-        playerName: currentPlayerName || 'Player',
-        pairs: totalPairs,
-        moves: moves
-      })
-    });
-  }
-
-  // --- Highscores laden + Tabelle füllen (gefiltert nach totalPairs) ---
-  function loadHighscores() {
-    $.getJSON('/game/highscores', { pairs: totalPairs }, function(list) {
-      const $body = $('#highscoreBody');
-      $body.empty();
-      list.forEach(function(entry, idx) {
-        const row = `
-          <tr>
-            <td>${idx + 1}</td>
-            <td>${entry.playerName}</td>
-            <td>${entry.pairs}</td>
-            <td>${entry.moves}</td>
-          </tr>`;
-        $body.append(row);
-      });
-      $('#highscoreTitle').text(`Highscores (${totalPairs} Paare)`);
-      $('#highscoreArea').show();
-    });
-  }
-
-  // --- New Game über Ajax + JSON ---
+  // ---------- New Game (AJAX) ----------
+  // Wichtig: Bei AJAX-Start muss das Board neu gerendert werden
   function hookNewGameForm() {
-    $('#newGameForm').on('submit', function(e) {
-      e.preventDefault(); // kein klassisches POST
+    const form = document.getElementById('newGameForm');
+    if (!form) return;
 
-      const nameVal   = $('#playerName').val() || 'Player';
-      const pairsVal  = parseInt($('#pairs').val() || '2', 10);
-      const pCountVal = parseInt($('#playerCount').val() || '1', 10);
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-      currentPlayerName = nameVal;
-      currentPlayerCount = pCountVal;
+      // Aus Formular lesen (IDs müssen existieren)
+      const pairsInput = document.getElementById('pairs');
+      const nameInput = document.getElementById('playerName');
+      const playerCountInput = document.getElementById('playerCount');
 
-      const csrfToken = getCsrfToken();
+      const pairsVal = parseInt((pairsInput && pairsInput.value) ? pairsInput.value : '8', 10);
+      const nameVal = nameInput ? nameInput.value : 'Player';
+      const pCountVal = playerCountInput ? parseInt(playerCountInput.value || '1', 10) : 1;
 
-      $.ajax({
-        url: '/game/newui/new-json',
+      // 1) Server informieren (optional – du hast das bisher gemacht)
+      const payload = new URLSearchParams();
+      payload.set('playerName', nameVal);
+      payload.set('pairs', String(pairsVal));
+      payload.set('playerCount', String(pCountVal));
+
+      fetch('/game/newui/new', {
         method: 'POST',
-        contentType: 'application/json',
-        dataType: 'json',
-        headers: {
-          'Csrf-Token': csrfToken,
-          'X-CSRF-Token': csrfToken
-        },
-        data: JSON.stringify({
-          playerName: nameVal,
-          pairs: pairsVal,
-          playerCount: pCountVal
-        }),
-        success: function(resp) {
-          totalPairs = resp.pairs || pairsVal;
-          board.dataset.totalPairs = String(totalPairs);
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: payload.toString()
+      })
+      .then(() => {
+        // 2) UI umschalten (wie vorher)
+        const setup_container = document.querySelector('.game-setup-container');
+        const game_container = document.querySelector('.game-container');
+        if (setup_container) setup_container.classList.add('hidden');
+        if (game_container) game_container.classList.remove('hidden');
 
-          resetCounters();
-          renderBoard(totalPairs);
-          bindEvents();
-          initBoard();
+        // 3) Board komplett neu erzeugen
+        totalPairs = pairsVal;
+        board.dataset.totalPairs = String(totalPairs);
 
-          // Setup verstecken, Spiel zeigen
-          $('.game-setup-container').addClass('hidden');
-          $('.game-container').removeClass('hidden');
+        // Counters resetten
+        resetCounters();
 
-          // Text aktualisieren
-          currentPlayerName  = resp.playerName || nameVal;
-          currentPlayerCount = resp.playerCount || pCountVal;
+        // DOM neu rendern und Events neu binden
+        renderBoard(totalPairs);
+        bindCardEvents();
 
-          $('#playerNameDisplay').text(currentPlayerName || '–');
-          $('#playerCountDisplay').text(currentPlayerCount);
-          $('#pairsDisplay').text(resp.pairs || pairsVal);
-          $('#pairsTotalDisplay').text(resp.pairs || pairsVal);
-
-          if (resp.message && resp.message.length > 0) {
-            $('#statusMessage').text(resp.message).show();
-          }
-
-          // Optional: XML vom Backend ansehen
-          $.get('/game-matrix', function(xml) {
-            console.log('Matrix XML:', xml);
-          });
-        },
-        error: function() {
-          alert('Fehler beim Starten des Spiels!');
-        }
+        // Deck + Timer neu
+        initBoard();
+      })
+      .catch(() => {
+        alert('Fehler beim Starten des Spiels!');
       });
     });
   }
 
-  // Preset-Liste: per Ajax JSON holen und Formular füllen
-  function hookPresets() {
-    $('#presetSelect').on('change', function() {
-      const key = $(this).val();
-      if (!key) return;
-
-      $.getJSON('/game/preset/' + encodeURIComponent(key), function(resp) {
-        // Name soll NICHT ausgefüllt werden => nur setzen, wenn resp.playerName nicht leer ist
-        if (resp.playerName && resp.playerName.trim().length > 0) {
-          $('#playerName').val(resp.playerName);
-        } else {
-          $('#playerName').val('');
-        }
-
-        if (resp.pairs) $('#pairs').val(resp.pairs);
-
-        // Spieler immer 1 bei Presets
-        $('#playerCount').val(1);
-      });
-    });
-  }
-
-  // Setup/Game umschalten
+  // ---------- Buttons, die Setup/Game togglen ----------
   function hookGameWindowButtons() {
-    $('.game-window-button').on('click', function() {
-      $('.game-setup-container').removeClass('hidden');
-      $('.game-container').addClass('hidden');
+    document.querySelectorAll('.game-window-button').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const setup_container = document.querySelector('.game-setup-container');
+        const game_container = document.querySelector('.game-container');
+        if (setup_container) setup_container.classList.remove('hidden');
+        if (game_container) game_container.classList.add('hidden');
+      });
     });
   }
 
-  // Highscore-Button: toggle anzeigen/verstecken
-  function hookHighscoreButton() {
-    $('#showHighscores').on('click', function() {
-      const area = $('#highscoreArea');
-      if (area.is(':visible')) {
-        area.hide();
-      } else {
-        loadHighscores();
-      }
-    });
-  }
-
-  // Init, wenn DOM bereit ist
+  // ---------- Init ----------
   function firstInit() {
+    // Beim initialen Laden: Board anhand des serverseitigen data-total-pairs bauen,
+    // falls das HTML schon die richtige Anzahl Karten enthält, lassen wir es – sonst bauen wir sicher neu.
     const existingCards = board.querySelectorAll('.memory-card').length;
     if (existingCards !== totalPairs * 2) {
       renderBoard(totalPairs);
     }
-    bindEvents();
+    bindCardEvents();
     resetCounters();
     initBoard();
 
     hookNewGameForm();
-    hookPresets();
     hookGameWindowButtons();
-    hookHighscoreButton();
   }
 
   if (document.readyState === 'loading') {
@@ -462,4 +368,3 @@
     firstInit();
   }
 })();
-

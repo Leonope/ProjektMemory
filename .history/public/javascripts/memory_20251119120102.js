@@ -11,7 +11,7 @@
   const mouth = document.getElementById('smilePath');
 
   // Konfiguration
-  let totalPairs = parseInt(board.dataset.totalPairs || '2', 10);
+  const totalPairs = parseInt(board.dataset.totalPairs || '8', 10);
   const TIMER_DURATION_MS = 17000;
 
   // Farben (Start gelb -> Ende rot)
@@ -26,10 +26,6 @@
   let moves = 0;
   let found = 0;
   let gameOver = false;
-
-  // aktuelle Spiel-Metadaten (für Highscore)
-  let currentPlayerName = '';
-  let currentPlayerCount = 1;
 
   // Timerstatus
   let timerStart = 0;
@@ -55,40 +51,6 @@
     return shuffle(base.concat(base));
   }
 
-  // --- Board dynamisch nach pairs erzeugen ---
-  function renderBoard(pairs) {
-    const count = pairs * 2;
-    let html = "";
-    for (let i = 0; i < count; i++) {
-      html += `
-        <div class="col">
-          <button class="memory-card w-100"
-                  type="button"
-                  data-state="facedown"
-                  aria-label="Karte verdeckt">
-            <div class="card-outer shadow-sm">
-              <div class="card-inner">
-                <div class="card-face card-back d-flex align-items-center justify-content-center">
-                  <span class="fs-3 fw-bold">?</span>
-                </div>
-                <div class="card-face card-front d-flex align-items-center justify-content-center">
-                  <span class="symbol fs-3 fw-bold"></span>
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>`;
-    }
-    board.innerHTML = html;
-  }
-
-  function resetCounters() {
-    moves = 0;
-    found = 0;
-    if (moveEl) moveEl.textContent = "0";
-    if (foundEl) foundEl.textContent = "0";
-  }
-
   function initBoard() {
     deck = buildDeck(totalPairs);
     const cards = board.querySelectorAll('.memory-card');
@@ -105,6 +67,11 @@
     });
     firstPick = secondPick = null;
     lock = false;
+    moves = 0;
+    found = 0;
+    if (moveEl) moveEl.textContent = '0';
+    if (foundEl) foundEl.textContent = '0';
+
     gameOver = false;
     resetTimer(true);
   }
@@ -241,7 +208,6 @@
         if (found === totalPairs) {
           gameOver = true;
           stopTimer();
-          submitHighscore();  // Highscore senden
           flashWinBanner();
         }
       }, 220);
@@ -284,182 +250,58 @@
     }));
   }
 
-  // --- Ajax: CSRF aus hidden Feld ---
-  function getCsrfToken() {
-    return $('input[name="csrfToken"]').val();
-  }
-
-  // --- Highscore-POST ---
-  function submitHighscore() {
-    if (!currentPlayerName) {
-      currentPlayerName = $('#playerNameDisplay').text() || 'Player';
-    }
-    const csrfToken = getCsrfToken();
-    $.ajax({
-      url: '/game/highscore',
-      method: 'POST',
-      contentType: 'application/json',
-      dataType: 'json',
-      headers: {
-        'Csrf-Token': csrfToken,
-        'X-CSRF-Token': csrfToken
-      },
-      data: JSON.stringify({
-        playerName: currentPlayerName || 'Player',
-        pairs: totalPairs,
-        moves: moves
-      })
-    });
-  }
-
-  // --- Highscores laden + Tabelle füllen (gefiltert nach totalPairs) ---
-  function loadHighscores() {
-    $.getJSON('/game/highscores', { pairs: totalPairs }, function(list) {
-      const $body = $('#highscoreBody');
-      $body.empty();
-      list.forEach(function(entry, idx) {
-        const row = `
-          <tr>
-            <td>${idx + 1}</td>
-            <td>${entry.playerName}</td>
-            <td>${entry.pairs}</td>
-            <td>${entry.moves}</td>
-          </tr>`;
-        $body.append(row);
-      });
-      $('#highscoreTitle').text(`Highscores (${totalPairs} Paare)`);
-      $('#highscoreArea').show();
-    });
-  }
-
-  // --- New Game über Ajax + JSON ---
-  function hookNewGameForm() {
+  $(function() {
     $('#newGameForm').on('submit', function(e) {
-      e.preventDefault(); // kein klassisches POST
+      e.preventDefault(); // Prevent normal form submission
 
-      const nameVal   = $('#playerName').val() || 'Player';
-      const pairsVal  = parseInt($('#pairs').val() || '2', 10);
-      const pCountVal = parseInt($('#playerCount').val() || '1', 10);
+      var form = $(this);
+      var data = form.serialize();
 
-      currentPlayerName = nameVal;
-      currentPlayerCount = pCountVal;
+      $.post("/game/newui/new", data, function(response) {
+        //console.log("Server responded: ", response);
+        $('.game-setup-container').addClass('hidden');
+        $('.game-container').removeClass('hidden');
+      });
 
-      const csrfToken = getCsrfToken();
+      $.get("/game-matrix", function(xml) {
+        console.log(xml);
+      });
 
-      $.ajax({
-        url: '/game/newui/new-json',
-        method: 'POST',
-        contentType: 'application/json',
-        dataType: 'json',
-        headers: {
-          'Csrf-Token': csrfToken,
-          'X-CSRF-Token': csrfToken
-        },
-        data: JSON.stringify({
-          playerName: nameVal,
-          pairs: pairsVal,
-          playerCount: pCountVal
-        }),
-        success: function(resp) {
-          totalPairs = resp.pairs || pairsVal;
-          board.dataset.totalPairs = String(totalPairs);
-
-          resetCounters();
-          renderBoard(totalPairs);
-          bindEvents();
-          initBoard();
-
-          // Setup verstecken, Spiel zeigen
+      /*$.ajax({
+        url: form.attr('action'), // Uses the form's action attribute
+        type: 'POST',
+        data: data,
+        success: function(response) {
+          // Hide setup, show game
           $('.game-setup-container').addClass('hidden');
           $('.game-container').removeClass('hidden');
-
-          // Text aktualisieren
-          currentPlayerName  = resp.playerName || nameVal;
-          currentPlayerCount = resp.playerCount || pCountVal;
-
-          $('#playerNameDisplay').text(currentPlayerName || '–');
-          $('#playerCountDisplay').text(currentPlayerCount);
-          $('#pairsDisplay').text(resp.pairs || pairsVal);
-          $('#pairsTotalDisplay').text(resp.pairs || pairsVal);
-
-          if (resp.message && resp.message.length > 0) {
-            $('#statusMessage').text(resp.message).show();
-          }
-
-          // Optional: XML vom Backend ansehen
-          $.get('/game-matrix', function(xml) {
-            console.log('Matrix XML:', xml);
-          });
+          // Optionally update game board with response if needed
         },
-        error: function() {
+        error: function(xhr) {
           alert('Fehler beim Starten des Spiels!');
         }
-      });
+      });*/
     });
-  }
+  });
 
-  // Preset-Liste: per Ajax JSON holen und Formular füllen
-  function hookPresets() {
-    $('#presetSelect').on('change', function() {
-      const key = $(this).val();
-      if (!key) return;
-
-      $.getJSON('/game/preset/' + encodeURIComponent(key), function(resp) {
-        // Name soll NICHT ausgefüllt werden => nur setzen, wenn resp.playerName nicht leer ist
-        if (resp.playerName && resp.playerName.trim().length > 0) {
-          $('#playerName').val(resp.playerName);
-        } else {
-          $('#playerName').val('');
-        }
-
-        if (resp.pairs) $('#pairs').val(resp.pairs);
-
-        // Spieler immer 1 bei Presets
-        $('#playerCount').val(1);
-      });
+  // Hide/Unhide Game-Setup-Container and Game-Container for multiple buttons with the same class
+  document.querySelectorAll('.game-window-button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const setup_container = document.querySelector('.game-setup-container');
+      const game_container = document.querySelector('.game-container');
+      setup_container.classList.remove('hidden'); // shows
+      game_container.classList.add('hidden'); // hides
     });
-  }
+  });
 
-  // Setup/Game umschalten
-  function hookGameWindowButtons() {
-    $('.game-window-button').on('click', function() {
-      $('.game-setup-container').removeClass('hidden');
-      $('.game-container').addClass('hidden');
-    });
-  }
-
-  // Highscore-Button: toggle anzeigen/verstecken
-  function hookHighscoreButton() {
-    $('#showHighscores').on('click', function() {
-      const area = $('#highscoreArea');
-      if (area.is(':visible')) {
-        area.hide();
-      } else {
-        loadHighscores();
-      }
-    });
-  }
-
-  // Init, wenn DOM bereit ist
-  function firstInit() {
-    const existingCards = board.querySelectorAll('.memory-card').length;
-    if (existingCards !== totalPairs * 2) {
-      renderBoard(totalPairs);
-    }
-    bindEvents();
-    resetCounters();
-    initBoard();
-
-    hookNewGameForm();
-    hookPresets();
-    hookGameWindowButtons();
-    hookHighscoreButton();
-  }
-
+  // Init, wenn DOM bereit ist (falls Script im <head> wäre)
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', firstInit);
+    document.addEventListener('DOMContentLoaded', () => {
+      initBoard();
+      bindEvents();
+    });
   } else {
-    firstInit();
+    initBoard();
+    bindEvents();
   }
 })();
-

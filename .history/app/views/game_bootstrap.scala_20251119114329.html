@@ -7,25 +7,10 @@
   <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/memory.css")'>
 
   <div class="game-setup-container">
-    <!-- Titel + Presets oben rechts -->
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <h1 class="mb-0">Memory (Bootstrap-Version)</h1>
-
-      <div class="d-flex align-items-center gap-2">
-        <span class="small text-secondary">Presets:</span>
-        <select id="presetSelect" class="form-select form-select-sm" style="min-width: 210px;">
-          <option value="">– None –</option>
-          <option value="easy">Easy (4 Paare)</option>
-          <option value="standard">Standard (8 Paare)</option>
-          <option value="pro">Pro (12 Paare)</option>
-        </select>
-      </div>
-    </div>
+    <h1 class="mb-4 text-center">Memory (Bootstrap-Version)</h1>
 
     @if(message.nonEmpty) {
-      <div class="alert alert-info text-center" id="statusMessage">@message</div>
-    } else {
-      <div class="alert alert-info text-center" id="statusMessage" style="display:none;"></div>
+      <div class="alert alert-info text-center">@message</div>
     }
 
     <form id="newGameForm" action='@routes.GameController.newGameBootstrap' method="post" class="row g-3 mb-4 justify-content-center">
@@ -51,9 +36,8 @@
           <option value="4" @if(playerCount == 4){selected}>4</option>
         </select>
       </div>
-
       <div class="col-12 text-center">
-        <button type="submit" class="btn btn-primary px-4">Neues Spiel starten</button>
+        <button type="submit">Neues Spiel starten</button>
       </div>
     </form>
   </div>
@@ -62,32 +46,15 @@
 
   <div class="game-container hidden">
     <!-- Statusleiste: Spieler-Infos + Zähler + Timer-Stern -->
-    <div class="row justify-content-center mb-3">
+    <div class="row justify-content-center mb- 3">
       <div class="col-12 col-md-10">
         <div class="card bg-secondary-subtle border-0 shadow-sm">
           <div class="card-body text-dark d-flex flex-wrap gap-3 align-items-center">
-            <div>
-              <strong>Spieler:</strong>
-              <span id="playerNameDisplay">
-                @if(playerName.trim.isEmpty) { <em>–</em> } else { @playerName }
-              </span>
-            </div>
-            <div>
-              <strong>Spieleranzahl:</strong>
-              <span id="playerCountDisplay">@playerCount</span>
-            </div>
-            <div>
-              <strong>Paare:</strong>
-              <span id="pairsDisplay">@pairs</span>
-            </div>
-            <div class="ms-auto">
-              <strong>Versuche:</strong> <span id="moves">0</span>
-            </div>
-            <div>
-              <strong>Gefundene Paare:</strong>
-              <span id="found">0</span> /
-              <span id="pairsTotalDisplay">@pairs</span>
-            </div>
+            <div><strong>Spieler:</strong> @if(playerName.trim.isEmpty) { <em>–</em> } else { @playerName }</div>
+            <div><strong>Spieleranzahl:</strong> @playerCount</div>
+            <div><strong>Paare:</strong> @pairs</div>
+            <div class="ms-auto"><strong>Versuche:</strong> <span id="moves">0</span></div>
+            <div><strong>Gefundene Paare:</strong> <span id="found">0</span> / @pairs</div>
 
             <!-- Timer-Stern -->
             <div id="timerStarWrap" class="d-flex align-items-center ms-auto" title="Zeitfenster: 17s">
@@ -109,7 +76,7 @@
       </div>
     </div>
 
-    <!-- Board -->
+    <!-- Board (liefert totalPairs via data-Attribut an die JS-Datei) -->
     <div id="board"
         data-total-pairs="@pairs"
         class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2 g-md-3 justify-content-center">
@@ -134,38 +101,9 @@
         </div>
       }
     </div>
-
-    <!-- Highscores -->
-    <div class="row justify-content-center mt-4">
-      <div class="col-12 col-md-8">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <button id="showHighscores" class="btn btn-sm btn-outline-info">
-            Highscores anzeigen
-          </button>
-        </div>
-        <div id="highscoreArea" class="table-responsive" style="display:none;">
-          <table class="table table-dark table-striped table-sm mb-0">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Spieler</th>
-                <th>Paare</th>
-                <th>Versuche</th>
-              </tr>
-            </thead>
-            <tbody id="highscoreBody">
-              <!-- Wird per jQuery/Ajax gefüllt -->
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <div class="force-bottom">
+      <button class="game-window-button">Neues Spiel starten</button>
     </div>
-
-    <!-- Button unter der Highscoreliste -->
-    <div class="text-center mt-4 mb-3">
-      <button class="btn btn-outline-light game-window-button">Neues Spiel</button>
-    </div>
-
   </div>
 
   <!-- jQuery -->
@@ -174,4 +112,3 @@
   <!-- Externes JavaScript (gesamte Logik) -->
   <script src='@routes.Assets.versioned("javascripts/memory.js")'></script>
 }
-

@@ -27,7 +27,7 @@
   let found = 0;
   let gameOver = false;
 
-  // aktuelle Spiel-Metadaten (für Highscore)
+  // „Metadaten“ fürs aktuelle Spiel (für Highscore)
   let currentPlayerName = '';
   let currentPlayerCount = 1;
 
@@ -241,7 +241,7 @@
         if (found === totalPairs) {
           gameOver = true;
           stopTimer();
-          submitHighscore();  // Highscore senden
+          submitHighscore();  // <- Highscore senden
           flashWinBanner();
         }
       }, 220);
@@ -312,9 +312,9 @@
     });
   }
 
-  // --- Highscores laden + Tabelle füllen (gefiltert nach totalPairs) ---
+  // --- Highscores laden + Tabelle füllen ---
   function loadHighscores() {
-    $.getJSON('/game/highscores', { pairs: totalPairs }, function(list) {
+    $.getJSON('/game/highscores', function(list) {
       const $body = $('#highscoreBody');
       $body.empty();
       list.forEach(function(entry, idx) {
@@ -327,12 +327,11 @@
           </tr>`;
         $body.append(row);
       });
-      $('#highscoreTitle').text(`Highscores (${totalPairs} Paare)`);
       $('#highscoreArea').show();
     });
   }
 
-  // --- New Game über Ajax + JSON ---
+  // --- jQuery: New Game über Ajax + JSON ---
   function hookNewGameForm() {
     $('#newGameForm').on('submit', function(e) {
       e.preventDefault(); // kein klassisches POST
@@ -405,17 +404,9 @@
       if (!key) return;
 
       $.getJSON('/game/preset/' + encodeURIComponent(key), function(resp) {
-        // Name soll NICHT ausgefüllt werden => nur setzen, wenn resp.playerName nicht leer ist
-        if (resp.playerName && resp.playerName.trim().length > 0) {
-          $('#playerName').val(resp.playerName);
-        } else {
-          $('#playerName').val('');
-        }
-
+        if (resp.playerName) $('#playerName').val(resp.playerName);
         if (resp.pairs) $('#pairs').val(resp.pairs);
-
-        // Spieler immer 1 bei Presets
-        $('#playerCount').val(1);
+        if (resp.playerCount) $('#playerCount').val(resp.playerCount);
       });
     });
   }
@@ -428,15 +419,10 @@
     });
   }
 
-  // Highscore-Button: toggle anzeigen/verstecken
+  // Highscore-Button
   function hookHighscoreButton() {
     $('#showHighscores').on('click', function() {
-      const area = $('#highscoreArea');
-      if (area.is(':visible')) {
-        area.hide();
-      } else {
-        loadHighscores();
-      }
+      loadHighscores();
     });
   }
 
