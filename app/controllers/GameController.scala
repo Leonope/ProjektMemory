@@ -6,6 +6,8 @@ import web.WebTUI
 import play.api.libs.json._
 import backend.Backend
 import java.nio.file.{Files, Paths}
+import akka.actor._
+import WSActor._
 
 // Companion-Object als simpler In-Memory-Store für Highscores
 object GameController {
@@ -181,6 +183,19 @@ class GameController @Inject()(cc: ControllerComponents) extends AbstractControl
 
   def state: Action[AnyContent] = Action {
     Ok(WebTUI.currentLog).as("text/plain; charset=utf-8")
+  }
+
+  def socket = WebSocket.accept[String, String] { request =>
+    ActorFlow.actorRef { out =>
+      println("Connect received")
+      WebSocketActorFactory.create(out)
+    }
+  }
+
+  object WebSocketActorFactory {
+    def create(out: ActorRef) = {
+      Props(new SudokuWebSocketActor(out))
+    }
   }
 }
 

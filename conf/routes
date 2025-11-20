@@ -29,15 +29,5 @@ GET   /game/preset/:key          controllers.GameController.preset(key: String)
 GET   /game/highscores           controllers.GameController.getHighscoresJson
 POST  /game/highscore            controllers.GameController.submitHighscore
 
-
-
-
-
-
-
-
-
-
-
-
-
+# Websockets
+GET /websocket controllers.GameController.socket
