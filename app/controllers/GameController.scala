@@ -194,7 +194,7 @@ class GameController @Inject()(cc: ControllerComponents) extends AbstractControl
 
   object WebSocketActorFactory {
     def create(out: ActorRef) = {
-      Props(new SudokuWebSocketActor(out))
+      Props(new WSActor(out))
     }
   }
 }

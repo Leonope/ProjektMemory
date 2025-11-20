@@ -5,7 +5,7 @@ import GameController._
 import backend.Backend.controller
 import scala.swing.Reactor
 
-class SudokuWebSocketActor(out: ActorRef) extends Actor with Reactor {
+class WSActor(out: ActorRef) extends Actor with Reactor {
     listenTo(Backend.controller);
 
     def receive = {
