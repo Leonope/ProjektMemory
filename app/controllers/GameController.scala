@@ -6,8 +6,10 @@ import web.WebTUI
 import play.api.libs.json._
 import backend.Backend
 import java.nio.file.{Files, Paths}
-import akka.actor._
-import WSActor._
+import org.apache.pekko.actor._
+import org.apache.pekko.stream._
+import play.api.libs.streams.ActorFlow
+import controllers.WSActor
 
 // Companion-Object als simpler In-Memory-Store für Highscores
 object GameController {
@@ -27,7 +29,7 @@ object GameController {
 }
 
 @Singleton
-class GameController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
+class GameController @Inject()(cc: ControllerComponents)(implicit system: ActorSystem, mat: Materializer) extends AbstractController(cc) {
 
   import GameController.HighscoreEntry
 

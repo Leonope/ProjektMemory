@@ -10,6 +10,11 @@ scalaVersion := "2.13.17"
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.2" % Test
 libraryDependencies += "org.scala-lang.modules" %% "scala-swing" % "3.0.0"
+libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.2"
+libraryDependencies += "org.apache.pekko" %% "pekko-stream" % "1.0.2"
+libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.0.2" 
+
+
 
 Compile / run / fork := true
 Compile / run / javaOptions ++= Seq("-Djava.awt.headless=false")

@@ -1,12 +1,14 @@
 package controllers
 
-import akka.actor._
 import GameController._
 import backend.Backend.controller
 import scala.swing.Reactor
+import play.api.libs.streams.ActorFlow
+import org.apache.pekko.actor._
+import org.apache.pekko.stream._
 
-class WSActor(out: ActorRef) extends Actor with Reactor {
-    listenTo(Backend.controller);
+class WSActor(out: ActorRef) extends Actor {
+    //listenTo(controller);
 
     def receive = {
         case msg: String =>
@@ -14,13 +16,12 @@ class WSActor(out: ActorRef) extends Actor with Reactor {
             println("Sent Json to Client"+ msg)
     }
 
-    reactions += {
+    /*reactions += {
         case event: askPlayerCount => sendJsonToClient
         case event: askPlayerName => sendJsonToClient
         case event: askCardCount => sendJsonToClient
         case event: restartGame => sendJsonToClient
-        case event: _ => sendJsonToClient
-    }
+    }*/
 
     def sendJsonToClient = {
         println("Received event from Controller")
