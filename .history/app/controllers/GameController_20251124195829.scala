@@ -7,9 +7,9 @@ import play.api.libs.json._
 import backend.Backend
 import java.nio.file.{Files, Paths}
 
-// Pekko / WebSocket (Play 3 verwendet Pekko statt Akka)
-import org.apache.pekko.actor.ActorSystem
-import org.apache.pekko.stream.Materializer
+// Akka / WebSocket
+import akka.actor.ActorSystem
+import akka.stream.Materializer
 import play.api.mvc.WebSocket
 import play.api.libs.streams.ActorFlow
 

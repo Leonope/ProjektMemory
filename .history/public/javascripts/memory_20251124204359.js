@@ -20,7 +20,7 @@
 
   // Spielstatus
   let deck = [];
-  let serverDeck = null;   // <- Deck, das wir aus matrix.xml lesen
+  let serverDeck = null;   // <- Deck, das wir aus matrix.xml vom Server lesen
   let firstPick = null;    // {el, symbol}
   let secondPick = null;
   let lock = false;
@@ -28,7 +28,7 @@
   let found = 0;
   let gameOver = false;
 
-  // aktuelle Spiel-Metadaten
+  // aktuelle Spiel-Metadaten (für Highscore & WebSocket)
   let currentPlayerName = '';
   let currentPlayerCount = 1;
   let currentSessionId = 'default';
@@ -63,32 +63,26 @@
 
   // -- Deck aus XML des Servers extrahieren ----------------------------------
   function parseDeckFromXml(xml) {
+    // xml ist hier ein XML-Dokument (von $.get)
     const $xml = $(xml);
     let values = [];
 
-    // Struktur:
-    // <matrix>
-    //   <cells>
-    //     <cell>
-    //       <id>2</id>
-    //       <state>FaceDownState</state>
-    //     </cell>
-    //     ...
-    //   </cells>
-    // </matrix>
-    const cells = $xml.find('matrix > cells > cell');
-    if (cells.length > 0) {
-      cells.each(function () {
-        const $cell = $(this);
-        let idText = $cell.find('id').first().text();
-        if (idText) {
-          idText = idText.trim();
-          if (idText.length > 0) {
-            values.push(idText);
-          }
+    // 1. Versuch: <card value="X"> oder <card>X</card>
+    let cards = $xml.find('card');
+    if (cards.length > 0) {
+      cards.each(function () {
+        const $c = $(this);
+        let v = $c.attr('value') || $c.text();
+        if (v) {
+          v = v.trim();
+          if (v.length > 0) values.push(v);
         }
       });
     }
+
+    // Fallback: falls dein XML andere Tags benutzt, kann man hier noch
+    // weitere Varianten ergänzen (z.B. <cell>, <slot>, etc.)
+    // Für jetzt lassen wir es bei <card>.
 
     return values;
   }
@@ -128,7 +122,7 @@
   }
 
   function initBoard() {
-    // Deck aus dem Server verwenden, wenn vorhanden und passend
+    // WICHTIG: Deck aus dem Server verwenden, wenn vorhanden und passend
     if (serverDeck && serverDeck.length >= totalPairs * 2) {
       deck = serverDeck.slice(0, totalPairs * 2);
     } else {
@@ -461,7 +455,7 @@
     }
   }
 
-  // --- New Game über Ajax + JSON (Host/Join) ---
+  // --- New Game über Ajax + JSON ---
   function hookNewGameForm() {
     $('#newGameForm').on('submit', function(e) {
       e.preventDefault(); // kein klassisches POST
@@ -470,7 +464,6 @@
       const pairsVal     = parseInt($('#pairs').val() || '2', 10);
       const pCountVal    = parseInt($('#playerCount').val() || '1', 10);
       const sessionInput = $('#sessionId').val() || '';
-      const isHost       = $('#isHost').is(':checked');
 
       currentPlayerName  = nameVal;
       currentPlayerCount = pCountVal;
@@ -480,107 +473,65 @@
 
       const csrfToken = getCsrfToken();
 
-      if (isHost) {
-        // HOST: neues Spiel im Backend erzeugen
-        $.ajax({
-          url: '/game/newui/new-json',
-          method: 'POST',
-          contentType: 'application/json',
-          dataType: 'json',
-          headers: {
-            'Csrf-Token': csrfToken,
-            'X-CSRF-Token': csrfToken
-          },
-          data: JSON.stringify({
-            playerName: nameVal,
-            pairs: pairsVal,
-            playerCount: pCountVal
-          }),
-          success: function(resp) {
-            totalPairs = resp.pairs || pairsVal;
-            board.dataset.totalPairs = String(totalPairs);
+      $.ajax({
+        url: '/game/newui/new-json',
+        method: 'POST',
+        contentType: 'application/json',
+        dataType: 'json',
+        headers: {
+          'Csrf-Token': csrfToken,
+          'X-CSRF-Token': csrfToken
+        },
+        data: JSON.stringify({
+          playerName: nameVal,
+          pairs: pairsVal,
+          playerCount: pCountVal
+        }),
+        success: function(resp) {
+          totalPairs = resp.pairs || pairsVal;
+          board.dataset.totalPairs = String(totalPairs);
 
-            resetCounters();
-            renderBoard(totalPairs);
-            bindEvents();
+          resetCounters();
+          renderBoard(totalPairs);
+          bindEvents();
 
-            // Deck aus XML holen (vom Backend generiert)
-            $.get('/game-matrix', function(xml) {
-              const parsed = parseDeckFromXml(xml);
-              if (parsed && parsed.length > 0) {
-                serverDeck = parsed;
-                console.log('ServerDeck aus XML:', serverDeck);
-              } else {
-                serverDeck = null;
-                console.warn('Konnte kein Deck aus matrix.xml extrahieren, nutze lokales Deck.');
-              }
-              initBoard(); // init mit serverDeck ODER lokalem Deck
-            });
-
-            // Setup verstecken, Spiel zeigen
-            $('.game-setup-container').addClass('hidden');
-            $('.game-container').removeClass('hidden');
-
-            // Text aktualisieren
-            currentPlayerName  = resp.playerName || nameVal;
-            currentPlayerCount = resp.playerCount || pCountVal;
-
-            $('#playerNameDisplay').text(currentPlayerName || '–');
-            $('#playerCountDisplay').text(currentPlayerCount);
-            $('#pairsDisplay').text(resp.pairs || pairsVal);
-            $('#pairsTotalDisplay').text(resp.pairs || pairsVal);
-
-            if (resp.message && resp.message.length > 0) {
-              $('#statusMessage').text(resp.message).show();
+          // WICHTIG: Deck aus XML-Live-Daten holen und dann initBoard()
+          $.get('/game-matrix', function(xml) {
+            const parsed = parseDeckFromXml(xml);
+            if (parsed && parsed.length > 0) {
+              serverDeck = parsed;
+              console.log('ServerDeck aus XML:', serverDeck);
+            } else {
+              serverDeck = null;
+              console.warn('Konnte kein Deck aus matrix.xml extrahieren, nutze lokales Deck.');
             }
+            initBoard(); // init mit serverDeck ODER lokalem Deck
+          });
 
-            // WebSocket: Session beitreten
-            sendJoinOverWebSocket();
-          },
-          error: function() {
-            alert('Fehler beim Starten des Spiels!');
+          // Setup verstecken, Spiel zeigen
+          $('.game-setup-container').addClass('hidden');
+          $('.game-container').removeClass('hidden');
+
+          // Text aktualisieren
+          currentPlayerName  = resp.playerName || nameVal;
+          currentPlayerCount = resp.playerCount || pCountVal;
+
+          $('#playerNameDisplay').text(currentPlayerName || '–');
+          $('#playerCountDisplay').text(currentPlayerCount);
+          $('#pairsDisplay').text(resp.pairs || pairsVal);
+          $('#pairsTotalDisplay').text(resp.pairs || pairsVal);
+
+          if (resp.message && resp.message.length > 0) {
+            $('#statusMessage').text(resp.message).show();
           }
-        });
-      } else {
-        // JOINER: kein neues Spiel erzeugen – nur vorhandene matrix.xml nutzen
-        totalPairs = pairsVal; // Clientseitige Erwartung; kann durch XML noch "korrigiert" werden
-        board.dataset.totalPairs = String(totalPairs);
 
-        resetCounters();
-        renderBoard(totalPairs);
-        bindEvents();
-
-        $.get('/game-matrix', function(xml) {
-          const parsed = parseDeckFromXml(xml);
-          if (parsed && parsed.length > 0) {
-            serverDeck = parsed;
-            console.log('ServerDeck aus XML (Joiner):', serverDeck);
-
-            // totalPairs ggf. aus Deck ableiten
-            totalPairs = serverDeck.length / 2;
-            board.dataset.totalPairs = String(totalPairs);
-            $('#pairsDisplay').text(totalPairs);
-            $('#pairsTotalDisplay').text(totalPairs);
-          } else {
-            serverDeck = null;
-            console.warn('Joiner: Konnte kein Deck aus matrix.xml extrahieren, nutze lokales Deck.');
-          }
-          initBoard();
-        });
-
-        // Setup verstecken, Spiel zeigen
-        $('.game-setup-container').addClass('hidden');
-        $('.game-container').removeClass('hidden');
-
-        // Text aktualisieren (kein Backend-Resp)
-        $('#playerNameDisplay').text(currentPlayerName || '–');
-        $('#playerCountDisplay').text(currentPlayerCount);
-        $('#pairsDisplay').text(pairsVal);
-        $('#pairsTotalDisplay').text(pairsVal);
-
-        // WebSocket: Session beitreten
-        sendJoinOverWebSocket();
-      }
+          // WebSocket: Server über neuen Spieler informieren (Session)
+          sendJoinOverWebSocket();
+        },
+        error: function() {
+          alert('Fehler beim Starten des Spiels!');
+        }
+      });
     });
   }
 
@@ -652,5 +603,4 @@
     firstInit();
   }
 })();
-
 

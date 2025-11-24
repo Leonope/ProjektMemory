@@ -7,12 +7,6 @@ import play.api.libs.json._
 import backend.Backend
 import java.nio.file.{Files, Paths}
 
-// Pekko / WebSocket (Play 3 verwendet Pekko statt Akka)
-import org.apache.pekko.actor.ActorSystem
-import org.apache.pekko.stream.Materializer
-import play.api.mvc.WebSocket
-import play.api.libs.streams.ActorFlow
-
 // Companion-Object als simpler In-Memory-Store für Highscores
 object GameController {
   case class HighscoreEntry(playerName: String, pairs: Int, moves: Int)
@@ -31,17 +25,9 @@ object GameController {
 }
 
 @Singleton
-class GameController @Inject()(cc: ControllerComponents)
-                              (implicit system: ActorSystem, mat: Materializer)
-  extends AbstractController(cc) {
+class GameController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
   import GameController.HighscoreEntry
-
-  // ==== WebSocket: /ws/game ==========================================
-  def gameSocket: WebSocket = WebSocket.accept[String, String] { _ =>
-    ActorFlow.actorRef(out => GameWebSocketActor.props(out))
-  }
-  // ===================================================================
 
   def index: Action[AnyContent] = Action { implicit request =>
     Ok(views.html.game(WebTUI.render()))
@@ -74,7 +60,7 @@ class GameController @Inject()(cc: ControllerComponents)
     )
   }
 
-  /** Klassischer HTML-POST (falls du ihn noch brauchst) */
+  /** Klassischer HTML-POST  */
   def newGameBootstrap: Action[AnyContent] = Action { implicit request =>
     val data        = request.body.asFormUrlEncoded.getOrElse(Map.empty)
     val name        = data.get("playerName").flatMap(_.headOption).filter(_.trim.nonEmpty).getOrElse("Player")
