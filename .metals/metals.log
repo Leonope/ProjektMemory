@@ -2765,3 +2765,26 @@ INFO: Unsupported notification method: $/setTrace
 2025.11.24 21:22:25 INFO  Shutting down server
 2025.11.24 21:22:25 INFO  shutting down Metals
 2025.11.24 21:22:25 INFO  Exiting server
+2025.11.25 09:59:44 INFO  Started: Metals version 1.6.3 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory' for client Visual Studio Code 1.106.2.
+2025.11.25 09:59:44 INFO  time: initialize in 0.14s
+2025.11.25 09:59:46 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.25 10:00:04 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 25, 2025 10:00:07 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 25, 2025 10:00:08 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 25, 2025 10:00:08 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 15
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:08 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:11 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:11 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala
+2025.11.25 10:00:17 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:18 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 25, 2025 10:21:44 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
