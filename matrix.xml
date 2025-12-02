@@ -1,14 +1,4 @@
 <matrix>
-<<<<<<< HEAD
-        <rows>4</rows>
-        <cols>6</cols>
-        <cells>
-          <cell row="0" col="0">
-                <id>12</id>
-                <state>FaceDownState</state>
-              </cell><cell row="0" col="1">
-                <id>1</id>
-=======
         <rows>3</rows>
         <cols>4</cols>
         <cells>
@@ -26,7 +16,6 @@
                 <state>FaceDownState</state>
               </cell><cell row="1" col="0">
                 <id>4</id>
->>>>>>> 255c16c97d175309b65ee8de854c81f33fdbaf8f
                 <state>FaceDownState</state>
               </cell><cell row="0" col="2">
                 <id>5</id>
