@@ -59,7 +59,7 @@
       });
 
       // SSE-Verbindung zum Server (Server Sent Events)
-      const source = new EventSource('@routes.SseController.sessionsStream');
+      const source = new EventSource('@routes.SseController.sessionsStream()');
 
       // Standard-Event: message
       source.addEventListener('message', function(e) {
@@ -97,4 +97,3 @@
     });
   </script>
 }
-

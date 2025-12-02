@@ -1,4 +1,5 @@
 <matrix>
+<<<<<<< HEAD
         <rows>4</rows>
         <cols>6</cols>
         <cells>
@@ -7,6 +8,25 @@
                 <state>FaceDownState</state>
               </cell><cell row="0" col="1">
                 <id>1</id>
+=======
+        <rows>3</rows>
+        <cols>4</cols>
+        <cells>
+          <cell row="0" col="0">
+                <id>4</id>
+                <state>FaceDownState</state>
+              </cell><cell row="0" col="1">
+                <id>1</id>
+                <state>FaceDownState</state>
+              </cell><cell row="0" col="2">
+                <id>2</id>
+                <state>FaceDownState</state>
+              </cell><cell row="0" col="3">
+                <id>2</id>
+                <state>FaceDownState</state>
+              </cell><cell row="1" col="0">
+                <id>4</id>
+>>>>>>> 255c16c97d175309b65ee8de854c81f33fdbaf8f
                 <state>FaceDownState</state>
               </cell><cell row="0" col="2">
                 <id>5</id>
@@ -24,12 +44,17 @@
                 <id>7</id>
                 <state>FaceDownState</state>
               </cell><cell row="1" col="1">
+<<<<<<< HEAD
                 <id>10</id>
+=======
+                <id>5</id>
+>>>>>>> 255c16c97d175309b65ee8de854c81f33fdbaf8f
                 <state>FaceDownState</state>
               </cell><cell row="1" col="2">
                 <id>3</id>
                 <state>FaceDownState</state>
               </cell><cell row="1" col="3">
+<<<<<<< HEAD
                 <id>3</id>
                 <state>FaceDownState</state>
               </cell><cell row="1" col="4">
@@ -52,6 +77,21 @@
                 <state>FaceDownState</state>
               </cell><cell row="2" col="4">
                 <id>2</id>
+=======
+                <id>1</id>
+                <state>FaceDownState</state>
+              </cell><cell row="2" col="0">
+                <id>6</id>
+                <state>FaceDownState</state>
+              </cell><cell row="2" col="1">
+                <id>3</id>
+                <state>FaceDownState</state>
+              </cell><cell row="2" col="2">
+                <id>6</id>
+                <state>FaceDownState</state>
+              </cell><cell row="2" col="3">
+                <id>5</id>
+>>>>>>> 255c16c97d175309b65ee8de854c81f33fdbaf8f
                 <state>FaceDownState</state>
               </cell><cell row="2" col="5">
                 <id>9</id>

@@ -36,9 +36,6 @@ GET   /ws/game                   controllers.GameController.gameSocket
 GET   /game/chat/comet   controllers.ChatController.chatComet(sessionId: String)
 POST  /game/chat/send    controllers.ChatController.chatSend
 
-# SSE: Live-Session-Counter
-GET   /sse/sessions     controllers.SseController.sessionsStream
-
 
 
 

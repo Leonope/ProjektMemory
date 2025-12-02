@@ -6,14 +6,10 @@ import web.WebTUI
 import play.api.libs.json._
 import backend.Backend
 import java.nio.file.{Files, Paths}
-import org.apache.pekko.actor._
-import org.apache.pekko.stream._
-import play.api.libs.streams.ActorFlow
-import controllers.WSActor
 
-// Pekko / WebSocket (Play 3 verwendet Pekko statt Akka)
-import org.apache.pekko.actor.ActorSystem
-import org.apache.pekko.stream.Materializer
+// Akka / WebSocket
+import akka.actor.ActorSystem
+import akka.stream.Materializer
 import play.api.mvc.WebSocket
 import play.api.libs.streams.ActorFlow
 
@@ -199,19 +195,6 @@ class GameController @Inject()(cc: ControllerComponents)
 
   def state: Action[AnyContent] = Action {
     Ok(WebTUI.currentLog).as("text/plain; charset=utf-8")
-  }
-
-  def socket = WebSocket.accept[String, String] { request =>
-    ActorFlow.actorRef { out =>
-      println("Connect received")
-      WebSocketActorFactory.create(out)
-    }
-  }
-
-  object WebSocketActorFactory {
-    def create(out: ActorRef) = {
-      Props(new WSActor(out))
-    }
   }
 }
 

@@ -10,12 +10,6 @@
   const timerLabel = document.getElementById('timerLabel');
   const mouth = document.getElementById('smilePath');
 
-  // Chat-DOM
-  let chatMessagesEl = null;
-  let chatInputEl = null;
-  let chatSendBtn = null;
-  let cometIframe = null;
-
   // Konfiguration
   let totalPairs = parseInt(board.dataset.totalPairs || '2', 10);
   const TIMER_DURATION_MS = 17000;
@@ -45,7 +39,7 @@
   let lastFoundAtReset = 0;
   let timerRunning = false;
 
-  // WebSocket (für Game-Events, z.B. Karten-Flip)
+  // WebSocket
   let socket = null;
   let pendingJoinInfo = null;
 
@@ -223,7 +217,7 @@
     }
   }
 
-  // --- WebSocket-Flip-Update-Helfer (Game) ---
+  // --- WebSocket-Flip-Update-Helfer ---
   function sendFlipUpdateFor(card, state) {
     if (!socket || socket.readyState !== WebSocket.OPEN) return;
     if (!currentSessionId) return;
@@ -401,108 +395,7 @@
     });
   }
 
-  // --- Chat-Helfer (Client-Seite) ---
-
-  // wird vom Comet-Stream (hidden iframe) aufgerufen:
-  // <script>parent.appendChat("...json...")</script>
-  window.appendChat = function(raw) {
-    try {
-      const msg = JSON.parse(raw);
-      const name = msg.playerName || 'Player';
-      const text = msg.text || '';
-      if (text.trim().length > 0) {
-        appendChatMessage(name, text);
-      }
-    } catch (e) {
-      console.error('appendChat JSON parse error:', e, raw);
-    }
-  };
-
-  function appendChatMessage(name, text) {
-    if (!chatMessagesEl) return;
-    const container = chatMessagesEl;
-    const row = document.createElement('div');
-    row.className = 'chat-line';
-    const who = name && name.trim().length > 0 ? name.trim() : 'Player';
-
-    row.innerHTML = `<span class="fw-semibold">${escapeHtml(who)}:</span> ${escapeHtml(text)}`;
-    container.appendChild(row);
-    container.scrollTop = container.scrollHeight;
-  }
-
-  function escapeHtml(str) {
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
-  }
-
-  function sendChatMessage() {
-    if (!chatInputEl) return;
-
-    const text = chatInputEl.value.trim();
-    if (!text) return;
-
-    const name = currentPlayerName || $('#playerNameDisplay').text() || 'Player';
-    const csrfToken = getCsrfToken();
-
-    $.ajax({
-      url: '/game/chat/send',
-      method: 'POST',
-      contentType: 'application/json',
-      dataType: 'json',
-      headers: {
-        'Csrf-Token': csrfToken,
-        'X-CSRF-Token': csrfToken
-      },
-      data: JSON.stringify({
-        sessionId: currentSessionId || 'default',
-        playerName: name,
-        text: text
-      })
-    });
-
-    chatInputEl.value = '';
-  }
-
-  function connectComet() {
-    // vorhandene Comet-Verbindung schließen
-    if (cometIframe && cometIframe.parentNode) {
-      cometIframe.parentNode.removeChild(cometIframe);
-      cometIframe = null;
-    }
-
-    const sid = currentSessionId || 'default';
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.src = '/game/chat/comet?sessionId=' + encodeURIComponent(sid);
-    document.body.appendChild(iframe);
-    cometIframe = iframe;
-  }
-
-  function hookChatUI() {
-    chatMessagesEl = document.getElementById('chatMessages');
-    chatInputEl    = document.getElementById('chatInput');
-    chatSendBtn    = document.getElementById('chatSend');
-
-    if (chatSendBtn) {
-      chatSendBtn.addEventListener('click', () => {
-        sendChatMessage();
-        if (chatInputEl) chatInputEl.focus();
-      });
-    }
-    if (chatInputEl) {
-      chatInputEl.addEventListener('keydown', (ev) => {
-        if (ev.key === 'Enter') {
-          ev.preventDefault();
-          sendChatMessage();
-        }
-      });
-    }
-  }
-
-  // --- WebSocket (nur fürs Spiel, nicht für Chat) ---
-
+  // --- WebSocket: Verbindung + ServerPush-Handling ---
   function initWebSocket() {
     try {
       const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
@@ -555,7 +448,6 @@
     if (msg.type === 'info' && msg.text) {
       const status = $('#statusMessage');
       status.text(msg.text).show();
-
     } else if (msg.type === 'flip') {
       const idx = msg.index;
       const state = msg.state;
@@ -567,8 +459,6 @@
         flipCard(card, toFaceUp, true);
       }
     }
-    // Chat-Nachrichten kommen NICHT über WebSocket,
-    // sondern über Comet (appendChat).
   }
 
   // --- New Game über Ajax + JSON (Host/Join) ---
@@ -644,11 +534,8 @@
               $('#statusMessage').text(resp.message).show();
             }
 
-            // WebSocket: Session beitreten (für Game)
+            // WebSocket: Session beitreten
             sendJoinOverWebSocket();
-
-            // Comet-Chat verbinden
-            connectComet();
           },
           error: function() {
             alert('Fehler beim Starten des Spiels!');
@@ -691,11 +578,8 @@
         $('#pairsDisplay').text(pairsVal);
         $('#pairsTotalDisplay').text(pairsVal);
 
-        // WebSocket: Session beitreten (für Game)
+        // WebSocket: Session beitreten
         sendJoinOverWebSocket();
-
-        // Comet-Chat verbinden
-        connectComet();
       }
     });
   }
@@ -759,8 +643,7 @@
     hookPresets();
     hookGameWindowButtons();
     hookHighscoreButton();
-    hookChatUI();
-    initWebSocket(); // WebSocket-Verbindung fürs Game aufbauen
+    initWebSocket(); // WebSocket-Verbindung aufbauen
   }
 
   if (document.readyState === 'loading') {
@@ -769,3 +652,5 @@
     firstInit();
   }
 })();
+
+

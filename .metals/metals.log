@@ -2516,3 +2516,275 @@ WARNING: Unmatched cancel notification for request id 5
 2025.11.19 13:14:03 INFO  Shutting down server
 2025.11.19 13:14:03 INFO  shutting down Metals
 2025.11.19 13:14:03 INFO  Exiting server
+2025.11.19 15:48:44 INFO  Started: Metals version 1.6.3 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory' for client Visual Studio Code 1.106.1.
+2025.11.19 15:48:45 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.19 15:50:57 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.19 15:51:00 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 19, 2025 3:51:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Nov 19, 2025 3:51:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2025.11.19 15:51:10 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.19 15:51:13 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.19 15:51:13 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.19 15:51:15 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.19 15:51:18 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 19, 2025 3:51:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.11.19 15:51:44 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.19 15:51:54 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.19 15:53:53 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.19 15:53:55 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.19 15:54:05 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.19 15:54:25 INFO  Shutting down server
+2025.11.19 15:54:25 INFO  shutting down Metals
+2025.11.19 15:54:25 INFO  Exiting server
+2025.11.19 15:54:26 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1570)
+
+2025.11.20 07:58:48 INFO  Started: Metals version 1.6.3 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory' for client Visual Studio Code 1.106.1.
+2025.11.20 07:58:50 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.20 07:58:51 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:02:57 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:06 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:20 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:20 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:20 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 20, 2025 8:03:23 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 29
+2025.11.20 08:03:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:24 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:25 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:26 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:26 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala
+2025.11.20 08:03:26 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:28 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:32 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:03:55 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:04:03 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:04:03 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:04:04 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:04:04 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:04:04 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:04:08 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:04:14 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:09:43 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala
+2025.11.20 08:09:43 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:09:43 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 20, 2025 8:09:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 136
+Nov 20, 2025 8:09:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 137
+2025.11.20 08:09:44 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:10:21 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 08:10:21 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:11:06 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala
+2025.11.20 09:11:06 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:11:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 20, 2025 9:11:07 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 173
+2025.11.20 09:13:43 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala
+2025.11.20 09:13:43 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:13:43 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:13:44 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:14:00 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala
+2025.11.20 09:14:00 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:14:00 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 20, 2025 9:15:01 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.11.20 09:17:55 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:19:40 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:19:40 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:19:40 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:20:00 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:24 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala
+2025.11.20 09:52:24 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:24 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:29 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:29 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:30 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:30 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:40 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:44 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:44 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:45 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:45 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 09:52:56 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.20 10:01:00 INFO  Shutting down server
+2025.11.20 10:01:00 INFO  shutting down Metals
+2025.11.20 10:01:00 INFO  Exiting server
+2025.11.24 19:52:38 INFO  Started: Metals version 1.6.3 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory' for client Visual Studio Code 1.106.2.
+2025.11.24 19:52:39 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.24 19:52:43 WARN  Build server is not auto-connectable.
+2025.11.24 19:57:51 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:57:53 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:57:53 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala
+2025.11.24 19:57:53 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala
+2025.11.24 19:57:53 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:57:55 WARN  Could not find semantic tokens for: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/play-server/ProjektMemory/app/controllers/GameWebSocketActor.scala
+2025.11.24 19:57:55 INFO  time: code lens generation in 1.29s
+2025.11.24 19:57:56 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:57:56 WARN  Could not find semantic tokens for: file:///C:/Users/leo11/OneDrive/Desktop/HTWG/AIN/Semester5/Web-apps/play-server/ProjektMemory/app/controllers/GameWebSocketActor.scala
+2025.11.24 19:58:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:03 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:03 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:04 INFO  time: code lens generation in 1.24s
+2025.11.24 19:58:08 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala
+2025.11.24 19:58:08 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:08 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:19 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:19 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala
+2025.11.24 19:58:19 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:19 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:19 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:21 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:24 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:26 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:26 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:26 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 19:58:29 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala
+2025.11.24 19:58:29 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:00:54 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala
+2025.11.24 20:00:54 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:00:54 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:01:00 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala
+2025.11.24 20:01:00 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:01:00 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:01:00 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:01:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:01:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:01:04 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:01:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:01:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:01:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:02:01 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:02:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:02:02 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:03:47 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:03:47 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt
+2025.11.24 20:03:47 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:03:47 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:03:47 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:03:47 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:03:51 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:03:53 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:04:14 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:04:44 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:04:46 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:04:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:19 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:21 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:21 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:21 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:27 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:27 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:28 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:28 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:29 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:29 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:29 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:29 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:32 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt
+2025.11.24 20:05:32 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:32 INFO  Detected new build tool in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory
+2025.11.24 20:05:32 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:36 WARN  Build server is not auto-connectable.
+2025.11.24 20:05:38 INFO  Detected new build tool in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory
+2025.11.24 20:05:38 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt
+2025.11.24 20:05:38 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:05:45 WARN  Build server is not auto-connectable.
+2025.11.24 20:06:08 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:06:21 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:06:34 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:06:34 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:06:35 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:09:47 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:09:48 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:09:49 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:09:49 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:09:52 INFO  Detected new build tool in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory
+2025.11.24 20:09:52 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt
+2025.11.24 20:09:52 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:09:54 WARN  Build server is not auto-connectable.
+2025.11.24 20:10:16 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:41 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:41 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:42 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:43 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:42 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:43 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:45 INFO  Detected new build tool in C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory
+2025.11.24 20:13:45 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt
+2025.11.24 20:13:45 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\build.sbt. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:52 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala
+2025.11.24 20:13:52 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:53 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:54 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:54 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:54 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:58 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:13:59 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:14:01 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala
+2025.11.24 20:14:01 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:14:22 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala
+2025.11.24 20:14:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:14:22 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:14:24 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:14:25 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:14:25 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:14:26 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:14:27 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala
+2025.11.24 20:14:27 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:35:45 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala
+2025.11.24 20:35:45 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:35:45 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:35:47 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:35:47 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:35:48 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:35:48 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:35:48 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:35:48 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.24 20:35:50 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala
+2025.11.24 20:35:50 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\GameWebSocketActor.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 24, 2025 9:20:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.11.24 21:22:25 INFO  Shutting down server
+2025.11.24 21:22:25 INFO  shutting down Metals
+2025.11.24 21:22:25 INFO  Exiting server
+2025.11.25 09:59:44 INFO  Started: Metals version 1.6.3 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory' for client Visual Studio Code 1.106.2.
+2025.11.25 09:59:44 INFO  time: initialize in 0.14s
+2025.11.25 09:59:46 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.25 10:00:04 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 25, 2025 10:00:07 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 25, 2025 10:00:08 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 25, 2025 10:00:08 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 15
+2025.11.25 10:00:07 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:08 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:11 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:11 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala
+2025.11.25 10:00:17 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.25 10:00:18 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\ChatController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+Nov 25, 2025 10:21:44 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

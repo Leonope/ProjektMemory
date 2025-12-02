@@ -10,12 +10,6 @@
   const timerLabel = document.getElementById('timerLabel');
   const mouth = document.getElementById('smilePath');
 
-  // Chat-DOM
-  let chatMessagesEl = null;
-  let chatInputEl = null;
-  let chatSendBtn = null;
-  let cometIframe = null;
-
   // Konfiguration
   let totalPairs = parseInt(board.dataset.totalPairs || '2', 10);
   const TIMER_DURATION_MS = 17000;
@@ -26,7 +20,7 @@
 
   // Spielstatus
   let deck = [];
-  let serverDeck = null;   // <- Deck, das wir aus matrix.xml lesen
+  let serverDeck = null;   // <- Deck, das wir aus matrix.xml vom Server lesen
   let firstPick = null;    // {el, symbol}
   let secondPick = null;
   let lock = false;
@@ -34,7 +28,7 @@
   let found = 0;
   let gameOver = false;
 
-  // aktuelle Spiel-Metadaten
+  // aktuelle Spiel-Metadaten (für Highscore & WebSocket)
   let currentPlayerName = '';
   let currentPlayerCount = 1;
   let currentSessionId = 'default';
@@ -45,7 +39,7 @@
   let lastFoundAtReset = 0;
   let timerRunning = false;
 
-  // WebSocket (für Game-Events, z.B. Karten-Flip)
+  // WebSocket
   let socket = null;
   let pendingJoinInfo = null;
 
@@ -69,32 +63,26 @@
 
   // -- Deck aus XML des Servers extrahieren ----------------------------------
   function parseDeckFromXml(xml) {
+    // xml ist hier ein XML-Dokument (von $.get)
     const $xml = $(xml);
     let values = [];
 
-    // Struktur:
-    // <matrix>
-    //   <cells>
-    //     <cell>
-    //       <id>2</id>
-    //       <state>FaceDownState</state>
-    //     </cell>
-    //     ...
-    //   </cells>
-    // </matrix>
-    const cells = $xml.find('matrix > cells > cell');
-    if (cells.length > 0) {
-      cells.each(function () {
-        const $cell = $(this);
-        let idText = $cell.find('id').first().text();
-        if (idText) {
-          idText = idText.trim();
-          if (idText.length > 0) {
-            values.push(idText);
-          }
+    // 1. Versuch: <card value="X"> oder <card>X</card>
+    let cards = $xml.find('card');
+    if (cards.length > 0) {
+      cards.each(function () {
+        const $c = $(this);
+        let v = $c.attr('value') || $c.text();
+        if (v) {
+          v = v.trim();
+          if (v.length > 0) values.push(v);
         }
       });
     }
+
+    // Fallback: falls dein XML andere Tags benutzt, kann man hier noch
+    // weitere Varianten ergänzen (z.B. <cell>, <slot>, etc.)
+    // Für jetzt lassen wir es bei <card>.
 
     return values;
   }
@@ -134,7 +122,7 @@
   }
 
   function initBoard() {
-    // Deck aus dem Server verwenden, wenn vorhanden und passend
+    // WICHTIG: Deck aus dem Server verwenden, wenn vorhanden und passend
     if (serverDeck && serverDeck.length >= totalPairs * 2) {
       deck = serverDeck.slice(0, totalPairs * 2);
     } else {
@@ -223,7 +211,7 @@
     }
   }
 
-  // --- WebSocket-Flip-Update-Helfer (Game) ---
+  // --- WebSocket-Flip-Update-Helfer ---
   function sendFlipUpdateFor(card, state) {
     if (!socket || socket.readyState !== WebSocket.OPEN) return;
     if (!currentSessionId) return;
@@ -401,108 +389,7 @@
     });
   }
 
-  // --- Chat-Helfer (Client-Seite) ---
-
-  // wird vom Comet-Stream (hidden iframe) aufgerufen:
-  // <script>parent.appendChat("...json...")</script>
-  window.appendChat = function(raw) {
-    try {
-      const msg = JSON.parse(raw);
-      const name = msg.playerName || 'Player';
-      const text = msg.text || '';
-      if (text.trim().length > 0) {
-        appendChatMessage(name, text);
-      }
-    } catch (e) {
-      console.error('appendChat JSON parse error:', e, raw);
-    }
-  };
-
-  function appendChatMessage(name, text) {
-    if (!chatMessagesEl) return;
-    const container = chatMessagesEl;
-    const row = document.createElement('div');
-    row.className = 'chat-line';
-    const who = name && name.trim().length > 0 ? name.trim() : 'Player';
-
-    row.innerHTML = `<span class="fw-semibold">${escapeHtml(who)}:</span> ${escapeHtml(text)}`;
-    container.appendChild(row);
-    container.scrollTop = container.scrollHeight;
-  }
-
-  function escapeHtml(str) {
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
-  }
-
-  function sendChatMessage() {
-    if (!chatInputEl) return;
-
-    const text = chatInputEl.value.trim();
-    if (!text) return;
-
-    const name = currentPlayerName || $('#playerNameDisplay').text() || 'Player';
-    const csrfToken = getCsrfToken();
-
-    $.ajax({
-      url: '/game/chat/send',
-      method: 'POST',
-      contentType: 'application/json',
-      dataType: 'json',
-      headers: {
-        'Csrf-Token': csrfToken,
-        'X-CSRF-Token': csrfToken
-      },
-      data: JSON.stringify({
-        sessionId: currentSessionId || 'default',
-        playerName: name,
-        text: text
-      })
-    });
-
-    chatInputEl.value = '';
-  }
-
-  function connectComet() {
-    // vorhandene Comet-Verbindung schließen
-    if (cometIframe && cometIframe.parentNode) {
-      cometIframe.parentNode.removeChild(cometIframe);
-      cometIframe = null;
-    }
-
-    const sid = currentSessionId || 'default';
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.src = '/game/chat/comet?sessionId=' + encodeURIComponent(sid);
-    document.body.appendChild(iframe);
-    cometIframe = iframe;
-  }
-
-  function hookChatUI() {
-    chatMessagesEl = document.getElementById('chatMessages');
-    chatInputEl    = document.getElementById('chatInput');
-    chatSendBtn    = document.getElementById('chatSend');
-
-    if (chatSendBtn) {
-      chatSendBtn.addEventListener('click', () => {
-        sendChatMessage();
-        if (chatInputEl) chatInputEl.focus();
-      });
-    }
-    if (chatInputEl) {
-      chatInputEl.addEventListener('keydown', (ev) => {
-        if (ev.key === 'Enter') {
-          ev.preventDefault();
-          sendChatMessage();
-        }
-      });
-    }
-  }
-
-  // --- WebSocket (nur fürs Spiel, nicht für Chat) ---
-
+  // --- WebSocket: Verbindung + ServerPush-Handling ---
   function initWebSocket() {
     try {
       const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
@@ -555,7 +442,6 @@
     if (msg.type === 'info' && msg.text) {
       const status = $('#statusMessage');
       status.text(msg.text).show();
-
     } else if (msg.type === 'flip') {
       const idx = msg.index;
       const state = msg.state;
@@ -567,11 +453,9 @@
         flipCard(card, toFaceUp, true);
       }
     }
-    // Chat-Nachrichten kommen NICHT über WebSocket,
-    // sondern über Comet (appendChat).
   }
 
-  // --- New Game über Ajax + JSON (Host/Join) ---
+  // --- New Game über Ajax + JSON ---
   function hookNewGameForm() {
     $('#newGameForm').on('submit', function(e) {
       e.preventDefault(); // kein klassisches POST
@@ -580,7 +464,6 @@
       const pairsVal     = parseInt($('#pairs').val() || '2', 10);
       const pCountVal    = parseInt($('#playerCount').val() || '1', 10);
       const sessionInput = $('#sessionId').val() || '';
-      const isHost       = $('#isHost').is(':checked');
 
       currentPlayerName  = nameVal;
       currentPlayerCount = pCountVal;
@@ -590,113 +473,65 @@
 
       const csrfToken = getCsrfToken();
 
-      if (isHost) {
-        // HOST: neues Spiel im Backend erzeugen
-        $.ajax({
-          url: '/game/newui/new-json',
-          method: 'POST',
-          contentType: 'application/json',
-          dataType: 'json',
-          headers: {
-            'Csrf-Token': csrfToken,
-            'X-CSRF-Token': csrfToken
-          },
-          data: JSON.stringify({
-            playerName: nameVal,
-            pairs: pairsVal,
-            playerCount: pCountVal
-          }),
-          success: function(resp) {
-            totalPairs = resp.pairs || pairsVal;
-            board.dataset.totalPairs = String(totalPairs);
+      $.ajax({
+        url: '/game/newui/new-json',
+        method: 'POST',
+        contentType: 'application/json',
+        dataType: 'json',
+        headers: {
+          'Csrf-Token': csrfToken,
+          'X-CSRF-Token': csrfToken
+        },
+        data: JSON.stringify({
+          playerName: nameVal,
+          pairs: pairsVal,
+          playerCount: pCountVal
+        }),
+        success: function(resp) {
+          totalPairs = resp.pairs || pairsVal;
+          board.dataset.totalPairs = String(totalPairs);
 
-            resetCounters();
-            renderBoard(totalPairs);
-            bindEvents();
+          resetCounters();
+          renderBoard(totalPairs);
+          bindEvents();
 
-            // Deck aus XML holen (vom Backend generiert)
-            $.get('/game-matrix', function(xml) {
-              const parsed = parseDeckFromXml(xml);
-              if (parsed && parsed.length > 0) {
-                serverDeck = parsed;
-                console.log('ServerDeck aus XML:', serverDeck);
-              } else {
-                serverDeck = null;
-                console.warn('Konnte kein Deck aus matrix.xml extrahieren, nutze lokales Deck.');
-              }
-              initBoard(); // init mit serverDeck ODER lokalem Deck
-            });
-
-            // Setup verstecken, Spiel zeigen
-            $('.game-setup-container').addClass('hidden');
-            $('.game-container').removeClass('hidden');
-
-            // Text aktualisieren
-            currentPlayerName  = resp.playerName || nameVal;
-            currentPlayerCount = resp.playerCount || pCountVal;
-
-            $('#playerNameDisplay').text(currentPlayerName || '–');
-            $('#playerCountDisplay').text(currentPlayerCount);
-            $('#pairsDisplay').text(resp.pairs || pairsVal);
-            $('#pairsTotalDisplay').text(resp.pairs || pairsVal);
-
-            if (resp.message && resp.message.length > 0) {
-              $('#statusMessage').text(resp.message).show();
+          // WICHTIG: Deck aus XML-Live-Daten holen und dann initBoard()
+          $.get('/game-matrix', function(xml) {
+            const parsed = parseDeckFromXml(xml);
+            if (parsed && parsed.length > 0) {
+              serverDeck = parsed;
+              console.log('ServerDeck aus XML:', serverDeck);
+            } else {
+              serverDeck = null;
+              console.warn('Konnte kein Deck aus matrix.xml extrahieren, nutze lokales Deck.');
             }
+            initBoard(); // init mit serverDeck ODER lokalem Deck
+          });
 
-            // WebSocket: Session beitreten (für Game)
-            sendJoinOverWebSocket();
+          // Setup verstecken, Spiel zeigen
+          $('.game-setup-container').addClass('hidden');
+          $('.game-container').removeClass('hidden');
 
-            // Comet-Chat verbinden
-            connectComet();
-          },
-          error: function() {
-            alert('Fehler beim Starten des Spiels!');
+          // Text aktualisieren
+          currentPlayerName  = resp.playerName || nameVal;
+          currentPlayerCount = resp.playerCount || pCountVal;
+
+          $('#playerNameDisplay').text(currentPlayerName || '–');
+          $('#playerCountDisplay').text(currentPlayerCount);
+          $('#pairsDisplay').text(resp.pairs || pairsVal);
+          $('#pairsTotalDisplay').text(resp.pairs || pairsVal);
+
+          if (resp.message && resp.message.length > 0) {
+            $('#statusMessage').text(resp.message).show();
           }
-        });
-      } else {
-        // JOINER: kein neues Spiel erzeugen – nur vorhandene matrix.xml nutzen
-        totalPairs = pairsVal; // Clientseitige Erwartung; kann durch XML noch "korrigiert" werden
-        board.dataset.totalPairs = String(totalPairs);
 
-        resetCounters();
-        renderBoard(totalPairs);
-        bindEvents();
-
-        $.get('/game-matrix', function(xml) {
-          const parsed = parseDeckFromXml(xml);
-          if (parsed && parsed.length > 0) {
-            serverDeck = parsed;
-            console.log('ServerDeck aus XML (Joiner):', serverDeck);
-
-            // totalPairs ggf. aus Deck ableiten
-            totalPairs = serverDeck.length / 2;
-            board.dataset.totalPairs = String(totalPairs);
-            $('#pairsDisplay').text(totalPairs);
-            $('#pairsTotalDisplay').text(totalPairs);
-          } else {
-            serverDeck = null;
-            console.warn('Joiner: Konnte kein Deck aus matrix.xml extrahieren, nutze lokales Deck.');
-          }
-          initBoard();
-        });
-
-        // Setup verstecken, Spiel zeigen
-        $('.game-setup-container').addClass('hidden');
-        $('.game-container').removeClass('hidden');
-
-        // Text aktualisieren (kein Backend-Resp)
-        $('#playerNameDisplay').text(currentPlayerName || '–');
-        $('#playerCountDisplay').text(currentPlayerCount);
-        $('#pairsDisplay').text(pairsVal);
-        $('#pairsTotalDisplay').text(pairsVal);
-
-        // WebSocket: Session beitreten (für Game)
-        sendJoinOverWebSocket();
-
-        // Comet-Chat verbinden
-        connectComet();
-      }
+          // WebSocket: Server über neuen Spieler informieren (Session)
+          sendJoinOverWebSocket();
+        },
+        error: function() {
+          alert('Fehler beim Starten des Spiels!');
+        }
+      });
     });
   }
 
@@ -759,8 +594,7 @@
     hookPresets();
     hookGameWindowButtons();
     hookHighscoreButton();
-    hookChatUI();
-    initWebSocket(); // WebSocket-Verbindung fürs Game aufbauen
+    initWebSocket(); // WebSocket-Verbindung aufbauen
   }
 
   if (document.readyState === 'loading') {
@@ -769,3 +603,4 @@
     firstInit();
   }
 })();
+
