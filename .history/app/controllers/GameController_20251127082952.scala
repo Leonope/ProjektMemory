@@ -74,7 +74,7 @@ class GameController @Inject()(cc: ControllerComponents)
     )
   }
 
-  /** Klassischer HTML-POST  */
+  /** Klassischer HTML-POST (falls du ihn noch brauchst) */
   def newGameBootstrap: Action[AnyContent] = Action { implicit request =>
     val data        = request.body.asFormUrlEncoded.getOrElse(Map.empty)
     val name        = data.get("playerName").flatMap(_.headOption).filter(_.trim.nonEmpty).getOrElse("Player")

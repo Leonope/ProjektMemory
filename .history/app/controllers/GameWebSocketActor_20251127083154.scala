@@ -113,7 +113,7 @@ class GameWebSocketActor(out: ActorRef) extends Actor {
                     exclude = Some(out)
                   )
                 case _ =>
-                  // unvollständige Daten -
+                  // unvollständige Daten -> ignorieren
               }
 
             case Some("ping") =>

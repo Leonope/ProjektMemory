@@ -1,0 +1,113 @@
+@()
+
+@main_bootstrap("Memory – Vue Version") {
+
+  <!-- Karte-/Board-Styling wiederverwenden -->
+  <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/memory.css")'>
+
+  <!-- Vue-spezifischer Sternschnuppen-Canvas (dezent, grünlich) -->
+  <div class="position-relative">
+    <!-- Extra Canvas nur für die Vue-Seite -->
+    <canvas id="vue-stars-canvas"
+            aria-hidden="true"
+            style="position: fixed; inset: 0; z-index: 1; pointer-events: none;">
+    </canvas>
+
+    <!-- Root-Container für Vue-App (liegt über dem Canvas) -->
+    <div id="vue-app" class="position-relative" style="z-index: 10;">
+      <memory-app></memory-app>
+    </div>
+  </div>
+
+  <!-- Vue 3 (global build) -->
+  <script src="https://unpkg.com/vue@@3/dist/vue.global.prod.js"></script>
+
+  <!-- Deine Vue-Logik -->
+  <script src='@routes.Assets.versioned("javascripts/vue-memory.js")'></script>
+
+  <!-- Vue-spezifische grüne Sternschnuppen -->
+  <script type="text/javascript">
+    (function() {
+      const canvas = document.getElementById('vue-stars-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      function resize() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      const stars = [];
+
+      function spawnStar() {
+        const startX = Math.random() * canvas.width;
+        const startY = Math.random() * canvas.height * 0.4; // eher im oberen Bereich
+        const length = 80 + Math.random() * 80;
+        const speed  = 300 + Math.random() * 200; // px/s
+        const angle  = Math.PI * (0.65 + Math.random() * 0.1); // leicht diagonale Flugbahn
+
+        stars.push({
+          x: startX,
+          y: startY,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          life: 0,
+          maxLife: 0.8 + Math.random() * 0.5, // Sekunden
+          length: length
+        });
+      }
+
+      let lastTime = performance.now();
+
+      function update(dt) {
+        for (let i = stars.length - 1; i >= 0; i--) {
+          const s = stars[i];
+          s.life += dt;
+          if (s.life > s.maxLife) {
+            stars.splice(i, 1);
+            continue;
+          }
+          s.x += s.vx * dt;
+          s.y += s.vy * dt;
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        stars.forEach(s => {
+          const t = s.life / s.maxLife;
+          const alpha = 1 - t;
+          const endX = s.x - (s.vx * 0.05); // Spur minimal zurück
+          const endY = s.y - (s.vy * 0.05);
+
+          ctx.strokeStyle = `rgba(66, 184, 131, ${alpha})`; // Vue-Grün (#42b883)
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(s.x, s.y);
+          ctx.lineTo(endX, endY);
+          ctx.stroke();
+        });
+      }
+
+      function loop(now) {
+        const dt = (now - lastTime) / 1000;
+        lastTime = now;
+
+        // Nur sehr wenige Sternschnuppen (spawnrate und max anzahl)
+        if (stars.length < 3 && Math.random() < 0.015) {
+          spawnStar();
+        }
+
+        update(dt);
+        draw();
+        requestAnimationFrame(loop);
+      }
+
+      requestAnimationFrame(loop);
+    })();
+  </script>
+}
+
