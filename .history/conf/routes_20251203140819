@@ -45,9 +45,6 @@ GET   /game/vue          controllers.VueGameController.index
 # React SPA Version
 GET   /game/react      controllers.ReactGameController.index
 
-# Angular SPA Version
-GET   /game/angular    controllers.AngularGameController.index
-
 
 
 
