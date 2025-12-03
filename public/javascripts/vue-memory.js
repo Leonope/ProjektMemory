@@ -286,7 +286,7 @@
           ></memory-board>
 
           <div class="text-center mt-3">
-            <button class="btn btn-outline-light me-2" @click="showSetup = true">
+            <button class="btn me-2" @click="showSetup = true">
               Neues Vue-Spiel konfigurieren
             </button>
             <span v-if="allMatched" class="ms-2 text-success fw-bold">

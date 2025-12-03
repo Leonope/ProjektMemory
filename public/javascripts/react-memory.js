@@ -389,7 +389,7 @@
               e(
                 'button',
                 {
-                  className: 'btn btn-outline-light me-2',
+                  className: 'btn me-2',
                   onClick: function() {
                     setShowSetup(true);
                   }
