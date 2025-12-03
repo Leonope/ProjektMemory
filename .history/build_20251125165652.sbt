@@ -1,3 +1,6 @@
+import play.sbt.PlayImport._
+import play.sbt.PlayKeys
+
 name := """web-tui"""
 organization := "com.leo"
 

@@ -26,20 +26,14 @@
         </a>
       </div>
 
-            <!-- Dropdown zur Auswahl der Version (Dark Mode) -->
+      <!-- Dropdown zur Auswahl der Version (Dark Mode) -->
       <div class="version-selector" style="margin-top: 1.5rem; text-align: center;">
         <select id="gameVersionSelect" class="game-version-select">
-          <option value="@routes.GameController.indexBootstrap.url">
-            Bootstrap-Version (mit Features usw.)
+          <option value="@routes.GameController.indexBootstrap().url">
+            Bootstrap-Version (mit WebSockets usw.)
           </option>
-          <option value="@routes.VueGameController.index.url">
+          <option value="@routes.VueGameController.index().url">
             Vue SPA Version
-          </option>
-          <option value="@routes.ReactGameController.index.url">
-            React SPA Version
-          </option>
-          <option value="@routes.AngularGameController.index.url">
-            Angular SPA Version
           </option>
         </select>
       </div>
@@ -98,7 +92,7 @@
         // --- Version-Auswahl & Start Game Button ---
         const versionSelect = document.getElementById('gameVersionSelect');
         const startLink     = document.getElementById('startGameLink');
-        const defaultUrl    = '@routes.GameController.indexBootstrap.url';
+        const defaultUrl    = '@routes.GameController.indexBootstrap().url';
 
         if (versionSelect && startLink) {
           startLink.addEventListener('click', function(e) {

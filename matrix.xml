@@ -1,21 +1,15 @@
 <matrix>
-        <rows>3</rows>
-        <cols>4</cols>
+        <rows>2</rows>
+        <cols>2</cols>
         <cells>
           <cell row="0" col="0">
-                <id>4</id>
-                <state>FaceDownState</state>
-              </cell><cell row="0" col="1">
                 <id>1</id>
                 <state>FaceDownState</state>
-              </cell><cell row="0" col="2">
-                <id>2</id>
-                <state>FaceDownState</state>
-              </cell><cell row="0" col="3">
+              </cell><cell row="0" col="1">
                 <id>2</id>
                 <state>FaceDownState</state>
               </cell><cell row="1" col="0">
-                <id>4</id>
+                <id>2</id>
                 <state>FaceDownState</state>
               </cell><cell row="0" col="2">
                 <id>5</id>
@@ -33,40 +27,6 @@
                 <id>7</id>
                 <state>FaceDownState</state>
               </cell><cell row="1" col="1">
-<<<<<<< HEAD
-                <id>10</id>
-=======
-                <id>5</id>
->>>>>>> 255c16c97d175309b65ee8de854c81f33fdbaf8f
-                <state>FaceDownState</state>
-              </cell><cell row="1" col="2">
-                <id>3</id>
-                <state>FaceDownState</state>
-              </cell><cell row="1" col="3">
-<<<<<<< HEAD
-                <id>3</id>
-                <state>FaceDownState</state>
-              </cell><cell row="1" col="4">
-                <id>4</id>
-                <state>FaceDownState</state>
-              </cell><cell row="1" col="5">
-                <id>6</id>
-                <state>FaceDownState</state>
-              </cell><cell row="2" col="0">
-                <id>1</id>
-                <state>FaceDownState</state>
-              </cell><cell row="2" col="1">
-                <id>11</id>
-                <state>FaceDownState</state>
-              </cell><cell row="2" col="2">
-                <id>7</id>
-                <state>FaceDownState</state>
-              </cell><cell row="2" col="3">
-                <id>12</id>
-                <state>FaceDownState</state>
-              </cell><cell row="2" col="4">
-                <id>2</id>
-=======
                 <id>1</id>
                 <state>FaceDownState</state>
               </cell><cell row="2" col="0">
@@ -79,28 +39,6 @@
                 <id>6</id>
                 <state>FaceDownState</state>
               </cell><cell row="2" col="3">
-                <id>5</id>
->>>>>>> 255c16c97d175309b65ee8de854c81f33fdbaf8f
-                <state>FaceDownState</state>
-              </cell><cell row="2" col="5">
-                <id>9</id>
-                <state>FaceDownState</state>
-              </cell><cell row="3" col="0">
-                <id>9</id>
-                <state>FaceDownState</state>
-              </cell><cell row="3" col="1">
-                <id>4</id>
-                <state>FaceDownState</state>
-              </cell><cell row="3" col="2">
-                <id>8</id>
-                <state>FaceDownState</state>
-              </cell><cell row="3" col="3">
-                <id>2</id>
-                <state>FaceDownState</state>
-              </cell><cell row="3" col="4">
-                <id>11</id>
-                <state>FaceDownState</state>
-              </cell><cell row="3" col="5">
                 <id>5</id>
                 <state>FaceDownState</state>
               </cell>
