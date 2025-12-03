@@ -4,25 +4,19 @@
 @main_bootstrap("Memory – Neues UI") {
 
   <!-- Vue -->
-  <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://unpkg.com/vue@@3/dist/vue.global.prod.js"></script>
+  <script src='@routes.Assets.versioned("javascripts/gameVue.js")'></script>
 
   <!-- Page-specific CSS -->
   <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/memory.css")'>
+  <div id="counter">{{ count }}</div>
 
   <div class="game-setup-container">
     <!-- Titel + Presets oben rechts -->
     <div class="d-flex justify-content-between align-items-center mb-3">
       <h1 class="mb-0">Memory (Bootstrap-Version)</h1>
-
-      <div class="d-flex align-items-center gap-2">
-        <span class="small text-secondary">Presets:</span>
-        <select id="presetSelect" class="form-select form-select-sm" style="min-width: 210px;">
-          <option value="">– None –</option>
-          <option value="easy">Easy (4 Paare)</option>
-          <option value="standard">Standard (8 Paare)</option>
-          <option value="pro">Pro (12 Paare)</option>
-        </select>
-      </div>
+      
+      <preset-selection></preset-selection>
     </div>
 
     @if(message.nonEmpty) {
@@ -47,12 +41,9 @@
 
       <div class="col-12 col-md-4">
         <label for="playerCount" class="form-label">Anzahl Spieler</label>
-        <select id="playerCount" name="playerCount" class="form-select">
-          <option value="1" @if(playerCount == 1){selected}>1</option>
-          <option value="2" @if(playerCount == 2){selected}>2</option>
-          <option value="3" @if(playerCount == 3){selected}>3</option>
-          <option value="4" @if(playerCount == 4){selected}>4</option>
-        </select>
+        <div id="select-player-count">
+          <select-players></select-players>
+        </div>
       </div>
 
       <div class="col-12 col-md-4">
