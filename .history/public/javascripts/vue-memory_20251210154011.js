@@ -301,7 +301,44 @@
             :found="found"
           ></game-status-bar>
 
-          
+          <!-- Vaadin Web Component: Accordion -->
+                    <!-- Vaadin Web Component: Accordion – klein & unten rechts -->
+          <div class="tech-accordion-container">
+            <vaadin-accordion class="tech-accordion">
+              <vaadin-accordion-panel theme="filled">
+                <div slot="summary">Frameworks</div>
+                <<div class="p-2 accordion-content">
+  <ul class="mb-0">
+    <li>Vue 3 SPA mit Vuetify</li>
+    <li>Bootstrap-Version mit WebSockets</li>
+    <li>React & Angular Varianten</li>
+  </ul>
+</div>
+
+              </vaadin-accordion-panel>
+
+              <vaadin-accordion-panel theme="filled">
+                <div slot="summary">Echtzeit &amp; Kommunikation</div>
+                <div class="p-2">
+                  <ul class="mb-0">
+                    <li>WebSockets für Spiel-Synchronisation</li>
+                    <li>Comet-Chat zwischen Spielern</li>
+                    <li>Server-Sent Events (SSE) für Session-Counter</li>
+                  </ul>
+                </div>
+              </vaadin-accordion-panel>
+
+              <vaadin-accordion-panel theme="filled">
+                <div slot="summary">Speicher &amp; Formate</div>
+                <div class="p-2">
+                  <ul class="mb-0">
+                    <li>JSON für Highscores &amp; Presets</li>
+                    <li>XML für das Karten-Deck</li>
+                  </ul>
+                </div>
+              </vaadin-accordion-panel>
+            </vaadin-accordion>
+          </div>
 
           <memory-board
             :cards="cards"

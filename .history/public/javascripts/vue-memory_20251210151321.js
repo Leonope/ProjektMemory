@@ -301,8 +301,6 @@
             :found="found"
           ></game-status-bar>
 
-          
-
           <memory-board
             :cards="cards"
             @flip="flipCard"

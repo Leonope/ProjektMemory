@@ -2,7 +2,7 @@
 
 (() => {
   const { createApp, ref, computed } = Vue;
-  const { createVuetify } = Vuetify;
+  const { createVuetify } = Vuetify;   // <<< Vuetify kommt jetzt dazu
 
   // --- Hilfsfunktion: Deck bauen --------------------------------
   function buildDeck(pairs) {
@@ -188,6 +188,7 @@
         lock.value = false;
       }
 
+      // ➕ Backend über Start informieren (askPlayerCount/Name/CardCount + GameStarting)
       function notifyBackendStart() {
         const name =
           playerName.value && playerName.value.trim().length > 0
@@ -205,14 +206,28 @@
             pairs:       pairs.value
           })
         })
-          .then(res => res.json().catch(() => null))
-          .catch(err => console.error("Fehler bei /game/vue/start:", err));
+        .then(res => {
+          if (!res.ok) {
+            console.error("Backend /game/vue/start fehlgeschlagen:", res.status);
+          }
+          return res.json().catch(() => null);
+        })
+        .then(data => {
+          if (!data || data.status !== "ok") {
+            console.warn("Antwort von /game/vue/start:", data);
+          }
+        })
+        .catch(err => {
+          console.error("Fehler bei /game/vue/start:", err);
+        });
       }
 
       function startGame() {
         initGame();
         showSetup.value = false;
         message.value = `Vue-Spiel für ${playerName.value || 'Player'} mit ${pairs.value} Paar(en) gestartet.`;
+
+        // Backend-Logik informieren
         notifyBackendStart();
       }
 
@@ -233,6 +248,7 @@
         moves.value++;
 
         if (firstPick.value.symbol === secondPick.value.symbol) {
+          // Match
           setTimeout(() => {
             cards.value[firstPick.value.index].state  = 'matched';
             cards.value[secondPick.value.index].state = 'matched';
@@ -243,6 +259,7 @@
             lock.value = false;
           }, 250);
         } else {
+          // kein Match
           setTimeout(() => {
             cards.value[firstPick.value.index].state  = 'facedown';
             cards.value[secondPick.value.index].state = 'facedown';
@@ -301,8 +318,6 @@
             :found="found"
           ></game-status-bar>
 
-          
-
           <memory-board
             :cards="cards"
             @flip="flipCard"
@@ -321,11 +336,12 @@
     `
   };
 
-  // --- Vue + Vuetify mounten -----------------------------------
+  // --- Vue-App + Vuetify mounten -------------------------------
   const vuetify = createVuetify();
 
   createApp({
     components: { MemoryApp },
+    // Vuetify verlangt einen v-app-Wrapper:
     template: `<v-app><memory-app /></v-app>`
   })
     .use(vuetify)

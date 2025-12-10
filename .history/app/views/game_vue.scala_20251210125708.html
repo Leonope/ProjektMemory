@@ -1,0 +1,110 @@
+@()(implicit request: RequestHeader)
+
+@main_bootstrap("Memory – Vue + Vuetify Version") {
+
+  <!-- Karten-/Board-Styling wiederverwenden -->
+  <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/memory.css")'>
+
+  <!-- Vuetify CSS (CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/vuetify@@3.6.0/dist/vuetify.min.css"
+  >
+
+  <!-- Root-Container für die gesamte Vue/Vuetify-Game-Komponente -->
+  <div id="vue-root" class="position-relative" style="z-index: 10;">
+    <!-- <memory-game> wird hier von Vue/Vuetify gemountet -->
+  </div>
+
+  <!-- Optional: Canvas nur für diese Seite (grüne Sternschnuppen) -->
+  <canvas id="vue-stars-canvas"
+          aria-hidden="true"
+          style="position: fixed; inset: 0; z-index: 1; pointer-events: none;">
+  </canvas>
+
+  <!-- Vue 3 (global build) -->
+  <script src="https://unpkg.com/vue@@3/dist/vue.global.prod.js"></script>
+
+  <!-- Vuetify JS (CDN, basierend auf Vue 3 global) -->
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@@3.6.0/dist/vuetify.min.js"></script>
+
+  <!-- Deine Vue+Vuetify-Logik: gesamtes Spiel als Komponente -->
+  <script src='@routes.Assets.versioned("javascripts/vue-memory.js")'></script>
+
+  <!-- Grüne Sternschnuppen speziell für die Vue-Seite -->
+  <script type="text/javascript">
+    (function() {
+      const canvas = document.getElementById('vue-stars-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      function resize() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      const stars = [];
+
+      function spawnStar() {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height * 0.5;
+        const speed = 80 + Math.random() * 60;
+        stars.push({
+          x,
+          y,
+          vx: -speed,
+          vy: speed * 0.2,
+          life: 0,
+          maxLife: 2 + Math.random() * 1.5
+        });
+      }
+
+      let lastTime = performance.now();
+
+      function update(dt) {
+        for (let i = stars.length - 1; i >= 0; i--) {
+          const s = stars[i];
+          s.life += dt;
+          if (s.life > s.maxLife) {
+            stars.splice(i, 1);
+            continue;
+          }
+          s.x += s.vx * dt;
+          s.y += s.vy * dt;
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        stars.forEach(s => {
+          const t = s.life / s.maxLife;
+          const alpha = 1 - t;
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(129, 199, 132, ${alpha})`; // grünlich
+          ctx.lineWidth = 2;
+          ctx.moveTo(s.x, s.y);
+          ctx.lineTo(s.x + 16, s.y - 8);
+          ctx.stroke();
+        });
+      }
+
+      function loop(now) {
+        const dt = (now - lastTime) / 1000;
+        lastTime = now;
+
+        if (stars.length < 15 && Math.random() < 0.05) {
+          spawnStar();
+        }
+
+        update(dt);
+        draw();
+        requestAnimationFrame(loop);
+      }
+
+      requestAnimationFrame(loop);
+    })();
+  </script>
+}

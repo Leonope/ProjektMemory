@@ -2,7 +2,6 @@
 
 (() => {
   const { createApp, ref, computed } = Vue;
-  const { createVuetify } = Vuetify;
 
   // --- Hilfsfunktion: Deck bauen --------------------------------
   function buildDeck(pairs) {
@@ -188,32 +187,10 @@
         lock.value = false;
       }
 
-      function notifyBackendStart() {
-        const name =
-          playerName.value && playerName.value.trim().length > 0
-            ? playerName.value.trim()
-            : "Player";
-
-        fetch("/game/vue/start", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            playerName:  name,
-            playerCount: playerCount.value,
-            pairs:       pairs.value
-          })
-        })
-          .then(res => res.json().catch(() => null))
-          .catch(err => console.error("Fehler bei /game/vue/start:", err));
-      }
-
       function startGame() {
         initGame();
         showSetup.value = false;
         message.value = `Vue-Spiel für ${playerName.value || 'Player'} mit ${pairs.value} Paar(en) gestartet.`;
-        notifyBackendStart();
       }
 
       function flipCard(index) {
@@ -233,6 +210,7 @@
         moves.value++;
 
         if (firstPick.value.symbol === secondPick.value.symbol) {
+          // Match
           setTimeout(() => {
             cards.value[firstPick.value.index].state  = 'matched';
             cards.value[secondPick.value.index].state = 'matched';
@@ -243,6 +221,7 @@
             lock.value = false;
           }, 250);
         } else {
+          // kein Match
           setTimeout(() => {
             cards.value[firstPick.value.index].state  = 'facedown';
             cards.value[secondPick.value.index].state = 'facedown';
@@ -301,15 +280,13 @@
             :found="found"
           ></game-status-bar>
 
-          
-
           <memory-board
             :cards="cards"
             @flip="flipCard"
           ></memory-board>
 
           <div class="text-center mt-3">
-            <button class="btn me-2" @click="showSetup = true">
+            <button class="btn btn-outline-light me-2" @click="showSetup = true">
               Neues Vue-Spiel konfigurieren
             </button>
             <span v-if="allMatched" class="ms-2 text-success fw-bold">
@@ -321,14 +298,10 @@
     `
   };
 
-  // --- Vue + Vuetify mounten -----------------------------------
-  const vuetify = createVuetify();
-
+  // --- Vue-App mounten ------------------------------------------
   createApp({
     components: { MemoryApp },
-    template: `<v-app><memory-app /></v-app>`
-  })
-    .use(vuetify)
-    .mount('#vue-app');
+    template: `<memory-app />`
+  }).mount('#vue-app');
 
 })();

@@ -2,81 +2,35 @@
 
 @main_bootstrap("Memory – Vue SPA") {
 
-  <!-- Memory-Styles (Flip, Match, Chat usw.) -->
+  <!-- WICHTIG: Memory-spezifische Styles (Flip, Match, Shake, Chat, etc.) -->
   <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/memory.css")'>
 
-  <!-- Vue-App Mount-Point -->
+  <!-- Canvas NUR für Vue-spezifische grünen Sternschnuppen (über dem globalen Background) -->
+  <canvas id="vue-stars-canvas" aria-hidden="true"></canvas>
+
+  <!-- Mount-Point für die Vue+Vuetify-App -->
   <div id="vue-app" class="position-relative" style="z-index: 10;"></div>
 
-  <!-- Vaadin Accordion: Immer sichtbar unten rechts im Layout -->
-<div class="tech-accordion-wrapper">
-  <div class="tech-accordion-container">
-    <vaadin-accordion class="tech-accordion">
-      <vaadin-accordion-panel theme="filled">
-        <div slot="summary">Frameworks</div>
-        <div class="p-2 accordion-content">
-          <ul class="mb-0">
-            <li>Vue 3 SPA + Vuetify</li>
-            <li>Bootstrap WebSockets Version</li>
-            <li>React Variante</li>
-            <li>Angular Variante</li>
-          </ul>
-        </div>
-      </vaadin-accordion-panel>
-
-      <vaadin-accordion-panel theme="filled">
-        <div slot="summary">Echtzeit</div>
-        <div class="p-2 accordion-content">
-          <ul class="mb-0">
-            <li>WebSockets</li>
-            <li>Comet Chat</li>
-            <li>Server-Sent Events</li>
-          </ul>
-        </div>
-      </vaadin-accordion-panel>
-
-      <vaadin-accordion-panel theme="filled">
-        <div slot="summary">Datenformate</div>
-        <div class="p-2 accordion-content">
-          <ul class="mb-0">
-            <li>JSON für Highscores</li>
-            <li>XML für Spielkarten</li>
-          </ul>
-        </div>
-      </vaadin-accordion-panel>
-    </vaadin-accordion>
-  </div>
-</div>
-
-
-  <!-- Vuetify-Web-Component (Badge) -->
+  <!-- Kleine Vuetify-Web-Component Anzeige unter dem Spiel -->
   <div class="d-flex justify-content-center mt-3 position-relative" style="z-index: 10;">
     <memory-vuetify-badge label="Vue + Vuetify Web Component aktiv"></memory-vuetify-badge>
   </div>
 
-  <!-- Quasar-Web-Component (Energie-Panel) -->
-  <memory-quasar-panel></memory-quasar-panel>
-
-  <!-- Vue 3 -->
+  <!-- Vue 3 (global build) -->
   <script src="https://unpkg.com/vue@@3/dist/vue.global.prod.js"></script>
 
-  <!-- Vuetify 3 -->
+  <!-- Vuetify 3 (global build) -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/vuetify@@3.6.0/dist/vuetify.min.css"
   >
   <script src="https://cdn.jsdelivr.net/npm/vuetify@@3.6.0/dist/vuetify.min.js"></script>
 
-  <!-- Vaadin Accordion (Web Component) -->
-  <script
-    type="module"
-    src="https://unpkg.com/@@vaadin/accordion@@24.9.2/vaadin-accordion.js?module">
-  </script>
-
-  <!-- Vue-Logik + Web Components -->
+  <!-- Deine Vue-Logik (MemoryApp + Subcomponents) -->
   <script src='@routes.Assets.versioned("javascripts/vue-memory.js")'></script>
+
+  <!-- NEU: Custom Web Component, die Vuetify verwendet -->
   <script src='@routes.Assets.versioned("javascripts/memory-webcomponent.js")'></script>
-  <script src='@routes.Assets.versioned("javascripts/quasar-webcomponent.js")'></script>
 
   <!-- Vue-spezifische grünen Sternschnuppen -->
   <script type="text/javascript">

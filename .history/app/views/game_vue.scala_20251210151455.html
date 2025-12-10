@@ -5,57 +5,53 @@
   <!-- Memory-Styles (Flip, Match, Chat usw.) -->
   <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/memory.css")'>
 
-  <!-- Vue-App Mount-Point -->
+  <!-- Mount-Point für die Vue+Vuetify-App -->
   <div id="vue-app" class="position-relative" style="z-index: 10;"></div>
 
-  <!-- Vaadin Accordion: Immer sichtbar unten rechts im Layout -->
-<div class="tech-accordion-wrapper">
+  <!-- Vuetify-Web-Component (Badge) -->
+  <div class="d-flex justify-content-center mt-3 position-relative" style="z-index: 20;">
+    <memory-vuetify-badge label="Vue + Vuetify Web Component aktiv"></memory-vuetify-badge>
+  </div>
+
+  <!-- Quasar-Web-Component (Mission-Control-Panel) -->
+  <memory-quasar-panel></memory-quasar-panel>
+
+  <!-- Vaadin-Accordion: Tech-Stack – FEST unten rechts, unabhängig von Vue -->
   <div class="tech-accordion-container">
-    <vaadin-accordion class="tech-accordion">
+    <vaadin-accordion>
       <vaadin-accordion-panel theme="filled">
         <div slot="summary">Frameworks</div>
-        <div class="p-2 accordion-content">
+        <div class="p-2">
           <ul class="mb-0">
-            <li>Vue 3 SPA + Vuetify</li>
-            <li>Bootstrap WebSockets Version</li>
-            <li>React Variante</li>
-            <li>Angular Variante</li>
+            <li>Vue 3 SPA mit Vuetify</li>
+            <li>Bootstrap-Version mit WebSockets</li>
+            <li>React &amp; Angular Varianten</li>
           </ul>
         </div>
       </vaadin-accordion-panel>
 
       <vaadin-accordion-panel theme="filled">
-        <div slot="summary">Echtzeit</div>
-        <div class="p-2 accordion-content">
+        <div slot="summary">Echtzeit &amp; Kommunikation</div>
+        <div class="p-2">
           <ul class="mb-0">
-            <li>WebSockets</li>
-            <li>Comet Chat</li>
-            <li>Server-Sent Events</li>
+            <li>WebSockets für Spiel-Synchronisation</li>
+            <li>Comet-Chat zwischen Spielern</li>
+            <li>Server-Sent Events (SSE) für Session-Counter</li>
           </ul>
         </div>
       </vaadin-accordion-panel>
 
       <vaadin-accordion-panel theme="filled">
-        <div slot="summary">Datenformate</div>
-        <div class="p-2 accordion-content">
+        <div slot="summary">Speicher &amp; Formate</div>
+        <div class="p-2">
           <ul class="mb-0">
-            <li>JSON für Highscores</li>
-            <li>XML für Spielkarten</li>
+            <li>JSON für Highscores &amp; Presets</li>
+            <li>XML für das Karten-Deck</li>
           </ul>
         </div>
       </vaadin-accordion-panel>
     </vaadin-accordion>
   </div>
-</div>
-
-
-  <!-- Vuetify-Web-Component (Badge) -->
-  <div class="d-flex justify-content-center mt-3 position-relative" style="z-index: 10;">
-    <memory-vuetify-badge label="Vue + Vuetify Web Component aktiv"></memory-vuetify-badge>
-  </div>
-
-  <!-- Quasar-Web-Component (Energie-Panel) -->
-  <memory-quasar-panel></memory-quasar-panel>
 
   <!-- Vue 3 -->
   <script src="https://unpkg.com/vue@@3/dist/vue.global.prod.js"></script>
@@ -73,10 +69,66 @@
     src="https://unpkg.com/@@vaadin/accordion@@24.9.2/vaadin-accordion.js?module">
   </script>
 
+  <!-- Quasar 2 (UMD, für Vue 3) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quasar@@2/dist/quasar.prod.css">
+  <script src="https://cdn.jsdelivr.net/npm/quasar@@2/dist/quasar.umd.prod.js"></script>
+
   <!-- Vue-Logik + Web Components -->
   <script src='@routes.Assets.versioned("javascripts/vue-memory.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/memory-webcomponent.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/quasar-webcomponent.js")'></script>
+
+  <!-- Lokale Overrides NACH Quasar/Vuetify, damit dein Look wieder passt -->
+  <style>
+    /* Deine Grundschrift wiederherstellen */
+    html, body {
+      font-size: 32px !important;
+      font-family: var(--default-font) !important;
+    }
+
+    body,
+    .q-body--light,
+    .q-body--dark {
+      font-family: var(--default-font) !important;
+      color: var(--text-color);
+      background-color: var(--base-color);
+    }
+
+    /* Vuetify nicht den Hintergrund kapern lassen */
+    .v-application {
+      background-color: transparent !important;
+      color: var(--text-color) !important;
+      font-family: var(--default-font) !important;
+    }
+
+    /* Tech-Accordion: fest unten rechts, immer klickbar */
+    .tech-accordion-container {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      width: 260px;
+      z-index: 9999;
+      pointer-events: auto;
+    }
+
+    .tech-accordion-container vaadin-accordion {
+      font-size: 0.8rem;
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 8px;
+      padding: 0.25rem;
+    }
+
+    /* Quasar-Panel unten links */
+    memory-quasar-panel {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+      width: 260px;
+      z-index: 9999;
+      display: block;
+    }
+  </style>
+
 
   <!-- Vue-spezifische grünen Sternschnuppen -->
   <script type="text/javascript">

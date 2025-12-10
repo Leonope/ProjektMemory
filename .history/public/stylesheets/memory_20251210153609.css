@@ -189,127 +189,16 @@
   padding: 0.4rem;
 }
 
-/* Inhalt im geöffneten Accordion kleiner machen */
-.tech-accordion .accordion-content {
-    font-size: 0.75rem !important;  /* kleiner */
-    line-height: 1.2 !important;
-}
-
-/* Listen im Accordion ebenfalls kleiner */
-.tech-accordion .accordion-content ul,
-.tech-accordion .accordion-content li {
-    font-size: 0.8rem !important;
+/* Accordion Titel (Summary) größer machen */
+.tech-accordion::part(summary) {
+  font-size: 1rem !important;       /* gleiche Größe wie Text */
+  font-weight: 700 !important;      /* fett */
+  color: #ffffff !important;        /* hell */
 }
 
 /* Optional: beim Hover etwas heller */
 .tech-accordion::part(summary):hover {
   color: #a8d0ff !important;
-}
-
-/* ========== Custom Web Components: Badge + Pill ========== */
-
-.memory-badge-wrapper {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding: 0.4rem 0.6rem;
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 12px rgba(0,0,0,0.5);
-}
-
-.memory-badge-main {
-  background: rgba(66, 184, 131, 0.15);
-  border: 1px solid rgba(66, 184, 131, 0.9);
-  color: #e8fdf3;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding-inline: 0.75rem;
-  cursor: default;
-}
-
-.memory-badge-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: #42b883; /* Vue-Grün */
-  box-shadow: 0 0 8px #42b883;
-}
-
-.memory-badge-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.memory-badge-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-}
-
-.memory-badge-chip {
-  font-size: 0.7rem;
-  padding-inline: 0.6rem;
-  background: rgba(255, 255, 255, 0.06);
-  color: #f5f5f5;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.memory-badge-chip[data-role="energy"],
-.memory-badge-chip[data-role="mode"] {
-  cursor: pointer;
-}
-
-.memory-badge-chip[data-role="energy"]:hover {
-  box-shadow: 0 0 8px rgba(255, 230, 109, 0.9);
-}
-
-.memory-badge-chip[data-role="mode"]:hover {
-  box-shadow: 0 0 8px rgba(117, 196, 255, 0.9);
-}
-
-.memory-badge-info {
-  opacity: 0.9;
-}
-
-.memory-badge-hint-row {
-  margin-top: 0.1rem;
-}
-
-.memory-badge-actions {
-  margin-top: 0.15rem;
-  justify-content: flex-end;
-}
-
-.memory-badge-btn {
-  background: transparent;
-  color: #e0e0e0;
-  font-size: 0.65rem;
-  border-radius: 999px;
-  padding: 0.1rem 0.6rem;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  cursor: pointer;
-}
-.memory-badge-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* Kleine Pill-Komponente */
-.memory-pill {
-  display: inline-block;
-  font-size: 0.65rem;
-  padding: 0.1rem 0.6rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(0, 0, 0, 0.5);
-  color: #f4f4f4;
-}
-
-.memory-pill--hint {
-  border-color: rgba(66, 184, 131, 0.8);
-  color: #c8ffe2;
 }
 
 
