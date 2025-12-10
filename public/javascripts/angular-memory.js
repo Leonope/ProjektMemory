@@ -17,7 +17,7 @@
   }
 
   angular.module('memoryApp', [])
-    .controller('MemoryController', ['$timeout', function($timeout) {
+    .controller('MemoryController', ['$timeout', function($timeout) {//controller or component definition
       var vm = this;
 
       vm.showSetup   = true;

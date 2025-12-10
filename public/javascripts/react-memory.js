@@ -200,7 +200,7 @@
               type: 'button',
               className: 'memory-card w-100',
               'data-state': card.state,
-              onClick: function() {
+              onClick: function() {//event binding
                 onFlip && onFlip(index);
               }
             },
@@ -245,7 +245,7 @@
     const [playerCount, setPlayerCount] = useState(1);
     const [pairs, setPairs] = useState(4);
 
-    const [moves, setMoves] = useState(0);
+    const [moves, setMoves] = useState(0);//state binding
     const [found, setFound] = useState(0);
     const [cards, setCards] = useState([]);
 
@@ -372,7 +372,7 @@
                 { className: 'alert alert-info text-center mb-3' },
                 message
               ),
-            e(GameStatusBar, {
+            e(GameStatusBar, { 
               playerName: playerName,
               playerCount: playerCount,
               pairs: pairs,
