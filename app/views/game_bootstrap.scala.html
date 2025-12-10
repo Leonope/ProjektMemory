@@ -3,6 +3,10 @@
 
 @main_bootstrap("Memory – Neues UI") {
 
+  <!-- Vue -->
+  <script src="https://unpkg.com/vue@@3/dist/vue.global.prod.js"></script>
+  <script src='@routes.Assets.versioned("javascripts/gameVue.js")'></script>
+
   <!-- Page-specific CSS -->
   <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/memory.css")'>
 
@@ -10,7 +14,7 @@
     <!-- Titel + Presets oben rechts -->
     <div class="d-flex justify-content-between align-items-center mb-3">
       <h1 class="mb-0">Memory (Bootstrap-Version)</h1>
-
+      
       <div class="d-flex align-items-center gap-2">
         <span class="small text-secondary">Presets:</span>
         <select id="presetSelect" class="form-select form-select-sm" style="min-width: 210px;">
