@@ -32,8 +32,7 @@ export default {
 
 <style scoped>
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
-@import url('/stylesheets/main.css');
-@import url('/stylesheets/stars.css');
+
 
 body {
   background-color: #212529;
