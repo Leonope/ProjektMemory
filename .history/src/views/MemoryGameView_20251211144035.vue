@@ -1,0 +1,72 @@
+<!-- src/views/MemoryGameView.vue -->
+<template>
+  <div class="game-page">
+    <header class="game-header">
+      <h2>Memory Game – Vue Version</h2>
+      <button class="back-button" @click="goHome">
+        ⬅ Zurück zur Startseite
+      </button>
+    </header>
+
+    <section class="game-content">
+      <!--
+        HIER wird später deine Memory-App integriert.
+        Zum Beispiel Board, Status-Bar, Setup, WebSockets usw.
+      -->
+      <p class="placeholder">
+        Hier wird die Memory-Vue-App eingebunden.
+        <br />
+        Im nächsten Schritt können wir deine vorhandene
+        <code>vue-memory.js</code> und Komponenten hier hineinziehen.
+      </p>
+    </section>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'MemoryGameView',
+  methods: {
+    goHome() {
+      this.$router.push({ name: 'Home' })
+    },
+  },
+}
+</script>
+
+<style scoped>
+.game-page {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-button {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: #f3f3f3;
+}
+
+.game-content {
+  margin-top: 1.5rem;
+}
+
+.placeholder {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px dashed #bbb;
+  background: #fafafa;
+}
+</style>
