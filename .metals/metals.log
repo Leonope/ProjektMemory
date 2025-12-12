@@ -1925,3 +1925,15 @@ INFO: Unsupported notification method: $/setTrace
 2025.12.11 14:50:52 INFO  Shut down connection with build server.
 2025.12.11 14:50:52 INFO  Shut down connection with build server.
 2025.12.11 14:50:52 INFO  Exiting server
+2025.12.11 14:51:10 INFO  Started: Metals version 1.6.4 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\vue\ProjektMemory' for client Visual Studio Code 1.107.0.
+2025.12.11 14:51:13 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.12.11 14:51:22 WARN  Build server is not auto-connectable.
+Dec 11, 2025 3:33:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.12.11 15:34:21 INFO  Shutting down server
+2025.12.11 15:34:21 INFO  shutting down Metals
+2025.12.11 15:34:21 INFO  Exiting server
+2025.12.12 18:33:51 INFO  Started: Metals version 1.6.4 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\vue\ProjektMemory' for client Visual Studio Code 1.107.0.
+2025.12.12 18:33:52 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+Dec 12, 2025 6:36:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

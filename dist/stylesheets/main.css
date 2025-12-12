@@ -1,0 +1,178 @@
+:root {
+    --base-color: #000028; /*Dark Blue Background*/
+    --text-color: #e7e7e7; /*White Text Color*/
+    --text-accent: #dddddd; /*Lighter Text for hovering, mainly used in navbar*/
+    --dark-text: #202020; /*Darker Text Color for bright Background*/
+    --button-color: #32395280; /*Button Color*/
+    --accent-color: #0071ff; /*Accent Color, for example for hovering over a Button*/
+    --default-font: 'JetBrains Mono', Helvetica, Arial; /*Sets font to NetBrains Mono, if not, fall back on the other 2*/
+    --hyperlink-color: #cc1019; /*Color for hyperlinks*/
+    --hyperlink-accent: #ee1e28; /*Accent color for hyperlinks on hover*/
+    --tui-color: #212125; /*TUI Background Color*/
+    --tui-text-color: #d8cdcd; /*TUI Text Color*/
+}
+
+.gamecontainer {
+    height: 100%;
+    width: 100%;
+    margin: 1em;
+    display:flex;
+    font-size:40px;
+    font-family: "Verdana",Geneva, sans-serif;
+    font-weight: bold;
+    color:black;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column; /*Stacks children vertically*/
+    align-items: center; /*Centers children horizontally*/
+    justify-content: center; /*Centers children vertically*/
+    height: 100vh; /*Full viewport height*/
+    width: 100vw; /*Full viewport width*/
+}
+
+.tui-log {
+    background-color: var(--tui-color); /*Sets TUI background color*/
+    color: var(--tui-text-color); /*Sets TUI text color*/
+    font-family: var(--default-font);
+    font-size: 20px; /*Sets TUI font size*/
+    padding: 20px; /*Adds padding inside the TUI container*/
+    border-radius: 10px; /*Rounds the corners of the TUI container*/
+    width: 30vw; /*Sets TUI width to 80% of viewport width*/
+    height: 20vh; /*Sets TUI height to 60% of viewport height*/
+    overflow-y: auto; /*Adds vertical scrollbar if content overflows*/
+    margin-bottom: 1ex; /*Adds space below the TUI container*/
+}
+
+body {
+    width: 100vw;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    font-family: var(--default-font);
+    font-size: 32px; /*Sets base font size*/
+    display: flex;
+    text-align: center; /*Centers all the text*/
+    align-items: center; /*Centers content vertically*/
+    justify-content: center; /*Centers content horizontally*/
+    flex-direction: column; /*Stacks children vertically*/
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.game-rules {
+    font-size: 20px; /*Sets font size for list items*/
+}
+
+.game-rules li {
+    margin-top: 1.8em; /*Adds margin between list items*/
+    margin-bottom: 0.5em; /*Adds margin between list items*/
+}
+
+.game-rules img {
+    max-width: 17%; /*Ensures images do not exceed container width*/
+    height: auto; /*Maintains aspect ratio*/
+}
+
+.remove_bulletpoint {
+    list-style-type: none; /*Removes bullets from lists*/
+    text-align: center;
+}
+
+.controls {
+    clear: both; /*Clears floats*/
+    overflow: auto; /*Ensures proper layout*/
+}
+
+a {
+    color: var(--hyperlink-color); /*Sets hyperlink color*/
+    text-decoration: none; /*Removes underline from hyperlinks*/
+    transition: cubic-bezier(0.5, 0, 1, 1) 0.15s;
+}
+
+a:hover {
+    color: var(--hyperlink-accent); /*Changes hyperlink color on hover*/
+}
+
+button {
+    background-color: var(--button-color); /**/
+    color: var(--text-color);
+    border: none; /*Removes the Border*/
+    padding: 10px 20px; /*Padding around the text*/
+    text-align: center; /*Centers text inside button*/
+    display: inline-block; /*Inline-block display*/
+    font-family: var(--default-font);
+    font-size: 24px; /*Font size for button text*/
+    margin: 10px; /*Margin around button*/
+    cursor: pointer; /*Pointer cursor on hover*/
+    border-radius: 25px; /*Rounded corners*/
+    transition: cubic-bezier(0.5, 0, 1, 1) 0.15s;
+}
+
+button:hover {
+    /*background-color: var(--accent-color); /*Changes button color on hover*/
+    background-color: transparent; /*Makes button background invisible on hover*/
+    text-shadow: 0 0 1em #f8f8f8, 0 0 15px #e7e7e7; /*Adds glow effect on hover*/
+    box-shadow: 0 0 0 #000000;
+}
+
+.btn {
+    background-color: var(--button-color); /**/
+    color: var(--text-color);
+    border: none; /*Removes the Border*/
+    padding: 10px 20px; /*Padding around the text*/
+    text-align: center; /*Centers text inside button*/
+    display: inline-block; /*Inline-block display*/
+    font-family: var(--default-font);
+    font-size: 24px; /*Font size for button text*/
+    margin: 10px; /*Margin around button*/
+    cursor: pointer; /*Pointer cursor on hover*/
+    border-radius: 25px; /*Rounded corners*/
+    transition: cubic-bezier(0.5, 0, 1, 1) 0.15s;
+}
+
+.btn:hover {
+    background-color: transparent; /*Makes button background invisible on hover*/
+    text-shadow: 0 0 1em #f8f8f8, 0 0 15px #e7e7e7; /*Adds glow effect on hover*/
+    box-shadow: 0 0 0 #000000;
+}
+
+.navbar-brand {
+    color: var(--text-color); /*Sets navbar brand text color*/
+    font-size: 28px; /*Sets navbar brand font size*/
+    font-weight: bold; /*Makes navbar brand text bold*/
+    text-align: center; /*Centers navbar brand text*/
+    transition: cubic-bezier(0.5, 0, 1, 1) 0.15s;
+}
+
+.navbar-brand:hover {
+    color: var(--text-accent); /*Changes navbar brand color on hover*/
+    text-shadow: 0 0 0.5em #0071ff, 0 0 1em #00a1ff; /*Enhances glow effect on hover*/
+}
+
+h2 {
+    text-decoration: underline; /*Underlines h2 elements*/
+}
+
+.title {
+    text-shadow: 0 0 10px #0071ff; /*Adds glow effect to title*/
+    padding: 0.5em;
+    transition: cubic-bezier(0.5, 0, 1, 1) 0.15s;
+}
+
+.title:hover {
+    text-shadow: 0 0 10px #0071ff, 0 0 20px #00a1ff; /*Enhances glow effect on hover*/
+}
+
+.hidden {
+    display: none !important;
+}
+
+.force-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    width: 100%;
+}
