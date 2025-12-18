@@ -27,35 +27,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero {
-  max-width: 480px;
-  text-align: center;
-}
-
-.lead {
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.start-button {
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  background: #42b983;
-  color: white;
-}
-
-.start-button:hover {
-  opacity: 0.9;
-}
-</style>

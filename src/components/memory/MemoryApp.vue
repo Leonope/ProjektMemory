@@ -221,7 +221,7 @@ export default {
 }
 
 .game-container {
-  background: #f8f9fa;
+  background: #666666;
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.08);
@@ -249,7 +249,7 @@ export default {
 }
 
 .info-box {
-  background: white;
+  background: #666666;
   border-radius: 0.75rem;
   padding: 0.75rem 1rem;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.04);
