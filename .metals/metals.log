@@ -3610,3 +3610,49 @@ org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequ
 Dec 10, 2025 1:07:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
 2025.12.10 13:13:43 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\VueGameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.12.10 16:00:24 INFO  Shutting down server
+2025.12.10 16:00:24 INFO  shutting down Metals
+2025.12.10 16:00:24 INFO  Exiting server
+2025.12.11 09:39:18 INFO  Started: Metals version 1.6.4 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory' for client Visual Studio Code 1.106.3.
+2025.12.11 09:39:19 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.12.11 09:39:24 WARN  Build server is not auto-connectable.
+2025.12.11 10:15:21 WARN  no build target for: C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\VueGameController.scala
+2025.12.11 10:15:21 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\VueGameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.12.11 10:15:21 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\VueGameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.12.11 10:15:23 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\VueGameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.12.11 10:15:23 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\VueGameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.12.11 10:15:24 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\VueGameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.12.11 10:15:28 INFO  time: code lens generation in 4.3s
+2025.12.11 10:16:23 INFO  no build target found for C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory\app\controllers\VueGameController.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.12.11 11:25:20 INFO  Shutting down server
+2025.12.11 11:25:20 INFO  shutting down Metals
+2025.12.11 11:25:20 INFO  Exiting server
+2025.12.11 14:19:38 INFO  Started: Metals version 1.6.4 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory' for client Visual Studio Code 1.107.0.
+2025.12.11 14:19:40 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.12.11 14:20:24 INFO  Shutting down server
+2025.12.11 14:20:24 INFO  shutting down Metals
+2025.12.11 14:20:24 INFO  Exiting server
+2025.12.18 09:58:45 INFO  Started: Metals version 1.6.4 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory' for client Visual Studio Code 1.107.0.
+2025.12.18 09:58:47 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.12.18 10:51:34 INFO  Shutting down server
+2025.12.18 10:51:34 INFO  shutting down Metals
+2025.12.18 10:51:34 INFO  Exiting server
+2025.12.18 10:51:34 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1570)
+
+2025.12.20 20:27:48 INFO  Started: Metals version 1.6.4 in folders 'C:\Users\leo11\OneDrive\Desktop\HTWG\AIN\Semester5\Web-apps\play-server\ProjektMemory' for client Visual Studio Code 1.107.1.
+2025.12.20 20:27:49 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.12.20 20:28:13 WARN  Build server is not auto-connectable.
+2025.12.20 20:59:30 INFO  Shutting down server
+2025.12.20 20:59:30 INFO  shutting down Metals
+2025.12.20 20:59:30 INFO  Exiting server

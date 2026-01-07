@@ -8,48 +8,53 @@
   <!-- Vue-App Mount-Point -->
   <div id="vue-app" class="position-relative" style="z-index: 10;"></div>
 
-  <!-- Quasar-Web-Component (Energie-Panel)
-  <memory-quasar-panel></memory-quasar-panel-->
+  <!-- Quasar-Web-Component (Energie-Panel) -->
+  <memory-quasar-panel></memory-quasar-panel>
 
-  <!-- Vaadin Accordion (Tech-Übersicht, Position über CSS steuerbar) -->
-  <div class="tech-accordion-wrapper">
-    <div class="tech-accordion-container">
-      <vaadin-accordion class="tech-accordion">
-        <vaadin-accordion-panel theme="filled">
-          <div slot="summary">Frameworks</div>
-          <div class="p-2 accordion-content">
-            <ul class="mb-0">
-              <li>Vue 3 SPA + Vuetify</li>
-              <li>Bootstrap WebSockets Version</li>
-              <li>React Variante</li>
-              <li>Angular Variante</li>
-            </ul>
-          </div>
-        </vaadin-accordion-panel>
+  <!-- Quasar 2 (UMD, für Vue 3) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quasar@@2/dist/quasar.prod.css">
+  <script src="https://cdn.jsdelivr.net/npm/quasar@@2/dist/quasar.umd.prod.js"></script>
 
-        <vaadin-accordion-panel theme="filled">
-          <div slot="summary">Echtzeit</div>
-          <div class="p-2 accordion-content">
-            <ul class="mb-0">
-              <li>WebSockets</li>
-              <li>Comet Chat</li>
-              <li>Server-Sent Events</li>
-            </ul>
-          </div>
-        </vaadin-accordion-panel>
+  <!-- Vaadin Accordion:  -->
+<div class="tech-accordion-wrapper">
+  <div class="tech-accordion-container">
+    <vaadin-accordion class="tech-accordion">
+      <vaadin-accordion-panel theme="filled">
+        <div slot="summary">Frameworks</div>
+        <div class="p-2 accordion-content">
+          <ul class="mb-0">
+            <li>Vue 3 SPA + Vuetify</li>
+            <li>Bootstrap WebSockets Version</li>
+            <li>React Variante</li>
+            <li>Angular Variante</li>
+          </ul>
+        </div>
+      </vaadin-accordion-panel>
 
-        <vaadin-accordion-panel theme="filled">
-          <div slot="summary">Datenformate</div>
-          <div class="p-2 accordion-content">
-            <ul class="mb-0">
-              <li>JSON für Highscores</li>
-              <li>XML für Spielkarten</li>
-            </ul>
-          </div>
-        </vaadin-accordion-panel>
-      </vaadin-accordion>
-    </div>
+      <vaadin-accordion-panel theme="filled">
+        <div slot="summary">Echtzeit</div>
+        <div class="p-2 accordion-content">
+          <ul class="mb-0">
+            <li>WebSockets</li>
+            <li>Comet Chat</li>
+            <li>Server-Sent Events</li>
+          </ul>
+        </div>
+      </vaadin-accordion-panel>
+
+      <vaadin-accordion-panel theme="filled">
+        <div slot="summary">Datenformate</div>
+        <div class="p-2 accordion-content">
+          <ul class="mb-0">
+            <li>JSON für Highscores</li>
+            <li>XML für Spielkarten</li>
+          </ul>
+        </div>
+      </vaadin-accordion-panel>
+    </vaadin-accordion>
   </div>
+</div>
+
 
   <!-- Vuetify-Web-Component (Badge) -->
   <div class="d-flex justify-content-center mt-3 position-relative" style="z-index: 10;">
@@ -66,22 +71,16 @@
   >
   <script src="https://cdn.jsdelivr.net/npm/vuetify@@3.6.0/dist/vuetify.min.js"></script>
 
-  <!-- Quasar 2 (UMD, für Vue 3) 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quasar@@2/dist/quasar.prod.css">
-  <script src="https://cdn.jsdelivr.net/npm/quasar@@2/dist/quasar.umd.prod.js"></script>-->
-
   <!-- Vaadin Accordion (Web Component) -->
   <script
     type="module"
     src="https://unpkg.com/@@vaadin/accordion@@24.9.2/vaadin-accordion.js?module">
   </script>
 
-  <!-- Eigene Web Components (nutzen Vuetify / Quasar) -->
+  <!-- Vue-Logik + Web Components -->
+  <script src='@routes.Assets.versioned("javascripts/vue-memory.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/memory-webcomponent.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/quasar-webcomponent.js")'></script>
-
-  <!-- Vue Memory SPA (Vue + Vuetify Memory-Spiel) -->
-  <script src='@routes.Assets.versioned("javascripts/vue-memory.js")'></script>
 
   <!-- Vue-spezifische grünen Sternschnuppen -->
   <script type="text/javascript">

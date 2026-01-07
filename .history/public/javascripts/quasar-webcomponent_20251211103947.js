@@ -89,7 +89,7 @@
       };
 
       const app = createApp(Panel);
-      app.use(Quasar);
+      //app.use(Quasar);
       this._app = app;
       app.mount(mountPoint);
     }
