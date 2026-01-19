@@ -1,0 +1,172 @@
+@()
+
+@main_bootstrap("Login") {
+
+  <!-- Page-specific CSS (wie bei game_bootstrap) -->
+  <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/memory.css")'>
+
+  <!-- Firebase compat SDK (passt zu deinem bisherigen Code) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+  <div class="container" style="max-width: 560px; margin-top: 2.5rem;">
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+
+        <h1 class="h3 mb-3">Login</h1>
+
+        <div id="msg" class="alert alert-danger" style="display:none; white-space: pre-wrap;"></div>
+
+        <h2 class="h5 mt-3">Email</h2>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" class="form-control" placeholder="Email" autocomplete="email">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Passwort</label>
+          <input id="password" type="password" class="form-control" placeholder="Passwort" autocomplete="current-password">
+        </div>
+
+        <div class="d-flex gap-2">
+          <button type="button" id="btnLogin" class="btn btn-primary w-100">Login</button>
+          <button type="button" id="btnSignup" class="btn btn-outline-primary w-100">Registrieren</button>
+        </div>
+
+        <hr class="my-4">
+
+        <h2 class="h5">OAuth</h2>
+        <div class="d-grid gap-2">
+          <button type="button" id="btnGithub" class="btn btn-dark">
+            Login mit GitHub
+          </button>
+
+          <button type="button" id="btnGoogle" class="btn btn-outline-danger">
+            Login mit Google
+          </button>
+        </div>
+
+        <hr class="my-4">
+
+        <button type="button" id="btnLogout" class="btn btn-outline-secondary w-100">
+          Logout
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Firebase Web Config (ok im Frontend)
+    const firebaseConfig = {
+      apiKey: "AIzaSyCuwnkNgZQUQcTtJCSYkdu68bVGx7nxcaU",
+      authDomain: "memory-e8ee2.firebaseapp.com",
+      projectId: "memory-e8ee2",
+      storageBucket: "memory-e8ee2.firebasestorage.app",
+      messagingSenderId: "20108492270",
+      appId: "1:20108492270:web:afe831b4449fc7cb2d22ff"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    const msgEl = document.getElementById("msg");
+    const emailEl = document.getElementById("email");
+    const pwEl = document.getElementById("password");
+
+    function showError(text) {
+      msgEl.style.display = "block";
+      msgEl.textContent = text;
+    }
+
+    function clearError() {
+      msgEl.style.display = "none";
+      msgEl.textContent = "";
+    }
+
+    async function exchangeTokenForCookie() {
+      const user = auth.currentUser;
+      if (!user) throw new Error("Kein Firebase User vorhanden");
+
+      const idToken = await user.getIdToken();
+
+      const res = await fetch("/auth/session", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+          "Authorization": `Bearer ${idToken}`,
+          // ✅ Play 3 CSRF bypass header
+          "Csrf-Token": "nocheck"
+        }
+      });
+
+      if (!res.ok) {
+        throw new Error(await res.text());
+      }
+
+      window.location.href = "/";
+    }
+
+    document.getElementById("btnLogin").onclick = async () => {
+      try {
+        clearError();
+        await auth.signInWithEmailAndPassword(emailEl.value, pwEl.value);
+        await exchangeTokenForCookie();
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnSignup").onclick = async () => {
+      try {
+        clearError();
+        await auth.createUserWithEmailAndPassword(emailEl.value, pwEl.value);
+        await exchangeTokenForCookie();
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnGithub").onclick = async () => {
+      try {
+        clearError();
+        const provider = new firebase.auth.GithubAuthProvider();
+        await auth.signInWithPopup(provider);
+        await exchangeTokenForCookie();
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnGoogle").onclick = async () => {
+      try {
+        clearError();
+        const provider = new firebase.auth.GoogleAuthProvider();
+        await auth.signInWithPopup(provider);
+        await exchangeTokenForCookie();
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnLogout").onclick = async () => {
+      try {
+        clearError();
+
+        await fetch("/auth/logout", {
+          method: "POST",
+          credentials: "same-origin",
+          headers: {
+            "Csrf-Token": "nocheck"
+          }
+        });
+
+        await auth.signOut();
+        window.location.href = "/login";
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+  </script>
+}

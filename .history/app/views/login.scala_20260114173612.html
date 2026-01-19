@@ -1,0 +1,282 @@
+@()
+
+@main_bootstrap("Login") {
+
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    body {
+      background: #0b1020;
+      color: #e7eaf3;
+    }
+
+    .auth-wrap {
+      max-width: 520px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .auth-card {
+      background: rgba(16, 22, 44, 0.92);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+      overflow: hidden;
+    }
+
+    .auth-header {
+      padding: 1.25rem 1.25rem 0.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: linear-gradient(135deg, rgba(120, 88, 255, 0.16), rgba(0, 200, 255, 0.10));
+    }
+
+    .auth-header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      letter-spacing: 0.2px;
+    }
+
+    .auth-body {
+      padding: 1.25rem;
+    }
+
+    .muted {
+      color: rgba(231, 234, 243, 0.72);
+      font-size: 0.95rem;
+      margin-top: 0.35rem;
+    }
+
+    label {
+      color: rgba(231, 234, 243, 0.85);
+      font-size: 0.9rem;
+    }
+
+    .form-control {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #e7eaf3;
+    }
+
+    .form-control:focus {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(120, 88, 255, 0.7);
+      box-shadow: 0 0 0 0.2rem rgba(120, 88, 255, 0.25);
+      color: #fff;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 1.25rem 0;
+    }
+
+    .btn-primary {
+      background: #7a5cff;
+      border-color: #7a5cff;
+    }
+
+    .btn-primary:hover {
+      background: #6a4cff;
+      border-color: #6a4cff;
+    }
+
+    .btn-outline-light {
+      border-color: rgba(255,255,255,0.22);
+      color: rgba(255,255,255,0.92);
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(255,255,255,0.30);
+      color: #fff;
+    }
+
+    .btn-dark {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .btn-dark:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.18);
+    }
+
+    .oauth-grid {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .alert {
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .alert-danger {
+      background: rgba(220, 53, 69, 0.12);
+      color: #ffb3bd;
+    }
+
+    .small-note {
+      font-size: 0.85rem;
+      color: rgba(231, 234, 243, 0.62);
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+  </style>
+
+  <!-- Firebase compat SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Login</h1>
+        <div class="muted">Melde dich an (Email, GitHub oder Google).</div>
+      </div>
+
+      <div class="auth-body">
+        <div id="msg" class="alert alert-danger" style="display:none; white-space: pre-wrap;"></div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" class="form-control" placeholder="Email" autocomplete="email">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Passwort</label>
+          <input id="password" type="password" class="form-control" placeholder="Passwort" autocomplete="current-password">
+        </div>
+
+        <div class="d-flex gap-2">
+          <button type="button" id="btnLogin" class="btn btn-primary w-100">Login</button>
+          <button type="button" id="btnSignup" class="btn btn-outline-light w-100">Registrieren</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="oauth-grid">
+          <button type="button" id="btnGithub" class="btn btn-dark w-100">Login mit GitHub</button>
+          <button type="button" id="btnGoogle" class="btn btn-dark w-100">Login mit Google</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <button type="button" id="btnLogout" class="btn btn-outline-light w-100">Logout</button>
+
+        <div class="small-note">
+          Tipp: Google Login muss in Firebase Auth aktiviert sein (Sign-in method → Google → Enable).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Firebase Web Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyCuwnkNgZQUQcTtJCSYkdu68bVGx7nxcaU",
+      authDomain: "memory-e8ee2.firebaseapp.com",
+      projectId: "memory-e8ee2",
+      storageBucket: "memory-e8ee2.firebasestorage.app",
+      messagingSenderId: "20108492270",
+      appId: "1:20108492270:web:afe831b4449fc7cb2d22ff"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    const msgEl = document.getElementById("msg");
+    const emailEl = document.getElementById("email");
+    const pwEl = document.getElementById("password");
+
+    function showError(text) {
+      msgEl.style.display = "block";
+      msgEl.textContent = text;
+    }
+
+    function clearError() {
+      msgEl.style.display = "none";
+      msgEl.textContent = "";
+    }
+
+    async function exchangeTokenForCookie() {
+      const user = auth.currentUser;
+      if (!user) throw new Error("Kein Firebase User vorhanden");
+
+      const idToken = await user.getIdToken();
+
+      const res = await fetch("/auth/session", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+          "Authorization": `Bearer ${idToken}`,
+          "Csrf-Token": "nocheck"
+        }
+      });
+
+      if (!res.ok) throw new Error(await res.text());
+      window.location.href = "/";
+    }
+
+    document.getElementById("btnLogin").onclick = async () => {
+      try {
+        clearError();
+        await auth.signInWithEmailAndPassword(emailEl.value, pwEl.value);
+        await exchangeTokenForCookie();
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnSignup").onclick = async () => {
+      try {
+        clearError();
+        await auth.createUserWithEmailAndPassword(emailEl.value, pwEl.value);
+        await exchangeTokenForCookie();
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnGithub").onclick = async () => {
+      try {
+        clearError();
+        const provider = new firebase.auth.GithubAuthProvider();
+        await auth.signInWithPopup(provider);
+        await exchangeTokenForCookie();
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnGoogle").onclick = async () => {
+      try {
+        clearError();
+        const provider = new firebase.auth.GoogleAuthProvider();
+        await auth.signInWithPopup(provider);
+        await exchangeTokenForCookie();
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnLogout").onclick = async () => {
+      try {
+        clearError();
+
+        await fetch("/auth/logout", {
+          method: "POST",
+          credentials: "same-origin",
+          headers: { "Csrf-Token": "nocheck" }
+        });
+
+        await auth.signOut();
+        window.location.href = "/login";
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+  </script>
+}

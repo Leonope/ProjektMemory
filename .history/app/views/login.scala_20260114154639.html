@@ -1,0 +1,110 @@
+@(implicit request: play.api.mvc.RequestHeader)
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <title>Login</title>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+  <style>
+    body { font-family: sans-serif; max-width: 520px; margin: 40px auto; }
+    input { display:block; width:100%; padding:10px; margin:8px 0; }
+    button { padding:10px 14px; margin:8px 0; }
+    .row { display:flex; gap:10px; }
+    .row button { flex: 1; }
+    #msg { color: #b00; }
+  </style>
+</head>
+<body>
+
+  <h2>Login</h2>
+  <p id="msg"></p>
+
+  <h3>Email</h3>
+  <input id="email" placeholder="Email" />
+  <input id="password" type="password" placeholder="Passwort" />
+
+  <div class="row">
+    <button onclick="loginEmail()">Login</button>
+    <button onclick="signupEmail()">Registrieren</button>
+  </div>
+
+  <hr/>
+
+  <h3>OAuth</h3>
+  <button onclick="loginGitHub()">Login mit GitHub</button>
+
+  <hr/>
+  <button onclick="doLogout()">Logout (falls du schon eingeloggt bist)</button>
+
+<script>
+  // TODO: deine Firebase Web Config hier einfügen
+  const firebaseConfig = {
+    apiKey: "…",
+    authDomain: "…",
+    projectId: "…",
+    appId: "…"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  function showError(e) {
+    document.getElementById("msg").textContent = e?.message || String(e);
+  }
+
+  async function exchangeTokenForCookie() {
+    const user = auth.currentUser;
+    if (!user) throw new Error("Kein Firebase User vorhanden");
+    const idToken = await user.getIdToken();
+
+    const res = await fetch("/auth/session", {
+      method: "POST",
+      headers: { "Authorization": `Bearer ${idToken}` }
+    });
+
+    if (!res.ok) throw new Error(await res.text());
+    window.location.href = "/";
+  }
+
+  async function loginEmail() {
+    try {
+      const email = document.getElementById("email").value;
+      const pw = document.getElementById("password").value;
+      await auth.signInWithEmailAndPassword(email, pw);
+      await exchangeTokenForCookie();
+    } catch (e) { showError(e); }
+  }
+
+  async function signupEmail() {
+    try {
+      const email = document.getElementById("email").value;
+      const pw = document.getElementById("password").value;
+      await auth.createUserWithEmailAndPassword(email, pw);
+      await exchangeTokenForCookie();
+    } catch (e) { showError(e); }
+  }
+
+  async function loginGitHub() {
+    try {
+      const provider = new firebase.auth.GithubAuthProvider();
+      await auth.signInWithPopup(provider);
+      await exchangeTokenForCookie();
+    } catch (e) { showError(e); }
+  }
+
+  async function doLogout() {
+    try {
+      await fetch("/auth/logout", { method: "POST" });
+      await auth.signOut();
+      window.location.href = "/login";
+    } catch (e) { showError(e); }
+  }
+</script>
+
+</body>
+</html>
+

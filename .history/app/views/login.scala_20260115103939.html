@@ -1,0 +1,467 @@
+@()
+
+@main_bootstrap("Login") {
+
+  <style>
+    :root { color-scheme: dark; }
+
+    body {
+      background: #0b1020;
+      color: #e7eaf3;
+    }
+
+    .auth-wrap {
+      max-width: 560px;
+      margin: 3.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .auth-card {
+      background: rgba(16, 22, 44, 0.92);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+      overflow: hidden;
+    }
+
+    .auth-header {
+      padding: 1.25rem 1.25rem 0.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: linear-gradient(135deg, rgba(120, 88, 255, 0.16), rgba(0, 200, 255, 0.10));
+    }
+
+    .auth-header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      letter-spacing: 0.2px;
+    }
+
+    .auth-sub {
+      margin-top: 0.35rem;
+      opacity: 0.8;
+      font-size: 0.95rem;
+    }
+
+    .auth-body { padding: 1.25rem; }
+
+    label {
+      color: rgba(231, 234, 243, 0.85);
+      font-size: 0.9rem;
+    }
+
+    .form-control {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #e7eaf3;
+    }
+
+    .form-control:focus {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(120, 88, 255, 0.7);
+      box-shadow: 0 0 0 0.2rem rgba(120, 88, 255, 0.25);
+      color: #fff;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 1.15rem 0;
+    }
+
+    .btn-primary {
+      background: #7a5cff;
+      border-color: #7a5cff;
+    }
+    .btn-primary:hover {
+      background: #6a4cff;
+      border-color: #6a4cff;
+    }
+
+    .btn-outline-light {
+      border-color: rgba(255,255,255,0.22);
+      color: rgba(255,255,255,0.92);
+    }
+    .btn-outline-light:hover {
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(255,255,255,0.30);
+      color: #fff;
+    }
+
+    .btn-dark {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+    .btn-dark:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.18);
+    }
+
+    .oauth-grid { display: grid; gap: 0.6rem; }
+
+    #msg {
+      display:none;
+      white-space: pre-wrap;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(220, 53, 69, 0.12);
+      color: #ffb3bd;
+      padding: .75rem 1rem;
+      margin-bottom: .8rem;
+    }
+
+    .mfa-box {
+      display:none;
+      padding: 0.9rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .tiny {
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    .recap-wrap {
+      padding: .6rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.20);
+    }
+  </style>
+
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Login</h1>
+        <div class="auth-sub">
+          Email/Passwort: Email-Verifizierung. GitHub/Google: keine Email-Verifizierung (OAuth).
+        </div>
+      </div>
+
+      <div class="auth-body">
+        <div id="msg"></div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" class="form-control" placeholder="Email" autocomplete="email">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Passwort</label>
+          <input id="password" type="password" class="form-control" placeholder="Passwort" autocomplete="current-password">
+        </div>
+
+        <div class="d-flex gap-2">
+          <button id="btnLogin" class="btn btn-primary w-100" type="button">Login</button>
+          <button id="btnSignup" class="btn btn-outline-light w-100" type="button">Registrieren</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="oauth-grid">
+          <button id="btnGithub" class="btn btn-dark w-100" type="button">Login mit GitHub</button>
+          <button id="btnGoogle" class="btn btn-dark w-100" type="button">Login mit Google</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- MFA UI -->
+        <div id="mfaBox" class="mfa-box">
+          <h2 class="h6 mb-2">SMS-2FA</h2>
+
+          <div class="mb-2">
+            <label for="phone" class="form-label">Telefonnummer (E.164)</label>
+            <input id="phone" class="form-control" placeholder="+41792209823" />
+          </div>
+
+          <div class="mb-2 recap-wrap">
+            <div id="recaptcha-container"></div>
+          </div>
+
+          <div class="mb-2">
+            <label for="sms" class="form-label">SMS-Code</label>
+            <input id="sms" class="form-control" placeholder="123456" />
+          </div>
+
+          <div class="d-flex gap-2">
+            <button id="btnSendSms" class="btn btn-outline-light w-100" type="button">SMS senden</button>
+            <button id="btnVerifySms" class="btn btn-primary w-100" type="button">Code bestätigen</button>
+          </div>
+
+          <button id="btnResetCaptcha" class="btn btn-link tiny mt-2 p-0" type="button">
+            Captcha zurücksetzen
+          </button>
+
+          <div class="tiny mt-2">
+            Dev: Mit “Test phone numbers” kommt keine echte SMS – du gibst den festen Code ein.
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <button id="btnLogout" class="btn btn-outline-light w-100" type="button">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      createUserWithEmailAndPassword,
+      signInWithPopup,
+      GithubAuthProvider,
+      GoogleAuthProvider,
+      signOut,
+      sendEmailVerification,
+      getMultiFactorResolver,
+      multiFactor,
+      PhoneAuthProvider,
+      PhoneMultiFactorGenerator,
+      RecaptchaVerifier
+    } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
+
+    //  MFA Toggle: true/false
+    const MFA_ENABLED = true;
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCuwnkNgZQUQcTtJCSYkdu68bVGx7nxcaU",
+      authDomain: "memory-e8ee2.firebaseapp.com",
+      projectId: "memory-e8ee2",
+      storageBucket: "memory-e8ee2.firebasestorage.app",
+      messagingSenderId: "20108492270",
+      appId: "1:20108492270:web:afe831b4449fc7cb2d22ff"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const msgEl = document.getElementById("msg");
+    const mfaBox = document.getElementById("mfaBox");
+    const emailEl = document.getElementById("email");
+    const pwEl = document.getElementById("password");
+    const phoneEl = document.getElementById("phone");
+    const smsEl = document.getElementById("sms");
+
+    let recaptchaVerifier = null;
+    let recaptchaWidgetId = null;
+
+    let mfaSession = null;
+    let verificationId = null;
+    let pendingResolver = null;
+
+    function showError(text) {
+      msgEl.style.display = "block";
+      msgEl.textContent = text;
+    }
+    function clearError() {
+      msgEl.style.display = "none";
+      msgEl.textContent = "";
+    }
+    function showMfaUI() {
+      mfaBox.style.display = "block";
+    }
+
+    async function ensureRecaptcha() {
+      showMfaUI();
+      if (recaptchaVerifier) return;
+
+      const c = document.getElementById("recaptcha-container");
+      c.innerHTML = "";
+
+      recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
+        size: "normal",
+        "expired-callback": () => showError("Captcha abgelaufen. Bitte neu lösen.")
+      });
+      recaptchaWidgetId = await recaptchaVerifier.render();
+    }
+
+    function resetRecaptcha() {
+      try {
+        if (recaptchaVerifier && typeof recaptchaVerifier.reset === "function") {
+          recaptchaVerifier.reset(recaptchaWidgetId ?? undefined);
+        }
+      } catch (_) {}
+    }
+
+    async function exchangeTokenForCookie() {
+      const user = auth.currentUser;
+      const idToken = await user.getIdToken();
+
+      const res = await fetch("/auth/session", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+          "Authorization": `Bearer ${idToken}`,
+          "Csrf-Token": "nocheck"
+        }
+      });
+
+      if (!res.ok) throw new Error(await res.text());
+      window.location.href = "/";
+    }
+
+    // ✅ FIX: wir entscheiden anhand der *aktuellen* Login-Methode
+    // loginMethod: "password" | "github.com" | "google.com"
+    async function afterLogin(user, loginMethod) {
+      // Email-Verifizierung NUR bei Email/Passwort
+      if (loginMethod === "password" && !user.emailVerified) {
+        try { await sendEmailVerification(user); } catch (_) {}
+        showError("Bitte E-Mail verifizieren (Link wurde gesendet). Danach erneut einloggen.");
+        return;
+      }
+
+      if (!MFA_ENABLED) {
+        await exchangeTokenForCookie();
+        return;
+      }
+
+      const enrolled = multiFactor(user).enrolledFactors;
+      if (enrolled && enrolled.length > 0) {
+        await exchangeTokenForCookie();
+        return;
+      }
+
+      await ensureRecaptcha();
+      mfaSession = await multiFactor(user).getSession();
+      showError("MFA erforderlich: Captcha lösen → Telefonnummer → SMS senden → Code bestätigen.");
+    }
+
+    async function handleAuthErrorMaybeMfa(err) {
+      if (!MFA_ENABLED) return false;
+
+      if (err?.code === "auth/multi-factor-auth-required") {
+        await ensureRecaptcha();
+        pendingResolver = getMultiFactorResolver(auth, err);
+        showError("MFA erforderlich: Captcha lösen → SMS senden → Code bestätigen.");
+        return true;
+      }
+      return false;
+    }
+
+    async function sendSms() {
+      await ensureRecaptcha();
+
+      try { await recaptchaVerifier.verify(); } catch (_) {
+        throw new Error("Captcha nicht verifiziert. Bitte lösen und erneut versuchen.");
+      }
+
+      const phoneAuthProvider = new PhoneAuthProvider(auth);
+
+      try {
+        if (pendingResolver) {
+          const hint = pendingResolver.hints[0];
+          verificationId = await phoneAuthProvider.verifyPhoneNumber(
+            { multiFactorHint: hint, session: pendingResolver.session },
+            recaptchaVerifier
+          );
+        } else {
+          const phoneNumber = phoneEl.value?.trim();
+          if (!phoneNumber) throw new Error("Bitte Telefonnummer eingeben (z.B. +41792209823)");
+          if (!mfaSession) throw new Error("MFA Session fehlt. Bitte erneut einloggen.");
+
+          verificationId = await phoneAuthProvider.verifyPhoneNumber(
+            { phoneNumber, session: mfaSession },
+            recaptchaVerifier
+          );
+        }
+
+        showError("SMS gesendet. Bitte Code eingeben und bestätigen.");
+      } catch (e) {
+        resetRecaptcha();
+        throw e;
+      }
+    }
+
+    async function verifySms() {
+      const code = smsEl.value?.trim();
+      if (!verificationId) throw new Error("Bitte zuerst SMS senden.");
+      if (!code) throw new Error("Bitte SMS-Code eingeben.");
+
+      const cred = PhoneAuthProvider.credential(verificationId, code);
+      const assertion = PhoneMultiFactorGenerator.assertion(cred);
+
+      if (pendingResolver) {
+        const res = await pendingResolver.resolveSignIn(assertion);
+        pendingResolver = null;
+        // beim Resolver wissen wir die Login-Methode nicht sicher → hier einfach nicht "password" erzwingen
+        await afterLogin(res.user, "oauth");
+      } else {
+        const user = auth.currentUser;
+        await multiFactor(user).enroll(assertion, "SMS");
+        await exchangeTokenForCookie();
+      }
+    }
+
+    // --- Buttons ---
+    document.getElementById("btnResetCaptcha").onclick = () => {
+      resetRecaptcha();
+      showError("Captcha zurückgesetzt. Bitte neu lösen und dann SMS senden.");
+    };
+
+    document.getElementById("btnLogin").onclick = async () => {
+      try {
+        clearError();
+        const res = await signInWithEmailAndPassword(auth, emailEl.value, pwEl.value);
+        await afterLogin(res.user, "password");
+      } catch (e) {
+        if (!(await handleAuthErrorMaybeMfa(e))) showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnSignup").onclick = async () => {
+      try {
+        clearError();
+        const res = await createUserWithEmailAndPassword(auth, emailEl.value, pwEl.value);
+        await afterLogin(res.user, "password");
+      } catch (e) {
+        if (!(await handleAuthErrorMaybeMfa(e))) showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnGithub").onclick = async () => {
+      try {
+        clearError();
+        const res = await signInWithPopup(auth, new GithubAuthProvider());
+        await afterLogin(res.user, "github.com");
+      } catch (e) {
+        if (!(await handleAuthErrorMaybeMfa(e))) showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnGoogle").onclick = async () => {
+      try {
+        clearError();
+        const res = await signInWithPopup(auth, new GoogleAuthProvider());
+        await afterLogin(res.user, "google.com");
+      } catch (e) {
+        if (!(await handleAuthErrorMaybeMfa(e))) showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnSendSms").onclick = async () => {
+      try { clearError(); await sendSms(); } catch (e) { showError(e?.message || String(e)); }
+    };
+
+    document.getElementById("btnVerifySms").onclick = async () => {
+      try { clearError(); await verifySms(); } catch (e) { showError(e?.message || String(e)); }
+    };
+
+    document.getElementById("btnLogout").onclick = async () => {
+      try {
+        clearError();
+        await fetch("/auth/logout", {
+          method: "POST",
+          credentials: "same-origin",
+          headers: { "Csrf-Token": "nocheck" }
+        });
+        await signOut(auth);
+        window.location.href = "/login";
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+  </script>
+}

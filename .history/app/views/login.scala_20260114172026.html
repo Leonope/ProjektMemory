@@ -1,0 +1,136 @@
+@()
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <title>Login</title>
+
+  <!-- Firebase compat SDK (passt zu deinem Code) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/memory.css")'>
+
+  <style>
+    body { font-family: sans-serif; max-width: 520px; margin: 40px auto; }
+    input { display:block; width:100%; padding:10px; margin:8px 0; box-sizing: border-box; }
+    button { padding:10px 14px; margin:8px 0; width: 100%; cursor: pointer; }
+    .row { display:flex; gap:10px; }
+    .row button { flex: 1; width: auto; }
+    #msg { color: #b00; white-space: pre-wrap; }
+    hr { margin: 18px 0; }
+  </style>
+</head>
+<body>
+
+  <h2>Login</h2>
+  <p id="msg"></p>
+
+  <h3>Email</h3>
+  <input id="email" placeholder="Email" autocomplete="email"/>
+  <input id="password" type="password" placeholder="Passwort" autocomplete="current-password"/>
+
+  <div class="row">
+    <button type="button" onclick="loginEmail()">Login</button>
+    <button type="button" onclick="signupEmail()">Registrieren</button>
+  </div>
+
+  <hr/>
+
+  <h3>OAuth</h3>
+  <button type="button" onclick="loginGitHub()">Login mit GitHub</button>
+
+  <hr/>
+  <button type="button" onclick="doLogout()">Logout</button>
+
+<script>
+  // Deine Firebase Web Config (die ist OK im Frontend)
+  const firebaseConfig = {
+    apiKey: "AIzaSyCuwnkNgZQUQcTtJCSYkdu68bVGx7nxcaU",
+    authDomain: "memory-e8ee2.firebaseapp.com",
+    projectId: "memory-e8ee2",
+    storageBucket: "memory-e8ee2.firebasestorage.app",
+    messagingSenderId: "20108492270",
+    appId: "1:20108492270:web:afe831b4449fc7cb2d22ff"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  function showError(e) {
+    const text = (e && e.message) ? e.message : String(e);
+    document.getElementById("msg").textContent = text;
+  }
+
+  async function exchangeTokenForCookie() {
+    const user = auth.currentUser;
+    if (!user) throw new Error("Kein Firebase User vorhanden");
+
+    const idToken = await user.getIdToken();
+
+    const res = await fetch("/auth/session", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${idToken}`,
+        // ✅ CSRF bypass header (Option 1)
+        "Csrf-Token": "nocheck"
+      }
+    });
+
+    if (!res.ok) {
+      throw new Error(await res.text());
+    }
+
+    // Cookie gesetzt -> ab zur Hauptseite
+    window.location.href = "/";
+  }
+
+  async function loginEmail() {
+    try {
+      const email = document.getElementById("email").value;
+      const pw = document.getElementById("password").value;
+      await auth.signInWithEmailAndPassword(email, pw);
+      await exchangeTokenForCookie();
+    } catch (e) { showError(e); }
+  }
+
+  async function signupEmail() {
+    try {
+      const email = document.getElementById("email").value;
+      const pw = document.getElementById("password").value;
+      await auth.createUserWithEmailAndPassword(email, pw);
+      await exchangeTokenForCookie();
+    } catch (e) { showError(e); }
+  }
+
+  async function loginGitHub() {
+    try {
+      const provider = new firebase.auth.GithubAuthProvider();
+      await auth.signInWithPopup(provider);
+      await exchangeTokenForCookie();
+    } catch (e) { showError(e); }
+  }
+
+  async function doLogout() {
+    try {
+      // Server cookie löschen
+      await fetch("/auth/logout", {
+        method: "POST",
+        headers: {
+          // ✅ CSRF bypass header (Option 1)
+          "Csrf-Token": "nocheck"
+        }
+      });
+
+      // Client logout
+      await auth.signOut();
+
+      window.location.href = "/login";
+    } catch (e) { showError(e); }
+  }
+</script>
+
+</body>
+</html>

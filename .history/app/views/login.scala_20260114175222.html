@@ -1,0 +1,298 @@
+@()
+
+@main_bootstrap("Login") {
+
+  <style>
+    :root { color-scheme: dark; }
+    body { background:#0b1020; color:#e7eaf3; }
+    .wrap { max-width:560px; margin:3rem auto; padding:0 1rem; }
+    .cardx { background:rgba(16,22,44,.92); border:1px solid rgba(255,255,255,.08); border-radius:18px; box-shadow:0 12px 40px rgba(0,0,0,.45); }
+    .hdr { padding:1.25rem; border-bottom:1px solid rgba(255,255,255,.06); background:linear-gradient(135deg, rgba(120,88,255,.16), rgba(0,200,255,.10)); border-top-left-radius:18px; border-top-right-radius:18px; }
+    .bd { padding:1.25rem; }
+    .form-control { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); color:#e7eaf3; }
+    .form-control:focus { background:rgba(255,255,255,.08); border-color:rgba(120,88,255,.7); box-shadow:0 0 0 .2rem rgba(120,88,255,.25); color:#fff; }
+    .divider { height:1px; background:rgba(255,255,255,.08); margin:1.1rem 0; }
+    .btn-primary { background:#7a5cff; border-color:#7a5cff; }
+    .btn-dark { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); }
+    .btn-dark:hover { background:rgba(255,255,255,.12); }
+    #msg { display:none; white-space:pre-wrap; }
+    .grid { display:grid; gap:.6rem; }
+  </style>
+
+  <div class="wrap">
+    <div class="cardx">
+      <div class="hdr">
+        <h1 class="h4 m-0">Login</h1>
+        <div style="opacity:.8;margin-top:.25rem;">MFA ist erzwungen: Nach Login wird SMS-2FA eingerichtet bzw. abgefragt.</div>
+      </div>
+
+      <div class="bd">
+        <div id="msg" class="alert alert-danger"></div>
+
+        <div class="mb-3">
+          <label class="form-label" for="email">Email</label>
+          <input id="email" class="form-control" autocomplete="email" placeholder="Email">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="password">Passwort</label>
+          <input id="password" type="password" class="form-control" autocomplete="current-password" placeholder="Passwort">
+        </div>
+
+        <div class="d-flex gap-2">
+          <button id="btnLogin" class="btn btn-primary w-100" type="button">Login</button>
+          <button id="btnSignup" class="btn btn-outline-light w-100" type="button">Registrieren</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="grid">
+          <button id="btnGithub" class="btn btn-dark w-100" type="button">Login mit GitHub</button>
+          <button id="btnGoogle" class="btn btn-dark w-100" type="button">Login mit Google</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- UI für MFA Enrollment / SMS -->
+        <div id="mfaBox" style="display:none;">
+          <h2 class="h6">SMS-2FA</h2>
+
+          <div class="mb-2">
+            <label class="form-label" for="phone">Telefonnummer (mit +49...)</label>
+            <input id="phone" class="form-control" placeholder="+49..." />
+          </div>
+
+          <!-- reCAPTCHA Container (erforderlich für Phone/SMS im Web) -->
+          <div id="recaptcha-container" class="mb-2"></div>
+
+          <div class="mb-2">
+            <label class="form-label" for="sms">SMS-Code</label>
+            <input id="sms" class="form-control" placeholder="123456" />
+          </div>
+
+          <div class="d-flex gap-2">
+            <button id="btnSendSms" class="btn btn-outline-light w-100" type="button">SMS senden</button>
+            <button id="btnVerifySms" class="btn btn-primary w-100" type="button">Code bestätigen</button>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <button id="btnLogout" class="btn btn-outline-light w-100" type="button">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    // Firebase modular SDK (inkl. MFA APIs)
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      createUserWithEmailAndPassword,
+      signInWithPopup,
+      GithubAuthProvider,
+      GoogleAuthProvider,
+      signOut,
+      getMultiFactorResolver,
+      multiFactor,
+      PhoneAuthProvider,
+      PhoneMultiFactorGenerator,
+      RecaptchaVerifier
+    } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCuwnkNgZQUQcTtJCSYkdu68bVGx7nxcaU",
+      authDomain: "memory-e8ee2.firebaseapp.com",
+      projectId: "memory-e8ee2",
+      storageBucket: "memory-e8ee2.firebasestorage.app",
+      messagingSenderId: "20108492270",
+      appId: "1:20108492270:web:afe831b4449fc7cb2d22ff"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const msgEl = document.getElementById("msg");
+    const mfaBox = document.getElementById("mfaBox");
+    const emailEl = document.getElementById("email");
+    const pwEl = document.getElementById("password");
+    const phoneEl = document.getElementById("phone");
+    const smsEl = document.getElementById("sms");
+
+    let recaptchaVerifier = null;
+    let mfaSession = null;            // MultiFactorSession (enroll)
+    let verificationId = null;        // SMS verification id
+    let pendingResolver = null;       // MultiFactorResolver (sign-in required)
+
+    function showError(text) {
+      msgEl.style.display = "block";
+      msgEl.textContent = text;
+    }
+    function clearError() {
+      msgEl.style.display = "none";
+      msgEl.textContent = "";
+    }
+    function showMfaUI() {
+      mfaBox.style.display = "block";
+      if (!recaptchaVerifier) {
+        // invisible reCAPTCHA
+        recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", { size: "invisible" });
+      }
+    }
+
+    async function exchangeTokenForCookie() {
+      const user = auth.currentUser;
+      const idToken = await user.getIdToken();
+
+      const res = await fetch("/auth/session", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+          "Authorization": `Bearer ${idToken}`,
+          "Csrf-Token": "nocheck"
+        }
+      });
+
+      if (!res.ok) throw new Error(await res.text());
+      window.location.href = "/";
+    }
+
+    // --- ENFORCE MFA ---
+    async function enforceMfaAfterLogin(user) {
+      // If user already has an enrolled second factor -> just proceed
+      const enrolled = multiFactor(user).enrolledFactors;
+      if (enrolled && enrolled.length > 0) {
+        await exchangeTokenForCookie();
+        return;
+      }
+
+      // Otherwise start enrollment (required)
+      showMfaUI();
+      mfaSession = await multiFactor(user).getSession();
+      showError("MFA erforderlich: Bitte Telefonnummer eingeben und SMS bestätigen.");
+    }
+
+    async function handleAuthErrorMaybeMfa(err) {
+      // MFA required during sign-in
+      if (err?.code === "auth/multi-factor-auth-required") {
+        showMfaUI();
+        pendingResolver = getMultiFactorResolver(auth, err); // :contentReference[oaicite:5]{index=5}
+        showError("MFA erforderlich: Bitte SMS-Code bestätigen (für deinen zweiten Faktor).");
+        return true;
+      }
+      return false;
+    }
+
+    // Send SMS (either enrollment or sign-in)
+    async function sendSms() {
+      if (!recaptchaVerifier) showMfaUI();
+      const phoneNumber = phoneEl.value?.trim();
+      if (!phoneNumber) throw new Error("Bitte Telefonnummer eingeben (z.B. +4917...)");
+
+      const phoneAuthProvider = new PhoneAuthProvider(auth);
+
+      if (pendingResolver) {
+        // Sign-in flow: use the first hint (registered second factor)
+        const hint = pendingResolver.hints[0]; // simple: first enrolled phone factor
+        verificationId = await phoneAuthProvider.verifyPhoneNumber(
+          { multiFactorHint: hint, session: pendingResolver.session },
+          recaptchaVerifier
+        );
+      } else {
+        // Enrollment flow: verify phone number using MFA session
+        verificationId = await phoneAuthProvider.verifyPhoneNumber(
+          { phoneNumber, session: mfaSession },
+          recaptchaVerifier
+        );
+      }
+
+      showError("SMS gesendet. Bitte Code eingeben und bestätigen.");
+    }
+
+    async function verifySms() {
+      const code = smsEl.value?.trim();
+      if (!verificationId) throw new Error("Bitte zuerst SMS senden.");
+      if (!code) throw new Error("Bitte SMS-Code eingeben.");
+
+      const cred = PhoneAuthProvider.credential(verificationId, code);
+      const assertion = PhoneMultiFactorGenerator.assertion(cred);
+
+      if (pendingResolver) {
+        // Complete sign-in with second factor
+        const res = await pendingResolver.resolveSignIn(assertion);
+        pendingResolver = null;
+        await enforceMfaAfterLogin(res.user); // ensures enrolled factors exist (should)
+      } else {
+        // Enroll second factor
+        const user = auth.currentUser;
+        await multiFactor(user).enroll(assertion, "SMS"); // label
+        await exchangeTokenForCookie();
+      }
+    }
+
+    // ---- UI handlers ----
+    document.getElementById("btnLogin").onclick = async () => {
+      try {
+        clearError();
+        const res = await signInWithEmailAndPassword(auth, emailEl.value, pwEl.value);
+        await enforceMfaAfterLogin(res.user);
+      } catch (e) {
+        if (!(await handleAuthErrorMaybeMfa(e))) showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnSignup").onclick = async () => {
+      try {
+        clearError();
+        const res = await createUserWithEmailAndPassword(auth, emailEl.value, pwEl.value);
+        await enforceMfaAfterLogin(res.user);
+      } catch (e) {
+        if (!(await handleAuthErrorMaybeMfa(e))) showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnGithub").onclick = async () => {
+      try {
+        clearError();
+        const res = await signInWithPopup(auth, new GithubAuthProvider());
+        await enforceMfaAfterLogin(res.user);
+      } catch (e) {
+        if (!(await handleAuthErrorMaybeMfa(e))) showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnGoogle").onclick = async () => {
+      try {
+        clearError();
+        const res = await signInWithPopup(auth, new GoogleAuthProvider());
+        await enforceMfaAfterLogin(res.user);
+      } catch (e) {
+        if (!(await handleAuthErrorMaybeMfa(e))) showError(e?.message || String(e));
+      }
+    };
+
+    document.getElementById("btnSendSms").onclick = async () => {
+      try { clearError(); await sendSms(); } catch (e) { showError(e?.message || String(e)); }
+    };
+
+    document.getElementById("btnVerifySms").onclick = async () => {
+      try { clearError(); await verifySms(); } catch (e) { showError(e?.message || String(e)); }
+    };
+
+    document.getElementById("btnLogout").onclick = async () => {
+      try {
+        clearError();
+        await fetch("/auth/logout", {
+          method: "POST",
+          credentials: "same-origin",
+          headers: { "Csrf-Token": "nocheck" }
+        });
+        await signOut(auth);
+        window.location.href = "/login";
+      } catch (e) {
+        showError(e?.message || String(e));
+      }
+    };
+  </script>
+}

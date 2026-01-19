@@ -1,0 +1,324 @@
+/* ========== Memory: Board, Animationen, Timer-Stern ========== */
+
+/* Kartenlayout & 3D-Flip */
+.memory-card {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  perspective: 1000px;
+  outline: none;
+}
+.memory-card:disabled { cursor: default; }
+
+.card-outer {
+  border-radius: 0.75rem;
+  background: transparent;
+  aspect-ratio: 1 / 1;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 450ms ease;
+  border-radius: 0.75rem;
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 0.75rem;
+  user-select: none;
+}
+
+.card-back {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.card-front {
+  background: #ffffff;
+  color: #111;
+  transform: rotateY(180deg);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Flip-State
+   - faceup: Karte ist aufgedeckt
+   - matched: Paar gefunden -> dauerhaft aufgedeckt
+   - is-flipped: alte JS-Variante, bleibt kompatibel
+*/
+.memory-card[data-state="faceup"] .card-inner,
+.memory-card[data-state="matched"] .card-inner,
+.memory-card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Match-Animation: Glühen + Pop */
+@keyframes match-pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.06); }
+  80%  { transform: scale(0.98); }
+  100% { transform: scale(1); }
+}
+@keyframes match-glow {
+  0%   { box-shadow: 0 0 0 rgba(25, 135, 84, 0); }
+  50%  { box-shadow: 0 0 24px rgba(25, 135, 84, 0.85); }
+  100% { box-shadow: 0 0 0 rgba(25, 135, 84, 0); }
+}
+
+/* Sowohl .matched (alte Version) als auch data-state="matched" (Vue/React) */
+.memory-card.matched .card-outer,
+.memory-card[data-state="matched"] .card-outer {
+  animation: match-glow 900ms ease;
+}
+.memory-card.matched .card-inner,
+.memory-card[data-state="matched"] .card-inner {
+  animation: match-pop 450ms ease;
+}
+.memory-card.matched,
+.memory-card[data-state="matched"] {
+  cursor: default;
+}
+
+/* Mismatch-Animation: Shake + roter Rand */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+.memory-card.mismatch .card-outer {
+  animation: shake 350ms ease;
+  box-shadow: 0 0 0 rgba(220, 53, 69, 0);
+}
+.memory-card.mismatch .card-back,
+.memory-card.mismatch .card-front {
+  outline: 2px solid rgba(220, 53, 69, 0.6);
+}
+
+/* Klicks blockieren während Animationen */
+.no-click { pointer-events: none !important; }
+
+/* Timeout-Feedback (Stern pulst kurz rot) */
+@keyframes timeout-flash {
+  0%   { transform: scale(1); filter: drop-shadow(0 0 0 rgba(220,53,69,0)); }
+  50%  { transform: scale(1.08); filter: drop-shadow(0 0 14px rgba(220,53,69,0.9)); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(220,53,69,0)); }
+}
+.timer-flash {
+  animation: timeout-flash 600ms ease;
+  transform-origin: center;
+}
+.hidden {
+  display: none !important;
+}
+
+/* ========== Chat-Styling ========== */
+
+/* Container mit dunklem Hintergrund und heller Schrift */
+#chatMessages {
+  background: rgba(0, 0, 0, 0.5); /* leicht transparenter Schwarzton */
+  color: #f8f9fa;                 /* helles Grau / fast weiß */
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Jede Chat-Zeile */
+.chat-line {
+  padding: 2px 0;
+  line-height: 1.3;
+}
+
+/* Name im Chat etwas hervorgehoben */
+.chat-line .fw-semibold {
+  color: #ffc107; /* gelb (ähnlich Bootstrap warning) */
+  margin-right: 4px;
+}
+
+/* Input-Bereich */
+#chatInput {
+  background-color: #111827; /* sehr dunkles Blau/Grau */
+  color: #f9fafb;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+#chatInput::placeholder {
+  color: rgba(249, 250, 251, 0.5);
+}
+
+/* ========== Vuetify-Overrides für Vue-SPA ========== */
+/* Damit Vuetify uns nicht den weißen Hintergrund + eigene Fonts aufzwingt */
+
+.v-application {
+  background-color: transparent !important;
+  color: var(--text-color) !important;
+  font-family: var(--default-font) !important;
+}
+
+/* Memory-App im Darkmode belassen */
+.memory-app-container {
+  background: transparent;
+}
+
+/* ========== Vaadin Accordion global positioniert ========== */
+
+/* Wrapper hält den Block am rechten Rand des Layouts */
+.tech-accordion-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* nach rechts drücken */
+  margin-top: 1.5rem;
+  padding-right: 1.5rem;     /* Abstand vom Rand */
+}
+
+/* Der eigentliche Accordion-Container */
+.tech-accordion-container {
+  width: 240x; /* Größe des Panels */
+}
+
+/* Styling */
+.tech-accordion {
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 8px;
+  padding: 0.4rem;
+}
+
+/* Inhalt im geöffneten Accordion kleiner machen */
+.tech-accordion .accordion-content {
+    font-size: 0.75rem !important;  /* kleiner */
+    line-height: 1.2 !important;
+}
+
+/* Listen im Accordion ebenfalls kleiner */
+.tech-accordion .accordion-content ul,
+.tech-accordion .accordion-content li {
+    font-size: 0.8rem !important;
+}
+
+/* Optional: beim Hover etwas heller */
+.tech-accordion::part(summary):hover {
+  color: #a8d0ff !important;
+}
+
+/* ========== Custom Web Components: Badge + Pill ========== */
+
+.memory-badge-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+.memory-badge-main {
+  background: rgba(66, 184, 131, 0.15);
+  border: 1px solid rgba(66, 184, 131, 0.9);
+  color: #e8fdf3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-inline: 0.75rem;
+  cursor: default;
+}
+
+.memory-badge-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #42b883; /* Vue-Grün */
+  box-shadow: 0 0 8px #42b883;
+}
+
+.memory-badge-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.memory-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.memory-badge-chip {
+  font-size: 0.7rem;
+  padding-inline: 0.6rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f5f5f5;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.memory-badge-chip[data-role="energy"],
+.memory-badge-chip[data-role="mode"] {
+  cursor: pointer;
+}
+
+.memory-badge-chip[data-role="energy"]:hover {
+  box-shadow: 0 0 8px rgba(255, 230, 109, 0.9);
+}
+
+.memory-badge-chip[data-role="mode"]:hover {
+  box-shadow: 0 0 8px rgba(117, 196, 255, 0.9);
+}
+
+.memory-badge-info {
+  opacity: 0.9;
+}
+
+.memory-badge-hint-row {
+  margin-top: 0.1rem;
+}
+
+.memory-badge-actions {
+  margin-top: 0.15rem;
+  justify-content: flex-end;
+}
+
+.memory-badge-btn {
+  background: transparent;
+  color: #e0e0e0;
+  font-size: 0.65rem;
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+}
+.memory-badge-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Kleine Pill-Komponente */
+.memory-pill {
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f4f4f4;
+}
+
+.memory-pill--hint {
+  border-color: rgba(66, 184, 131, 0.8);
+  color: #c8ffe2;
+}
+
+/* Bild in der Kartenfront sauber skalieren */
+.memory-card .symbol img{
+  width: 110%;
+  height: 110%;
+  object-fit: contain;
+  display: block;
+}
+
+
+
