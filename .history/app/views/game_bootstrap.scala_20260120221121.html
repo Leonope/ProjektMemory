@@ -200,48 +200,46 @@
       </div>
 
       <!-- Highscores -->
-<div class="col-12 col-lg-7">
-  <div class="card bg-secondary-subtle border-0 h-100">
-    <div class="card-body">
+      <div class="col-12 col-lg-7">
+        <div class="card bg-secondary-subtle border-0 h-100">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h2 id="highscoreTitle" class="h5 mb-0">Highscores</h2>
 
-      <!-- Header-Leiste -->
-      <div class="d-flex justify-content-between align-items-center">
-        <h2 id="highscoreTitle" class="h5 mb-0">Highscores</h2>
+              <!-- Toggle -->
+              <button id="showHighscores" class="btn btn-sm btn-outline-info"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#highscoreCollapse"
+        aria-expanded="false"
+        aria-controls="highscoreCollapse">
+  Highscores anzeigen
+</button>
 
-        <button id="showHighscores"
-                class="btn btn-sm btn-outline-info"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#highscoreCollapse"
-                aria-expanded="false"
-                aria-controls="highscoreCollapse">
-          Highscores anzeigen
-        </button>
-      </div>
 
-      <!-- Collapse IN EIGENER ZEILE -->
-      <div id="highscoreCollapse" class="collapse mt-2">
-        <div id="highscoreArea" class="table-responsive">
-          <table class="table table-dark table-striped table-sm mb-0">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Spieler</th>
-                <th>Paare</th>
-                <th>Versuche</th>
-              </tr>
-            </thead>
-            <tbody id="highscoreBody">
-              <!-- Wird per jQuery/Ajax gefüllt -->
-            </tbody>
-          </table>
+            <!-- Collapse-Body -->
+            <div id="highscoreCollapse" class="collapse">
+              <div id="highscoreArea" class="table-responsive" style="display:block;">
+                <table class="table table-dark table-striped table-sm mb-0">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Spieler</th>
+                      <th>Paare</th>
+                      <th>Versuche</th>
+                    </tr>
+                  </thead>
+                  <tbody id="highscoreBody">
+                    <!-- Wird per jQuery/Ajax gefüllt -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-</div>
-
 
     <!-- Button unter der Highscore/Chat-Sektion -->
     <div class="text-center mt-4 mb-3">
@@ -251,6 +249,10 @@
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JS (für collapse) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
   <!-- Externes JavaScript (gesamte Logik) -->
   <script src='@routes.Assets.versioned("javascripts/memory.js")'></script>

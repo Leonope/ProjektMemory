@@ -553,23 +553,6 @@
   padding: 0.35rem 0.45rem !important;
 }
 
-/* Highscore: Collapse-Inhalt soll unter Header stehen (nicht daneben) */
-#highscoreCollapse {
-  width: 100%;
-}
-
-#highscoreCollapse .table-responsive {
-  width: 100%;
-  display: block;
-  margin-top: 0.75rem;
-}
-
-/* Falls Flex/Align aus dem Header Einfluss nimmt: klar trennen */
-#highscoreCollapse table {
-  width: 100%;
-}
-
-
 
 
 

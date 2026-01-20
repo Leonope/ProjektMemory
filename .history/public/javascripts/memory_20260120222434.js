@@ -751,7 +751,6 @@
     hookGameWindowButtons();
     hookHighscoreButton();
     hookChatUI();
-    hookChatCollapse();
     initWebSocket();
   }
 

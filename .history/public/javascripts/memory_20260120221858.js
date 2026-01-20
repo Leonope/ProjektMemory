@@ -504,22 +504,6 @@
     }
   }
 
-  function hookChatCollapse() {
-  const el = document.getElementById('chatCollapse');
-  if (!el) return;
-
-  const btn = document.querySelector('[data-bs-target="#chatCollapse"]');
-
-  el.addEventListener('show.bs.collapse', function () {
-    if (btn) btn.textContent = 'Chat ausblenden';
-  });
-
-  el.addEventListener('hide.bs.collapse', function () {
-    if (btn) btn.textContent = 'Chat anzeigen';
-  });
-}
-
-
   // --- WebSocket (nur fürs Spiel, nicht für Chat) ---
   function initWebSocket() {
     try {
@@ -751,7 +735,6 @@
     hookGameWindowButtons();
     hookHighscoreButton();
     hookChatUI();
-    hookChatCollapse();
     initWebSocket();
   }
 
